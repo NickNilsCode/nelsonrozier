@@ -1,0 +1,15 @@
+export { default as HomePage } from "./HomePage";
+export { default as AboutPage } from "./AboutPage";
+export { default as PersonalinjuryPage } from "./PersonalinjuryPage";
+export { default as PersonalinjurytemplatePage } from "./PersonalinjurytemplatePage";
+export { default as CaseresultsPage } from "./CaseresultsPage";
+export { default as FaqPage } from "./FaqPage";
+export { default as BlogPage } from "./BlogPage";
+export { default as BlogcattemplatePage } from "./BlogcattemplatePage";
+export { default as BlogtemplatePage } from "./BlogtemplatePage";
+export { default as ContactPage } from "./ContactPage";
+export { default as DisclaimerPage } from "./DisclaimerPage";
+export { default as SitemapPage } from "./SitemapPage";
+export { default as PrivacypolicyPage } from "./PrivacypolicyPage";
+export { default as AttorneytemplatePage } from "./AttorneytemplatePage";
+export { default as SearchPage } from "./SearchPage";
