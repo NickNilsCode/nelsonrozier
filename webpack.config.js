@@ -3,20 +3,20 @@ const webpack = require('webpack');
 require('@babel/polyfill');
 const pages = [
   'home',
-  // 'about',
-  // 'personalinjury',
-  // 'personalinjurytemplate',
-  // 'caseresults',
-  // 'faq',
-  // 'blog',
-  // 'blogcattemplate',
-  // 'blogtemplate',
-  // 'contact',
-  // 'disclaimer',
-  // 'sitemap',
-  // 'privacypolicy',
-  // 'attorneytemplate',
-  // 'search'
+  'about',
+  'personalinjury',
+  'personalinjurytemplate',
+  'caseresults',
+  'faq',
+  'blog',
+  'blogcattemplate',
+  'blogtemplate',
+  'contact',
+  'disclaimer',
+  'sitemap',
+  'privacypolicy',
+  'attorneytemplate',
+  'search'
 ];
 
 module.exports = pages.map((page) => {
