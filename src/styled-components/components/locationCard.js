@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 export const LocationCard = styled.div`
-  width: 300px;
+  width: 100%;
   height: 241px;
+  max-width: 300px;
   background-color: #fff;
   border-left: 1px solid black;
   position: absolute;
@@ -27,6 +28,7 @@ export const LocationCard = styled.div`
     margin-bottom: 12px;
   }
   .directionAnchor {
+
     position: absolute;
     bottom: -28px;
     left: 24px;
@@ -50,7 +52,7 @@ export const LocationCard = styled.div`
   @media (min-width: 924px){
     right: initial;
     border-left: #833634 solid 65px;
-    width: 364px;
+    max-width: 364px;
     .directionAnchor {
       position: absolute;
       bottom: -52px;

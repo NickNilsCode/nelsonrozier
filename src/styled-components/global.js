@@ -8,7 +8,7 @@ export const PageWrapper = styled.div`
 
 export const ContentWrapper = styled.div`
   width: calc(100% - 32px);
-  padding: 16px;
+  padding: 40px 16px;
   min-height: calc(100vh - 89px - 145px);
   max-width: 900px;
   margin: auto;
@@ -19,9 +19,9 @@ export const ContentWrapper = styled.div`
   }
 `;
 
-export const GoldButton = styled.div`
+export const GoldButton = styled.button`
   background: ${gold};
-  padding: 7px 20px;
+  padding: 12px 20px;
   margin: 12px auto;
   color: #fff;
   font-size: 17px;
@@ -33,7 +33,7 @@ export const GoldButton = styled.div`
     background-color: #7c3230;
   }
 `;
-export const BigGoldButton = styled.div`
+export const BigGoldButton = styled.button`
   background: ${gold};
   padding: 12px 20px;
   margin: 12px auto;
@@ -59,15 +59,32 @@ export const Input = styled.input`
   font-size: 16px;
   border: 1px solid #8d8d8d;
   border-radius: 1px;
+  line-height: 1.5;
 `;
 
 export const TextArea = styled.textarea`
   background: #fff;
   padding: 12px;
   width: 100%;
-  height: 200px;
+  height: 174px;
   margin: 0 0 12px 0;
   font-size: 16px;
   border: 1px solid #8d8d8d;
   border-radius: 1px;
+`;
+
+export const HalfSize = styled.div`
+  width: 100%;
+  @media (min-width: 900px){
+    width: 444px;
+  }
+`;
+
+export const FlexDiv = styled.div`
+  display: block;
+  align-items: ${props => props.alignItems ? props.alignItems : "center"};
+  justify-content: space-between;
+  @media (min-width: 900px){
+    display: flex;
+  }
 `;

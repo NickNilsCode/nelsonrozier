@@ -54,6 +54,33 @@ var MessageFormComponent = /*#__PURE__*/function (_Component) {
     _defineProperty(_assertThisInitialized(_this), "submitForm", function (e) {
       e.preventDefault();
       console.log(_this.state);
+      fetch('/emailer', {
+        method: "POST",
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(_this.state)
+      }).then(function (res) {
+        return res.json();
+      }).then(function (res) {
+        alert("An email has been submitted to the associates at Nelson Rozier. Someone will be in contact with you shortly.");
+
+        _this.resetState();
+      })["catch"](function (err) {
+        alert("Something went wrong. Please contact Nelson Rozier directly via email or telephone. We are sorry for the inconvenience.");
+
+        _this.resetState();
+      });
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "resetState", function () {
+      _this.setState({
+        name: "",
+        email: "",
+        phone: "",
+        description: "",
+        disclaimer: false
+      });
     });
 
     _defineProperty(_assertThisInitialized(_this), "updateState", function (e, prop) {
@@ -61,6 +88,12 @@ var MessageFormComponent = /*#__PURE__*/function (_Component) {
       obj[prop] = e.currentTarget.value;
 
       _this.setState(obj);
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "updateCheckbox", function () {
+      _this.setState({
+        disclaimer: !_this.state.disclaimer
+      });
     });
 
     _this.state = {
@@ -83,11 +116,13 @@ var MessageFormComponent = /*#__PURE__*/function (_Component) {
           email = _this$state.email,
           phone = _this$state.phone,
           description = _this$state.description,
-          disclaimer = _this$state.disclaimer; //add disclaimer
-
-      return /*#__PURE__*/_react["default"].createElement(_messageForm.MessageFormWrap, null, /*#__PURE__*/_react["default"].createElement(_messageForm.MessageForm, null, /*#__PURE__*/_react["default"].createElement("h2", null, "How Can We Help You?"), /*#__PURE__*/_react["default"].createElement("p", null, "Fields marked with an * are required."), /*#__PURE__*/_react["default"].createElement("form", {
+          disclaimer = _this$state.disclaimer;
+      var buttonDisabled = disclaimer == true && email ? false : true;
+      return /*#__PURE__*/_react["default"].createElement(_messageForm.MessageFormWrap, {
+        id: "consultation"
+      }, /*#__PURE__*/_react["default"].createElement(_messageForm.MessageForm, null, /*#__PURE__*/_react["default"].createElement("h2", null, "How Can We Help You?"), /*#__PURE__*/_react["default"].createElement("p", null, "Fields marked with an * are required."), /*#__PURE__*/_react["default"].createElement("form", {
         onSubmit: this.submitForm
-      }, /*#__PURE__*/_react["default"].createElement(_global.Input, {
+      }, /*#__PURE__*/_react["default"].createElement(_global.FlexDiv, null, /*#__PURE__*/_react["default"].createElement(_global.HalfSize, null, /*#__PURE__*/_react["default"].createElement(_global.Input, {
         placeholder: "Name",
         type: "text",
         value: name,
@@ -109,15 +144,29 @@ var MessageFormComponent = /*#__PURE__*/function (_Component) {
         onChange: function onChange(e) {
           _this2.updateState(e, "phone");
         }
-      }), /*#__PURE__*/_react["default"].createElement(_global.TextArea, {
+      })), /*#__PURE__*/_react["default"].createElement(_global.HalfSize, null, /*#__PURE__*/_react["default"].createElement(_global.TextArea, {
         placeholder: "Brief description of your legal issue.",
         value: description,
         onChange: function onChange(e) {
           _this2.updateState(e, "description");
         }
-      }), /*#__PURE__*/_react["default"].createElement(_global.BigGoldButton, {
+      }))), /*#__PURE__*/_react["default"].createElement(_global.FlexDiv, null, /*#__PURE__*/_react["default"].createElement(_global.HalfSize, null, /*#__PURE__*/_react["default"].createElement(_messageForm.MessageLinks, null, /*#__PURE__*/_react["default"].createElement("a", {
+        href: "/disclaimer"
+      }, "Disclaimer"), " | ", /*#__PURE__*/_react["default"].createElement("a", {
+        href: "/privacy"
+      }, "Privacy Policy")), /*#__PURE__*/_react["default"].createElement(_messageForm.MessageDisclaimer, null, /*#__PURE__*/_react["default"].createElement("input", {
+        required: true,
+        type: "checkbox",
+        id: "disclaimer",
+        name: "disclaimer",
+        checked: disclaimer,
+        onChange: this.updateCheckbox
+      }), /*#__PURE__*/_react["default"].createElement("label", {
+        htmlFor: "disclaimer"
+      }, "I Have Read The Disclaimer *"))), /*#__PURE__*/_react["default"].createElement(_global.HalfSize, null, /*#__PURE__*/_react["default"].createElement(_global.BigGoldButton, {
+        className: buttonDisabled ? "buttonDisabled" : "",
         type: "submit"
-      }, "Send Your Information Today"))));
+      }, "Send Your Information Today"))))));
     }
   }]);
 

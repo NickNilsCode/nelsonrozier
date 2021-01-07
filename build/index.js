@@ -20,10 +20,17 @@ var _path = _interopRequireDefault(require("path"));
 
 var _bodyParser = _interopRequireDefault(require("body-parser"));
 
+var _nodemailer = _interopRequireDefault(require("nodemailer"));
+
+var _config = _interopRequireDefault(require("./config"));
+
 var _roots = require("./roots");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
+var Cryptr = require('cryptr');
+
+var cryptr = new Cryptr(_config["default"].key);
 var PORT = process.env.PORT || 3003;
 var app = (0, _express["default"])();
 app.use((0, _compression["default"])());
@@ -118,17 +125,17 @@ app.get('/about', function (req, res) {
   res.set('Cache-Control', 'public, max-age=31557600');
   res.send(returnHTML(data, aboutBundle, _roots.AboutRoot, "about"));
 });
-app.get('/personalinjury', function (req, res) {
+app.get('/personal-injury', function (req, res) {
   var data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
   res.send(returnHTML(data, personalinjuryBundle, _roots.PersonalinjuryRoot, "personalinjury"));
 });
-app.get('/personalinjurytemplate', function (req, res) {
+app.get('/personal-injury/:id', function (req, res) {
   var data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
   res.send(returnHTML(data, personalinjurytemplateBundle, _roots.PersonalinjurytemplateRoot, "personalinjurytemplate"));
 });
-app.get('/caseresults', function (req, res) {
+app.get('/case-results', function (req, res) {
   var data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
   res.send(returnHTML(data, caseresultsBundle, _roots.CaseresultsRoot, "caseresults"));
@@ -187,6 +194,37 @@ app.get('/search', function (req, res) {
 app.get('/images/:id', function (req, res) {
   res.set('Cache-Control', 'public, max-age=31557600');
   res.sendFile(_path["default"].join(__dirname, '../images/' + req.params.id));
+});
+app.post('/emailer', function (req, res) {
+  res.send({
+    message: "success"
+  }); // let { email, name, description, phone} = req.body;
+  // var transporter = nodemailer.createTransport({
+  //   host: 'smtp.gmail.com',
+  //   port: 587,
+  //   secure: false,
+  //   requireTLS: true,
+  //   auth: {
+  //     user: cryptr.decrypt(config.nodemailerEmail),
+  //     pass: cryptr.decrypt(config.nodemailerPW)
+  //   }
+  // });
+  //
+  // transporter.sendMail({
+  //   from: email,
+  //   to: cryptr.decrypt(config.nodemailerEmail),
+  //   subject: 'Nelson Rozier: Online Inquiry',
+  //   html: `
+  //     <h3>Hi! The following person has submitted a message.<h3/>
+  //     <h4>Name: ${name}</h4>
+  //     <h4>Email: ${email}</h4>
+  //     <h4>Phone: ${phone}</h4>
+  //     <h4>Message: ${description}</h4>
+  //   `
+  // }, (error, info) => {
+  //   if (error) res.send({error: error});
+  //   else res.send({response: info});
+  // });
 });
 app.get('/health', function (req, res) {
   return res.send('OK');

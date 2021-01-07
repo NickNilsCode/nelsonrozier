@@ -8,6 +8,11 @@ import compression from 'compression';
 import cors from 'cors';
 import path from 'path';
 import bodyParser from 'body-parser';
+import nodemailer from 'nodemailer';
+
+import config from './config';
+const Cryptr = require('cryptr');
+const cryptr = new Cryptr(config.key);
 
 import { HomeRoot, AboutRoot, PersonalinjuryRoot, PersonalinjurytemplateRoot, CaseresultsRoot, FaqRoot, BlogRoot, BlogcattemplateRoot, BlogtemplateRoot, ContactRoot, DisclaimerRoot, SitemapRoot, PrivacypolicyRoot, AttorneytemplateRoot, SearchRoot } from './roots';
 
@@ -105,17 +110,17 @@ app.get('/about', (req, res) => {
   res.set('Cache-Control', 'public, max-age=31557600');
   res.send(returnHTML(data, aboutBundle, AboutRoot, "about"));
 });
-app.get('/personalinjury', (req, res) => {
+app.get('/personal-injury', (req, res) => {
   let data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
   res.send(returnHTML(data, personalinjuryBundle, PersonalinjuryRoot, "personalinjury"));
 });
-app.get('/personalinjurytemplate', (req, res) => {
+app.get('/personal-injury/:id', (req, res) => {
   let data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
   res.send(returnHTML(data, personalinjurytemplateBundle, PersonalinjurytemplateRoot, "personalinjurytemplate"));
 });
-app.get('/caseresults', (req, res) => {
+app.get('/case-results', (req, res) => {
   let data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
   res.send(returnHTML(data, caseresultsBundle, CaseresultsRoot, "caseresults"));
@@ -175,6 +180,37 @@ app.get('/images/:id', (req, res) => {
   res.set('Cache-Control', 'public, max-age=31557600');
   res.sendFile(path.join(__dirname, '../images/' + req.params.id));
 });
+
+app.post('/emailer', (req, res) => {
+  res.send({message: "success"})
+  // let { email, name, description, phone} = req.body;
+  // var transporter = nodemailer.createTransport({
+  //   host: 'smtp.gmail.com',
+  //   port: 587,
+  //   secure: false,
+  //   requireTLS: true,
+  //   auth: {
+  //     user: cryptr.decrypt(config.nodemailerEmail),
+  //     pass: cryptr.decrypt(config.nodemailerPW)
+  //   }
+  // });
+  //
+  // transporter.sendMail({
+  //   from: email,
+  //   to: cryptr.decrypt(config.nodemailerEmail),
+  //   subject: 'Nelson Rozier: Online Inquiry',
+  //   html: `
+  //     <h3>Hi! The following person has submitted a message.<h3/>
+  //     <h4>Name: ${name}</h4>
+  //     <h4>Email: ${email}</h4>
+  //     <h4>Phone: ${phone}</h4>
+  //     <h4>Message: ${description}</h4>
+  //   `
+  // }, (error, info) => {
+  //   if (error) res.send({error: error});
+  //   else res.send({response: info});
+  // });
+})
 
 
 

@@ -9,11 +9,11 @@ exports["default"] = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _ = require("./");
+var _nav = require("../styled-components/components/nav");
 
-var _header = require("../styled-components/components/header");
+var _nav2 = _interopRequireDefault(require("../data/nav"));
 
-var _global = require("../styled-components/global");
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
 
@@ -39,43 +39,66 @@ function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Re
 
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
-var HeaderComponent = /*#__PURE__*/function (_Component) {
-  _inherits(HeaderComponent, _Component);
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-  var _super = _createSuper(HeaderComponent);
+var NavComponent = /*#__PURE__*/function (_Component) {
+  _inherits(NavComponent, _Component);
 
-  function HeaderComponent() {
-    _classCallCheck(this, HeaderComponent);
+  var _super = _createSuper(NavComponent);
 
-    return _super.apply(this, arguments);
+  function NavComponent(props) {
+    var _this;
+
+    _classCallCheck(this, NavComponent);
+
+    _this = _super.call(this, props);
+
+    _defineProperty(_assertThisInitialized(_this), "menuManager", function () {
+      _this.setState({
+        menuOpen: !_this.state.menuOpen
+      });
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "fillNav", function (mobile) {
+      return _nav2["default"].map(function (a, i) {
+        return /*#__PURE__*/_react["default"].createElement(_react.Fragment, {
+          key: i
+        }, /*#__PURE__*/_react["default"].createElement("a", {
+          href: a.link
+        }, /*#__PURE__*/_react["default"].createElement(_nav.NavButton, {
+          className: mobile ? "mobileNav" : "",
+          index: i,
+          size: _nav2["default"].length
+        }, a.name)));
+      });
+    });
+
+    _this.state = {
+      menuOpen: false
+    };
+    return _this;
   }
 
-  _createClass(HeaderComponent, [{
+  _createClass(NavComponent, [{
     key: "render",
     value: function render() {
-      return /*#__PURE__*/_react["default"].createElement(_header.Header, {
-        id: "header"
-      }, /*#__PURE__*/_react["default"].createElement(_header.HeaderWrap, null, /*#__PURE__*/_react["default"].createElement(_global.FlexDiv, {
-        alignItems: "flex-end"
-      }, /*#__PURE__*/_react["default"].createElement("a", {
-        href: "/"
-      }, /*#__PURE__*/_react["default"].createElement("img", {
-        src: "/images/brand-logo.png"
-      })), /*#__PURE__*/_react["default"].createElement(_header.HeaderDiv, null, /*#__PURE__*/_react["default"].createElement(_header.Header1, null, "FREE Consultation."), /*#__PURE__*/_react["default"].createElement(_header.Header2, null, "No fee unless we win"), /*#__PURE__*/_react["default"].createElement("a", {
-        href: "tel:+1-559-713-0159"
-      }, /*#__PURE__*/_react["default"].createElement(_header.Header3, null, "559-713-0159")))), /*#__PURE__*/_react["default"].createElement(_.Nav, null), /*#__PURE__*/_react["default"].createElement(_header.Header4, null, "Personalized Legal Representation by Compassionate,"), /*#__PURE__*/_react["default"].createElement(_header.Header4, null, "Dedicated and Experienced Attorneys"), /*#__PURE__*/_react["default"].createElement("a", {
-        href: "/#consultation",
-        className: "consultationAnchor"
-      }, /*#__PURE__*/_react["default"].createElement(_global.GoldButton, {
-        className: "consultationButton"
-      }, "Get a Free Consultation ", /*#__PURE__*/_react["default"].createElement("i", {
-        className: "fas fa-chevron-circle-right"
-      })))));
+      var menuOpen = this.state.menuOpen;
+      return /*#__PURE__*/_react["default"].createElement(_nav.Nav, null, /*#__PURE__*/_react["default"].createElement(_nav.DesktopNav, null, this.fillNav(false)), /*#__PURE__*/_react["default"].createElement(_nav.MobileNav, null, /*#__PURE__*/_react["default"].createElement(_nav.MenuBar, {
+        onClick: this.menuManager
+      }, /*#__PURE__*/_react["default"].createElement("i", {
+        className: "fas fa-bars"
+      }), " MAIN NAVIGATION"), /*#__PURE__*/_react["default"].createElement(_nav.MenuPopup, {
+        className: menuOpen ? "menuOpen" : ""
+      }, menuOpen && this.fillNav(true), /*#__PURE__*/_react["default"].createElement(_nav.NavButton, {
+        className: "mobileNav",
+        size: _nav2["default"].length,
+        onClick: this.menuManager
+      }, "X Close"))));
     }
   }]);
 
-  return HeaderComponent;
+  return NavComponent;
 }(_react.Component);
 
-var _default = HeaderComponent;
+var _default = NavComponent;
 exports["default"] = _default;
