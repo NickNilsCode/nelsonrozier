@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { Header, Footer } from '../components';
+import { Header, Footer, PersonalInjury } from '../components';
 import { BlogContent } from '../styled-components/pages/blog';
-import { PageWrapper, ContentWrapper } from '../styled-components/global';
+import { PageWrapper, ContentWrapper, Content } from '../styled-components/global';
 
 class Blog extends Component {
     render(){
@@ -9,9 +9,10 @@ class Blog extends Component {
           <PageWrapper>
               <Header/>
               <ContentWrapper>
-                <BlogContent>
-                  blog page
-                </BlogContent>
+                <PersonalInjury/>
+                <Content>
+                  Blog
+                </Content>
               </ContentWrapper>
               <Footer/>
           </PageWrapper>

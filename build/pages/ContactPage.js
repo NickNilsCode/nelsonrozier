@@ -53,7 +53,7 @@ var Contact = /*#__PURE__*/function (_Component) {
   _createClass(Contact, [{
     key: "render",
     value: function render() {
-      return /*#__PURE__*/_react["default"].createElement(_global.PageWrapper, null, /*#__PURE__*/_react["default"].createElement(_components.Header, null), /*#__PURE__*/_react["default"].createElement(_global.ContentWrapper, null, /*#__PURE__*/_react["default"].createElement(_contact.ContactContent, null, "contact page")), /*#__PURE__*/_react["default"].createElement(_components.Footer, null));
+      return /*#__PURE__*/_react["default"].createElement(_global.PageWrapper, null, /*#__PURE__*/_react["default"].createElement(_components.Header, null), /*#__PURE__*/_react["default"].createElement(_global.ContentWrapper, null, /*#__PURE__*/_react["default"].createElement(_components.PersonalInjury, null), /*#__PURE__*/_react["default"].createElement(_global.Content, null, "Contact")), /*#__PURE__*/_react["default"].createElement(_components.Footer, null));
     }
   }]);
 

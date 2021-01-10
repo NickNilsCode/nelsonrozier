@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { Header, Footer } from '../components';
-import { AboutContent } from '../styled-components/pages/about';
-import { PageWrapper, ContentWrapper } from '../styled-components/global';
+import { Header, Footer, PersonalInjury } from '../components';
+import { PageWrapper, ContentWrapper, Content } from '../styled-components/global';
+import aboutContent from '../data/about';
 
 class About extends Component {
     render(){
@@ -9,9 +9,24 @@ class About extends Component {
           <PageWrapper>
               <Header/>
               <ContentWrapper>
-                <AboutContent>
-                  about page
-                </AboutContent>
+                <PersonalInjury/>
+                <Content>
+                  {
+                    aboutContent.map((a,i) => {
+                      let A = a.type;
+                      if(A != "html"){
+                        return (
+                          <A key={i}>{a.content}</A>
+                        )
+                      } else {
+                        return (
+                          <div key={i}>{a.content}</div>
+                        )
+                      }
+
+                    })
+                  }
+                </Content>
               </ContentWrapper>
               <Footer/>
           </PageWrapper>

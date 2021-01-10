@@ -14,9 +14,23 @@ export const ContentWrapper = styled.div`
   margin: auto;
   text-align: center;
   position: relative;
-  @media (min-width: 700px){
+  display: block;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content:space-between;
+  @media (min-width: 900px){
+    display: flex;
     min-height: calc(100vh - 58px - 115px);
+    flex-direction: row-reverse;
+    &.homePage {
+      flex-direction: column;
+    }
   }
+`;
+
+export const Content = styled.div`
+  width: 100%;
+  text-align: center;
 `;
 
 export const GoldButton = styled.button`

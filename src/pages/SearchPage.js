@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { Header, Footer } from '../components';
+import { Header, Footer, PersonalInjury } from '../components';
 import { SearchContent } from '../styled-components/pages/search';
-import { PageWrapper, ContentWrapper } from '../styled-components/global';
+import { PageWrapper, ContentWrapper, Content } from '../styled-components/global';
 
 class Search extends Component {
     render(){
@@ -9,9 +9,10 @@ class Search extends Component {
           <PageWrapper>
               <Header/>
               <ContentWrapper>
-                <SearchContent>
-                  search page
-                </SearchContent>
+                <PersonalInjury/>
+                <Content>
+                  Search
+                </Content>
               </ContentWrapper>
               <Footer/>
           </PageWrapper>

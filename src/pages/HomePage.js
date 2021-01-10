@@ -1,17 +1,20 @@
 import React, { Component } from 'react';
-import { Header, Footer } from '../components';
+import { Header, Footer, PersonalInjury } from '../components';
 import { HomeContent } from '../styled-components/pages/home';
-import { PageWrapper, ContentWrapper } from '../styled-components/global';
+import { PageWrapper, ContentWrapper, Content } from '../styled-components/global';
 
 class Home extends Component {
     render(){
       return (
           <PageWrapper>
               <Header/>
-              <ContentWrapper>
-                <HomeContent>
-                  home page
-                </HomeContent>
+              <ContentWrapper className="homePage">
+                <PersonalInjury home={true}/>
+                <Content>
+                  {
+                    //home
+                  }
+                </Content>
               </ContentWrapper>
               <Footer/>
           </PageWrapper>

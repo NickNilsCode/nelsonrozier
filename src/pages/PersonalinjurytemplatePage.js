@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { Header, Footer } from '../components';
+import { Header, Footer, PersonalInjury } from '../components';
 import { PersonalinjurytemplateContent } from '../styled-components/pages/personalinjurytemplate';
-import { PageWrapper, ContentWrapper } from '../styled-components/global';
+import { PageWrapper, ContentWrapper, Content } from '../styled-components/global';
 
 class Personalinjurytemplate extends Component {
     render(){
@@ -9,9 +9,10 @@ class Personalinjurytemplate extends Component {
           <PageWrapper>
               <Header/>
               <ContentWrapper>
-                <PersonalinjurytemplateContent>
-                  personalinjurytemplate page
-                </PersonalinjurytemplateContent>
+                <PersonalInjury/>
+                <Content>
+                  Personalinjurytemplate
+                </Content>
               </ContentWrapper>
               <Footer/>
           </PageWrapper>

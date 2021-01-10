@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { Header, Footer } from '../components';
+import { Header, Footer, PersonalInjury } from '../components';
 import { SitemapContent } from '../styled-components/pages/sitemap';
-import { PageWrapper, ContentWrapper } from '../styled-components/global';
+import { PageWrapper, ContentWrapper, Content } from '../styled-components/global';
 
 class Sitemap extends Component {
     render(){
@@ -9,9 +9,10 @@ class Sitemap extends Component {
           <PageWrapper>
               <Header/>
               <ContentWrapper>
-                <SitemapContent>
-                  sitemap page
-                </SitemapContent>
+                <PersonalInjury/>
+                <Content>
+                  Sitemap
+                </Content>
               </ContentWrapper>
               <Footer/>
           </PageWrapper>

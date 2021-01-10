@@ -53,7 +53,11 @@ var Home = /*#__PURE__*/function (_Component) {
   _createClass(Home, [{
     key: "render",
     value: function render() {
-      return /*#__PURE__*/_react["default"].createElement(_global.PageWrapper, null, /*#__PURE__*/_react["default"].createElement(_components.Header, null), /*#__PURE__*/_react["default"].createElement(_global.ContentWrapper, null, /*#__PURE__*/_react["default"].createElement(_home.HomeContent, null, "home page")), /*#__PURE__*/_react["default"].createElement(_components.Footer, null));
+      return /*#__PURE__*/_react["default"].createElement(_global.PageWrapper, null, /*#__PURE__*/_react["default"].createElement(_components.Header, null), /*#__PURE__*/_react["default"].createElement(_global.ContentWrapper, {
+        className: "homePage"
+      }, /*#__PURE__*/_react["default"].createElement(_components.PersonalInjury, {
+        home: true
+      }), /*#__PURE__*/_react["default"].createElement(_global.Content, null)), /*#__PURE__*/_react["default"].createElement(_components.Footer, null));
     }
   }]);
 

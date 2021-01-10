@@ -26,8 +26,13 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded())
 
 cron.schedule('* * * 1 *', () => {
-  fetch('https://milkmancoffee.herokuapp.com/')
-  .then(res => console.log("requested at " + new Date()));
+  fetch('https://nelsonrozier.herokuapp.com/')
+  .then(res => {
+    console.log("requested at " + new Date())
+  })
+  .catch(() => {
+    console.log("request to https://nelsonrozier.herokuapp.com/ failed at " + new Date())
+  });
 });
 
 var dataObj = {},
@@ -54,58 +59,58 @@ fs.readFile('./dist/js/about.bundle.min.js', "utf8", (err, data) => {
   if (err) console.log("ERR" ,err);
   aboutBundle = data || "";
 })
-fs.readFile('./dist/js/personalinjury.bundle.min.js', "utf8", (err, data) => {
-  if (err) console.log("ERR" ,err);
-  personalinjuryBundle = data || "";
-})
-fs.readFile('./dist/js/personalinjurytemplate.bundle.min.js', "utf8", (err, data) => {
-  if (err) console.log("ERR" ,err);
-  personalinjurytemplateBundle = data || "";
-})
-fs.readFile('./dist/js/caseresults.bundle.min.js', "utf8", (err, data) => {
-  if (err) console.log("ERR" ,err);
-  caseresultsBundle = data || "";
-})
-fs.readFile('./dist/js/faq.bundle.min.js', "utf8", (err, data) => {
-  if (err) console.log("ERR" ,err);
-  faqBundle = data || "";
-})
-fs.readFile('./dist/js/blog.bundle.min.js', "utf8", (err, data) => {
-  if (err) console.log("ERR" ,err);
-  blogBundle = data || "";
-})
-fs.readFile('./dist/js/blogcattemplate.bundle.min.js', "utf8", (err, data) => {
-  if (err) console.log("ERR" ,err);
-  blogcattemplateBundle = data || "";
-})
-fs.readFile('./dist/js/blogtemplate.bundle.min.js', "utf8", (err, data) => {
-  if (err) console.log("ERR" ,err);
-  blogtemplateBundle = data || "";
-})
-fs.readFile('./dist/js/contact.bundle.min.js', "utf8", (err, data) => {
-  if (err) console.log("ERR" ,err);
-  contactBundle = data || "";
-})
-fs.readFile('./dist/js/disclaimer.bundle.min.js', "utf8", (err, data) => {
-  if (err) console.log("ERR" ,err);
-  disclaimerBundle = data || "";
-})
-fs.readFile('./dist/js/sitemap.bundle.min.js', "utf8", (err, data) => {
-  if (err) console.log("ERR" ,err);
-  sitemapBundle = data || "";
-})
-fs.readFile('./dist/js/privacypolicy.bundle.min.js', "utf8", (err, data) => {
-  if (err) console.log("ERR" ,err);
-  privacypolicyBundle = data || "";
-})
-fs.readFile('./dist/js/attorneytemplate.bundle.min.js', "utf8", (err, data) => {
-  if (err) console.log("ERR" ,err);
-  attorneytemplateBundle = data || "";
-})
-fs.readFile('./dist/js/search.bundle.min.js', "utf8", (err, data) => {
-  if (err) console.log("ERR" ,err);
-  searchBundle = data || "";
-})
+// fs.readFile('./dist/js/personalinjury.bundle.min.js', "utf8", (err, data) => {
+//   if (err) console.log("ERR" ,err);
+//   personalinjuryBundle = data || "";
+// })
+// fs.readFile('./dist/js/personalinjurytemplate.bundle.min.js', "utf8", (err, data) => {
+//   if (err) console.log("ERR" ,err);
+//   personalinjurytemplateBundle = data || "";
+// })
+// fs.readFile('./dist/js/caseresults.bundle.min.js', "utf8", (err, data) => {
+//   if (err) console.log("ERR" ,err);
+//   caseresultsBundle = data || "";
+// })
+// fs.readFile('./dist/js/faq.bundle.min.js', "utf8", (err, data) => {
+//   if (err) console.log("ERR" ,err);
+//   faqBundle = data || "";
+// })
+// fs.readFile('./dist/js/blog.bundle.min.js', "utf8", (err, data) => {
+//   if (err) console.log("ERR" ,err);
+//   blogBundle = data || "";
+// })
+// fs.readFile('./dist/js/blogcattemplate.bundle.min.js', "utf8", (err, data) => {
+//   if (err) console.log("ERR" ,err);
+//   blogcattemplateBundle = data || "";
+// })
+// fs.readFile('./dist/js/blogtemplate.bundle.min.js', "utf8", (err, data) => {
+//   if (err) console.log("ERR" ,err);
+//   blogtemplateBundle = data || "";
+// })
+// fs.readFile('./dist/js/contact.bundle.min.js', "utf8", (err, data) => {
+//   if (err) console.log("ERR" ,err);
+//   contactBundle = data || "";
+// })
+// fs.readFile('./dist/js/disclaimer.bundle.min.js', "utf8", (err, data) => {
+//   if (err) console.log("ERR" ,err);
+//   disclaimerBundle = data || "";
+// })
+// fs.readFile('./dist/js/sitemap.bundle.min.js', "utf8", (err, data) => {
+//   if (err) console.log("ERR" ,err);
+//   sitemapBundle = data || "";
+// })
+// fs.readFile('./dist/js/privacypolicy.bundle.min.js', "utf8", (err, data) => {
+//   if (err) console.log("ERR" ,err);
+//   privacypolicyBundle = data || "";
+// })
+// fs.readFile('./dist/js/attorneytemplate.bundle.min.js', "utf8", (err, data) => {
+//   if (err) console.log("ERR" ,err);
+//   attorneytemplateBundle = data || "";
+// })
+// fs.readFile('./dist/js/search.bundle.min.js', "utf8", (err, data) => {
+//   if (err) console.log("ERR" ,err);
+//   searchBundle = data || "";
+// })
 app.get('/', (req, res) => {
   let data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
@@ -189,33 +194,33 @@ app.get('/images/:id', (req, res) => {
 
 app.post('/emailer', (req, res) => {
   res.send({message: "success"})
-  // let { email, name, description, phone} = req.body;
-  // var transporter = nodemailer.createTransport({
-  //   host: 'smtp.gmail.com',
-  //   port: 587,
-  //   secure: false,
-  //   requireTLS: true,
-  //   auth: {
-  //     user: cryptr.decrypt(config.nodemailerEmail),
-  //     pass: cryptr.decrypt(config.nodemailerPW)
-  //   }
-  // });
-  //
-  // transporter.sendMail({
-  //   from: email,
-  //   to: cryptr.decrypt(config.nodemailerEmail),
-  //   subject: 'Nelson Rozier: Online Inquiry',
-  //   html: `
-  //     <h3>Hi! The following person has submitted a message.<h3/>
-  //     <h4>Name: ${name}</h4>
-  //     <h4>Email: ${email}</h4>
-  //     <h4>Phone: ${phone}</h4>
-  //     <h4>Message: ${description}</h4>
-  //   `
-  // }, (error, info) => {
-  //   if (error) res.send({error: error});
-  //   else res.send({response: info});
-  // });
+  let { email, name, description, phone} = req.body;
+  var transporter = nodemailer.createTransport({
+    host: 'smtp.gmail.com',
+    port: 587,
+    secure: false,
+    requireTLS: true,
+    auth: {
+      user: cryptr.decrypt(config.nodemailerEmail),
+      pass: cryptr.decrypt(config.nodemailerPW)
+    }
+  });
+
+  transporter.sendMail({
+    from: email,
+    to: cryptr.decrypt(config.nodemailerEmail),
+    subject: 'Nelson Rozier: Online Inquiry',
+    html: `
+      <h3>Hi! The following person has submitted a message.<h3/>
+      <h4>Name: ${name}</h4>
+      <h4>Email: ${email}</h4>
+      <h4>Phone: ${phone}</h4>
+      <h4>Message: ${description}</h4>
+    `
+  }, (error, info) => {
+    if (error) res.send({error: error});
+    else res.send({response: info});
+  });
 })
 
 

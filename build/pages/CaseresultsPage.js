@@ -53,7 +53,7 @@ var Caseresults = /*#__PURE__*/function (_Component) {
   _createClass(Caseresults, [{
     key: "render",
     value: function render() {
-      return /*#__PURE__*/_react["default"].createElement(_global.PageWrapper, null, /*#__PURE__*/_react["default"].createElement(_components.Header, null), /*#__PURE__*/_react["default"].createElement(_global.ContentWrapper, null, /*#__PURE__*/_react["default"].createElement(_caseresults.CaseresultsContent, null, "caseresults page")), /*#__PURE__*/_react["default"].createElement(_components.Footer, null));
+      return /*#__PURE__*/_react["default"].createElement(_global.PageWrapper, null, /*#__PURE__*/_react["default"].createElement(_components.Header, null), /*#__PURE__*/_react["default"].createElement(_global.ContentWrapper, null, /*#__PURE__*/_react["default"].createElement(_components.PersonalInjury, null), /*#__PURE__*/_react["default"].createElement(_global.Content, null, "Caseresults")), /*#__PURE__*/_react["default"].createElement(_components.Footer, null));
     }
   }]);
 

@@ -11,9 +11,11 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _components = require("../components");
 
-var _about = require("../styled-components/pages/about");
-
 var _global = require("../styled-components/global");
+
+var _about = _interopRequireDefault(require("../data/about"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
 
@@ -53,7 +55,19 @@ var About = /*#__PURE__*/function (_Component) {
   _createClass(About, [{
     key: "render",
     value: function render() {
-      return /*#__PURE__*/_react["default"].createElement(_global.PageWrapper, null, /*#__PURE__*/_react["default"].createElement(_components.Header, null), /*#__PURE__*/_react["default"].createElement(_global.ContentWrapper, null, /*#__PURE__*/_react["default"].createElement(_about.AboutContent, null, "about page")), /*#__PURE__*/_react["default"].createElement(_components.Footer, null));
+      return /*#__PURE__*/_react["default"].createElement(_global.PageWrapper, null, /*#__PURE__*/_react["default"].createElement(_components.Header, null), /*#__PURE__*/_react["default"].createElement(_global.ContentWrapper, null, /*#__PURE__*/_react["default"].createElement(_components.PersonalInjury, null), /*#__PURE__*/_react["default"].createElement(_global.Content, null, _about["default"].map(function (a, i) {
+        var A = a.type;
+
+        if (A != "html") {
+          return /*#__PURE__*/_react["default"].createElement(A, {
+            key: i
+          }, a.content);
+        } else {
+          return /*#__PURE__*/_react["default"].createElement("div", {
+            key: i
+          }, a.content);
+        }
+      }))), /*#__PURE__*/_react["default"].createElement(_components.Footer, null));
     }
   }]);
 

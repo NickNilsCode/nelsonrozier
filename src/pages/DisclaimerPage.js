@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { Header, Footer } from '../components';
+import { Header, Footer, PersonalInjury } from '../components';
 import { DisclaimerContent } from '../styled-components/pages/disclaimer';
-import { PageWrapper, ContentWrapper } from '../styled-components/global';
+import { PageWrapper, ContentWrapper, Content } from '../styled-components/global';
 
 class Disclaimer extends Component {
     render(){
@@ -9,9 +9,10 @@ class Disclaimer extends Component {
           <PageWrapper>
               <Header/>
               <ContentWrapper>
-                <DisclaimerContent>
-                  disclaimer page
-                </DisclaimerContent>
+                <PersonalInjury/>
+                <Content>
+                  Disclaimer
+                </Content>
               </ContentWrapper>
               <Footer/>
           </PageWrapper>

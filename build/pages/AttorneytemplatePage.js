@@ -11,8 +11,6 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _components = require("../components");
 
-var _attorneytemplate = require("../styled-components/pages/attorneytemplate");
-
 var _global = require("../styled-components/global");
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
@@ -53,7 +51,7 @@ var Attorneytemplate = /*#__PURE__*/function (_Component) {
   _createClass(Attorneytemplate, [{
     key: "render",
     value: function render() {
-      return /*#__PURE__*/_react["default"].createElement(_global.PageWrapper, null, /*#__PURE__*/_react["default"].createElement(_components.Header, null), /*#__PURE__*/_react["default"].createElement(_global.ContentWrapper, null, /*#__PURE__*/_react["default"].createElement(_attorneytemplate.AttorneytemplateContent, null, "attorneytemplate page")), /*#__PURE__*/_react["default"].createElement(_components.Footer, null));
+      return /*#__PURE__*/_react["default"].createElement(_global.PageWrapper, null, /*#__PURE__*/_react["default"].createElement(_components.Header, null), /*#__PURE__*/_react["default"].createElement(_global.ContentWrapper, null, /*#__PURE__*/_react["default"].createElement(_components.PersonalInjury, null), /*#__PURE__*/_react["default"].createElement(_global.Content, null, "Attorneytemplate")), /*#__PURE__*/_react["default"].createElement(_components.Footer, null));
     }
   }]);
 

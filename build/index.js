@@ -41,8 +41,10 @@ app.use(_bodyParser["default"].json());
 app.use(_bodyParser["default"].urlencoded());
 
 _nodeCron["default"].schedule('* * * 1 *', function () {
-  (0, _nodeFetch["default"])('https://milkmancoffee.herokuapp.com/').then(function (res) {
-    return console.log("requested at " + new Date());
+  (0, _nodeFetch["default"])('https://nelsonrozier.herokuapp.com/').then(function (res) {
+    console.log("requested at " + new Date());
+  })["catch"](function () {
+    console.log("request to https://nelsonrozier.herokuapp.com/ failed at " + new Date());
   });
 });
 
@@ -71,72 +73,59 @@ _fs["default"].readFile('./dist/js/home.bundle.min.js', "utf8", function (err, d
 _fs["default"].readFile('./dist/js/about.bundle.min.js', "utf8", function (err, data) {
   if (err) console.log("ERR", err);
   aboutBundle = data || "";
-});
+}); // fs.readFile('./dist/js/personalinjury.bundle.min.js', "utf8", (err, data) => {
+//   if (err) console.log("ERR" ,err);
+//   personalinjuryBundle = data || "";
+// })
+// fs.readFile('./dist/js/personalinjurytemplate.bundle.min.js', "utf8", (err, data) => {
+//   if (err) console.log("ERR" ,err);
+//   personalinjurytemplateBundle = data || "";
+// })
+// fs.readFile('./dist/js/caseresults.bundle.min.js', "utf8", (err, data) => {
+//   if (err) console.log("ERR" ,err);
+//   caseresultsBundle = data || "";
+// })
+// fs.readFile('./dist/js/faq.bundle.min.js', "utf8", (err, data) => {
+//   if (err) console.log("ERR" ,err);
+//   faqBundle = data || "";
+// })
+// fs.readFile('./dist/js/blog.bundle.min.js', "utf8", (err, data) => {
+//   if (err) console.log("ERR" ,err);
+//   blogBundle = data || "";
+// })
+// fs.readFile('./dist/js/blogcattemplate.bundle.min.js', "utf8", (err, data) => {
+//   if (err) console.log("ERR" ,err);
+//   blogcattemplateBundle = data || "";
+// })
+// fs.readFile('./dist/js/blogtemplate.bundle.min.js', "utf8", (err, data) => {
+//   if (err) console.log("ERR" ,err);
+//   blogtemplateBundle = data || "";
+// })
+// fs.readFile('./dist/js/contact.bundle.min.js', "utf8", (err, data) => {
+//   if (err) console.log("ERR" ,err);
+//   contactBundle = data || "";
+// })
+// fs.readFile('./dist/js/disclaimer.bundle.min.js', "utf8", (err, data) => {
+//   if (err) console.log("ERR" ,err);
+//   disclaimerBundle = data || "";
+// })
+// fs.readFile('./dist/js/sitemap.bundle.min.js', "utf8", (err, data) => {
+//   if (err) console.log("ERR" ,err);
+//   sitemapBundle = data || "";
+// })
+// fs.readFile('./dist/js/privacypolicy.bundle.min.js', "utf8", (err, data) => {
+//   if (err) console.log("ERR" ,err);
+//   privacypolicyBundle = data || "";
+// })
+// fs.readFile('./dist/js/attorneytemplate.bundle.min.js', "utf8", (err, data) => {
+//   if (err) console.log("ERR" ,err);
+//   attorneytemplateBundle = data || "";
+// })
+// fs.readFile('./dist/js/search.bundle.min.js', "utf8", (err, data) => {
+//   if (err) console.log("ERR" ,err);
+//   searchBundle = data || "";
+// })
 
-_fs["default"].readFile('./dist/js/personalinjury.bundle.min.js', "utf8", function (err, data) {
-  if (err) console.log("ERR", err);
-  personalinjuryBundle = data || "";
-});
-
-_fs["default"].readFile('./dist/js/personalinjurytemplate.bundle.min.js', "utf8", function (err, data) {
-  if (err) console.log("ERR", err);
-  personalinjurytemplateBundle = data || "";
-});
-
-_fs["default"].readFile('./dist/js/caseresults.bundle.min.js', "utf8", function (err, data) {
-  if (err) console.log("ERR", err);
-  caseresultsBundle = data || "";
-});
-
-_fs["default"].readFile('./dist/js/faq.bundle.min.js', "utf8", function (err, data) {
-  if (err) console.log("ERR", err);
-  faqBundle = data || "";
-});
-
-_fs["default"].readFile('./dist/js/blog.bundle.min.js', "utf8", function (err, data) {
-  if (err) console.log("ERR", err);
-  blogBundle = data || "";
-});
-
-_fs["default"].readFile('./dist/js/blogcattemplate.bundle.min.js', "utf8", function (err, data) {
-  if (err) console.log("ERR", err);
-  blogcattemplateBundle = data || "";
-});
-
-_fs["default"].readFile('./dist/js/blogtemplate.bundle.min.js', "utf8", function (err, data) {
-  if (err) console.log("ERR", err);
-  blogtemplateBundle = data || "";
-});
-
-_fs["default"].readFile('./dist/js/contact.bundle.min.js', "utf8", function (err, data) {
-  if (err) console.log("ERR", err);
-  contactBundle = data || "";
-});
-
-_fs["default"].readFile('./dist/js/disclaimer.bundle.min.js', "utf8", function (err, data) {
-  if (err) console.log("ERR", err);
-  disclaimerBundle = data || "";
-});
-
-_fs["default"].readFile('./dist/js/sitemap.bundle.min.js', "utf8", function (err, data) {
-  if (err) console.log("ERR", err);
-  sitemapBundle = data || "";
-});
-
-_fs["default"].readFile('./dist/js/privacypolicy.bundle.min.js', "utf8", function (err, data) {
-  if (err) console.log("ERR", err);
-  privacypolicyBundle = data || "";
-});
-
-_fs["default"].readFile('./dist/js/attorneytemplate.bundle.min.js', "utf8", function (err, data) {
-  if (err) console.log("ERR", err);
-  attorneytemplateBundle = data || "";
-});
-
-_fs["default"].readFile('./dist/js/search.bundle.min.js', "utf8", function (err, data) {
-  if (err) console.log("ERR", err);
-  searchBundle = data || "";
-});
 
 app.get('/', function (req, res) {
   var data = "";
@@ -221,33 +210,36 @@ app.get('/images/:id', function (req, res) {
 app.post('/emailer', function (req, res) {
   res.send({
     message: "success"
-  }); // let { email, name, description, phone} = req.body;
-  // var transporter = nodemailer.createTransport({
-  //   host: 'smtp.gmail.com',
-  //   port: 587,
-  //   secure: false,
-  //   requireTLS: true,
-  //   auth: {
-  //     user: cryptr.decrypt(config.nodemailerEmail),
-  //     pass: cryptr.decrypt(config.nodemailerPW)
-  //   }
-  // });
-  //
-  // transporter.sendMail({
-  //   from: email,
-  //   to: cryptr.decrypt(config.nodemailerEmail),
-  //   subject: 'Nelson Rozier: Online Inquiry',
-  //   html: `
-  //     <h3>Hi! The following person has submitted a message.<h3/>
-  //     <h4>Name: ${name}</h4>
-  //     <h4>Email: ${email}</h4>
-  //     <h4>Phone: ${phone}</h4>
-  //     <h4>Message: ${description}</h4>
-  //   `
-  // }, (error, info) => {
-  //   if (error) res.send({error: error});
-  //   else res.send({response: info});
-  // });
+  });
+  var _req$body = req.body,
+      email = _req$body.email,
+      name = _req$body.name,
+      description = _req$body.description,
+      phone = _req$body.phone;
+
+  var transporter = _nodemailer["default"].createTransport({
+    host: 'smtp.gmail.com',
+    port: 587,
+    secure: false,
+    requireTLS: true,
+    auth: {
+      user: cryptr.decrypt(_config["default"].nodemailerEmail),
+      pass: cryptr.decrypt(_config["default"].nodemailerPW)
+    }
+  });
+
+  transporter.sendMail({
+    from: email,
+    to: cryptr.decrypt(_config["default"].nodemailerEmail),
+    subject: 'Nelson Rozier: Online Inquiry',
+    html: "\n      <h3>Hi! The following person has submitted a message.<h3/>\n      <h4>Name: ".concat(name, "</h4>\n      <h4>Email: ").concat(email, "</h4>\n      <h4>Phone: ").concat(phone, "</h4>\n      <h4>Message: ").concat(description, "</h4>\n    ")
+  }, function (error, info) {
+    if (error) res.send({
+      error: error
+    });else res.send({
+      response: info
+    });
+  });
 });
 app.get('/health', function (req, res) {
   return res.send('OK');
