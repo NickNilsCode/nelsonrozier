@@ -13,7 +13,7 @@ module.exports = [
   },
   {
     type: "p",
-    content: `If you need an attorney and would like to schedule a free consultation, call us today at <a href="tel:+1-559-713-0159">559-713-0159 or <a href="/contact">contact</a> our office online.`
+    content: `If you need an attorney and would like to schedule a free consultation, call us today at <a href="tel:+1-559-713-0159">559-713-0159</a> or <a href="/contact">contact</a> our office online.`
   },
   {
     type: "p",

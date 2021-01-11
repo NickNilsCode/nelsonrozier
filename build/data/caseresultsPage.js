@@ -11,7 +11,7 @@ module.exports = [{
   content: "We are a personal injury firm with experience providing effective, compassionate representation. On this page, you can find brief descriptions of a few of the successful results our firm has achieved."
 }, {
   type: "p",
-  content: "If you need an attorney and would like to schedule a free consultation, call us today at <a href=\"tel:+1-559-713-0159\">559-713-0159 or <a href=\"/contact\">contact</a> our office online."
+  content: "If you need an attorney and would like to schedule a free consultation, call us today at <a href=\"tel:+1-559-713-0159\">559-713-0159</a> or <a href=\"/contact\">contact</a> our office online."
 }, {
   type: "p",
   content: "<strong>Apple Valley Nursing Home Death:</strong> When this nursing home resident was sent unescorted to a medical appointment she was dependent on oxygen tanks and other assistance. While waiting for a ride home she fell from her wheelchair and suffered what became fatal injuries. The family received a large settlement approaching $1 million."
