@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import { Header, Footer, PersonalInjury, ContentBottom } from '../components';
 import { HomeContent } from '../styled-components/pages/home';
 import { PageWrapper, ContentWrapper, Content } from '../styled-components/global';
-import homeContent from '../data/home';
+import homeContent from '../data/homePage';
+import mapPage from '../helpers/mapPage';
 
 class Home extends Component {
     render(){
@@ -14,12 +15,7 @@ class Home extends Component {
                 <HomeContent>
                   <ContentBottom className="desktopBottom homePageBottom" home={true}/>
                   <Content>
-                    {
-                      homeContent.map((a,i) => {
-                        let A = a.type;
-                        return <A key={i} dangerouslySetInnerHTML={{__html: a.content}}/>
-                      })
-                    }
+                    { mapPage(homeContent) }
                     </Content>
                 </HomeContent>
                 <ContentBottom className="mobileBottom" home={true}/>

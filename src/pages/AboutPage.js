@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { Header, Footer, PersonalInjury, ContentBottom } from '../components';
 import { PageWrapper, ContentWrapper, Content } from '../styled-components/global';
-import aboutContent from '../data/about';
+import aboutContent from '../data/aboutPage';
+import mapPage from '../helpers/mapPage';
 
 class About extends Component {
     render(){
@@ -11,12 +12,7 @@ class About extends Component {
               <ContentWrapper>
                 <PersonalInjury/>
                 <Content>
-                  {
-                    aboutContent.map((a,i) => {
-                      let A = a.type;
-                      return <A key={i} dangerouslySetInnerHTML={{__html: a.content}}/>
-                    })
-                  }
+                  { mapPage(aboutContent) }
                 </Content>
                 <ContentBottom className="mobileBottom"/>
               </ContentWrapper>

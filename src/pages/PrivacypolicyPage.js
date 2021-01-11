@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
-import { Header, Footer, PersonalInjury } from '../components';
+import { Header, Footer, PersonalInjury, ContentBottom } from '../components';
 import { PrivacypolicyContent } from '../styled-components/pages/privacypolicy';
 import { PageWrapper, ContentWrapper, Content } from '../styled-components/global';
+import privacyContent from '../data/privacyPage';
+import mapPage from '../helpers/mapPage';
 
 class Privacypolicy extends Component {
     render(){
@@ -11,8 +13,9 @@ class Privacypolicy extends Component {
               <ContentWrapper>
                 <PersonalInjury/>
                 <Content>
-                  Privacypolicy
+                  { mapPage(privacyPage) }
                 </Content>
+                <ContentBottom className="mobileBottom"/>
               </ContentWrapper>
               <Footer/>
           </PageWrapper>

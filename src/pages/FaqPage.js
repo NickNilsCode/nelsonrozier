@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
-import { Header, Footer, PersonalInjury } from '../components';
+import { Header, Footer, PersonalInjury, ContentBottom } from '../components';
 import { FaqContent } from '../styled-components/pages/faq';
 import { PageWrapper, ContentWrapper, Content } from '../styled-components/global';
+import faqContent from '../data/faqPage';
+import mapPage from '../helpers/mapPage';
 
 class Faq extends Component {
     render(){
@@ -11,8 +13,9 @@ class Faq extends Component {
               <ContentWrapper>
                 <PersonalInjury/>
                 <Content>
-                  faq
+                  { mapPage(faqContent) }
                 </Content>
+                <ContentBottom className="mobileBottom"/>
               </ContentWrapper>
               <Footer/>
           </PageWrapper>

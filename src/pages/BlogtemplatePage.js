@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
-import { Header, Footer, PersonalInjury } from '../components';
+import { Header, Footer, PersonalInjury, ContentBottom } from '../components';
 import { BlogtemplateContent } from '../styled-components/pages/blogtemplate';
 import { PageWrapper, ContentWrapper, Content } from '../styled-components/global';
+import aboutContent from '../data/aboutPage';
+import mapPage from '../helpers/mapPage';
 
 class Blogtemplate extends Component {
     render(){
@@ -13,6 +15,7 @@ class Blogtemplate extends Component {
                 <Content>
                   Blogtemplate
                 </Content>
+                <ContentBottom className="mobileBottom"/>
               </ContentWrapper>
               <Footer/>
           </PageWrapper>

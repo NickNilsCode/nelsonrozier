@@ -61,13 +61,7 @@ var BottomSectionComponent = /*#__PURE__*/function (_Component) {
       }, "Site Map"), " | ", /*#__PURE__*/_react["default"].createElement("a", {
         href: "/privacy",
         target: "_blank"
-      }, "Privacy Policy"), " | ", /*#__PURE__*/_react["default"].createElement("a", {
-        href: "https://www.lawyermarketing.com/",
-        target: "_blank"
-      }, "Business Development Solutions"), " by ", /*#__PURE__*/_react["default"].createElement("a", {
-        href: "https://www.findlaw.com/",
-        target: "_blank"
-      }, "FindLaw"), ", part of Thomson Reuters"));
+      }, "Privacy Policy")));
     }
   }]);
 

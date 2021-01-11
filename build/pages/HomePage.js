@@ -15,7 +15,9 @@ var _home = require("../styled-components/pages/home");
 
 var _global = require("../styled-components/global");
 
-var _home2 = _interopRequireDefault(require("../data/home"));
+var _homePage = _interopRequireDefault(require("../data/homePage"));
+
+var _mapPage = _interopRequireDefault(require("../helpers/mapPage"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -64,15 +66,7 @@ var Home = /*#__PURE__*/function (_Component) {
       }), /*#__PURE__*/_react["default"].createElement(_home.HomeContent, null, /*#__PURE__*/_react["default"].createElement(_components.ContentBottom, {
         className: "desktopBottom homePageBottom",
         home: true
-      }), /*#__PURE__*/_react["default"].createElement(_global.Content, null, _home2["default"].map(function (a, i) {
-        var A = a.type;
-        return /*#__PURE__*/_react["default"].createElement(A, {
-          key: i,
-          dangerouslySetInnerHTML: {
-            __html: a.content
-          }
-        });
-      }))), /*#__PURE__*/_react["default"].createElement(_components.ContentBottom, {
+      }), /*#__PURE__*/_react["default"].createElement(_global.Content, null, (0, _mapPage["default"])(_homePage["default"]))), /*#__PURE__*/_react["default"].createElement(_components.ContentBottom, {
         className: "mobileBottom",
         home: true
       })), /*#__PURE__*/_react["default"].createElement(_components.Footer, null));

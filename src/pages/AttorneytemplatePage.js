@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-import { Header, Footer, PersonalInjury } from '../components';
+import { Header, Footer, PersonalInjury, ContentBottom } from '../components';
 import { PageWrapper, ContentWrapper, Content } from '../styled-components/global';
+import aboutContent from '../data/aboutPage';
+import mapPage from '../helpers/mapPage';
 
 class Attorneytemplate extends Component {
     render(){
@@ -12,7 +14,7 @@ class Attorneytemplate extends Component {
                 <Content>
                   Attorneytemplate
                 </Content>
-                <ContentBottom/>
+                <ContentBottom className="mobileBottom"/>
               </ContentWrapper>
               <Footer/>
           </PageWrapper>

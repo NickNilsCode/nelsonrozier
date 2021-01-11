@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
-import { Header, Footer, PersonalInjury } from '../components';
+import { Header, Footer, PersonalInjury, ContentBottom } from '../components';
 import { DisclaimerContent } from '../styled-components/pages/disclaimer';
 import { PageWrapper, ContentWrapper, Content } from '../styled-components/global';
+import disclaimerContent from '../data/disclaimerPage';
+import mapPage from '../helpers/mapPage';
 
 class Disclaimer extends Component {
     render(){
@@ -11,8 +13,9 @@ class Disclaimer extends Component {
               <ContentWrapper>
                 <PersonalInjury/>
                 <Content>
-                  Disclaimer
+                  { mapPage(disclaimerContent) }
                 </Content>
+                <ContentBottom className="mobileBottom"/>
               </ContentWrapper>
               <Footer/>
           </PageWrapper>

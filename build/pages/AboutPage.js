@@ -13,7 +13,9 @@ var _components = require("../components");
 
 var _global = require("../styled-components/global");
 
-var _about = _interopRequireDefault(require("../data/about"));
+var _aboutPage = _interopRequireDefault(require("../data/aboutPage"));
+
+var _mapPage = _interopRequireDefault(require("../helpers/mapPage"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -55,15 +57,7 @@ var About = /*#__PURE__*/function (_Component) {
   _createClass(About, [{
     key: "render",
     value: function render() {
-      return /*#__PURE__*/_react["default"].createElement(_global.PageWrapper, null, /*#__PURE__*/_react["default"].createElement(_components.Header, null), /*#__PURE__*/_react["default"].createElement(_global.ContentWrapper, null, /*#__PURE__*/_react["default"].createElement(_components.PersonalInjury, null), /*#__PURE__*/_react["default"].createElement(_global.Content, null, _about["default"].map(function (a, i) {
-        var A = a.type;
-        return /*#__PURE__*/_react["default"].createElement(A, {
-          key: i,
-          dangerouslySetInnerHTML: {
-            __html: a.content
-          }
-        });
-      })), /*#__PURE__*/_react["default"].createElement(_components.ContentBottom, {
+      return /*#__PURE__*/_react["default"].createElement(_global.PageWrapper, null, /*#__PURE__*/_react["default"].createElement(_components.Header, null), /*#__PURE__*/_react["default"].createElement(_global.ContentWrapper, null, /*#__PURE__*/_react["default"].createElement(_components.PersonalInjury, null), /*#__PURE__*/_react["default"].createElement(_global.Content, null, (0, _mapPage["default"])(_aboutPage["default"])), /*#__PURE__*/_react["default"].createElement(_components.ContentBottom, {
         className: "mobileBottom"
       })), /*#__PURE__*/_react["default"].createElement(_components.Footer, null));
     }
