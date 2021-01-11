@@ -70,7 +70,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  margin: auto;\n  @media(min-width: 900px){\n    margin: 0 0 0 85px;\n    width: 276px;\n    &.homePI {\n      width: 100%;\n      display: flex;\n      margin: 0;\n      h2 {\n        text-align: center;\n      }\n    }\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  margin: auto;\n  @media(min-width: 900px){\n    margin: 0 0 0 85px;\n    width: 276px;\n    &.homePI {\n      width: 100%;\n      display: flex;\n      margin: 0 0 64px 0;\n      h2 {\n        text-align: center;\n      }\n    }\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;

@@ -12,6 +12,7 @@ class Attorneytemplate extends Component {
                 <Content>
                   Attorneytemplate
                 </Content>
+                <ContentBottom/>
               </ContentWrapper>
               <Footer/>
           </PageWrapper>

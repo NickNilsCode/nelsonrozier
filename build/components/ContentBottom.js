@@ -9,11 +9,13 @@ exports["default"] = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _ = require("./");
-
-var _header = require("../styled-components/components/header");
+var _contentBottom = require("../styled-components/components/contentBottom");
 
 var _global = require("../styled-components/global");
+
+var _blogs = _interopRequireDefault(require("../data/blogs"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
 
@@ -39,63 +41,65 @@ function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Re
 
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+var ContentBottomComponent = /*#__PURE__*/function (_Component) {
+  _inherits(ContentBottomComponent, _Component);
 
-var HeaderComponent = /*#__PURE__*/function (_Component) {
-  _inherits(HeaderComponent, _Component);
+  var _super = _createSuper(ContentBottomComponent);
 
-  var _super = _createSuper(HeaderComponent);
+  function ContentBottomComponent() {
+    _classCallCheck(this, ContentBottomComponent);
 
-  function HeaderComponent() {
-    var _this;
-
-    _classCallCheck(this, HeaderComponent);
-
-    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
-    }
-
-    _this = _super.call.apply(_super, [this].concat(args));
-
-    _defineProperty(_assertThisInitialized(_this), "scroll", function (e) {
-      e.preventDefault();
-      document.getElementById("consultation").scrollIntoView({
-        block: 'start',
-        behavior: 'smooth',
-        passive: true
-      });
-    });
-
-    return _this;
+    return _super.apply(this, arguments);
   }
 
-  _createClass(HeaderComponent, [{
+  _createClass(ContentBottomComponent, [{
     key: "render",
     value: function render() {
-      return /*#__PURE__*/_react["default"].createElement(_header.Header, {
-        id: "header"
-      }, /*#__PURE__*/_react["default"].createElement(_header.HeaderWrap, null, /*#__PURE__*/_react["default"].createElement(_global.FlexDiv, {
-        alignItems: "flex-end"
-      }, /*#__PURE__*/_react["default"].createElement("a", {
-        href: "/"
-      }, /*#__PURE__*/_react["default"].createElement("img", {
-        src: "/images/brand-logo.png"
-      })), /*#__PURE__*/_react["default"].createElement(_header.HeaderDiv, null, /*#__PURE__*/_react["default"].createElement(_header.Header1, null, "FREE Consultation."), /*#__PURE__*/_react["default"].createElement(_header.Header2, null, "No fee unless we win"), /*#__PURE__*/_react["default"].createElement("a", {
-        href: "tel:+1-559-713-0159"
-      }, /*#__PURE__*/_react["default"].createElement(_header.Header3, null, "559-713-0159")))), /*#__PURE__*/_react["default"].createElement(_.Nav, null), /*#__PURE__*/_react["default"].createElement(_header.Header4, null, "Personalized Legal Representation by Compassionate,"), /*#__PURE__*/_react["default"].createElement(_header.Header4, null, "Dedicated and Experienced Attorneys"), /*#__PURE__*/_react["default"].createElement("a", {
-        href: "",
-        onClick: this.scroll,
-        className: "consultationAnchor"
-      }, /*#__PURE__*/_react["default"].createElement(_global.GoldButton, {
-        className: "consultationButton"
-      }, "Get a Free Consultation ", /*#__PURE__*/_react["default"].createElement("i", {
+      return /*#__PURE__*/_react["default"].createElement(_contentBottom.ContentBottom, {
+        className: this.props.className
+      }, this.props.home && /*#__PURE__*/_react["default"].createElement(_contentBottom.MeetAttorneys, null, /*#__PURE__*/_react["default"].createElement("h3", null, "MEET OUR ATTORNEYS"), /*#__PURE__*/_react["default"].createElement("img", {
+        src: "/images/atto-home-new.jpg"
+      }), /*#__PURE__*/_react["default"].createElement("a", {
+        className: "learnMore",
+        href: "/about"
+      }, "LEARN MORE ", /*#__PURE__*/_react["default"].createElement("i", {
         className: "fas fa-chevron-circle-right"
-      })))));
+      })), /*#__PURE__*/_react["default"].createElement("h3", {
+        className: "freeConsultation"
+      }, "FREE CONSULTATION"), /*#__PURE__*/_react["default"].createElement("a", {
+        href: "/contact",
+        className: "contactToday"
+      }, /*#__PURE__*/_react["default"].createElement(_global.RedButton, null, "Contact Us Today ", /*#__PURE__*/_react["default"].createElement("i", {
+        className: "fas fa-chevron-circle-right"
+      })))), /*#__PURE__*/_react["default"].createElement(_contentBottom.BottomBox, null, /*#__PURE__*/_react["default"].createElement(_contentBottom.BoxTitle, null, "VISIT OUR BLOG"), /*#__PURE__*/_react["default"].createElement(_contentBottom.BoxContent, null, _blogs["default"].map(function (a, i) {
+        return /*#__PURE__*/_react["default"].createElement("a", {
+          key: i,
+          href: a.link
+        }, a.title);
+      }), /*#__PURE__*/_react["default"].createElement("a", {
+        href: "/blog",
+        className: "readMore"
+      }, /*#__PURE__*/_react["default"].createElement("div", null, "Read More ", /*#__PURE__*/_react["default"].createElement("i", {
+        className: "fas fa-chevron-circle-right"
+      }))))), /*#__PURE__*/_react["default"].createElement(_contentBottom.BottomBox, null, /*#__PURE__*/_react["default"].createElement(_contentBottom.BoxTitle, null, "FAQ"), /*#__PURE__*/_react["default"].createElement(_contentBottom.BoxContent, null, /*#__PURE__*/_react["default"].createElement("p", null, "Find answers to some of the most often-asked questions regarding personal injury."), /*#__PURE__*/_react["default"].createElement("a", {
+        href: "/faq",
+        className: "readMore"
+      }, /*#__PURE__*/_react["default"].createElement("div", null, "Read More ", /*#__PURE__*/_react["default"].createElement("i", {
+        className: "fas fa-chevron-circle-right"
+      }))))), /*#__PURE__*/_react["default"].createElement("a", {
+        target: "_blank",
+        href: "https://reviewplatform.findlaw.com/nelsonrozier"
+      }, /*#__PURE__*/_react["default"].createElement(_global.RedButton, null, "REVIEW US")), /*#__PURE__*/_react["default"].createElement("a", {
+        target: "_blank",
+        href: "https://www.facebook.com/nelsonrozier/"
+      }, /*#__PURE__*/_react["default"].createElement(_global.FBButton, null, /*#__PURE__*/_react["default"].createElement("i", {
+        className: "fab fa-facebook-f"
+      }))));
     }
   }]);
 
-  return HeaderComponent;
+  return ContentBottomComponent;
 }(_react.Component);
 
-var _default = HeaderComponent;
+var _default = ContentBottomComponent;
 exports["default"] = _default;

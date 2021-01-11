@@ -9,6 +9,12 @@ Object.defineProperty(exports, "BottomSection", {
     return _BottomSection["default"];
   }
 });
+Object.defineProperty(exports, "ContentBottom", {
+  enumerable: true,
+  get: function get() {
+    return _ContentBottom["default"];
+  }
+});
 Object.defineProperty(exports, "Footer", {
   enumerable: true,
   get: function get() {
@@ -53,6 +59,8 @@ Object.defineProperty(exports, "PersonalInjury", {
 });
 
 var _BottomSection = _interopRequireDefault(require("./BottomSection"));
+
+var _ContentBottom = _interopRequireDefault(require("./ContentBottom"));
 
 var _Footer = _interopRequireDefault(require("./Footer"));
 

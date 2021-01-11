@@ -276,11 +276,11 @@ function returnHTML(data, bundle, Page, title){
                   a { text-decoration: none; color: #000; }
                 </style>
                 ${styles}
+                <script src="https://kit.fontawesome.com/7fa747235e.js" crossorigin="anonymous"></script>
               </head>
               <body>
                 <script>window.os = window.os || {};</script>
                 <script>window.__DATA__=${dataString}</script>
-                <script src="https://kit.fontawesome.com/7fa747235e.js" crossorigin="anonymous"></script>
                 <div id="app" role="main">${body}</div>
                 <script>${bundle}</script>
               </body>

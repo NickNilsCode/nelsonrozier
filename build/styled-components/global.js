@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.FlexDiv = exports.HalfSize = exports.TextArea = exports.Input = exports.BigGoldButton = exports.GoldButton = exports.Content = exports.ContentWrapper = exports.PageWrapper = void 0;
+exports.FlexDiv = exports.HalfSize = exports.TextArea = exports.Input = exports.FBButton = exports.RedButton = exports.BigGoldButton = exports.GoldButton = exports.Content = exports.ContentWrapper = exports.PageWrapper = void 0;
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
@@ -11,8 +11,28 @@ var _colors = require("./colors");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-function _templateObject9() {
+function _templateObject11() {
   var data = _taggedTemplateLiteral(["\n  display: block;\n  align-items: ", ";\n  justify-content: space-between;\n  @media (min-width: 900px){\n    display: flex;\n  }\n"]);
+
+  _templateObject11 = function _templateObject11() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject10() {
+  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  @media (min-width: 900px){\n    width: 444px;\n  }\n"]);
+
+  _templateObject10 = function _templateObject10() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject9() {
+  var data = _taggedTemplateLiteral(["\n  background: #fff;\n  padding: 12px;\n  width: 100%;\n  height: 174px;\n  margin: 0 0 12px 0;\n  font-size: 16px;\n  border: 1px solid #8d8d8d;\n  border-radius: 1px;\n"]);
 
   _templateObject9 = function _templateObject9() {
     return data;
@@ -22,7 +42,7 @@ function _templateObject9() {
 }
 
 function _templateObject8() {
-  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  @media (min-width: 900px){\n    width: 444px;\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  background: #fff;\n  padding: 12px;\n  width: 100%;\n  margin: 0 0 12px 0;\n  font-size: 16px;\n  border: 1px solid #8d8d8d;\n  border-radius: 1px;\n  line-height: 1.5;\n"]);
 
   _templateObject8 = function _templateObject8() {
     return data;
@@ -32,7 +52,7 @@ function _templateObject8() {
 }
 
 function _templateObject7() {
-  var data = _taggedTemplateLiteral(["\n  background: #fff;\n  padding: 12px;\n  width: 100%;\n  height: 174px;\n  margin: 0 0 12px 0;\n  font-size: 16px;\n  border: 1px solid #8d8d8d;\n  border-radius: 1px;\n"]);
+  var data = _taggedTemplateLiteral(["\n  background-color: #3b5998;\n  border-radius: 3px;\n  height: 30px;\n  width: 30px;\n  border: none;\n  transition: background-color 300ms ease 0ms;\n  display: block;\n  i {\n    color: #fff;\n    font-size: 16px;\n  }\n  &:hover {\n    cursor: pointer;\n    background-color: #4674b5;\n  }\n"]);
 
   _templateObject7 = function _templateObject7() {
     return data;
@@ -42,7 +62,7 @@ function _templateObject7() {
 }
 
 function _templateObject6() {
-  var data = _taggedTemplateLiteral(["\n  background: #fff;\n  padding: 12px;\n  width: 100%;\n  margin: 0 0 12px 0;\n  font-size: 16px;\n  border: 1px solid #8d8d8d;\n  border-radius: 1px;\n  line-height: 1.5;\n"]);
+  var data = _taggedTemplateLiteral(["\n  background-color: ", ";\n  padding: 5px 15px;\n  margin: 24px 0 8px 0;\n  color: #fff;\n  font-size: 15px;\n  font-weight: 600px;\n  border: none;\n  line-height: 26px;\n  width: max-content;\n  transition: background-color 300ms ease 0ms;\n  display: block;\n  &:hover {\n    cursor: pointer;\n    background-color: #000;\n  }\n"]);
 
   _templateObject6 = function _templateObject6() {
     return data;
@@ -72,7 +92,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  text-align: center;\n"]);
+  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  text-align: center;\n  p, ul, li {\n    text-align: left;\n    font-size: 17px;\n    font-weight: 400;\n    line-height: 27px;\n  }\n  h1 {\n    text-align: left;\n    font-size: 25px;\n    font-weight: 700;\n    margin-bottom: 30px;\n  }\n  h2 {\n    text-align: left;\n    font-size: 24px;\n    font-weight: 700;\n    margin-bottom: 10px;\n  }\n  a {\n    color: ", ";\n    transition: color 300ms ease 0ms;\n    text-decoration: underline;\n  }\n  a:hover {\n    color: ", ";\n  }\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -111,7 +131,7 @@ var ContentWrapper = _styledComponents["default"].div(_templateObject2());
 
 exports.ContentWrapper = ContentWrapper;
 
-var Content = _styledComponents["default"].div(_templateObject3());
+var Content = _styledComponents["default"].div(_templateObject3(), _colors.red, _colors.gold);
 
 exports.Content = Content;
 
@@ -123,19 +143,27 @@ var BigGoldButton = _styledComponents["default"].button(_templateObject5(), _col
 
 exports.BigGoldButton = BigGoldButton;
 
-var Input = _styledComponents["default"].input(_templateObject6());
+var RedButton = _styledComponents["default"].button(_templateObject6(), _colors.red);
+
+exports.RedButton = RedButton;
+
+var FBButton = _styledComponents["default"].button(_templateObject7());
+
+exports.FBButton = FBButton;
+
+var Input = _styledComponents["default"].input(_templateObject8());
 
 exports.Input = Input;
 
-var TextArea = _styledComponents["default"].textarea(_templateObject7());
+var TextArea = _styledComponents["default"].textarea(_templateObject9());
 
 exports.TextArea = TextArea;
 
-var HalfSize = _styledComponents["default"].div(_templateObject8());
+var HalfSize = _styledComponents["default"].div(_templateObject10());
 
 exports.HalfSize = HalfSize;
 
-var FlexDiv = _styledComponents["default"].div(_templateObject9(), function (props) {
+var FlexDiv = _styledComponents["default"].div(_templateObject11(), function (props) {
   return props.alignItems ? props.alignItems : "center";
 });
 

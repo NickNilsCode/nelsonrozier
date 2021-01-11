@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { red } from '../colors';
 export const LocationCard = styled.div`
   width: 100%;
   height: 241px;
@@ -51,7 +52,7 @@ export const LocationCard = styled.div`
   }
   @media (min-width: 924px){
     right: initial;
-    border-left: #833634 solid 65px;
+    border-left: ${red} solid 65px;
     max-width: 364px;
     .directionAnchor {
       position: absolute;

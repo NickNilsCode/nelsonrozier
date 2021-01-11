@@ -3,24 +3,14 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.EmailInput = exports.HomeContent = void 0;
+exports.HomeContent = void 0;
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n    width: 100%;\n    padding: 12px;\n    font-size: 16px;\n  "]);
-
-  _templateObject2 = function _templateObject2() {
-    return data;
-  };
-
-  return data;
-}
-
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n    width: 100%;\n    text-align: center;\n  "]);
+  var data = _taggedTemplateLiteral(["\n    width: 100%;\n    text-align: center;\n    @media(min-width: 900px){\n      display: flex;\n    }\n  "]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -34,7 +24,3 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 var HomeContent = _styledComponents["default"].div(_templateObject());
 
 exports.HomeContent = HomeContent;
-
-var EmailInput = _styledComponents["default"].input(_templateObject2());
-
-exports.EmailInput = EmailInput;

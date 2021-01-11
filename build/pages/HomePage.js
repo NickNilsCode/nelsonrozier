@@ -15,6 +15,10 @@ var _home = require("../styled-components/pages/home");
 
 var _global = require("../styled-components/global");
 
+var _home2 = _interopRequireDefault(require("../data/home"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
@@ -57,7 +61,21 @@ var Home = /*#__PURE__*/function (_Component) {
         className: "homePage"
       }, /*#__PURE__*/_react["default"].createElement(_components.PersonalInjury, {
         home: true
-      }), /*#__PURE__*/_react["default"].createElement(_global.Content, null)), /*#__PURE__*/_react["default"].createElement(_components.Footer, null));
+      }), /*#__PURE__*/_react["default"].createElement(_home.HomeContent, null, /*#__PURE__*/_react["default"].createElement(_components.ContentBottom, {
+        className: "desktopBottom homePageBottom",
+        home: true
+      }), /*#__PURE__*/_react["default"].createElement(_global.Content, null, _home2["default"].map(function (a, i) {
+        var A = a.type;
+        return /*#__PURE__*/_react["default"].createElement(A, {
+          key: i,
+          dangerouslySetInnerHTML: {
+            __html: a.content
+          }
+        });
+      }))), /*#__PURE__*/_react["default"].createElement(_components.ContentBottom, {
+        className: "mobileBottom",
+        home: true
+      })), /*#__PURE__*/_react["default"].createElement(_components.Footer, null));
     }
   }]);
 

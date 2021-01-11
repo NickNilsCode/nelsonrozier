@@ -9,6 +9,8 @@ exports["default"] = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
 
+var _ = require("./");
+
 var _personalInjury = require("../styled-components/components/personalInjury");
 
 var _global = require("../styled-components/global");
@@ -104,7 +106,9 @@ var PersonalInjuryComponent = /*#__PURE__*/function (_Component) {
         className: "mobilePI",
         size: _personalinjury["default"].length,
         onClick: this.menuManager
-      }, "X Close"))));
+      }, "X Close"))), !home && /*#__PURE__*/_react["default"].createElement(_.ContentBottom, {
+        className: "desktopBottom"
+      }));
     }
   }]);
 

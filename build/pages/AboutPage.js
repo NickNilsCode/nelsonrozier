@@ -57,17 +57,15 @@ var About = /*#__PURE__*/function (_Component) {
     value: function render() {
       return /*#__PURE__*/_react["default"].createElement(_global.PageWrapper, null, /*#__PURE__*/_react["default"].createElement(_components.Header, null), /*#__PURE__*/_react["default"].createElement(_global.ContentWrapper, null, /*#__PURE__*/_react["default"].createElement(_components.PersonalInjury, null), /*#__PURE__*/_react["default"].createElement(_global.Content, null, _about["default"].map(function (a, i) {
         var A = a.type;
-
-        if (A != "html") {
-          return /*#__PURE__*/_react["default"].createElement(A, {
-            key: i
-          }, a.content);
-        } else {
-          return /*#__PURE__*/_react["default"].createElement("div", {
-            key: i
-          }, a.content);
-        }
-      }))), /*#__PURE__*/_react["default"].createElement(_components.Footer, null));
+        return /*#__PURE__*/_react["default"].createElement(A, {
+          key: i,
+          dangerouslySetInnerHTML: {
+            __html: a.content
+          }
+        });
+      })), /*#__PURE__*/_react["default"].createElement(_components.ContentBottom, {
+        className: "mobileBottom"
+      })), /*#__PURE__*/_react["default"].createElement(_components.Footer, null));
     }
   }]);
 

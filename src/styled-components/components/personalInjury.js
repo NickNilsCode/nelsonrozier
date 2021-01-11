@@ -9,7 +9,7 @@ export const PersonalInjury = styled.div`
     &.homePI {
       width: 100%;
       display: flex;
-      margin: 0;
+      margin: 0 0 64px 0;
       h2 {
         text-align: center;
       }

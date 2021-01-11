@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react';
+import { ContentBottom } from './'
 import { PersonalInjury, DesktopPI, MobilePI, PIButton, PIBar, PIPopup, FlexWrap } from '../styled-components/components/personalInjury';
 import { GoldButton } from '../styled-components/global';
 import piData from '../data/personalinjury';
@@ -49,6 +50,10 @@ class PersonalInjuryComponent extends Component {
             >X Close</PIButton>
           </PIPopup>
         </MobilePI>
+        {
+          !home && <ContentBottom className="desktopBottom"/>
+        }
+
       </PersonalInjury>
     );
   }

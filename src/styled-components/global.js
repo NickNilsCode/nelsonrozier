@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { gold } from './colors';
+import { gold, red, yellow } from './colors';
 
 export const PageWrapper = styled.div`
   width: 100%;
@@ -31,6 +31,32 @@ export const ContentWrapper = styled.div`
 export const Content = styled.div`
   width: 100%;
   text-align: center;
+  p, ul, li {
+    text-align: left;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 27px;
+  }
+  h1 {
+    text-align: left;
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 30px;
+  }
+  h2 {
+    text-align: left;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  a {
+    color: ${red};
+    transition: color 300ms ease 0ms;
+    text-decoration: underline;
+  }
+  a:hover {
+    color: ${gold};
+  }
 `;
 
 export const GoldButton = styled.button`
@@ -64,7 +90,41 @@ export const BigGoldButton = styled.button`
     color: #fff;
   }
 `;
+export const RedButton = styled.button`
+  background-color: ${red};
+  padding: 5px 15px;
+  margin: 24px 0 8px 0;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600px;
+  border: none;
+  line-height: 26px;
+  width: max-content;
+  transition: background-color 300ms ease 0ms;
+  display: block;
+  &:hover {
+    cursor: pointer;
+    background-color: #000;
+  }
+`;
 
+export const FBButton = styled.button`
+  background-color: #3b5998;
+  border-radius: 3px;
+  height: 30px;
+  width: 30px;
+  border: none;
+  transition: background-color 300ms ease 0ms;
+  display: block;
+  i {
+    color: #fff;
+    font-size: 16px;
+  }
+  &:hover {
+    cursor: pointer;
+    background-color: #4674b5;
+  }
+`;
 export const Input = styled.input`
   background: #fff;
   padding: 12px;

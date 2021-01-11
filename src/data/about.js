@@ -1,6 +1,6 @@
 module.exports = [
   {
-    type: "h2",
+    type: "h1",
     content: "Meet The Attorneys Of Nelson & Rozier"
   },
   {
@@ -12,7 +12,7 @@ module.exports = [
     content: `We are committed to helping people who have suffered serious injuries put their lives back together by securing the compensation they need and deserve. As part of that commitment, you will never receive a bill from us unless we recover compensation for you. While almost all personal injury attorneys will not charge you attorneys’ fees for their time if they are unable to secure compensation for you, many will still bill you for any costs they incur in your case, such as filing fees or expert witness fees. Here at Nelson & Rozier, we are confident in our ability to secure compensation for you, so we will not bill our clients for either our time or our costs unless we secure compensation for you.`
   },
   {
-    type: "html",
+    type: "p",
     content: `Our confidence comes from a track <a href="/case-results">record of success</a> in representing personal injury plaintiffs. We have significant litigation experience, representing both plaintiffs and defendants. That experience gives our clients an advantage in that we understand how the defense attorneys are likely to try to defend against your claims.`
   },
   {
@@ -20,19 +20,17 @@ module.exports = [
     content: "To learn more about our attorneys’ backgrounds, follow the links below."
   },
   {
-    type: "html",
-    content: `<ul>
-      <li><a href="/attorney/ryan-t-nelson">Ryan T. Nelson</a></li>
+    type: "ul",
+    content: `<li><a href="/attorney/ryan-t-nelson">Ryan T. Nelson</a></li>
       <li><a href="/attorney/clayton-j-christenson">Clayton J. Christenson</a></li>
-      <li><a href="/attorney/green-john">John Green</a></li>
-    </ul>`
+      <li><a href="/attorney/green-john">John Green</a></li>`
   },
   {
-    type: "h3",
+    type: "h2",
     content: "Attorneys Helping The Injured In Visalia And Throughout California’s Central Valley"
   },
   {
-    type: "html",
+    type: "p",
     content: `For skilled representation you can trust to always put you first, turn to Nelson & Rozier. To schedule a free initial consultation, call <a href="tel:+1-559-713-0159">559-713-0159</a> or <a href="/contact">contact us online</a>.`
   },
   {

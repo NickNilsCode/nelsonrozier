@@ -4,6 +4,10 @@ import { Header, HeaderWrap, HeaderDiv, Header1, Header2, Header3, Header4 } fro
 import { GoldButton, FlexDiv } from '../styled-components/global';
 
 class HeaderComponent extends Component {
+  scroll = (e) => {
+    e.preventDefault();
+    document.getElementById("consultation").scrollIntoView({block: 'start', behavior: 'smooth', passive: true});
+  }
   render(){
     return (
       <Header id="header">
@@ -19,7 +23,7 @@ class HeaderComponent extends Component {
           <Nav/>
           <Header4>Personalized Legal Representation by Compassionate,</Header4>
           <Header4>Dedicated and Experienced Attorneys</Header4>
-          <a href="/#consultation" className="consultationAnchor">
+          <a href="" onClick={this.scroll} className="consultationAnchor">
             <GoldButton className="consultationButton">Get a Free Consultation <i className="fas fa-chevron-circle-right"/></GoldButton>
           </a>
         </HeaderWrap>
