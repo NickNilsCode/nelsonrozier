@@ -31,7 +31,7 @@ export const ContentWrapper = styled.div`
 export const Content = styled.div`
   width: 100%;
   text-align: center;
-  p, ul, li {
+  p, ul, li, .goldBack {
     text-align: left;
     font-size: 17px;
     font-weight: 400;
@@ -56,6 +56,26 @@ export const Content = styled.div`
   }
   a:hover {
     color: ${gold};
+  }
+  .goldBack {
+    background-color: ${gold};
+    color: #fff;
+    padding: 20px;
+  }
+  .boxedList {
+    display: flex;
+    flex-direction: column;
+    padding: 12px;
+    padding-left: 24px;
+    margin: 12px 0;
+    border: 1px solid #000;
+    @media (min-width: 600px){
+      flex-wrap: wrap;
+      max-height: 300px;
+      li {
+        width: calc(50% - 16px);
+      }
+    }
   }
 `;
 

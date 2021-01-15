@@ -15,7 +15,7 @@ var _personalinjurytemplate = require("../styled-components/pages/personalinjury
 
 var _global = require("../styled-components/global");
 
-var _aboutPage = _interopRequireDefault(require("../data/aboutPage"));
+var _personalinjurylist = _interopRequireDefault(require("../data/personalinjurylist"));
 
 var _mapPage = _interopRequireDefault(require("../helpers/mapPage"));
 
@@ -59,7 +59,15 @@ var Personalinjurytemplate = /*#__PURE__*/function (_Component) {
   _createClass(Personalinjurytemplate, [{
     key: "render",
     value: function render() {
-      return /*#__PURE__*/_react["default"].createElement(_global.PageWrapper, null, /*#__PURE__*/_react["default"].createElement(_components.Header, null), /*#__PURE__*/_react["default"].createElement(_global.ContentWrapper, null, /*#__PURE__*/_react["default"].createElement(_components.PersonalInjury, null), /*#__PURE__*/_react["default"].createElement(_global.Content, null, "Personalinjurytemplate"), /*#__PURE__*/_react["default"].createElement(_components.ContentBottom, {
+      var _this = this;
+
+      var selected = _personalinjurylist["default"].find(function (a, i) {
+        return a.link == "/personal-injury/" + _this.props.data.page;
+      });
+
+      return /*#__PURE__*/_react["default"].createElement(_global.PageWrapper, null, /*#__PURE__*/_react["default"].createElement(_components.Header, null), /*#__PURE__*/_react["default"].createElement(_global.ContentWrapper, null, /*#__PURE__*/_react["default"].createElement(_components.PersonalInjury, {
+        selected: selected.name
+      }), /*#__PURE__*/_react["default"].createElement(_global.Content, null, (0, _mapPage["default"])(selected.content)), /*#__PURE__*/_react["default"].createElement(_components.ContentBottom, {
         className: "mobileBottom"
       })), /*#__PURE__*/_react["default"].createElement(_components.Footer, null));
     }

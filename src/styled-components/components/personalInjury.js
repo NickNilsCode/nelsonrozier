@@ -68,6 +68,10 @@ export const PIButton = styled.div`
   border-right: ${props => props.index != props.size - 1 ? "1px solid #fff" : "none"};
   background: url("${props => props.dimg}") 6px center no-repeat;
   padding: 10px 7px 10px 53px;
+  &.selectedPI.desktopPI {
+    color: #fff;
+    background: url("${props => props.himg}") 6px center no-repeat #7c3230;
+  }
 
   &:hover {
     &.mobilePI {

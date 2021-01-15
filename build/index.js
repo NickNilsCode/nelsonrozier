@@ -156,7 +156,9 @@ app.get('/personal-injury', function (req, res) {
   res.send(returnHTML(data, personalinjuryBundle, _roots.PersonalinjuryRoot, "personalinjury"));
 });
 app.get('/personal-injury/:id', function (req, res) {
-  var data = "";
+  var data = {
+    page: req.params.id
+  };
   res.set('Cache-Control', 'public, max-age=31557600');
   res.send(returnHTML(data, personalinjurytemplateBundle, _roots.PersonalinjurytemplateRoot, "personalinjurytemplate"));
 });

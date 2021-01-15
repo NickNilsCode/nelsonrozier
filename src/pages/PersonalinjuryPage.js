@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Header, Footer, PersonalInjury, ContentBottom } from '../components';
 import { PersonalinjuryContent } from '../styled-components/pages/personalinjury';
 import { PageWrapper, ContentWrapper, Content } from '../styled-components/global';
-import aboutContent from '../data/aboutPage';
+import personalInjuryContent from '../data/personalInjuryPage';
 import mapPage from '../helpers/mapPage';
 
 class Personalinjury extends Component {
@@ -13,7 +13,7 @@ class Personalinjury extends Component {
               <ContentWrapper>
                 <PersonalInjury/>
                 <Content>
-                  Personalinjury
+                  { mapPage(personalInjuryContent) }
                 </Content>
                 <ContentBottom className="mobileBottom"/>
               </ContentWrapper>

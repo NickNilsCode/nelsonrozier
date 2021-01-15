@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react';
 import { ContentBottom } from './'
 import { PersonalInjury, DesktopPI, MobilePI, PIButton, PIBar, PIPopup, FlexWrap } from '../styled-components/components/personalInjury';
 import { GoldButton } from '../styled-components/global';
-import piData from '../data/personalinjury';
+import piData from '../data/personalinjurylist';
 
 class PersonalInjuryComponent extends Component {
   constructor(props){
@@ -15,11 +15,21 @@ class PersonalInjuryComponent extends Component {
 
   fillPI = (mobile) => {
     return piData.map((a,i) => {
+      let className = "";
+      if(mobile){
+        className = "mobilePI"
+      } else {
+        if(this.props.selected == a.name){
+          className = "desktopPI selectedPI"
+        } else {
+          className = "desktopPI"
+        }
+      }
       return (
         <Fragment key={i}>
           <a href={a.link}>
             <PIButton
-              className={mobile ? "mobilePI" : "desktopPI"}
+              className={className}
               index={i} size={piData.length}
               dimg={a.icon} himg={a.hicon}
             >{a.name}</PIButton>
@@ -50,10 +60,7 @@ class PersonalInjuryComponent extends Component {
             >X Close</PIButton>
           </PIPopup>
         </MobilePI>
-        {
-          !home && <ContentBottom className="desktopBottom"/>
-        }
-
+        { !home && <ContentBottom className="desktopBottom"/> }
       </PersonalInjury>
     );
   }

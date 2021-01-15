@@ -1,3 +1,5 @@
+let { phone, contact, phoneorcontact, successfulresults, freeconsultation, motorcycleaccidents, bicycleandpedestrianaccidents, traumaticbraininjuries, accidentsinvolvingcowsorotherlivestock, braininjuries, spineinjuriesandamputations, dangerousintersectionsandobscuredstopsigns, underinsuredanduninsuredmotoristclaims, drunkdrivers, distracteddrivers, rearendcollisions, wrongfuldeath, braininjuriesspineinjuriesandamputations, commercialtrucksandtractortrailers, spinalinjuries, amputations, nelsonrozier, personalinjury, weonlycollect } = require("./repeatables.js");
+
 module.exports = [
   {
     type: "h1",
@@ -31,10 +33,10 @@ module.exports = [
   },
   {
     type: "p",
-    content: `For skilled representation you can trust to always put you first, turn to Nelson & Rozier. To schedule a free initial consultation, call <a href="tel:+1-559-713-0159">559-713-0159</a> or <a href="/contact">contact us online</a>.`
+    content: `For skilled representation you can trust to always put you first, turn to Nelson & Rozier. To schedule a free initial consultation, call ${phoneorcontact}.`
   },
   {
     type: "p",
-    content: "We only collect attorney’s fees and costs if we secure compensation for you."
+    content: weonlycollect
   },
 ]

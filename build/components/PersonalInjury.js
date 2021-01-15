@@ -15,7 +15,7 @@ var _personalInjury = require("../styled-components/components/personalInjury");
 
 var _global = require("../styled-components/global");
 
-var _personalinjury = _interopRequireDefault(require("../data/personalinjury"));
+var _personalinjurylist = _interopRequireDefault(require("../data/personalinjurylist"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -64,15 +64,27 @@ var PersonalInjuryComponent = /*#__PURE__*/function (_Component) {
     });
 
     _defineProperty(_assertThisInitialized(_this), "fillPI", function (mobile) {
-      return _personalinjury["default"].map(function (a, i) {
+      return _personalinjurylist["default"].map(function (a, i) {
+        var className = "";
+
+        if (mobile) {
+          className = "mobilePI";
+        } else {
+          if (_this.props.selected == a.name) {
+            className = "desktopPI selectedPI";
+          } else {
+            className = "desktopPI";
+          }
+        }
+
         return /*#__PURE__*/_react["default"].createElement(_react.Fragment, {
           key: i
         }, /*#__PURE__*/_react["default"].createElement("a", {
           href: a.link
         }, /*#__PURE__*/_react["default"].createElement(_personalInjury.PIButton, {
-          className: mobile ? "mobilePI" : "desktopPI",
+          className: className,
           index: i,
-          size: _personalinjury["default"].length,
+          size: _personalinjurylist["default"].length,
           dimg: a.icon,
           himg: a.hicon
         }, a.name)));
@@ -104,7 +116,7 @@ var PersonalInjuryComponent = /*#__PURE__*/function (_Component) {
         className: menuOpen ? "menuOpen" : ""
       }, menuOpen && this.fillPI(true), /*#__PURE__*/_react["default"].createElement(_personalInjury.PIButton, {
         className: "mobilePI",
-        size: _personalinjury["default"].length,
+        size: _personalinjurylist["default"].length,
         onClick: this.menuManager
       }, "X Close"))), !home && /*#__PURE__*/_react["default"].createElement(_.ContentBottom, {
         className: "desktopBottom"

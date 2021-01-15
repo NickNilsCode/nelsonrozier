@@ -127,7 +127,9 @@ app.get('/personal-injury', (req, res) => {
   res.send(returnHTML(data, personalinjuryBundle, PersonalinjuryRoot, "personalinjury"));
 });
 app.get('/personal-injury/:id', (req, res) => {
-  let data = "";
+  let data = {
+    page: req.params.id
+  }
   res.set('Cache-Control', 'public, max-age=31557600');
   res.send(returnHTML(data, personalinjurytemplateBundle, PersonalinjurytemplateRoot, "personalinjurytemplate"));
 });

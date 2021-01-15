@@ -1,5 +1,31 @@
 "use strict";
 
+var _require = require("./repeatables.js"),
+    phone = _require.phone,
+    contact = _require.contact,
+    phoneorcontact = _require.phoneorcontact,
+    successfulresults = _require.successfulresults,
+    freeconsultation = _require.freeconsultation,
+    motorcycleaccidents = _require.motorcycleaccidents,
+    bicycleandpedestrianaccidents = _require.bicycleandpedestrianaccidents,
+    traumaticbraininjuries = _require.traumaticbraininjuries,
+    accidentsinvolvingcowsorotherlivestock = _require.accidentsinvolvingcowsorotherlivestock,
+    braininjuries = _require.braininjuries,
+    spineinjuriesandamputations = _require.spineinjuriesandamputations,
+    dangerousintersectionsandobscuredstopsigns = _require.dangerousintersectionsandobscuredstopsigns,
+    underinsuredanduninsuredmotoristclaims = _require.underinsuredanduninsuredmotoristclaims,
+    drunkdrivers = _require.drunkdrivers,
+    distracteddrivers = _require.distracteddrivers,
+    rearendcollisions = _require.rearendcollisions,
+    wrongfuldeath = _require.wrongfuldeath,
+    braininjuriesspineinjuriesandamputations = _require.braininjuriesspineinjuriesandamputations,
+    commercialtrucksandtractortrailers = _require.commercialtrucksandtractortrailers,
+    spinalinjuries = _require.spinalinjuries,
+    amputations = _require.amputations,
+    nelsonrozier = _require.nelsonrozier,
+    personalinjury = _require.personalinjury,
+    weonlycollect = _require.weonlycollect;
+
 module.exports = [{
   type: "h1",
   content: "Meet The Attorneys Of Nelson & Rozier"
@@ -23,8 +49,8 @@ module.exports = [{
   content: "Attorneys Helping The Injured In Visalia And Throughout California’s Central Valley"
 }, {
   type: "p",
-  content: "For skilled representation you can trust to always put you first, turn to Nelson & Rozier. To schedule a free initial consultation, call <a href=\"tel:+1-559-713-0159\">559-713-0159</a> or <a href=\"/contact\">contact us online</a>."
+  content: "For skilled representation you can trust to always put you first, turn to Nelson & Rozier. To schedule a free initial consultation, call ".concat(phoneorcontact, ".")
 }, {
   type: "p",
-  content: "We only collect attorney’s fees and costs if we secure compensation for you."
+  content: weonlycollect
 }];

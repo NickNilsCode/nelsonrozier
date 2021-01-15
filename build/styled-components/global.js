@@ -92,7 +92,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  text-align: center;\n  p, ul, li {\n    text-align: left;\n    font-size: 17px;\n    font-weight: 400;\n    line-height: 27px;\n  }\n  h1 {\n    text-align: left;\n    font-size: 25px;\n    font-weight: 700;\n    margin-bottom: 30px;\n  }\n  h2 {\n    text-align: left;\n    font-size: 24px;\n    font-weight: 700;\n    margin-bottom: 10px;\n  }\n  a {\n    color: ", ";\n    transition: color 300ms ease 0ms;\n    text-decoration: underline;\n  }\n  a:hover {\n    color: ", ";\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  text-align: center;\n  p, ul, li, .goldBack {\n    text-align: left;\n    font-size: 17px;\n    font-weight: 400;\n    line-height: 27px;\n  }\n  h1 {\n    text-align: left;\n    font-size: 25px;\n    font-weight: 700;\n    margin-bottom: 30px;\n  }\n  h2 {\n    text-align: left;\n    font-size: 24px;\n    font-weight: 700;\n    margin-bottom: 10px;\n  }\n  a {\n    color: ", ";\n    transition: color 300ms ease 0ms;\n    text-decoration: underline;\n  }\n  a:hover {\n    color: ", ";\n  }\n  .goldBack {\n    background-color: ", ";\n    color: #fff;\n    padding: 20px;\n  }\n  .boxedList {\n    display: flex;\n    flex-direction: column;\n    padding: 12px;\n    padding-left: 24px;\n    margin: 12px 0;\n    border: 1px solid #000;\n    @media (min-width: 600px){\n      flex-wrap: wrap;\n      max-height: 300px;\n      li {\n        width: calc(50% - 16px);\n      }\n    }\n  }\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -131,7 +131,7 @@ var ContentWrapper = _styledComponents["default"].div(_templateObject2());
 
 exports.ContentWrapper = ContentWrapper;
 
-var Content = _styledComponents["default"].div(_templateObject3(), _colors.red, _colors.gold);
+var Content = _styledComponents["default"].div(_templateObject3(), _colors.red, _colors.gold, _colors.gold);
 
 exports.Content = Content;
 
