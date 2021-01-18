@@ -41,23 +41,39 @@ function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Re
 
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 var ContentBottomComponent = /*#__PURE__*/function (_Component) {
   _inherits(ContentBottomComponent, _Component);
 
   var _super = _createSuper(ContentBottomComponent);
 
   function ContentBottomComponent() {
+    var _this;
+
     _classCallCheck(this, ContentBottomComponent);
 
-    return _super.apply(this, arguments);
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = _super.call.apply(_super, [this].concat(args));
+
+    _defineProperty(_assertThisInitialized(_this), "searchBlogs", function () {});
+
+    return _this;
   }
 
   _createClass(ContentBottomComponent, [{
     key: "render",
     value: function render() {
+      var _this$props = this.props,
+          className = _this$props.className,
+          home = _this$props.home,
+          blog = _this$props.blog;
       return /*#__PURE__*/_react["default"].createElement(_contentBottom.ContentBottom, {
-        className: this.props.className
-      }, this.props.home && /*#__PURE__*/_react["default"].createElement(_contentBottom.MeetAttorneys, null, /*#__PURE__*/_react["default"].createElement("h3", null, "MEET OUR ATTORNEYS"), /*#__PURE__*/_react["default"].createElement("img", {
+        className: className
+      }, home && /*#__PURE__*/_react["default"].createElement(_contentBottom.MeetAttorneys, null, /*#__PURE__*/_react["default"].createElement("h3", null, "MEET OUR ATTORNEYS"), /*#__PURE__*/_react["default"].createElement("img", {
         src: "/images/atto-home-new.jpg"
       }), /*#__PURE__*/_react["default"].createElement("a", {
         className: "learnMore",

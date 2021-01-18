@@ -13,7 +13,9 @@ var _components = require("../components");
 
 var _global = require("../styled-components/global");
 
-var _aboutPage = _interopRequireDefault(require("../data/aboutPage"));
+var _attorneytemplate = require("../styled-components/pages/attorneytemplate");
+
+var _attorneyList = _interopRequireDefault(require("../data/attorneyList"));
 
 var _mapPage = _interopRequireDefault(require("../helpers/mapPage"));
 
@@ -57,7 +59,17 @@ var Attorneytemplate = /*#__PURE__*/function (_Component) {
   _createClass(Attorneytemplate, [{
     key: "render",
     value: function render() {
-      return /*#__PURE__*/_react["default"].createElement(_global.PageWrapper, null, /*#__PURE__*/_react["default"].createElement(_components.Header, null), /*#__PURE__*/_react["default"].createElement(_global.ContentWrapper, null, /*#__PURE__*/_react["default"].createElement(_components.PersonalInjury, null), /*#__PURE__*/_react["default"].createElement(_global.Content, null, "Attorneytemplate"), /*#__PURE__*/_react["default"].createElement(_components.ContentBottom, {
+      var link = this.props.data.link;
+
+      var attorney = _attorneyList["default"].find(function (a) {
+        return a.link == link;
+      });
+
+      return /*#__PURE__*/_react["default"].createElement(_global.PageWrapper, null, /*#__PURE__*/_react["default"].createElement(_components.Header, null), /*#__PURE__*/_react["default"].createElement(_global.ContentWrapper, null, /*#__PURE__*/_react["default"].createElement(_components.PersonalInjury, null), /*#__PURE__*/_react["default"].createElement(_global.Content, null, attorney && /*#__PURE__*/_react["default"].createElement(_attorneytemplate.AttorneyDiv, null, /*#__PURE__*/_react["default"].createElement("h1", null, attorney.name), /*#__PURE__*/_react["default"].createElement("p", null, "Associate"), /*#__PURE__*/_react["default"].createElement("img", {
+        src: attorney.headshot
+      }), /*#__PURE__*/_react["default"].createElement("h2", null, "Location"), /*#__PURE__*/_react["default"].createElement("p", null, attorney.location), /*#__PURE__*/_react["default"].createElement("h2", null, "Phone"), /*#__PURE__*/_react["default"].createElement("p", null, /*#__PURE__*/_react["default"].createElement("a", {
+        href: attorney.phonelink
+      }, attorney.phone)), /*#__PURE__*/_react["default"].createElement("h2", null, "Fax"), /*#__PURE__*/_react["default"].createElement("p", null, attorney.fax), /*#__PURE__*/_react["default"].createElement("h2", null, "Email"), /*#__PURE__*/_react["default"].createElement("p", null), (0, _mapPage["default"])(attorney.content))), /*#__PURE__*/_react["default"].createElement(_components.ContentBottom, {
         className: "mobileBottom"
       })), /*#__PURE__*/_react["default"].createElement(_components.Footer, null));
     }

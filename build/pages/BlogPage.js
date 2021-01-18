@@ -15,9 +15,9 @@ var _blog = require("../styled-components/pages/blog");
 
 var _global = require("../styled-components/global");
 
-var _aboutPage = _interopRequireDefault(require("../data/aboutPage"));
+var _blogs = _interopRequireDefault(require("../data/blogs"));
 
-var _mapPage = _interopRequireDefault(require("../helpers/mapPage"));
+var _mapBlog = _interopRequireDefault(require("../helpers/mapBlog"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -59,9 +59,7 @@ var Blog = /*#__PURE__*/function (_Component) {
   _createClass(Blog, [{
     key: "render",
     value: function render() {
-      return /*#__PURE__*/_react["default"].createElement(_global.PageWrapper, null, /*#__PURE__*/_react["default"].createElement(_components.Header, null), /*#__PURE__*/_react["default"].createElement(_global.ContentWrapper, null, /*#__PURE__*/_react["default"].createElement(_components.PersonalInjury, null), /*#__PURE__*/_react["default"].createElement(_global.Content, null, "Blog"), /*#__PURE__*/_react["default"].createElement(_components.ContentBottom, {
-        className: "mobileBottom"
-      })), /*#__PURE__*/_react["default"].createElement(_components.Footer, null));
+      return /*#__PURE__*/_react["default"].createElement(_global.PageWrapper, null, /*#__PURE__*/_react["default"].createElement(_components.Header, null), /*#__PURE__*/_react["default"].createElement(_global.ContentWrapper, null, /*#__PURE__*/_react["default"].createElement(_components.BlogBottom, null), /*#__PURE__*/_react["default"].createElement(_global.Content, null, /*#__PURE__*/_react["default"].createElement("h1", null, "Visalia Personal Injury Law Blog"), (0, _mapBlog["default"])(_blogs["default"]))), /*#__PURE__*/_react["default"].createElement(_components.Footer, null));
     }
   }]);
 

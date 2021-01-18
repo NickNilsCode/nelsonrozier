@@ -4,8 +4,8 @@ module.exports = [{
   type: "h1",
   content: "Case Results"
 }, {
-  type: "h2",
-  content: "Successful Case Results At Nelson & Rozier In Visalia, California."
+  type: "p",
+  content: "<strong>Successful Case Results At Nelson & Rozier In Visalia, California.</strong>"
 }, {
   type: "p",
   content: "We are a personal injury firm with experience providing effective, compassionate representation. On this page, you can find brief descriptions of a few of the successful results our firm has achieved."

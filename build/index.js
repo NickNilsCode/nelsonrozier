@@ -182,8 +182,14 @@ app.get('/blogcattemplate', function (req, res) {
   res.set('Cache-Control', 'public, max-age=31557600');
   res.send(returnHTML(data, blogcattemplateBundle, _roots.BlogcattemplateRoot, "blogcattemplate"));
 });
-app.get('/blogtemplate', function (req, res) {
-  var data = "";
+app.get('/blog/:year/:month/:title', function (req, res) {
+  var _req$params = req.params,
+      year = _req$params.year,
+      month = _req$params.month,
+      title = _req$params.title;
+  var data = {
+    link: "/blog/".concat(year, "/").concat(month, "/").concat(title)
+  };
   res.set('Cache-Control', 'public, max-age=31557600');
   res.send(returnHTML(data, blogtemplateBundle, _roots.BlogtemplateRoot, "blogtemplate"));
 });
@@ -207,8 +213,10 @@ app.get('/privacypolicy', function (req, res) {
   res.set('Cache-Control', 'public, max-age=31557600');
   res.send(returnHTML(data, privacypolicyBundle, _roots.PrivacypolicyRoot, "privacypolicy"));
 });
-app.get('/attorneytemplate', function (req, res) {
-  var data = "";
+app.get('/attorney/:name', function (req, res) {
+  var data = {
+    link: "/attorney/".concat(req.params.name)
+  };
   res.set('Cache-Control', 'public, max-age=31557600');
   res.send(returnHTML(data, attorneytemplateBundle, _roots.AttorneytemplateRoot, "attorneytemplate"));
 });

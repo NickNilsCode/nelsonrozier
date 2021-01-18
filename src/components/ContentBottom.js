@@ -1,14 +1,18 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { ContentBottom, BottomBox, BoxTitle, BoxContent, MeetAttorneys } from '../styled-components/components/contentBottom';
 import { RedButton, FBButton } from '../styled-components/global';
 import blogData from '../data/blogs';
 
 class ContentBottomComponent extends Component {
+  searchBlogs = () => {
+
+  }
   render(){
+    const { className, home, blog } = this.props;
     return (
-      <ContentBottom className={this.props.className}>
+      <ContentBottom className={className}>
         {
-          this.props.home &&
+          home &&
           <MeetAttorneys>
             <h3>MEET OUR ATTORNEYS</h3>
             <img src="/images/atto-home-new.jpg"/>

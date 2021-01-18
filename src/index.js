@@ -153,8 +153,11 @@ app.get('/blogcattemplate', (req, res) => {
   res.set('Cache-Control', 'public, max-age=31557600');
   res.send(returnHTML(data, blogcattemplateBundle, BlogcattemplateRoot, "blogcattemplate"));
 });
-app.get('/blogtemplate', (req, res) => {
-  let data = "";
+app.get('/blog/:year/:month/:title', (req, res) => {
+  const { year, month, title } = req.params;
+  let data = {
+    link: `/blog/${year}/${month}/${title}`
+  };
   res.set('Cache-Control', 'public, max-age=31557600');
   res.send(returnHTML(data, blogtemplateBundle, BlogtemplateRoot, "blogtemplate"));
 });
@@ -178,8 +181,10 @@ app.get('/privacypolicy', (req, res) => {
   res.set('Cache-Control', 'public, max-age=31557600');
   res.send(returnHTML(data, privacypolicyBundle, PrivacypolicyRoot, "privacypolicy"));
 });
-app.get('/attorneytemplate', (req, res) => {
-  let data = "";
+app.get('/attorney/:name', (req, res) => {
+  let data = {
+    link: `/attorney/${req.params.name}`
+  };
   res.set('Cache-Control', 'public, max-age=31557600');
   res.send(returnHTML(data, attorneytemplateBundle, AttorneytemplateRoot, "attorneytemplate"));
 });

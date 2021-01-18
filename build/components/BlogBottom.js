@@ -9,15 +9,11 @@ exports["default"] = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _components = require("../components");
-
-var _blogtemplate = require("../styled-components/pages/blogtemplate");
+var _blogBottom = require("../styled-components/components/blogBottom");
 
 var _global = require("../styled-components/global");
 
-var _blogs = _interopRequireDefault(require("../data/blogs"));
-
-var _mapPage = _interopRequireDefault(require("../helpers/mapPage"));
+var _categories = _interopRequireDefault(require("../data/categories"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -45,36 +41,65 @@ function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Re
 
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
-var Blogtemplate = /*#__PURE__*/function (_Component) {
-  _inherits(Blogtemplate, _Component);
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-  var _super = _createSuper(Blogtemplate);
+var BlogBottomComponent = /*#__PURE__*/function (_Component) {
+  _inherits(BlogBottomComponent, _Component);
 
-  function Blogtemplate() {
-    _classCallCheck(this, Blogtemplate);
+  var _super = _createSuper(BlogBottomComponent);
 
-    return _super.apply(this, arguments);
+  function BlogBottomComponent(props) {
+    var _this;
+
+    _classCallCheck(this, BlogBottomComponent);
+
+    _this = _super.call(this, props);
+
+    _defineProperty(_assertThisInitialized(_this), "searchBlogs", function () {});
+
+    _this.state = {
+      searchInput: ""
+    };
+    return _this;
   }
 
-  _createClass(Blogtemplate, [{
+  _createClass(BlogBottomComponent, [{
     key: "render",
     value: function render() {
-      var link = this.props.data.link;
-
-      var blog = _blogs["default"].find(function (a) {
-        return a.link == link;
-      });
-
-      return /*#__PURE__*/_react["default"].createElement(_global.PageWrapper, null, /*#__PURE__*/_react["default"].createElement(_components.Header, null), /*#__PURE__*/_react["default"].createElement(_global.ContentWrapper, null, /*#__PURE__*/_react["default"].createElement(_components.PersonalInjury, null), /*#__PURE__*/_react["default"].createElement(_global.Content, null, blog && /*#__PURE__*/_react["default"].createElement(_react.Fragment, null, /*#__PURE__*/_react["default"].createElement("h1", null, blog.title), /*#__PURE__*/_react["default"].createElement("p", null, /*#__PURE__*/_react["default"].createElement("a", {
-        href: "/"
-      }, "On behalf of Nelson & Rozier"), " | ", blog.date, " | ", blog.categories.join(', ')), (0, _mapPage["default"])(blog.content), "social media icons")), /*#__PURE__*/_react["default"].createElement(_components.ContentBottom, {
-        className: "mobileBottom"
-      })), /*#__PURE__*/_react["default"].createElement(_components.Footer, null));
+      var _this$props = this.props,
+          className = _this$props.className,
+          home = _this$props.home,
+          blog = _this$props.blog;
+      return /*#__PURE__*/_react["default"].createElement(_blogBottom.BlogBottom, {
+        className: className
+      }, /*#__PURE__*/_react["default"].createElement("form", {
+        onSubmit: this.searchBlogs()
+      }, /*#__PURE__*/_react["default"].createElement(_global.Input, {
+        placeholder: "Search...",
+        type: "text",
+        required: true
+      }), /*#__PURE__*/_react["default"].createElement(_global.GoldButton, {
+        type: "submit"
+      }, "Search")), /*#__PURE__*/_react["default"].createElement("h2", null, "Categories"), /*#__PURE__*/_react["default"].createElement("ul", null, _categories["default"].map(function (a, i) {
+        return /*#__PURE__*/_react["default"].createElement("li", {
+          key: i
+        }, /*#__PURE__*/_react["default"].createElement("a", {
+          href: a.link
+        }, a.name), "(", a.qty, ")");
+      })), /*#__PURE__*/_react["default"].createElement("h2", null, "Archives"), /*#__PURE__*/_react["default"].createElement("a", {
+        target: "_blank",
+        href: "https://reviewplatform.findlaw.com/nelsonrozier"
+      }, /*#__PURE__*/_react["default"].createElement(_global.RedButton, null, "REVIEW US")), /*#__PURE__*/_react["default"].createElement("a", {
+        target: "_blank",
+        href: "https://www.facebook.com/nelsonrozier/"
+      }, /*#__PURE__*/_react["default"].createElement(_global.FBButton, null, /*#__PURE__*/_react["default"].createElement("i", {
+        className: "fab fa-facebook-f"
+      }))));
     }
   }]);
 
-  return Blogtemplate;
+  return BlogBottomComponent;
 }(_react.Component);
 
-var _default = Blogtemplate;
+var _default = BlogBottomComponent;
 exports["default"] = _default;

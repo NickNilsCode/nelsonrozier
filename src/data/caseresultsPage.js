@@ -4,8 +4,8 @@ module.exports = [
     content: "Case Results"
   },
   {
-    type: "h2",
-    content: "Successful Case Results At Nelson & Rozier In Visalia, California."
+    type: "p",
+    content: "<strong>Successful Case Results At Nelson & Rozier In Visalia, California.</strong>"
   },
   {
     type: "p",
