@@ -182,11 +182,29 @@ app.get('/blogcattemplate', function (req, res) {
   res.set('Cache-Control', 'public, max-age=31557600');
   res.send(returnHTML(data, blogcattemplateBundle, _roots.BlogcattemplateRoot, "blogcattemplate"));
 });
-app.get('/blog/:year/:month/:title', function (req, res) {
+app.get('/blog/search/:query', function (req, res) {
+  var query = req.params.query;
+  var data = {
+    link: "/blog/search/".concat(query)
+  };
+  res.set('Cache-Control', 'public, max-age=31557600');
+  res.send(returnHTML(data, blogBundle, _roots.BlogRoot, "blog"));
+});
+app.get('/blog/:year/:month', function (req, res) {
   var _req$params = req.params,
       year = _req$params.year,
-      month = _req$params.month,
-      title = _req$params.title;
+      month = _req$params.month;
+  var data = {
+    link: "/blog/".concat(year, "/").concat(month)
+  };
+  res.set('Cache-Control', 'public, max-age=31557600');
+  res.send(returnHTML(data, blogBundle, _roots.BlogRoot, "blog"));
+});
+app.get('/blog/:year/:month/:title', function (req, res) {
+  var _req$params2 = req.params,
+      year = _req$params2.year,
+      month = _req$params2.month,
+      title = _req$params2.title;
   var data = {
     link: "/blog/".concat(year, "/").concat(month, "/").concat(title)
   };

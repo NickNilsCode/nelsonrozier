@@ -41,12 +41,8 @@ class ContentBottomComponent extends Component {
             </a>
           </BoxContent>
         </BottomBox>
-        <a target="_blank" href="https://reviewplatform.findlaw.com/nelsonrozier">
-          <RedButton>REVIEW US</RedButton>
-        </a>
-        <a target="_blank" href="https://www.facebook.com/nelsonrozier/">
-          <FBButton><i className="fab fa-facebook-f"></i></FBButton>
-        </a>
+        <RedButton target="_blank" href="https://reviewplatform.findlaw.com/nelsonrozier">REVIEW US</RedButton>
+        <FBButton target="_blank" href="https://www.facebook.com/nelsonrozier/"><i className="fab fa-facebook-f"></i></FBButton>
       </ContentBottom>
     );
   }

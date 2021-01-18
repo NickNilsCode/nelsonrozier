@@ -102,15 +102,15 @@ var ContentBottomComponent = /*#__PURE__*/function (_Component) {
         className: "readMore"
       }, /*#__PURE__*/_react["default"].createElement("div", null, "Read More ", /*#__PURE__*/_react["default"].createElement("i", {
         className: "fas fa-chevron-circle-right"
-      }))))), /*#__PURE__*/_react["default"].createElement("a", {
+      }))))), /*#__PURE__*/_react["default"].createElement(_global.RedButton, {
         target: "_blank",
         href: "https://reviewplatform.findlaw.com/nelsonrozier"
-      }, /*#__PURE__*/_react["default"].createElement(_global.RedButton, null, "REVIEW US")), /*#__PURE__*/_react["default"].createElement("a", {
+      }, "REVIEW US"), /*#__PURE__*/_react["default"].createElement(_global.FBButton, {
         target: "_blank",
         href: "https://www.facebook.com/nelsonrozier/"
-      }, /*#__PURE__*/_react["default"].createElement(_global.FBButton, null, /*#__PURE__*/_react["default"].createElement("i", {
+      }, /*#__PURE__*/_react["default"].createElement("i", {
         className: "fab fa-facebook-f"
-      }))));
+      })));
     }
   }]);
 

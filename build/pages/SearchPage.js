@@ -39,21 +39,50 @@ function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Re
 
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 var Search = /*#__PURE__*/function (_Component) {
   _inherits(Search, _Component);
 
   var _super = _createSuper(Search);
 
-  function Search() {
+  function Search(props) {
+    var _this;
+
     _classCallCheck(this, Search);
 
-    return _super.apply(this, arguments);
+    _this = _super.call(this, props);
+
+    _defineProperty(_assertThisInitialized(_this), "changeSearch", function (e) {
+      _this.setState({
+        searchInput: e.target.value
+      });
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "searchBlogs", function (e) {
+      e.preventDefault();
+      window.location.href = "/blog/search/" + _this.state.searchInput;
+    });
+
+    _this.state = {
+      searchInput: ""
+    };
+    return _this;
   }
 
   _createClass(Search, [{
     key: "render",
     value: function render() {
-      return /*#__PURE__*/_react["default"].createElement(_global.PageWrapper, null, /*#__PURE__*/_react["default"].createElement(_components.Header, null), /*#__PURE__*/_react["default"].createElement(_global.ContentWrapper, null, /*#__PURE__*/_react["default"].createElement(_components.PersonalInjury, null), /*#__PURE__*/_react["default"].createElement(_global.Content, null, "Search"), /*#__PURE__*/_react["default"].createElement(_components.ContentBottom, {
+      return /*#__PURE__*/_react["default"].createElement(_global.PageWrapper, null, /*#__PURE__*/_react["default"].createElement(_components.Header, null), /*#__PURE__*/_react["default"].createElement(_global.ContentWrapper, null, /*#__PURE__*/_react["default"].createElement(_components.PersonalInjury, null), /*#__PURE__*/_react["default"].createElement(_global.Content, null, /*#__PURE__*/_react["default"].createElement(_search.SearchContent, null, /*#__PURE__*/_react["default"].createElement("form", {
+        onSubmit: this.searchBlogs
+      }, /*#__PURE__*/_react["default"].createElement(_global.Input, {
+        placeholder: "Search...",
+        type: "text",
+        required: true,
+        onChange: this.changeSearch
+      }), /*#__PURE__*/_react["default"].createElement(_global.GoldButton, {
+        type: "submit"
+      }, "Search")))), /*#__PURE__*/_react["default"].createElement(_components.ContentBottom, {
         className: "mobileBottom"
       })), /*#__PURE__*/_react["default"].createElement(_components.Footer, null));
     }

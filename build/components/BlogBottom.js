@@ -15,6 +15,10 @@ var _global = require("../styled-components/global");
 
 var _categories = _interopRequireDefault(require("../data/categories"));
 
+var _blogs = _interopRequireDefault(require("../data/blogs"));
+
+var _archives = _interopRequireDefault(require("../data/archives"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
@@ -55,7 +59,21 @@ var BlogBottomComponent = /*#__PURE__*/function (_Component) {
 
     _this = _super.call(this, props);
 
-    _defineProperty(_assertThisInitialized(_this), "searchBlogs", function () {});
+    _defineProperty(_assertThisInitialized(_this), "changeSearch", function (e) {
+      _this.setState({
+        searchInput: e.target.value
+      });
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "searchBlogs", function (e) {
+      e.preventDefault();
+      window.location.href = "/blog/search/" + _this.state.searchInput;
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "changeBlogDate", function (e) {
+      e.preventDefault();
+      window.location.href = e.target.value;
+    });
 
     _this.state = {
       searchInput: ""
@@ -73,11 +91,12 @@ var BlogBottomComponent = /*#__PURE__*/function (_Component) {
       return /*#__PURE__*/_react["default"].createElement(_blogBottom.BlogBottom, {
         className: className
       }, /*#__PURE__*/_react["default"].createElement("form", {
-        onSubmit: this.searchBlogs()
+        onSubmit: this.searchBlogs
       }, /*#__PURE__*/_react["default"].createElement(_global.Input, {
         placeholder: "Search...",
         type: "text",
-        required: true
+        required: true,
+        onChange: this.changeSearch
       }), /*#__PURE__*/_react["default"].createElement(_global.GoldButton, {
         type: "submit"
       }, "Search")), /*#__PURE__*/_react["default"].createElement("h2", null, "Categories"), /*#__PURE__*/_react["default"].createElement("ul", null, _categories["default"].map(function (a, i) {
@@ -86,15 +105,28 @@ var BlogBottomComponent = /*#__PURE__*/function (_Component) {
         }, /*#__PURE__*/_react["default"].createElement("a", {
           href: a.link
         }, a.name), "(", a.qty, ")");
-      })), /*#__PURE__*/_react["default"].createElement("h2", null, "Archives"), /*#__PURE__*/_react["default"].createElement("a", {
+      })), /*#__PURE__*/_react["default"].createElement("h2", null, "Archives"), /*#__PURE__*/_react["default"].createElement("select", {
+        onChange: this.changeBlogDate
+      }, _archives["default"].map(function (a, i) {
+        return /*#__PURE__*/_react["default"].createElement("option", {
+          key: i,
+          value: a.link
+        }, a.date, "(", a.qty, ")");
+      })), /*#__PURE__*/_react["default"].createElement("h2", null, "Recent Posts"), /*#__PURE__*/_react["default"].createElement("ul", null, _blogs["default"].map(function (a, i) {
+        return /*#__PURE__*/_react["default"].createElement("li", {
+          key: i
+        }, /*#__PURE__*/_react["default"].createElement("a", {
+          href: a.link
+        }, a.title));
+      })), /*#__PURE__*/_react["default"].createElement(_global.RedButton, {
         target: "_blank",
         href: "https://reviewplatform.findlaw.com/nelsonrozier"
-      }, /*#__PURE__*/_react["default"].createElement(_global.RedButton, null, "REVIEW US")), /*#__PURE__*/_react["default"].createElement("a", {
+      }, "REVIEW US"), /*#__PURE__*/_react["default"].createElement(_global.FBButton, {
         target: "_blank",
         href: "https://www.facebook.com/nelsonrozier/"
-      }, /*#__PURE__*/_react["default"].createElement(_global.FBButton, null, /*#__PURE__*/_react["default"].createElement("i", {
+      }, /*#__PURE__*/_react["default"].createElement("i", {
         className: "fab fa-facebook-f"
-      }))));
+      })));
     }
   }]);
 

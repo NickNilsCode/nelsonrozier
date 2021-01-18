@@ -153,6 +153,22 @@ app.get('/blogcattemplate', (req, res) => {
   res.set('Cache-Control', 'public, max-age=31557600');
   res.send(returnHTML(data, blogcattemplateBundle, BlogcattemplateRoot, "blogcattemplate"));
 });
+app.get('/blog/search/:query', (req, res) => {
+  const { query } = req.params;
+  let data = {
+    link: `/blog/search/${query}`
+  };
+  res.set('Cache-Control', 'public, max-age=31557600');
+  res.send(returnHTML(data, blogBundle, BlogRoot, "blog"));
+});
+app.get('/blog/:year/:month', (req, res) => {
+  const { year, month } = req.params;
+  let data = {
+    link: `/blog/${year}/${month}`
+  };
+  res.set('Cache-Control', 'public, max-age=31557600');
+  res.send(returnHTML(data, blogBundle, BlogRoot, "blog"));
+});
 app.get('/blog/:year/:month/:title', (req, res) => {
   const { year, month, title } = req.params;
   let data = {

@@ -10,12 +10,12 @@ class Blog extends Component {
       return (
           <PageWrapper>
               <Header/>
-              <ContentWrapper>
-                <BlogBottom/>
+              <ContentWrapper className="blogPage">
                 <Content>
                   <h1>Visalia Personal Injury Law Blog</h1>
                   { mapBlog(blogContent) }
                 </Content>
+                <BlogBottom/>
               </ContentWrapper>
               <Footer/>
           </PageWrapper>

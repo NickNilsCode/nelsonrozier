@@ -8,6 +8,47 @@ export const BlogBottom = styled.div`
   }
   form {
     width: 100%;
+    input {
+      width: calc(100% - 65px);
+      font-size: 12px;
+      padding: 10px;
+      color: #bcbcbc;
+      background-color: #eef1f4;
+      border: none;
+    }
+    input:focus {
+      outline: none;
+    }
+    button {
+      font-size: 12px;
+      padding: 12px;
+      border-radius: initial;
+      border: none;
+    }
+  }
+  select {
+    width: 100%;
+    padding: 5px;
+    color: #4e4e4e;
+    border: 1px solid #bbb;
+  }
+  p {
+    text-align: left;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 27px;
+  }
+  h1 {
+    text-align: left;
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 30px;
+  }
+  h2 {
+    text-align: left;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 10px;
   }
   ul {
     a {

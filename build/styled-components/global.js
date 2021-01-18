@@ -102,7 +102,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n  width: calc(100% - 32px);\n  padding: 40px 16px;\n  min-height: calc(100vh - 89px - 145px);\n  max-width: 900px;\n  margin: auto;\n  text-align: center;\n  position: relative;\n  display: block;\n  flex-direction: column;\n  align-items: flex-start;\n  justify-content:space-between;\n  @media (min-width: 900px){\n    display: flex;\n    min-height: calc(100vh - 58px - 115px);\n    flex-direction: row-reverse;\n    &.homePage {\n      flex-direction: column;\n    }\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  width: calc(100% - 32px);\n  padding: 40px 16px;\n  min-height: calc(100vh - 89px - 145px);\n  max-width: 900px;\n  margin: auto;\n  text-align: center;\n  position: relative;\n  display: block;\n  flex-direction: column;\n  align-items: flex-start;\n  justify-content:space-between;\n  @media (min-width: 900px){\n    display: flex;\n    min-height: calc(100vh - 58px - 115px);\n    flex-direction: row-reverse;\n    &.homePage {\n      flex-direction: column;\n    }\n    &.blogPage {\n      flex-direction: row;\n    }\n  }\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;

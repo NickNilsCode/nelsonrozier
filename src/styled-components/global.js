@@ -25,6 +25,9 @@ export const ContentWrapper = styled.div`
     &.homePage {
       flex-direction: column;
     }
+    &.blogPage {
+      flex-direction: row;
+    }
   }
 `;
 

@@ -1,9 +1,24 @@
 import React, { Component } from 'react';
 import { Header, Footer, PersonalInjury, ContentBottom } from '../components';
 import { SearchContent } from '../styled-components/pages/search';
-import { PageWrapper, ContentWrapper, Content } from '../styled-components/global';
+import { PageWrapper, ContentWrapper, Content, Input, GoldButton } from '../styled-components/global';
 
 class Search extends Component {
+    constructor(props){
+      super(props);
+      this.state = {
+        searchInput: ""
+      }
+    }
+    changeSearch = (e) => {
+      this.setState({
+        searchInput: e.target.value
+      })
+    }
+    searchBlogs = (e) => {
+      e.preventDefault();
+      window.location.href = "/blog/search/" + this.state.searchInput;
+    }
     render(){
       return (
           <PageWrapper>
@@ -11,7 +26,17 @@ class Search extends Component {
               <ContentWrapper>
                 <PersonalInjury/>
                 <Content>
-                  Search
+                  <SearchContent>
+                  <form onSubmit={this.searchBlogs}>
+                    <Input
+                      placeholder="Search..."
+                      type="text"
+                      required
+                      onChange={this.changeSearch}
+                    />
+                    <GoldButton type="submit">Search</GoldButton>
+                  </form>
+                  </SearchContent>
                 </Content>
                 <ContentBottom className="mobileBottom"/>
               </ContentWrapper>

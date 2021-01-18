@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import { Header, Footer, PersonalInjury, ContentBottom } from '../components';
+import { Header, Footer, BlogBottom } from '../components';
 import { BlogtemplateContent } from '../styled-components/pages/blogtemplate';
 import { PageWrapper, ContentWrapper, Content } from '../styled-components/global';
 import blogs from '../data/blogs';
@@ -12,8 +12,7 @@ class Blogtemplate extends Component {
       return (
           <PageWrapper>
               <Header/>
-              <ContentWrapper>
-                <PersonalInjury/>
+              <ContentWrapper className="blogPage">
                 <Content>
                   {
                     blog &&
@@ -24,9 +23,8 @@ class Blogtemplate extends Component {
                       social media icons
                     </Fragment>
                   }
-
                 </Content>
-                <ContentBottom className="mobileBottom"/>
+                <BlogBottom/>
               </ContentWrapper>
               <Footer/>
           </PageWrapper>
