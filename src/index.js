@@ -24,6 +24,16 @@ app.use(compression());
 app.use(cors());
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded())
+// 
+// cron.schedule('* * * 1 *', () => {
+//   fetch('https://nelsonrozier.herokuapp.com/')
+//   .then(res => {
+//     console.log("requested at " + new Date())
+//   })
+//   .catch(() => {
+//     console.log("request to https://nelsonrozier.herokuapp.com/ failed at " + new Date())
+//   });
+// });
 
 var dataObj = {},
 homeBundle = "",

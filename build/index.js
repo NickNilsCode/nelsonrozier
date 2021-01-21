@@ -38,7 +38,17 @@ var app = (0, _express["default"])();
 app.use((0, _compression["default"])());
 app.use((0, _cors["default"])());
 app.use(_bodyParser["default"].json());
-app.use(_bodyParser["default"].urlencoded());
+app.use(_bodyParser["default"].urlencoded()); // 
+// cron.schedule('* * * 1 *', () => {
+//   fetch('https://nelsonrozier.herokuapp.com/')
+//   .then(res => {
+//     console.log("requested at " + new Date())
+//   })
+//   .catch(() => {
+//     console.log("request to https://nelsonrozier.herokuapp.com/ failed at " + new Date())
+//   });
+// });
+
 var dataObj = {},
     homeBundle = "",
     aboutBundle = "",

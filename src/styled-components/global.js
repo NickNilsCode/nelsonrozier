@@ -106,6 +106,7 @@ export const GoldButton = styled.button`
   border: 1px solid #8d8d8d;
   border-radius: 3px;
   width: max-content;
+  transition: background-color 300ms ease 0ms;
   &:hover {
     cursor: pointer;
     background-color: #7c3230;
@@ -122,6 +123,7 @@ export const BigGoldButton = styled.button`
   width: 100%;
   box-sizing: border-box;
   text-align: center;
+  transition: background-color 300ms ease 0ms;
   &:hover {
     cursor: pointer;
     background-color: #7c3230;
