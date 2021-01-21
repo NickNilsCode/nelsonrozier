@@ -17,6 +17,10 @@ var _global = require("../styled-components/global");
 
 var _messageForm = require("../styled-components/components/messageForm");
 
+var _states = _interopRequireDefault(require("../data/states"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
@@ -48,6 +52,7 @@ var initialState = {
   email: "",
   phone: "",
   zip: "",
+  state: "",
   contactemail: false,
   contactphone: false,
   description: "",
@@ -93,6 +98,7 @@ var Contact = /*#__PURE__*/function (_Component) {
     });
 
     _defineProperty(_assertThisInitialized(_this), "updateState", function (e, prop) {
+      console.log("crash", prop, e.currentTarget.value);
       var obj = {};
       obj[prop] = e.currentTarget.value;
 
@@ -120,12 +126,15 @@ var Contact = /*#__PURE__*/function (_Component) {
           email = _this$state.email,
           phone = _this$state.phone,
           zip = _this$state.zip,
+          state = _this$state.state,
           contactemail = _this$state.contactemail,
           contactphone = _this$state.contactphone,
           description = _this$state.description,
           disclaimer = _this$state.disclaimer;
       var buttonDisabled = disclaimer == true && email ? false : true;
-      return /*#__PURE__*/_react["default"].createElement(_global.PageWrapper, null, /*#__PURE__*/_react["default"].createElement(_components.Header, null), /*#__PURE__*/_react["default"].createElement(_global.ContentWrapper, null, /*#__PURE__*/_react["default"].createElement(_components.PersonalInjury, null), /*#__PURE__*/_react["default"].createElement(_global.Content, null, /*#__PURE__*/_react["default"].createElement("h1", null, "Contact"), /*#__PURE__*/_react["default"].createElement("p", null, "While this website provides general information, it does not constitute legal advice. The best way to get guidance on your specific legal issue is to contact a lawyer. To schedule a meeting with an attorney, please call or complete the intake form below."), /*#__PURE__*/_react["default"].createElement("form", {
+      return /*#__PURE__*/_react["default"].createElement(_global.PageWrapper, null, /*#__PURE__*/_react["default"].createElement(_components.Header, {
+        page: "Contact"
+      }), /*#__PURE__*/_react["default"].createElement(_global.ContentWrapper, null, /*#__PURE__*/_react["default"].createElement(_components.PersonalInjury, null), /*#__PURE__*/_react["default"].createElement(_global.Content, null, /*#__PURE__*/_react["default"].createElement("h1", null, "Contact"), /*#__PURE__*/_react["default"].createElement("p", null, "While this website provides general information, it does not constitute legal advice. The best way to get guidance on your specific legal issue is to contact a lawyer. To schedule a meeting with an attorney, please call or complete the intake form below."), /*#__PURE__*/_react["default"].createElement("form", {
         onSubmit: this.submitForm
       }, /*#__PURE__*/_react["default"].createElement("p", null, "Fields marked with an * are required"), /*#__PURE__*/_react["default"].createElement("p", null, /*#__PURE__*/_react["default"].createElement("strong", null, "Name")), /*#__PURE__*/_react["default"].createElement(_global.Input, {
         placeholder: "Name",
@@ -156,7 +165,18 @@ var Contact = /*#__PURE__*/function (_Component) {
         onChange: function onChange(e) {
           _this2.updateState(e, "zip");
         }
-      }), /*#__PURE__*/_react["default"].createElement("strong", null, "US States"), "select list of states", /*#__PURE__*/_react["default"].createElement("strong", null, "How Would You Like To Be Contacted?"), /*#__PURE__*/_react["default"].createElement("span", null, "Check all that apply."), "Phone Email", /*#__PURE__*/_react["default"].createElement("input", {
+      }), /*#__PURE__*/_react["default"].createElement("p", null, /*#__PURE__*/_react["default"].createElement("strong", null, "US States")), /*#__PURE__*/_react["default"].createElement("select", {
+        value: state,
+        name: "states",
+        onChange: function onChange(e) {
+          _this2.updateState(e, "state");
+        }
+      }, _states["default"].map(function (a, i) {
+        return /*#__PURE__*/_react["default"].createElement("option", {
+          value: a.value,
+          key: i
+        }, a.name);
+      })), /*#__PURE__*/_react["default"].createElement("p", null, /*#__PURE__*/_react["default"].createElement("strong", null, "How Would You Like To Be Contacted?"), /*#__PURE__*/_react["default"].createElement("br", null), /*#__PURE__*/_react["default"].createElement("span", null, "Check all that apply."), /*#__PURE__*/_react["default"].createElement("br", null), /*#__PURE__*/_react["default"].createElement("input", {
         required: true,
         type: "checkbox",
         id: "contactphone",
@@ -167,7 +187,7 @@ var Contact = /*#__PURE__*/function (_Component) {
         }
       }), /*#__PURE__*/_react["default"].createElement("label", {
         htmlFor: "contactphone"
-      }, "Phone"), /*#__PURE__*/_react["default"].createElement("input", {
+      }, "Phone"), /*#__PURE__*/_react["default"].createElement("br", null), /*#__PURE__*/_react["default"].createElement("input", {
         required: true,
         type: "checkbox",
         id: "contactemail",
@@ -178,18 +198,18 @@ var Contact = /*#__PURE__*/function (_Component) {
         }
       }), /*#__PURE__*/_react["default"].createElement("label", {
         htmlFor: "contactemail"
-      }, "Email"), /*#__PURE__*/_react["default"].createElement("p", null, /*#__PURE__*/_react["default"].createElement("strong", null, "Brief Description of Your Legal Issue")), /*#__PURE__*/_react["default"].createElement(_global.TextArea, {
+      }, "Email")), /*#__PURE__*/_react["default"].createElement("p", null, /*#__PURE__*/_react["default"].createElement("strong", null, "Brief Description of Your Legal Issue")), /*#__PURE__*/_react["default"].createElement(_global.TextArea, {
         placeholder: "Description",
         type: "description",
         value: description,
         onChange: function onChange(e) {
           _this2.updateState(e, "description");
         }
-      }), /*#__PURE__*/_react["default"].createElement(_messageForm.MessageLinks, null, /*#__PURE__*/_react["default"].createElement("a", {
+      }), /*#__PURE__*/_react["default"].createElement(_messageForm.ContactLinks, null, /*#__PURE__*/_react["default"].createElement("a", {
         href: "/disclaimer"
       }, "Disclaimer"), " | ", /*#__PURE__*/_react["default"].createElement("a", {
         href: "/privacy"
-      }, "Privacy Policy")), /*#__PURE__*/_react["default"].createElement(_messageForm.MessageDisclaimer, null, /*#__PURE__*/_react["default"].createElement("input", {
+      }, "Privacy Policy")), /*#__PURE__*/_react["default"].createElement(_messageForm.ContactDisclaimer, null, /*#__PURE__*/_react["default"].createElement("input", {
         required: true,
         type: "checkbox",
         id: "disclaimer",
@@ -200,10 +220,10 @@ var Contact = /*#__PURE__*/function (_Component) {
         }
       }), /*#__PURE__*/_react["default"].createElement("label", {
         htmlFor: "disclaimer"
-      }, "I Have Read The Disclaimer *"), /*#__PURE__*/_react["default"].createElement(_global.BigGoldButton, {
+      }, /*#__PURE__*/_react["default"].createElement("p", null, /*#__PURE__*/_react["default"].createElement("strong", null, "I Have Read The Disclaimer *")))), /*#__PURE__*/_react["default"].createElement(_global.BigGoldButton, {
         className: buttonDisabled ? "buttonDisabled" : "",
         type: "submit"
-      }, "Send This Message")))), /*#__PURE__*/_react["default"].createElement(_components.ContentBottom, {
+      }, "Send This Message"))), /*#__PURE__*/_react["default"].createElement(_components.ContentBottom, {
         className: "mobileBottom"
       })), /*#__PURE__*/_react["default"].createElement(_components.Footer, null));
     }

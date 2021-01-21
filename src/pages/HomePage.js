@@ -9,7 +9,7 @@ class Home extends Component {
     render(){
       return (
           <PageWrapper>
-              <Header/>
+              <Header page="Home"/>
               <ContentWrapper className="homePage">
                 <PersonalInjury home={true}/>
                 <HomeContent>

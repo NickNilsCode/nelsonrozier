@@ -63,82 +63,67 @@ var dataObj = {},
     sitemapBundle = "",
     privacypolicyBundle = "",
     attorneytemplateBundle = "",
-    searchBundle = "";
-
-_fs["default"].readFile('./dist/js/home.bundle.min.js', "utf8", function (err, data) {
-  if (err) console.log("ERR", err);
-  homeBundle = data || "";
-});
-
-_fs["default"].readFile('./dist/js/about.bundle.min.js', "utf8", function (err, data) {
-  if (err) console.log("ERR", err);
-  aboutBundle = data || "";
-});
-
-_fs["default"].readFile('./dist/js/personalinjury.bundle.min.js', "utf8", function (err, data) {
-  if (err) console.log("ERR", err);
-  personalinjuryBundle = data || "";
-});
-
-_fs["default"].readFile('./dist/js/personalinjurytemplate.bundle.min.js', "utf8", function (err, data) {
-  if (err) console.log("ERR", err);
-  personalinjurytemplateBundle = data || "";
-});
-
-_fs["default"].readFile('./dist/js/caseresults.bundle.min.js', "utf8", function (err, data) {
-  if (err) console.log("ERR", err);
-  caseresultsBundle = data || "";
-});
-
-_fs["default"].readFile('./dist/js/faq.bundle.min.js', "utf8", function (err, data) {
-  if (err) console.log("ERR", err);
-  faqBundle = data || "";
-});
-
-_fs["default"].readFile('./dist/js/blog.bundle.min.js', "utf8", function (err, data) {
-  if (err) console.log("ERR", err);
-  blogBundle = data || "";
-});
-
-_fs["default"].readFile('./dist/js/blogcattemplate.bundle.min.js', "utf8", function (err, data) {
-  if (err) console.log("ERR", err);
-  blogcattemplateBundle = data || "";
-});
-
-_fs["default"].readFile('./dist/js/blogtemplate.bundle.min.js', "utf8", function (err, data) {
-  if (err) console.log("ERR", err);
-  blogtemplateBundle = data || "";
-});
+    searchBundle = ""; // fs.readFile('./dist/js/home.bundle.min.js', "utf8", (err, data) => {
+//   if (err) console.log("ERR" ,err);
+//   homeBundle = data || "";
+// })
+// fs.readFile('./dist/js/about.bundle.min.js', "utf8", (err, data) => {
+//   if (err) console.log("ERR" ,err);
+//   aboutBundle = data || "";
+// })
+// fs.readFile('./dist/js/personalinjury.bundle.min.js', "utf8", (err, data) => {
+//   if (err) console.log("ERR" ,err);
+//   personalinjuryBundle = data || "";
+// })
+// fs.readFile('./dist/js/personalinjurytemplate.bundle.min.js', "utf8", (err, data) => {
+//   if (err) console.log("ERR" ,err);
+//   personalinjurytemplateBundle = data || "";
+// })
+// fs.readFile('./dist/js/caseresults.bundle.min.js', "utf8", (err, data) => {
+//   if (err) console.log("ERR" ,err);
+//   caseresultsBundle = data || "";
+// })
+// fs.readFile('./dist/js/faq.bundle.min.js', "utf8", (err, data) => {
+//   if (err) console.log("ERR" ,err);
+//   faqBundle = data || "";
+// })
+// fs.readFile('./dist/js/blog.bundle.min.js', "utf8", (err, data) => {
+//   if (err) console.log("ERR" ,err);
+//   blogBundle = data || "";
+// })
+// fs.readFile('./dist/js/blogcattemplate.bundle.min.js', "utf8", (err, data) => {
+//   if (err) console.log("ERR" ,err);
+//   blogcattemplateBundle = data || "";
+// })
+// fs.readFile('./dist/js/blogtemplate.bundle.min.js', "utf8", (err, data) => {
+//   if (err) console.log("ERR" ,err);
+//   blogtemplateBundle = data || "";
+// })
 
 _fs["default"].readFile('./dist/js/contact.bundle.min.js', "utf8", function (err, data) {
   if (err) console.log("ERR", err);
   contactBundle = data || "";
-});
+}); // fs.readFile('./dist/js/disclaimer.bundle.min.js', "utf8", (err, data) => {
+//   if (err) console.log("ERR" ,err);
+//   disclaimerBundle = data || "";
+// })
+// fs.readFile('./dist/js/sitemap.bundle.min.js', "utf8", (err, data) => {
+//   if (err) console.log("ERR" ,err);
+//   sitemapBundle = data || "";
+// })
+// fs.readFile('./dist/js/privacypolicy.bundle.min.js', "utf8", (err, data) => {
+//   if (err) console.log("ERR" ,err);
+//   privacypolicyBundle = data || "";
+// })
+// fs.readFile('./dist/js/attorneytemplate.bundle.min.js', "utf8", (err, data) => {
+//   if (err) console.log("ERR" ,err);
+//   attorneytemplateBundle = data || "";
+// })
+// fs.readFile('./dist/js/search.bundle.min.js', "utf8", (err, data) => {
+//   if (err) console.log("ERR" ,err);
+//   searchBundle = data || "";
+// })
 
-_fs["default"].readFile('./dist/js/disclaimer.bundle.min.js', "utf8", function (err, data) {
-  if (err) console.log("ERR", err);
-  disclaimerBundle = data || "";
-});
-
-_fs["default"].readFile('./dist/js/sitemap.bundle.min.js', "utf8", function (err, data) {
-  if (err) console.log("ERR", err);
-  sitemapBundle = data || "";
-});
-
-_fs["default"].readFile('./dist/js/privacypolicy.bundle.min.js', "utf8", function (err, data) {
-  if (err) console.log("ERR", err);
-  privacypolicyBundle = data || "";
-});
-
-_fs["default"].readFile('./dist/js/attorneytemplate.bundle.min.js', "utf8", function (err, data) {
-  if (err) console.log("ERR", err);
-  attorneytemplateBundle = data || "";
-});
-
-_fs["default"].readFile('./dist/js/search.bundle.min.js', "utf8", function (err, data) {
-  if (err) console.log("ERR", err);
-  searchBundle = data || "";
-});
 
 app.get('/', function (req, res) {
   var data = "";

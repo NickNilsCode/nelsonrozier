@@ -9,7 +9,7 @@ class Faq extends Component {
     render(){
       return (
           <PageWrapper>
-              <Header/>
+              <Header page="FAQ"/>
               <ContentWrapper>
                 <PersonalInjury/>
                 <Content>

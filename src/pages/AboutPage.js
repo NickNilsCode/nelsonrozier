@@ -8,7 +8,7 @@ class About extends Component {
     render(){
       return (
           <PageWrapper>
-              <Header/>
+              <Header page="About"/>
               <ContentWrapper>
                 <PersonalInjury/>
                 <Content>

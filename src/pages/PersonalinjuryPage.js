@@ -9,7 +9,7 @@ class Personalinjury extends Component {
     render(){
       return (
           <PageWrapper>
-              <Header/>
+              <Header page="Personal Injury"/>
               <ContentWrapper>
                 <PersonalInjury/>
                 <Content>

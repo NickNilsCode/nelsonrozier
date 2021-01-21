@@ -52,10 +52,25 @@ export const Content = styled.div`
     font-weight: 700;
     margin-bottom: 10px;
   }
+  select {
+    background: #f7f7f7;
+    padding: 12px;
+    width: 100%;
+    margin: 0 0 12px 0;
+    font-size: 16px;
+    border: 1px solid #8d8d8d;
+    border-radius: 1px;
+    line-height: 1.5;
+  }
   a {
     color: ${red};
     transition: color 300ms ease 0ms;
     text-decoration: underline;
+  }
+  form {
+    input, textarea {
+      background: #f7f7f7;
+    }
   }
   a:hover {
     color: ${gold};

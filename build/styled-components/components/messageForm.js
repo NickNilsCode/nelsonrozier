@@ -3,14 +3,34 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.MessageDisclaimer = exports.MessageLinks = exports.MessageForm = exports.MessageFormWrap = void 0;
+exports.ContactDisclaimer = exports.MessageDisclaimer = exports.ContactLinks = exports.MessageLinks = exports.MessageForm = exports.MessageFormWrap = void 0;
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-function _templateObject4() {
+function _templateObject6() {
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  align-items: center;\n  margin: 6px 0;\n  input {\n    height: 20px;\n    width: 20px;\n    margin: 0 6px 0 0;\n    background: #f7f7f7;\n  }\n"]);
+
+  _templateObject6 = function _templateObject6() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject5() {
   var data = _taggedTemplateLiteral(["\n  display: flex;\n  align-items: center;\n  margin: 6px 0;\n  input {\n    height: 20px;\n    width: 20px;\n    margin: 0 6px 0 0;\n  }\n"]);
+
+  _templateObject5 = function _templateObject5() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject4() {
+  var data = _taggedTemplateLiteral(["\n  text-align: left;\n  a {\n    color: #833634;\n    text-decoration: underline;\n  }\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -63,6 +83,14 @@ var MessageLinks = _styledComponents["default"].div(_templateObject3());
 
 exports.MessageLinks = MessageLinks;
 
-var MessageDisclaimer = _styledComponents["default"].div(_templateObject4());
+var ContactLinks = _styledComponents["default"].div(_templateObject4());
+
+exports.ContactLinks = ContactLinks;
+
+var MessageDisclaimer = _styledComponents["default"].div(_templateObject5());
 
 exports.MessageDisclaimer = MessageDisclaimer;
+
+var ContactDisclaimer = _styledComponents["default"].div(_templateObject6());
+
+exports.ContactDisclaimer = ContactDisclaimer;

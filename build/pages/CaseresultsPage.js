@@ -59,7 +59,9 @@ var Caseresults = /*#__PURE__*/function (_Component) {
   _createClass(Caseresults, [{
     key: "render",
     value: function render() {
-      return /*#__PURE__*/_react["default"].createElement(_global.PageWrapper, null, /*#__PURE__*/_react["default"].createElement(_components.Header, null), /*#__PURE__*/_react["default"].createElement(_global.ContentWrapper, null, /*#__PURE__*/_react["default"].createElement(_components.PersonalInjury, null), /*#__PURE__*/_react["default"].createElement(_global.Content, null, (0, _mapPage["default"])(_caseresultsPage["default"])), /*#__PURE__*/_react["default"].createElement(_components.ContentBottom, {
+      return /*#__PURE__*/_react["default"].createElement(_global.PageWrapper, null, /*#__PURE__*/_react["default"].createElement(_components.Header, {
+        page: "Case Results"
+      }), /*#__PURE__*/_react["default"].createElement(_global.ContentWrapper, null, /*#__PURE__*/_react["default"].createElement(_components.PersonalInjury, null), /*#__PURE__*/_react["default"].createElement(_global.Content, null, (0, _mapPage["default"])(_caseresultsPage["default"])), /*#__PURE__*/_react["default"].createElement(_components.ContentBottom, {
         className: "mobileBottom"
       })), /*#__PURE__*/_react["default"].createElement(_components.Footer, null));
     }

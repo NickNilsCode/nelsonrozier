@@ -82,7 +82,9 @@ var HeaderComponent = /*#__PURE__*/function (_Component) {
         src: "/images/brand-logo.png"
       })), /*#__PURE__*/_react["default"].createElement(_header.HeaderDiv, null, /*#__PURE__*/_react["default"].createElement(_header.Header1, null, "FREE Consultation."), /*#__PURE__*/_react["default"].createElement(_header.Header2, null, "No fee unless we win"), /*#__PURE__*/_react["default"].createElement("a", {
         href: "tel:+1-559-713-0159"
-      }, /*#__PURE__*/_react["default"].createElement(_header.Header3, null, "559-713-0159")))), /*#__PURE__*/_react["default"].createElement(_.Nav, null), /*#__PURE__*/_react["default"].createElement(_header.Header4, null, "Personalized Legal Representation by Compassionate,"), /*#__PURE__*/_react["default"].createElement(_header.Header4, null, "Dedicated and Experienced Attorneys"), /*#__PURE__*/_react["default"].createElement("a", {
+      }, /*#__PURE__*/_react["default"].createElement(_header.Header3, null, "559-713-0159")))), /*#__PURE__*/_react["default"].createElement(_.Nav, {
+        page: this.props.page
+      }), /*#__PURE__*/_react["default"].createElement(_header.Header4, null, "Personalized Legal Representation by Compassionate,"), /*#__PURE__*/_react["default"].createElement(_header.Header4, null, "Dedicated and Experienced Attorneys"), /*#__PURE__*/_react["default"].createElement("a", {
         href: "",
         onClick: this.scroll,
         className: "consultationAnchor"

@@ -65,7 +65,9 @@ var Blogtemplate = /*#__PURE__*/function (_Component) {
         return a.link == link;
       });
 
-      return /*#__PURE__*/_react["default"].createElement(_global.PageWrapper, null, /*#__PURE__*/_react["default"].createElement(_components.Header, null), /*#__PURE__*/_react["default"].createElement(_global.ContentWrapper, {
+      return /*#__PURE__*/_react["default"].createElement(_global.PageWrapper, null, /*#__PURE__*/_react["default"].createElement(_components.Header, {
+        page: "Blog"
+      }), /*#__PURE__*/_react["default"].createElement(_global.ContentWrapper, {
         className: "blogPage"
       }, /*#__PURE__*/_react["default"].createElement(_global.Content, null, blog && /*#__PURE__*/_react["default"].createElement(_react.Fragment, null, /*#__PURE__*/_react["default"].createElement("h1", null, blog.title), /*#__PURE__*/_react["default"].createElement("p", null, /*#__PURE__*/_react["default"].createElement("a", {
         href: "/"

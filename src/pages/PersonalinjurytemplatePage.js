@@ -10,7 +10,7 @@ class Personalinjurytemplate extends Component {
       let selected = piContent.find((a, i) => a.link == "/personal-injury/" + this.props.data.page)
       return (
           <PageWrapper>
-              <Header/>
+              <Header page="Personal Injury"/>
               <ContentWrapper>
                 <PersonalInjury selected={selected.name}/>
                 <Content>

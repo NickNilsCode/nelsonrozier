@@ -9,7 +9,7 @@ class Blog extends Component {
     render(){
       return (
           <PageWrapper>
-              <Header/>
+              <Header page="Blog"/>
               <ContentWrapper className="blogPage">
                 <Content>
                   <h1>Visalia Personal Injury Law Blog</h1>

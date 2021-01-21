@@ -11,7 +11,7 @@ class Blogtemplate extends Component {
       let blog = blogs.find(a => a.link == link);
       return (
           <PageWrapper>
-              <Header/>
+              <Header page="Blog"/>
               <ContentWrapper className="blogPage">
                 <Content>
                   {

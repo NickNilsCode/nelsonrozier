@@ -2,12 +2,14 @@ import React, { Component } from 'react';
 import { Header, Footer, PersonalInjury, ContentBottom } from '../components';
 import { ContactContent } from '../styled-components/pages/contact';
 import { PageWrapper, ContentWrapper, Content, Input, TextArea, BigGoldButton } from '../styled-components/global';
-import { MessageForm, MessageFormWrap, MessageLinks, MessageDisclaimer } from '../styled-components/components/messageForm';
+import { MessageForm, MessageFormWrap, ContactLinks, ContactDisclaimer } from '../styled-components/components/messageForm';
+import states from '../data/states';
 let initialState = {
   name: "",
   email: "",
   phone: "",
   zip: "",
+  state: "",
   contactemail: false,
   contactphone: false,
   description: "",
@@ -41,6 +43,7 @@ class Contact extends Component {
       this.setState(initialState)
     }
     updateState = (e, prop) => {
+      console.log("crash", prop, e.currentTarget.value );
       let obj = {};
       obj[prop] = e.currentTarget.value;
       this.setState(obj);
@@ -51,11 +54,11 @@ class Contact extends Component {
       this.setState(obj)
     }
     render(){
-      const {name, email, phone, zip, contactemail, contactphone, description, disclaimer } = this.state;
+      const {name, email, phone, zip, state, contactemail, contactphone, description, disclaimer } = this.state;
       const buttonDisabled = disclaimer == true && email ? false : true;
       return (
           <PageWrapper>
-              <Header/>
+              <Header page="Contact"/>
               <ContentWrapper>
                 <PersonalInjury/>
                 <Content>
@@ -92,30 +95,42 @@ class Contact extends Component {
                       value={zip}
                       onChange={(e) => {this.updateState(e, "zip")}}
                     />
-                    <strong>US States</strong>
-                    select list of states
-                    <strong>How Would You Like To Be Contacted?</strong>
-                    <span>Check all that apply.</span>
-                    Phone
-                    Email
-                    <input
-                      required
-                      type="checkbox"
-                      id="contactphone"
-                      name="contactphone"
-                      checked={contactphone}
-                      onChange={() => {this.updateCheckbox("contactphone")}}
-                    />
-                    <label htmlFor="contactphone">Phone</label>
-                    <input
-                      required
-                      type="checkbox"
-                      id="contactemail"
-                      name="contactemail"
-                      checked={contactemail}
-                      onChange={() => {this.updateCheckbox("contactemail")}}
-                    />
-                    <label htmlFor="contactemail">Email</label>
+                    <p><strong>US States</strong></p>
+                    <select
+                      value={state}
+                      name="states"
+                      onChange={(e) => {this.updateState(e,"state")}}
+                    >
+                      {
+                        states.map((a,i) => {
+                          return (
+                            <option value={a.value} key={i}>{a.name}</option>
+                          )
+                        })
+                      }
+                    </select>
+                    <p>
+                      <strong>How Would You Like To Be Contacted?</strong><br/>
+                      <span>Check all that apply.</span><br/>
+                      <input
+                        required
+                        type="checkbox"
+                        id="contactphone"
+                        name="contactphone"
+                        checked={contactphone}
+                        onChange={() => {this.updateCheckbox("contactphone")}}
+                      />
+                      <label htmlFor="contactphone">Phone</label><br/>
+                      <input
+                        required
+                        type="checkbox"
+                        id="contactemail"
+                        name="contactemail"
+                        checked={contactemail}
+                        onChange={() => {this.updateCheckbox("contactemail")}}
+                      />
+                      <label htmlFor="contactemail">Email</label>
+                    </p>
 
                     <p><strong>Brief Description of Your Legal Issue</strong></p>
                     <TextArea
@@ -124,10 +139,10 @@ class Contact extends Component {
                       value={description}
                       onChange={(e) => {this.updateState(e, "description")}}
                     />
-                    <MessageLinks>
+                    <ContactLinks>
                       <a href="/disclaimer">Disclaimer</a> | <a href="/privacy">Privacy Policy</a>
-                    </MessageLinks>
-                    <MessageDisclaimer>
+                    </ContactLinks>
+                    <ContactDisclaimer>
                       <input
                         required
                         type="checkbox"
@@ -136,9 +151,11 @@ class Contact extends Component {
                         checked={disclaimer}
                         onChange={() => {this.updateCheckbox("disclaimer")}}
                       />
-                      <label htmlFor="disclaimer">I Have Read The Disclaimer *</label>
-                      <BigGoldButton className={buttonDisabled ? "buttonDisabled" : ""} type="submit">Send This Message</BigGoldButton>
-                    </MessageDisclaimer>
+                      <label htmlFor="disclaimer">
+                        <p><strong>I Have Read The Disclaimer *</strong></p>
+                      </label>
+                    </ContactDisclaimer>
+                    <BigGoldButton className={buttonDisabled ? "buttonDisabled" : ""} type="submit">Send This Message</BigGoldButton>
                   </form>
                 </Content>
                 <ContentBottom className="mobileBottom"/>

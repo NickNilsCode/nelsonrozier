@@ -65,7 +65,9 @@ var Personalinjurytemplate = /*#__PURE__*/function (_Component) {
         return a.link == "/personal-injury/" + _this.props.data.page;
       });
 
-      return /*#__PURE__*/_react["default"].createElement(_global.PageWrapper, null, /*#__PURE__*/_react["default"].createElement(_components.Header, null), /*#__PURE__*/_react["default"].createElement(_global.ContentWrapper, null, /*#__PURE__*/_react["default"].createElement(_components.PersonalInjury, {
+      return /*#__PURE__*/_react["default"].createElement(_global.PageWrapper, null, /*#__PURE__*/_react["default"].createElement(_components.Header, {
+        page: "Personal Injury"
+      }), /*#__PURE__*/_react["default"].createElement(_global.ContentWrapper, null, /*#__PURE__*/_react["default"].createElement(_components.PersonalInjury, {
         selected: selected.name
       }), /*#__PURE__*/_react["default"].createElement(_global.Content, null, (0, _mapPage["default"])(selected.content)), /*#__PURE__*/_react["default"].createElement(_components.ContentBottom, {
         className: "mobileBottom"

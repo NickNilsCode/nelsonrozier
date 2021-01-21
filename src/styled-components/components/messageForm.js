@@ -32,6 +32,13 @@ export const MessageLinks = styled.div`
     text-decoration: underline;
   }
 `;
+export const ContactLinks = styled.div`
+  text-align: left;
+  a {
+    color: #833634;
+    text-decoration: underline;
+  }
+`;
 export const MessageDisclaimer = styled.div`
   display: flex;
   align-items: center;
@@ -40,5 +47,16 @@ export const MessageDisclaimer = styled.div`
     height: 20px;
     width: 20px;
     margin: 0 6px 0 0;
+  }
+`;
+export const ContactDisclaimer = styled.div`
+  display: flex;
+  align-items: center;
+  margin: 6px 0;
+  input {
+    height: 20px;
+    width: 20px;
+    margin: 0 6px 0 0;
+    background: #f7f7f7;
   }
 `;

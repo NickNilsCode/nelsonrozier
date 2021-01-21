@@ -20,7 +20,7 @@ class HeaderComponent extends Component {
               <a href="tel:+1-559-713-0159"><Header3>559-713-0159</Header3></a>
             </HeaderDiv>
           </FlexDiv>
-          <Nav/>
+          <Nav page={this.props.page}/>
           <Header4>Personalized Legal Representation by Compassionate,</Header4>
           <Header4>Dedicated and Experienced Attorneys</Header4>
           <a href="" onClick={this.scroll} className="consultationAnchor">

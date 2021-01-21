@@ -66,6 +66,7 @@ var NavComponent = /*#__PURE__*/function (_Component) {
         }, /*#__PURE__*/_react["default"].createElement("a", {
           href: a.link
         }, /*#__PURE__*/_react["default"].createElement(_nav.NavButton, {
+          selected: _this.props.page == a.name ? true : false,
           className: mobile ? "mobileNav" : "",
           index: i,
           size: _nav2["default"].length

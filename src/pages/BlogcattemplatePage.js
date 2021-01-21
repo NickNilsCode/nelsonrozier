@@ -9,7 +9,7 @@ class Blogcattemplate extends Component {
     render(){
       return (
           <PageWrapper>
-              <Header/>
+              <Header page="Blog"/>
               <ContentWrapper>
                 <PersonalInjury/>
                 <Content>

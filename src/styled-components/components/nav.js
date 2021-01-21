@@ -31,19 +31,21 @@ export const NavButton = styled.div`
   color: #fff;
   padding: 3px 13px;
   border-right: ${props => props.index != props.size - 1 ? "1px solid #fff" : "none"};
+  transition: background-color 0.6s;
+  background-color: ${props => props.selected ? "#763432" : "transparent"};
   &.mobileNav {
     text-transform: capitalize;
     padding: 10px 37.5px;
-    background-color: #763432;
     border-right: none;
     width: 100%;
     box-sizing: border-box;
     text-align: left;
+    background-color: ${props => props.selected ? "#321413" : "#763432"};
   }
   &:hover {
-    background-color: #763432;
+    background-color: #76343299;
     &.mobileNav {
-      background-color: #321413;
+      background-color: #32141399;
     }
   }
 `;
@@ -61,6 +63,7 @@ export const MenuBar = styled.div`
 `;
 export const MenuPopup = styled.div`
   width: calc(100% - 24px);
+  background-color: rgb(118, 52, 50);
   display: none;
   margin: auto;
   padding: 24px auto;

@@ -19,7 +19,12 @@ class NavComponent extends Component {
       return (
         <Fragment key={i}>
           <a href={a.link}>
-            <NavButton className={mobile ? "mobileNav" : ""} index={i} size={navData.length}>{a.name}</NavButton>
+            <NavButton
+              selected={this.props.page == a.name ? true : false}
+              className={mobile ? "mobileNav" : ""}
+              index={i}
+              size={navData.length}
+            >{a.name}</NavButton>
           </a>
         </Fragment>
       )

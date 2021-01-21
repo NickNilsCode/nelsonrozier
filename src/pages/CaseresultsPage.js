@@ -9,7 +9,7 @@ class Caseresults extends Component {
     render(){
       return (
           <PageWrapper>
-              <Header/>
+              <Header page="Case Results"/>
               <ContentWrapper>
                 <PersonalInjury/>
                 <Content>

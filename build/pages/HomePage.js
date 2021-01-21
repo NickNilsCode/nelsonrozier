@@ -59,7 +59,9 @@ var Home = /*#__PURE__*/function (_Component) {
   _createClass(Home, [{
     key: "render",
     value: function render() {
-      return /*#__PURE__*/_react["default"].createElement(_global.PageWrapper, null, /*#__PURE__*/_react["default"].createElement(_components.Header, null), /*#__PURE__*/_react["default"].createElement(_global.ContentWrapper, {
+      return /*#__PURE__*/_react["default"].createElement(_global.PageWrapper, null, /*#__PURE__*/_react["default"].createElement(_components.Header, {
+        page: "Home"
+      }), /*#__PURE__*/_react["default"].createElement(_global.ContentWrapper, {
         className: "homePage"
       }, /*#__PURE__*/_react["default"].createElement(_components.PersonalInjury, {
         home: true
