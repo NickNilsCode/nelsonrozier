@@ -39,15 +39,6 @@ app.use((0, _compression["default"])());
 app.use((0, _cors["default"])());
 app.use(_bodyParser["default"].json());
 app.use(_bodyParser["default"].urlencoded());
-
-_nodeCron["default"].schedule('* * * 1 *', function () {
-  (0, _nodeFetch["default"])('https://nelsonrozier.herokuapp.com/').then(function (res) {
-    console.log("requested at " + new Date());
-  })["catch"](function () {
-    console.log("request to https://nelsonrozier.herokuapp.com/ failed at " + new Date());
-  });
-});
-
 var dataObj = {},
     homeBundle = "",
     aboutBundle = "",
