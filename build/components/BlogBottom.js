@@ -104,7 +104,7 @@ var BlogBottomComponent = /*#__PURE__*/function (_Component) {
           key: i
         }, /*#__PURE__*/_react["default"].createElement("a", {
           href: a.link
-        }, a.name), "(", a.qty, ")");
+        }, a.name), " (", a.qty, ")");
       })), /*#__PURE__*/_react["default"].createElement("h2", null, "Archives"), /*#__PURE__*/_react["default"].createElement("select", {
         onChange: this.changeBlogDate
       }, _archives["default"].map(function (a, i) {

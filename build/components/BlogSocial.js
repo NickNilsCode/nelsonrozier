@@ -9,17 +9,7 @@ exports["default"] = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _components = require("../components");
-
-var _blogtemplate = require("../styled-components/pages/blogtemplate");
-
-var _global = require("../styled-components/global");
-
-var _blogs = _interopRequireDefault(require("../data/blogs"));
-
-var _mapPage = _interopRequireDefault(require("../helpers/mapPage"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+var _blogSocial = require("../styled-components/components/blogSocial");
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
 
@@ -45,42 +35,57 @@ function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Re
 
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
-var Blogtemplate = /*#__PURE__*/function (_Component) {
-  _inherits(Blogtemplate, _Component);
+var BlogSocialComponent = /*#__PURE__*/function (_Component) {
+  _inherits(BlogSocialComponent, _Component);
 
-  var _super = _createSuper(Blogtemplate);
+  var _super = _createSuper(BlogSocialComponent);
 
-  function Blogtemplate() {
-    _classCallCheck(this, Blogtemplate);
+  function BlogSocialComponent() {
+    _classCallCheck(this, BlogSocialComponent);
 
     return _super.apply(this, arguments);
   }
 
-  _createClass(Blogtemplate, [{
+  _createClass(BlogSocialComponent, [{
     key: "render",
     value: function render() {
-      var link = this.props.data.link;
-
-      var blog = _blogs["default"].find(function (a) {
-        return a.link == link;
-      });
-
-      return /*#__PURE__*/_react["default"].createElement(_global.PageWrapper, null, /*#__PURE__*/_react["default"].createElement(_components.Header, {
-        page: "Blog"
-      }), /*#__PURE__*/_react["default"].createElement(_global.ContentWrapper, {
-        className: "blogPage"
-      }, /*#__PURE__*/_react["default"].createElement(_global.Content, {
-        className: "blogContent"
-      }, blog && /*#__PURE__*/_react["default"].createElement(_react.Fragment, null, /*#__PURE__*/_react["default"].createElement("h1", null, blog.title), /*#__PURE__*/_react["default"].createElement("p", null, /*#__PURE__*/_react["default"].createElement("a", {
-        href: "/"
-      }, "On behalf of Nelson & Rozier"), " | ", blog.date, " | ", blog.categories.join(', ')), (0, _mapPage["default"])(blog.content), /*#__PURE__*/_react["default"].createElement(_components.BlogSocial, {
-        share: blog.share
-      }))), /*#__PURE__*/_react["default"].createElement(_components.BlogBottom, null)), /*#__PURE__*/_react["default"].createElement(_components.Footer, null));
+      var _this$props$share = this.props.share,
+          facebook = _this$props$share.facebook,
+          linkedin = _this$props$share.linkedin,
+          twitter = _this$props$share.twitter;
+      return /*#__PURE__*/_react["default"].createElement(_blogSocial.BlogSocial, null, /*#__PURE__*/_react["default"].createElement(_blogSocial.SocialButton, {
+        href: facebook,
+        className: "blogFacebook"
+      }, /*#__PURE__*/_react["default"].createElement(_blogSocial.Logo, {
+        className: "socialLogo"
+      }, /*#__PURE__*/_react["default"].createElement("i", {
+        className: "fab fa-facebook-f"
+      }), /*#__PURE__*/_react["default"].createElement("i", {
+        className: "fab fa-facebook-f"
+      })), /*#__PURE__*/_react["default"].createElement(_blogSocial.SocialText, null, "Facebook")), /*#__PURE__*/_react["default"].createElement(_blogSocial.SocialButton, {
+        href: linkedin,
+        className: "blogLinkedin"
+      }, /*#__PURE__*/_react["default"].createElement(_blogSocial.Logo, {
+        className: "socialLogo"
+      }, /*#__PURE__*/_react["default"].createElement("i", {
+        className: "fab fa-linkedin-in"
+      }), /*#__PURE__*/_react["default"].createElement("i", {
+        className: "fab fa-linkedin-in"
+      })), /*#__PURE__*/_react["default"].createElement(_blogSocial.SocialText, null, "LinkedIn")), /*#__PURE__*/_react["default"].createElement(_blogSocial.SocialButton, {
+        href: twitter,
+        className: "blogTwitter"
+      }, /*#__PURE__*/_react["default"].createElement(_blogSocial.Logo, {
+        className: "socialLogo"
+      }, /*#__PURE__*/_react["default"].createElement("i", {
+        className: "fab fa-twitter"
+      }), /*#__PURE__*/_react["default"].createElement("i", {
+        className: "fab fa-twitter"
+      })), /*#__PURE__*/_react["default"].createElement(_blogSocial.SocialText, null, "Twitter")));
     }
   }]);
 
-  return Blogtemplate;
+  return BlogSocialComponent;
 }(_react.Component);
 
-var _default = Blogtemplate;
+var _default = BlogSocialComponent;
 exports["default"] = _default;

@@ -24,16 +24,17 @@ app.use(compression());
 app.use(cors());
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded())
-// 
-// cron.schedule('* * * 1 *', () => {
-//   fetch('https://nelsonrozier.herokuapp.com/')
-//   .then(res => {
-//     console.log("requested at " + new Date())
-//   })
-//   .catch(() => {
-//     console.log("request to https://nelsonrozier.herokuapp.com/ failed at " + new Date())
-//   });
-// });
+
+cron.schedule('0 1 * * *', (e) => {
+  console.log(e);
+  fetch('https://nelsonrozier.herokuapp.com/')
+  .then(res => {
+    console.log("requested at " + new Date())
+  })
+  .catch(() => {
+    console.log("request to https://nelsonrozier.herokuapp.com/ failed at " + new Date())
+  });
+});
 
 var dataObj = {},
 homeBundle = "",
@@ -293,7 +294,7 @@ function returnHTML(data, bundle, Page, title){
                 <title>${title}</title>
                 <meta name="Description" content="${title}">
                 <link rel="preconnect" href="https://fonts.gstatic.com">
-                <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&family=PT+Sans&display=swap" rel="stylesheet">
+                <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&family=Open+Sans:wght@700&family=PT+Sans&display=swap" rel="stylesheet">
                 <style>
                   body { margin: 0; font-family: "PT Sans", Helvetica, Arial, Lucida, sans-serif; color: #383b40; }
                   a { text-decoration: none; color: #000; }

@@ -38,16 +38,16 @@ var app = (0, _express["default"])();
 app.use((0, _compression["default"])());
 app.use((0, _cors["default"])());
 app.use(_bodyParser["default"].json());
-app.use(_bodyParser["default"].urlencoded()); // 
-// cron.schedule('* * * 1 *', () => {
-//   fetch('https://nelsonrozier.herokuapp.com/')
-//   .then(res => {
-//     console.log("requested at " + new Date())
-//   })
-//   .catch(() => {
-//     console.log("request to https://nelsonrozier.herokuapp.com/ failed at " + new Date())
-//   });
-// });
+app.use(_bodyParser["default"].urlencoded());
+
+_nodeCron["default"].schedule('0 1 * * *', function (e) {
+  console.log(e);
+  (0, _nodeFetch["default"])('https://nelsonrozier.herokuapp.com/').then(function (res) {
+    console.log("requested at " + new Date());
+  })["catch"](function () {
+    console.log("request to https://nelsonrozier.herokuapp.com/ failed at " + new Date());
+  });
+});
 
 var dataObj = {},
     homeBundle = "",
@@ -320,7 +320,7 @@ function returnHTML(data, bundle, Page, title) {
     data: data
   })));
   var styles = sheet.getStyleTags();
-  return "\n            <html lang=\"en\">\n              <head>\n                <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n                <title>".concat(title, "</title>\n                <meta name=\"Description\" content=\"").concat(title, "\">\n                <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\">\n                <link href=\"https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&family=PT+Sans&display=swap\" rel=\"stylesheet\">\n                <style>\n                  body { margin: 0; font-family: \"PT Sans\", Helvetica, Arial, Lucida, sans-serif; color: #383b40; }\n                  a { text-decoration: none; color: #000; }\n                </style>\n                ").concat(styles, "\n                <script src=\"https://kit.fontawesome.com/7fa747235e.js\" crossorigin=\"anonymous\"></script>\n              </head>\n              <body>\n                <script>window.os = window.os || {};</script>\n                <script>window.__DATA__=").concat(dataString, "</script>\n                <div id=\"app\" role=\"main\">").concat(body, "</div>\n                <script>").concat(bundle, "</script>\n              </body>\n            </html>\n          ");
+  return "\n            <html lang=\"en\">\n              <head>\n                <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n                <title>".concat(title, "</title>\n                <meta name=\"Description\" content=\"").concat(title, "\">\n                <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\">\n                <link href=\"https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&family=Open+Sans:wght@700&family=PT+Sans&display=swap\" rel=\"stylesheet\">\n                <style>\n                  body { margin: 0; font-family: \"PT Sans\", Helvetica, Arial, Lucida, sans-serif; color: #383b40; }\n                  a { text-decoration: none; color: #000; }\n                </style>\n                ").concat(styles, "\n                <script src=\"https://kit.fontawesome.com/7fa747235e.js\" crossorigin=\"anonymous\"></script>\n              </head>\n              <body>\n                <script>window.os = window.os || {};</script>\n                <script>window.__DATA__=").concat(dataString, "</script>\n                <div id=\"app\" role=\"main\">").concat(body, "</div>\n                <script>").concat(bundle, "</script>\n              </body>\n            </html>\n          ");
 }
 
 function errHandle(err) {

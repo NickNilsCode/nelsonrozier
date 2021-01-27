@@ -1,5 +1,6 @@
 export { default as BottomSection } from "./BottomSection";
 export { default as BlogBottom } from "./BlogBottom";
+export { default as BlogSocial } from "./BlogSocial";
 export { default as ContentBottom } from "./ContentBottom";
 export { default as Footer } from "./Footer";
 export { default as Header } from "./Header";

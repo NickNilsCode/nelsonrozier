@@ -95,6 +95,11 @@ export const Content = styled.div`
       }
     }
   }
+  &.blogContent {
+    @media (min-width: 900px){
+      width: calc(100% - 277px - 85px);
+    }
+  }
 `;
 
 export const GoldButton = styled.button`

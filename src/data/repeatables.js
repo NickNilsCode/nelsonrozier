@@ -46,6 +46,4 @@ module.exports = {
   weonlycollect: `We only collect attorney’s fees and costs if we secure compensation for you.`,
   morethan40: `More Than 40 Years Of Combined Experience`
 
-
-
 };

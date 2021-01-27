@@ -15,6 +15,12 @@ Object.defineProperty(exports, "BlogBottom", {
     return _BlogBottom["default"];
   }
 });
+Object.defineProperty(exports, "BlogSocial", {
+  enumerable: true,
+  get: function get() {
+    return _BlogSocial["default"];
+  }
+});
 Object.defineProperty(exports, "ContentBottom", {
   enumerable: true,
   get: function get() {
@@ -67,6 +73,8 @@ Object.defineProperty(exports, "PersonalInjury", {
 var _BottomSection = _interopRequireDefault(require("./BottomSection"));
 
 var _BlogBottom = _interopRequireDefault(require("./BlogBottom"));
+
+var _BlogSocial = _interopRequireDefault(require("./BlogSocial"));
 
 var _ContentBottom = _interopRequireDefault(require("./ContentBottom"));
 

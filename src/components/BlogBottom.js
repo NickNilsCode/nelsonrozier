@@ -43,7 +43,7 @@ class BlogBottomComponent extends Component {
           {
             categories.map((a,i) => {
               return (
-                <li key={i}><a href={a.link}>{a.name}</a>({a.qty})</li>
+                <li key={i}><a href={a.link}>{a.name}</a> ({a.qty})</li>
               )
             })
           }

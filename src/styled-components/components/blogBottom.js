@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { red } from '../colors';
 export const BlogBottom = styled.div`
+  width: 100%;
   a {
     width: max-content;
     word-wrap: break-word;
@@ -51,9 +52,7 @@ export const BlogBottom = styled.div`
     margin-bottom: 10px;
   }
   ul {
-    a {
-      display: inline-block;
-    }
+    padding-left: 17px;
     li {
       margin: 8px 0;
       text-align: left;
@@ -63,6 +62,7 @@ export const BlogBottom = styled.div`
     }
   }
   @media (min-width: 900px){
-
+    width: 277px;
+    margin-left: 85px;
   }
 `;

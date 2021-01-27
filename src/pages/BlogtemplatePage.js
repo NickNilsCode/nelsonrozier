@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import { Header, Footer, BlogBottom } from '../components';
+import { Header, Footer, BlogBottom, BlogSocial } from '../components';
 import { BlogtemplateContent } from '../styled-components/pages/blogtemplate';
 import { PageWrapper, ContentWrapper, Content } from '../styled-components/global';
 import blogs from '../data/blogs';
@@ -13,14 +13,14 @@ class Blogtemplate extends Component {
           <PageWrapper>
               <Header page="Blog"/>
               <ContentWrapper className="blogPage">
-                <Content>
+                <Content className="blogContent">
                   {
                     blog &&
                     <Fragment>
                       <h1>{blog.title}</h1>
                       <p><a href="/">On behalf of Nelson & Rozier</a> | {blog.date} | {blog.categories.join(', ')}</p>
                       { mapPage(blog.content) }
-                      social media icons
+                      <BlogSocial share={blog.share}/>
                     </Fragment>
                   }
                 </Content>
