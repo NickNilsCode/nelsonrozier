@@ -12,7 +12,7 @@ var _colors = require("../colors");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _templateObject7() {
-  var data = _taggedTemplateLiteral(["\n  font-family: 'Libre Baskerville',Georgia,\"Times New Roman\",serif;\n  color: #fff;\n  font-size: 17px;\n  font-weight: 100;\n  text-shadow: 1px 1px #000000;\n\n  @media(min-width: 900px){\n    font-size: 32px;\n    margin: 48px 0;\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  font-family: 'Libre Baskerville',Georgia,\"Times New Roman\",serif;\n  color: #fff;\n  font-size: 17px;\n  font-weight: 100;\n  text-shadow: 1px 1px #000000;\n\n  @media(min-width: 900px){\n    font-size: 32px;\n    margin: 120px 0;\n  }\n"]);
 
   _templateObject7 = function _templateObject7() {
     return data;
@@ -72,7 +72,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  width: 100vw;\n  min-height: 100px;\n  background-image: url(\"/images/Proof-8961.jpg\");\n  background-position: left top;\n  background-size: cover;\n  color: #fff;\n"]);
+  var data = _taggedTemplateLiteral(["\n  width: 100vw;\n  min-height: 100px;\n  background-image: url(\"/images/Proof-8961.jpg\");\n  background-position: center;\n  background-size: cover;\n  color: #fff;\n"]);
 
   _templateObject = function _templateObject() {
     return data;

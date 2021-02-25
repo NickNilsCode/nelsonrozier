@@ -4,7 +4,7 @@ export const Header = styled.header`
   width: 100vw;
   min-height: 100px;
   background-image: url("/images/Proof-8961.jpg");
-  background-position: left top;
+  background-position: center;
   background-size: cover;
   color: #fff;
 `;
@@ -74,6 +74,6 @@ export const Header4 = styled.h2`
 
   @media(min-width: 900px){
     font-size: 32px;
-    margin: 48px 0;
+    margin: 120px 0;
   }
 `;
