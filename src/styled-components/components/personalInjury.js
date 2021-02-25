@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { red, reddish } from '../colors'
 
 export const PersonalInjury = styled.div`
   width: 100%;
@@ -63,24 +64,24 @@ export const PIButton = styled.div`
   font-size: 15px;
   width: 216px;
   word-wrap: break-word;
-  color: #383b40;
+  color: #fff;
   padding: 3px 13px;
   border-right: ${props => props.index != props.size - 1 ? "1px solid #fff" : "none"};
-  background: url("${props => props.dimg}") 6px center no-repeat;
+  background: url("${props => props.himg}") 6px center no-repeat ${red};
   padding: 10px 7px 10px 53px;
   &.selectedPI.desktopPI {
     color: #fff;
-    background: url("${props => props.himg}") 6px center no-repeat #7c3230;
+    background: url("${props => props.himg}") 6px center no-repeat ${reddish};
   }
 
   &:hover {
     &.mobilePI {
-      background-color: rgba(0,0,0,.03);
+      background-color: ${red};
       background-image: none;
     }
     &.desktopPI {
       color: #fff;
-      background: url("${props => props.himg}") 6px center no-repeat #7c3230;
+      background: url("${props => props.himg}") 6px center no-repeat ${reddish};
     }
 
   }
@@ -91,7 +92,7 @@ export const PIBar = styled.div`
   text-align: center;
   font-weight: 700;
   font-size: 16px;
-  color: #383b40;
+  color: ${red};
   i {
     color: #0099c4
   }

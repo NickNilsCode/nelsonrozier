@@ -51,10 +51,7 @@ var LocationCardComponent = /*#__PURE__*/function (_Component) {
   _createClass(LocationCardComponent, [{
     key: "render",
     value: function render() {
-      return /*#__PURE__*/_react["default"].createElement(_locationCard.LocationCardWrap, null, /*#__PURE__*/_react["default"].createElement(_locationCard.LocationCard, null, /*#__PURE__*/_react["default"].createElement("img", {
-        id: "pinimg",
-        src: "/images/bg-contact-info.png"
-      }), /*#__PURE__*/_react["default"].createElement("h2", null, "Keep In Touch"), /*#__PURE__*/_react["default"].createElement("p", null, "3924 W. Caldwell Ave."), /*#__PURE__*/_react["default"].createElement("p", null, "Suite A"), /*#__PURE__*/_react["default"].createElement("p", null, "Visalia, CA 93277"), /*#__PURE__*/_react["default"].createElement("p", null, "Phone: 559-713-0159", /*#__PURE__*/_react["default"].createElement("i", {
+      return /*#__PURE__*/_react["default"].createElement(_locationCard.LocationCardWrap, null, /*#__PURE__*/_react["default"].createElement(_locationCard.LocationCard, null, /*#__PURE__*/_react["default"].createElement("h2", null, "Keep In Touch"), /*#__PURE__*/_react["default"].createElement("p", null, "3924 W. Caldwell Ave."), /*#__PURE__*/_react["default"].createElement("p", null, "Suite A"), /*#__PURE__*/_react["default"].createElement("p", null, "Visalia, CA 93277"), /*#__PURE__*/_react["default"].createElement("p", null, "Phone: 559-713-0159", /*#__PURE__*/_react["default"].createElement("i", {
         className: "fas fa-phone-square-alt"
       })), /*#__PURE__*/_react["default"].createElement("br", null), /*#__PURE__*/_react["default"].createElement("p", null, "Fax: 559-713-0166", /*#__PURE__*/_react["default"].createElement("i", {
         className: "fas fa-fax"

@@ -13,7 +13,7 @@ class Privacypolicy extends Component {
               <ContentWrapper>
                 <PersonalInjury/>
                 <Content>
-                  { mapPage(privacyPage) }
+                  { mapPage(privacyContent) }
                 </Content>
                 <ContentBottom className="mobileBottom"/>
               </ContentWrapper>

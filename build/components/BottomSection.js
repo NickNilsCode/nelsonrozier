@@ -56,7 +56,7 @@ var BottomSectionComponent = /*#__PURE__*/function (_Component) {
         href: "/disclaimer",
         target: "_blank"
       }, "Disclaimer"), " | ", /*#__PURE__*/_react["default"].createElement("a", {
-        href: "/site-map",
+        href: "/sitemap",
         target: "_blank"
       }, "Site Map"), " | ", /*#__PURE__*/_react["default"].createElement("a", {
         href: "/privacy",

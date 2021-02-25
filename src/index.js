@@ -193,7 +193,7 @@ app.get('/sitemap', (req, res) => {
   res.set('Cache-Control', 'public, max-age=31557600');
   res.send(returnHTML(data, sitemapBundle, SitemapRoot, "sitemap"));
 });
-app.get('/privacypolicy', (req, res) => {
+app.get('/privacy', (req, res) => {
   let data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
   res.send(returnHTML(data, privacypolicyBundle, PrivacypolicyRoot, "privacypolicy"));

@@ -89,7 +89,7 @@ export const Content = styled.div`
     border: 1px solid #000;
     @media (min-width: 600px){
       flex-wrap: wrap;
-      max-height: 300px;
+      max-height: 325px;
       li {
         width: calc(50% - 16px);
       }
@@ -114,14 +114,14 @@ export const GoldButton = styled.button`
   transition: background-color 300ms ease 0ms;
   &:hover {
     cursor: pointer;
-    background-color: #7c3230;
+    background-color: ${red};
   }
 `;
 export const BigGoldButton = styled.button`
   background: ${gold};
   padding: 12px 20px;
   margin: 12px auto;
-  color: #7c3230;
+  color: ${red};
   font-size: 19px;
   border: 1px solid #8d8d8d;
   border-radius: 3px;
@@ -131,7 +131,7 @@ export const BigGoldButton = styled.button`
   transition: background-color 300ms ease 0ms;
   &:hover {
     cursor: pointer;
-    background-color: #7c3230;
+    background-color: ${red};
     color: #fff;
   }
 `;

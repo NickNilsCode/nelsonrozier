@@ -7,6 +7,8 @@ exports.MenuPopup = exports.MenuBar = exports.NavButton = exports.MobileNav = ex
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
+var _colors = require("../colors");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _templateObject6() {
@@ -20,7 +22,7 @@ function _templateObject6() {
 }
 
 function _templateObject5() {
-  var data = _taggedTemplateLiteral(["\n  background-color: #763432;\n  padding: 24px;\n  margin: 12px 0;\n  text-align: center;\n  font-weight: 700;\n  font-size: 16px;\n  color: #fff;\n  &:hover {\n    cursor: pointer;\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  background-color: ", ";\n  padding: 24px;\n  margin: 12px 0;\n  text-align: center;\n  font-weight: 700;\n  font-size: 16px;\n  color: #fff;\n  &:hover {\n    cursor: pointer;\n  }\n"]);
 
   _templateObject5 = function _templateObject5() {
     return data;
@@ -30,7 +32,7 @@ function _templateObject5() {
 }
 
 function _templateObject4() {
-  var data = _taggedTemplateLiteral(["\n  text-transform: uppercase;\n  font-weight: 700;\n  font-size: 18px;\n  width: max-content;\n  color: #fff;\n  padding: 3px 13px;\n  border-right: ", ";\n  transition: background-color 0.6s;\n  background-color: ", ";\n  &.mobileNav {\n    text-transform: capitalize;\n    padding: 10px 37.5px;\n    border-right: none;\n    width: 100%;\n    box-sizing: border-box;\n    text-align: left;\n    background-color: ", ";\n  }\n  &:hover {\n    background-color: #76343299;\n    &.mobileNav {\n      background-color: #32141399;\n    }\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  text-transform: uppercase;\n  font-weight: 700;\n  font-size: 18px;\n  width: max-content;\n  color: #fff;\n  padding: 3px 13px;\n  border-right: ", ";\n  transition: background-color 0.4s;\n  background-color: ", ";\n  &.mobileNav {\n    text-transform: capitalize;\n    padding: 10px 37.5px;\n    border-right: none;\n    width: 100%;\n    box-sizing: border-box;\n    text-align: left;\n    background-color: ", ";\n  }\n  &:hover {\n    background-color: ", ";\n    &.mobileNav {\n      background-color: #32141399;\n    }\n  }\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -86,14 +88,14 @@ exports.MobileNav = MobileNav;
 var NavButton = _styledComponents["default"].div(_templateObject4(), function (props) {
   return props.index != props.size - 1 ? "1px solid #fff" : "none";
 }, function (props) {
-  return props.selected ? "#763432" : "transparent";
+  return props.selected ? _colors.red : "transparent";
 }, function (props) {
-  return props.selected ? "#321413" : "#763432";
-});
+  return props.selected ? "#321413" : _colors.red;
+}, _colors.reddish);
 
 exports.NavButton = NavButton;
 
-var MenuBar = _styledComponents["default"].div(_templateObject5());
+var MenuBar = _styledComponents["default"].div(_templateObject5(), _colors.red);
 
 exports.MenuBar = MenuBar;
 

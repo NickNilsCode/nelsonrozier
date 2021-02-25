@@ -75,7 +75,12 @@ var HeaderComponent = /*#__PURE__*/function (_Component) {
       return /*#__PURE__*/_react["default"].createElement(_header.Header, {
         id: "header"
       }, /*#__PURE__*/_react["default"].createElement(_header.HeaderWrap, null, /*#__PURE__*/_react["default"].createElement(_global.FlexDiv, {
-        alignItems: "flex-end"
+        alignItems: "flex-end",
+        style: {
+          background: '#ffffff80',
+          padding: '12px',
+          width: 'calc(100% - 24px)'
+        }
       }, /*#__PURE__*/_react["default"].createElement("a", {
         href: "/"
       }, /*#__PURE__*/_react["default"].createElement("img", {

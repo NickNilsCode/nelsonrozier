@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { red, reddish } from '../colors'
 
 export const Nav = styled.div`
   width: 100%;
@@ -31,8 +32,8 @@ export const NavButton = styled.div`
   color: #fff;
   padding: 3px 13px;
   border-right: ${props => props.index != props.size - 1 ? "1px solid #fff" : "none"};
-  transition: background-color 0.6s;
-  background-color: ${props => props.selected ? "#763432" : "transparent"};
+  transition: background-color 0.4s;
+  background-color: ${props => props.selected ? red : "transparent"};
   &.mobileNav {
     text-transform: capitalize;
     padding: 10px 37.5px;
@@ -40,17 +41,17 @@ export const NavButton = styled.div`
     width: 100%;
     box-sizing: border-box;
     text-align: left;
-    background-color: ${props => props.selected ? "#321413" : "#763432"};
+    background-color: ${props => props.selected ? "#321413" : red};
   }
   &:hover {
-    background-color: #76343299;
+    background-color: ${reddish};
     &.mobileNav {
       background-color: #32141399;
     }
   }
 `;
 export const MenuBar = styled.div`
-  background-color: #763432;
+  background-color: ${red};
   padding: 24px;
   margin: 12px 0;
   text-align: center;

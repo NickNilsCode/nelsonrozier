@@ -7,10 +7,12 @@ exports.Header4 = exports.Header3 = exports.Header2 = exports.Header1 = exports.
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
+var _colors = require("../colors");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _templateObject7() {
-  var data = _taggedTemplateLiteral(["\n  font-family: 'Libre Baskerville',Georgia,\"Times New Roman\",serif;\n  color: #fff;\n  font-size: 17px;\n  font-weight: 100;\n  @media(min-width: 900px){\n    font-size: 32px;\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  font-family: 'Libre Baskerville',Georgia,\"Times New Roman\",serif;\n  color: #fff;\n  font-size: 17px;\n  font-weight: 100;\n  text-shadow: 1px 1px #000000;\n\n  @media(min-width: 900px){\n    font-size: 32px;\n    margin: 48px 0;\n  }\n"]);
 
   _templateObject7 = function _templateObject7() {
     return data;
@@ -30,7 +32,7 @@ function _templateObject6() {
 }
 
 function _templateObject5() {
-  var data = _taggedTemplateLiteral(["\n  color: #383b40;\n  font-weight: 400;\n  font-size: 24px;\n  margin: 0;\n"]);
+  var data = _taggedTemplateLiteral(["\n  color: ", ";\n  font-weight: 400;\n  font-size: 24px;\n  margin: 0;\n"]);
 
   _templateObject5 = function _templateObject5() {
     return data;
@@ -40,7 +42,7 @@ function _templateObject5() {
 }
 
 function _templateObject4() {
-  var data = _taggedTemplateLiteral(["\n  font-size: 23px;\n  font-weight: 700;\n  color: #7c3230;\n  margin: 0;\n"]);
+  var data = _taggedTemplateLiteral(["\n  font-size: 23px;\n  font-weight: 700;\n  color: ", ";\n  margin: 0;\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -70,7 +72,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  width: 100vw;\n  min-height: 100px;\n  background-image: url(\"/images/bg-header-page-wrap-home.jpg\");\n  background-position: center;\n  background-size: cover;\n  color: #fff;\n"]);
+  var data = _taggedTemplateLiteral(["\n  width: 100vw;\n  min-height: 100px;\n  background-image: url(\"/images/Proof-8961.jpg\");\n  background-position: left top;\n  background-size: cover;\n  color: #fff;\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -93,11 +95,11 @@ var HeaderDiv = _styledComponents["default"].div(_templateObject3());
 
 exports.HeaderDiv = HeaderDiv;
 
-var Header1 = _styledComponents["default"].h2(_templateObject4());
+var Header1 = _styledComponents["default"].h2(_templateObject4(), _colors.red);
 
 exports.Header1 = Header1;
 
-var Header2 = _styledComponents["default"].h2(_templateObject5());
+var Header2 = _styledComponents["default"].h2(_templateObject5(), _colors.red);
 
 exports.Header2 = Header2;
 

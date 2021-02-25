@@ -12,7 +12,11 @@ class HeaderComponent extends Component {
     return (
       <Header id="header">
         <HeaderWrap>
-          <FlexDiv alignItems="flex-end">
+          <FlexDiv alignItems="flex-end" style={{
+            background: '#ffffff80',
+            padding: '12px',
+            width: 'calc(100% - 24px)'
+          }}>
             <a href="/"><img src="/images/brand-logo.png"/></a>
             <HeaderDiv>
               <Header1>FREE Consultation.</Header1>

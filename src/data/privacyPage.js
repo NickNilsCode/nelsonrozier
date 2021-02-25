@@ -56,7 +56,7 @@ certain searches/queries that you conducted via our website(s).</li>`
     content: "Cookies"
   },
   {
-    type: "h2",
+    type: "p",
     content: "In order to offer and provide a customized and personal service, our websites and applications may use cookies and similar technologies to store and help track information about you. Cookies are simply small pieces of data that are sent to your browser from a Web server and stored on your computer’s hard drive. We use cookies to help remind us who you are and to help you navigate our sites during your visits. Cookies also can tell us where visitors go on a website and allow us to save preferences for you so you won’t have to re-enter them each time you visit. The use of cookies is relatively standard. Most Internet browsers are initially set up to accept cookies, but you can use your browser to either notify you when you receive a cookie or to disable cookies."
   },
   {

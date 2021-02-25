@@ -7,7 +7,9 @@ class LocationCardComponent extends Component {
     return (
       <LocationCardWrap>
         <LocationCard>
-          <img id="pinimg" src="/images/bg-contact-info.png"/>
+          {
+            // <img id="pinimg" src="/images/bg-contact-info.png"/>
+          }
           <h2>Keep In Touch</h2>
           <p>3924 W. Caldwell Ave.</p>
           <p>Suite A</p>

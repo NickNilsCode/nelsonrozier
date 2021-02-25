@@ -227,7 +227,7 @@ app.get('/sitemap', function (req, res) {
   res.set('Cache-Control', 'public, max-age=31557600');
   res.send(returnHTML(data, sitemapBundle, _roots.SitemapRoot, "sitemap"));
 });
-app.get('/privacypolicy', function (req, res) {
+app.get('/privacy', function (req, res) {
   var data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
   res.send(returnHTML(data, privacypolicyBundle, _roots.PrivacypolicyRoot, "privacypolicy"));

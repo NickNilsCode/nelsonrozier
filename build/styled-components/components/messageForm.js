@@ -7,6 +7,8 @@ exports.ContactDisclaimer = exports.MessageDisclaimer = exports.ContactLinks = e
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
+var _colors = require("../colors");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _templateObject6() {
@@ -30,7 +32,7 @@ function _templateObject5() {
 }
 
 function _templateObject4() {
-  var data = _taggedTemplateLiteral(["\n  text-align: left;\n  a {\n    color: #833634;\n    text-decoration: underline;\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  text-align: left;\n  a {\n    color: ", ";\n    text-decoration: underline;\n  }\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -83,7 +85,7 @@ var MessageLinks = _styledComponents["default"].div(_templateObject3());
 
 exports.MessageLinks = MessageLinks;
 
-var ContactLinks = _styledComponents["default"].div(_templateObject4());
+var ContactLinks = _styledComponents["default"].div(_templateObject4(), _colors.red);
 
 exports.ContactLinks = ContactLinks;
 

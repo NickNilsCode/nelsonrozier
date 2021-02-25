@@ -1,9 +1,10 @@
 import styled from 'styled-components';
+import { red, gold } from '../colors';
 export const Header = styled.header`
   width: 100vw;
   min-height: 100px;
-  background-image: url("/images/bg-header-page-wrap-home.jpg");
-  background-position: center;
+  background-image: url("/images/Proof-8961.jpg");
+  background-position: left top;
   background-size: cover;
   color: #fff;
 `;
@@ -46,11 +47,11 @@ export const HeaderDiv = styled.div`
 export const Header1 = styled.h2`
   font-size: 23px;
   font-weight: 700;
-  color: #7c3230;
+  color: ${red};
   margin: 0;
 `;
 export const Header2 = styled.h2`
-  color: #383b40;
+  color: ${red};
   font-weight: 400;
   font-size: 24px;
   margin: 0;
@@ -69,7 +70,10 @@ export const Header4 = styled.h2`
   color: #fff;
   font-size: 17px;
   font-weight: 100;
+  text-shadow: 1px 1px #000000;
+
   @media(min-width: 900px){
     font-size: 32px;
+    margin: 48px 0;
   }
 `;
