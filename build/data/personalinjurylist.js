@@ -46,21 +46,49 @@ module.exports = [{
     className: "",
     content: "Visalia Car & Auto Accident Attorneys"
   }, {
-    type: "p",
+    type: "h2",
     className: "",
-    content: "Car accidents can cause injuries that impair, disable or even kill their victims. If you or your loved one suffered injuries in a car accident, you may need legal representation to help recover the compensation you will require to move forward."
+    content: "Auto Accident Law Office in Visalia, California"
   }, {
     type: "p",
     className: "",
-    content: "Not every case demands an attorney\u2019s attention, but the only way to find out if you need one is to speak with one directly. We have a long history of ".concat(successfulresults, " helping clients recover the compensation they needed.")
+    content: "There is no adequate compensation for the impairment, disability, and death caused by a car accident. But the recovery of your financial losses will help you reclaim your old life or be better prepared to begin your new one. You don\u2019t have to start over with nothing, or worse, huge amounts of debt. If you or your loved one suffered physical, financial, or emotional harm in a car accident, seek legal representation today."
+  }, {
+    type: "h2",
+    className: "",
+    content: "Why Hire Nelson & Rozier as You Auto Accident Attorney"
   }, {
     type: "p",
     className: "",
-    content: "We understand the hardship your injuries have caused you and your family. We provide experienced, compassionate and effective representation. Feel free to call ".concat(phone, " or ").concat(contact, " us to schedule a ").concat(freeconsultation, ". One of our attorneys would be glad to drop by your home on his or her way home from work this evening.")
+    content: "<i>No Financial Risk</i>"
   }, {
     type: "p",
     className: "",
-    content: "We handle a wide variety of car accidents and related incidents. Call our office for any case involving:"
+    content: "We only collect attorney\u2019s fees and costs if we secure compensation for you. Between medical expenses, lost wages, and damage to your vehicle, a car accident can quickly lead to financial ruin. As you undergo these hardships, we believe you should not pay for the recklessness of the other individual. That\u2019s why we are one of the only auto accident defense attorneys in Visalia to completely forgo all legal fees from start to finish. We get paid when you do."
+  }, {
+    type: "p",
+    className: "",
+    content: "<i>Decades of Experience</i>"
+  }, {
+    type: "p",
+    className: "",
+    content: "Car accident attorneys at Nelson & Rozier have an intense level of familiarity with local law. We\u2019ve served in Visalia and California\u2019s central valley for a combined forty years, and our experience working for insurance companies helps us set realistic expectations for your car accident lawsuit. This ensures we never overpromise, and always get you what you\u2019re owed."
+  }, {
+    type: "p",
+    className: "",
+    content: "<i>Compassionate Representation</i>"
+  }, {
+    type: "p",
+    className: "",
+    content: "We know insurance companies are trying to confuse you. We have complete empathy and will work to ease those fears and frustrations. We fight for what\u2019s fair and have a strong track record of effectiveness. To schedule a free initial consultation with a car accident attorney, call Nelson & Rozier today at ".concat(phoneorcontact, ". We are ready to help. One of our auto accident defense attorneys can visit your home in Visalia or surrounding cities to begin consultation on your case.")
+  }, {
+    type: "h2",
+    className: "",
+    content: "Services:"
+  }, {
+    type: "p",
+    className: "",
+    content: "We handle a wide variety of car accidents and related incidents in Visalia and surrounding cities. Call our office for any case involving:"
   }, {
     type: "ul",
     className: "",
@@ -68,23 +96,71 @@ module.exports = [{
   }, {
     type: "h2",
     className: "",
-    content: "Act Quickly To Preserve Evidence"
+    content: "FAQs"
   }, {
     type: "p",
     className: "",
-    content: "If you were involved in a car accident, and if the liable insurance company tries to get out of its responsibility to pay a fair settlement, you will need to present a clear, compelling case to demonstrate why you need compensation. Without evidence, this can be difficult."
+    content: "<strong>Should I hire an attorney after an auto accident?</strong>"
   }, {
     type: "p",
     className: "",
-    content: "Unfortunately, evidence begins to deteriorate within days and even hours of the accident. Skid marks on the road begin to fade, and witnesses begin to forget exactly what they witnessed. One of the first things we do in every case is to make sure all relevant evidence has been preserved. This includes taking written statements from witnesses and may involve calling accident reconstruction experts to examine any evidence left at the scene."
+    content: "Even for a minor car accident, or a car accident that you believe wasn\u2019t your fault, you should hire a lawyer. In some cases, an injury like whiplash may not surface for weeks. The later you file a claim, the weaker it is. An experienced car accident lawyer knows what to watch for how to prepare."
   }, {
     type: "p",
     className: "",
-    content: "To schedule a free initial consultation, call our office today at ".concat(phoneorcontact, ". We are ready to help.")
+    content: "By representing yourself, you also leave yourself vulnerable to insurance companies and may pay more than you need to. It\u2019s equally possible that if you have suffered pain and financial difficulties, you could be leaving money on the table. A car accident lawyer helps you pursue the full list of claims available to you under the law. We also provide guidance to prevent you from jeopardizing your own claim. It\u2019s always worth getting a car accident lawyer."
   }, {
     type: "p",
     className: "",
-    content: weonlycollect
+    content: "<strong>What questions should I ask an attorney for a car accident?</strong>"
+  }, {
+    type: "p",
+    className: "",
+    content: "A qualified car accident attorney will have handled similar cases, and ideally specialize in personal injury. They need to know what questions to ask to get you the best chance of settlement. They should also anticipate the defense\u2019s counter-questions to ensure you don\u2019t risk losing the maximum payout."
+  }, {
+    type: "p",
+    className: "",
+    content: "Here are questions to consider when measuring the impact of the car accident on the life of you and your loved ones:"
+  }, {
+    type: "ul",
+    className: "",
+    content: "<li>Are you able to participate in the activities you enjoyed prior to the accident?</li>\n        <li>Have your current or future employment opportunities been affected?</li>\n        <li>Have you lost income due to injury or time away from work as a result of the car accident?</li>\n        <li>Have you incurred medical and/or funeral expenses?</li>\n        <li>Will you need ongoing treatment, medication or physical rehabilitation?</li>\n        <li>Have you endured any resulting emotional trauma?</li>\n        <li>Did you suffer property damage? How minimal or extensive?</li>\n        <li>Were there any additional factors, like road sign visibility, infrastructure damage, etc.?</li>"
+  }, {
+    type: "p",
+    className: "",
+    content: "At ".concat(nelsonrozier, ", our decades of experience in auto accident lawsuits includes previous work defending insurance companies. This allows us to provide skilled Visalia car accident lawyers to help you receive coverage. Again, you won\u2019t be responsible for case-related costs if we do not secure you compensation.")
+  }, {
+    type: "p",
+    className: "",
+    content: "<strong>How long do you have to get a lawyer after a car accident?</strong>"
+  }, {
+    type: "p",
+    className: "",
+    content: "In California, you have three years to file property damage and injury claims. Unfortunately, evidence begins to deteriorate within days and even hours of your car accident. Skid marks on the road begin to fade, and so will bruises from seat belts and air bags. Even witness testimony will prove less reliable over time. You\u2019ll want to hire an accident lawyer as quickly as possible."
+  }, {
+    type: "p",
+    className: "",
+    content: "A car accident attorney will work to preserve all relevant evidence, which is why they\u2019re helpful at the start of your case. Before you meet with your attorney, document your evidence, including:"
+  }, {
+    type: "ul",
+    className: "",
+    content: "<li>Medical consultations sought</li>\n        <li>Medical bills</li>\n        <li>Photographs of injuries before and after treatment</li>\n        <li>Photographs of the scene, including road conditions and signage</li>\n        <li>Photographs of car damage</li>"
+  }, {
+    type: "p",
+    className: "",
+    content: "It\u2019s important to get ahead of the defense. Document visible injuries before they heal and identify physical factors in an accident as soon as possible before infrastructure updates, environmental changes, etc. Your attorney will also take written statements from witnesses and may involve calling accident reconstruction experts to investigate the scene."
+  }, {
+    type: "p",
+    className: "",
+    content: "<strong>How long does a car accident lawsuit take?</strong>"
+  }, {
+    type: "p",
+    className: "",
+    content: "An auto accident defense attorney can estimate the time it takes to resolve your case based on similar cases they\u2019ve had with past clients. It can take anywhere from months to years and largely relies on evidence. A car accident attorney is also huge factor in the length of your case. They can work around the clock on your lawsuit while you focus on recovery, as well as your daily responsibilities like your job and family."
+  }, {
+    type: "p",
+    className: "",
+    content: "The success rate and total cost of payout versus legal fees should all influence your decision to pursue a case. You don\u2019t want it to drag out. You can schedule a free consultation to evaluate all your options and the best course of action. Contact Nelson & Rozier to get free guidance from the top auto accident attorney in Visalia, CA. You can call us at ".concat(phoneorcontact, ".")
   }]
 }, {
   name: "Truck Accidents",
@@ -210,43 +286,106 @@ module.exports = [{
   }, {
     type: "p",
     className: "",
-    content: "As if there are not enough risks to our safety on the roads, drivers who get behind the wheel while intoxicated add an additional and very serious hazard. While many types of accidents can be avoided through defensive driving, the erratic nature of how an inebriated driver operates his or her motor vehicle can create risks that are almost impossible to foresee or avoid."
+    content: "<i>Sometimes defensive driving isn\u2019t enough.</i>"
   }, {
     type: "p",
-    className: "goldBack",
-    content: "If you or a loved one has been injured in an accident that was caused by a drunk driver, we can help you recover full compensation for your injuries and losses such as lost wages."
+    className: "",
+    content: "Driving under the influence causes accidents, from improper steering, to slower response times, to reduced awareness. You can\u2019t predict a drunk driver\u2019s erratic behavior and you shouldn\u2019t have to. It was a conscious choice for the defendant to drink and then get behind the wheel. They willfully put others in danger, which is a criminal charge."
+  }, {
+    type: "p",
+    className: "",
+    content: "Have you or a loved one been the victim of impaired driving? At ".concat(nelsonrozier, ", we will help you lead a DUI lawsuit against the other driver. We\u2019ll also gather the evidence so that you don\u2019t relive the trauma of your accident. Our every effort will be to recover damages for your property, medical bills, pain and suffering, and lost wages.")
+  }, {
+    type: "p",
+    className: "",
+    content: "<strong>Why hire Nelson & Rozier for your DUI accident case?</strong>"
+  }, {
+    type: "p",
+    className: "",
+    content: "<i>Our law firm limits our practice to plaintiffs.</i>"
+  }, {
+    type: "p",
+    className: "",
+    content: "We focus solely on securing compensation for those who have been wronged. In the event of a DUI accident, our lawyers will prioritize your potential to advance in your career and enjoy your daily life. If either have been affected, it\u2019s our legal motive and our moral imperative to get you what you\u2019re owed."
+  }, {
+    type: "p",
+    className: "",
+    content: "<i>We help you avoid vulnerability.</i>"
+  }, {
+    type: "p",
+    className: "As the victim of a drunk driving accident, your auto accident insurance should help you recover damages. However, these companies may deny your claim or attempt to reduce your payout. Our lawyers began their careers by negotiating for insurance companies, and we now use that expertise to negotiate with them. Hiring Nelson & Rozier protects your legal rights as the victim of DUI or DWI accident."
+  }, {
+    type: "p",
+    className: "",
+    content: "<i>We specialize in Visalia and California\u2019s central valley.</i>"
+  }, {
+    type: "p",
+    className: "",
+    content: "Our knowledge of the local community, courts, and attorneys make us some of the most experienced DUI accident attorneys in Visalia, CA. We combine over four decades in litigation to achieve quick resolutions with a maximum payout. In other words, everything you need to move forward. You will get personalized, empathetic guidance and support from our attorneys."
+  }, {
+    type: "p",
+    className: "",
+    content: "Call ".concat(phoneorcontact, " to consult with Nelson & Rozier drunk driving accident attorneys.")
   }, {
     type: "h2",
     className: "",
-    content: "How Is A Drunk Driving Accident Different From Any Other Motor Vehicle Accident?"
+    content: "FAQ\u2019s"
   }, {
     type: "p",
     className: "",
-    content: "Drunk drivers who cause accidents can be held liable for punitive as well as compensatory damages. This simply means that there is an additional category of damages that is not available in most motor vehicle accidents."
+    content: "<strong>How much does it cost to hire a DUI Accident Attorneys in Visalia, CA?</strong>"
   }, {
     type: "p",
     className: "",
-    content: "Two of the key questions in pursuing compensation through litigation are liability (Who is responsible for the accident?) and damages (How much harm did that person cause?).  A drunk driving conviction can be very helpful in answering the liability question. Juries understand that drunk drivers are often the cause of serious accidents."
+    content: "".concat(nelsonrozier, " takes on the complete financial risk for your case, including all court fees. We believe that in every drunk driving accident, your pain and suffering were preventable. You should be allowed time and financial freedom to recover. This includes the family members or otherwise appointed representative of a person killed by a drunk driver, who are entitled to pursue a wrongful death suit. We won\u2019t charge for any legal services unless we acquire compensation to help you rebuild your life. It\u2019s one less thing to worry about.")
+  }, {
+    type: "p",
+    className: "",
+    content: "<strong>What happens if someone crashed into you while drunk?</strong>"
+  }, {
+    type: "p",
+    className: "",
+    content: "Drunk driving victims can pursue full compensation for incurred damages, and that\u2019s why it\u2019s important to hire attorneys that you can trust. A DUI accident attorney will build your case using medical records, police reports, insurance policies, witness and expert testimony, and more. Nelson & Rozier have previously secured compensation for impaired driving cases, including:"
+  }, {
+    type: "ul",
+    className: "",
+    content: "<li>Property Damage: including destroyed or dented vehicle</li>\n        <li>Lost Wages: including payroll and benefits from your inability to attend work</li>\n        <li>Pain and Suffering: including whiplash, broken bones, amputated limbs, loss of life, etc.</li>\n        <li>Emotional Damage: including physiological harm caused by the event</li>\n        <li>Medical Expenses: including emergency room visits, ambulance rides, surgery, hospitalization, medication, and physical therapy and rehabilitation</li>"
+  }, {
+    type: "p",
+    className: "",
+    content: "<strong>When do I need a lawyer after I am the victim of impaired driving?</strong>"
+  }, {
+    type: "p",
+    className: "",
+    content: "After being injured by a drunk driver, take immediate legal action. While you have legal rights to compensation because of the other driver\u2019s negligence, wounds heal and memories fade. Document everything from the start."
+  }, {
+    type: "p",
+    className: "",
+    content: "Our drunk driving accident lawyers can come to your home or hospital room to expedite your case. Let us help you hold drunk drivers responsible for the harm they cause. Nelson & Rozier can offer you the skilled and experienced help you need to recover the maximum amount owed to you."
+  }, {
+    type: "p",
+    className: "",
+    content: "<strong>What questions should I ask after a drunk driving accident?</strong>"
+  }, {
+    type: "p",
+    className: "",
+    content: "It\u2019s important that you have an experienced drunk driving accident attorney to ask the right questions. Lawyers for DUI accidents will help you file claims against the drunk driver, as well as the bar, restaurant, or club that may have overserved them (the provider may be liable for damages if they supplied liquor to an individual who was clearly inebriated)."
+  }, {
+    type: "p",
+    className: "",
+    content: "You may need more than a drunk driving conviction to prove liability and damages. Here are questions you can use to craft a strong case after being injured by a drunk driver:"
+  }, {
+    type: "ul",
+    className: "",
+    content: "<li>What was the at-fault driver\u2019s blood alcohol level?</li>\n        <li>Does the at-fault driver have a medical condition affected by alcohol consumption?</li>\n        <li>Does the at-fault driver have a low alcohol tolerance?</li>\n        <li>Did the establishment serving the alcohol know or suspect that the at-fault driver could not safely get behind the wheel?</li>\n        <li>Did the injuries from your drunk driving crash cause you a disability?</li>\n        <li>Did it prevent you from going to work?</li>"
   }, {
     type: "h2",
     className: "",
-    content: morethan40
+    content: "Schedule a Free Consultation"
   }, {
     type: "p",
     className: "",
-    content: "At ".concat(nelsonrozier, ", we provide our clients with highly effective representation that can secure the compensation they need to help them deal with medical bills, lost wages and other difficult issues they may face during their recoveries. Our decades of experience, which include previous work defending insurance companies, allow us to craft strong cases that can deliver the results you need after being injured by a drunk driver.")
-  }, {
-    type: "h2",
-    className: "",
-    content: "Drunk Driving Accident Attorneys Serving Visalia And Throughout California\u2019s Central Valley"
-  }, {
-    type: "p",
-    className: "",
-    content: "Let us help you hold drunk drivers responsible for the harm they cause. Nelson & Rozier, can offer you the skilled and experienced help you need. To schedule a free initial consultation, call ".concat(phoneorcontact, ".")
-  }, {
-    type: "p",
-    className: "",
-    content: weonlycollect
+    content: "To go through these questions and more, all ".concat(phoneorcontact, " to get DUI Accident Attorney services in Visalia, CA.")
   }]
 }, {
   name: "Distracted Driving Accidents",
@@ -516,9 +655,9 @@ module.exports = [{
   }, {
     type: "p",
     className: "",
-    content: "Nelson & Rozier, is dedicated to helping people secure the full compensation they deserve after being injured in an accident. To schedule a free initial consultation, call $Visalia Medical Malpractice Attorneys\nWe place our trust in physicians, nurses and other health care professionals to provide care that will help us, not harm us. When substandard care is provided and injuries are caused, the doctor or another health care professional who caused that harm should compensate that person.\n\nMany people have longstanding relationships with their doctors and may be reluctant to sue based on that relationship. However, patients who have been injured by their doctors should remember that all doctors and hospitals carry extensive insurance. It is the insurance company that would provide compensation, not the physician.\n\nOur firm offers experienced representation to those who have been injured by any type of medical malpractice, including:\n\nBirth injuries (cerebral palsy, Erb\u2019s palsy, shoulder dystocia)\nDental malpractice\nSurgical errors (wrong-site surgery, foreign object, nicked or perforated blood vessels or nerves, anesthesia errors)\nFailure to diagnose/misdiagnosis\nMedication errors\nEmergency room errors\nTake Action As Soon As Possible\nThere are strict time limits in place regarding when a claim against a doctor or hospital can be filed. That time frame is even tighter if the hospital is a government entity. As in all personal injury cases, the sooner we can begin building a case, the more effective the case is likely to be.\n\nMore Than 40 Years Of Combined Experience\nAt Nelson & Rozier, we are skilled litigators with decades of combined courtroom experience. We are confident in the strength of the cases that we present for our clients, and we have a record of success that illustrates how effective we are as advocates.\n\nMedical malpractice cases can be very complex from an evidence standpoint. We rely on the assistance of various experts when necessary to help us build our cases, including physicians, life care planners, financial experts and others. Our experience and the assistance of outside experts allow us to craft cases that are able to show the extent of your injuries, who was responsible, and what care you will need going forward to aid in your recovery.\n\nMedical Malpractice Attorneys Serving Visalia And Throughout California\u2019s Central Valley\nNelson & Rozier, can help you secure the full compensation you should have after being injured by medical malpractice. To schedule a free initial consultation, call 559-713-0159 or contact us online.\n\nWe only collect attorney\u2019s fees and costs if we secure compensation for you.{phoneorcontact}."
+    content: "Nelson & Rozier, is dedicated to helping people secure the full compensation they deserve after being injured in an accident. To schedule a free initial consultation, call ".concat(phoneorcontact, ".")
   }, {
-    type: "h2",
+    type: "p",
     className: "",
     content: weonlycollect
   }]
