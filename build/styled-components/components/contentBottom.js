@@ -22,7 +22,7 @@ function _templateObject5() {
 }
 
 function _templateObject4() {
-  var data = _taggedTemplateLiteral(["\n  background-color: ", ";\n  padding: 3px 0;\n  width: calc(100% - 8px);\n  color: #fff;\n  border: 4px solid #fff;\n"]);
+  var data = _taggedTemplateLiteral(["\n  background-color: ", ";\n  padding: 3px 0;\n  width: calc(100% - 8px);\n  color: ", ";\n  border: 4px solid ", ";\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -42,7 +42,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  text-align: center;\n  img {\n    display: block;\n    margin: auto;\n  }\n  .freeConsultation {\n    margin: 24px 0 0 0;\n  }\n  .contactToday {\n    margin: auto;\n  }\n  .contactToday button {\n    margin: 0;\n  }\n  .learnMore, .learnMore i {\n    color: ", ";\n    margin: auto;\n    transition: color 300ms ease 0ms;\n  }\n  .learnMore:hover i {\n    color: #000;\n  }\n  @media (min-width: 900px){\n    .contactToday, .contactToday button {\n      width: 100%;\n    }\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  text-align: center;\n  img {\n    display: block;\n    margin: auto;\n  }\n  .freeConsultation {\n    margin: 24px 0 0 0;\n  }\n  .contactToday {\n    margin: auto;\n  }\n  .contactToday button {\n    margin: 0;\n  }\n  .learnMore, .learnMore i {\n    color: ", ";\n    margin: auto;\n    transition: color 300ms ease 0ms;\n  }\n  .learnMore:hover i {\n    color: #000;\n  }\n  #attorneyList {\n    width: 100%;\n    display: flex;\n    flex-direction: row;\n    flex-wrap: wrap;\n  }\n  @media (min-width: 900px){\n    .contactToday, .contactToday button {\n      width: 100%;\n    }\n  }\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -52,7 +52,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  a {\n    width: max-content;\n    display: block;\n    word-wrap: break-word;\n    max-width: 100%;\n  }\n  &.mobileBottom {\n    width: 100%;\n    background-color: #fff;\n    color: #000;\n    text-align: center;\n  }\n  &.desktopBottom {\n    display: none;\n    width: 100%;\n    background-color: #fff;\n    color: #000;\n    text-align: center;\n  }\n  &.homePageBottom {\n    width: 222px;\n    margin-right: 24px;\n  }\n  @media (min-width: 900px){\n    &.mobileBottom {\n      display: none;\n    }\n    &.desktopBottom {\n      display: block;\n    }\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  a {\n    width: max-content;\n    display: block;\n    word-wrap: break-word;\n    max-width: 100%;\n  }\n  &.mobileBottom {\n    width: 100%;\n    background-color: ", ";\n    color: #000;\n    text-align: center;\n  }\n  &.desktopBottom {\n    display: none;\n    width: 100%;\n    background-color: ", ";\n    color: #000;\n    text-align: center;\n  }\n  &.homePageBottom {\n    width: 222px;\n    margin-right: 24px;\n  }\n  @media (min-width: 900px){\n    &.mobileBottom {\n      display: none;\n    }\n    &.desktopBottom {\n      display: block;\n    }\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -63,7 +63,7 @@ function _templateObject() {
 
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
-var ContentBottom = _styledComponents["default"].div(_templateObject());
+var ContentBottom = _styledComponents["default"].div(_templateObject(), _colors.white, _colors.white);
 
 exports.ContentBottom = ContentBottom;
 
@@ -75,7 +75,7 @@ var BottomBox = _styledComponents["default"].div(_templateObject3());
 
 exports.BottomBox = BottomBox;
 
-var BoxTitle = _styledComponents["default"].div(_templateObject4(), _colors.red);
+var BoxTitle = _styledComponents["default"].div(_templateObject4(), _colors.red, _colors.white, _colors.white);
 
 exports.BoxTitle = BoxTitle;
 

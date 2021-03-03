@@ -1,12 +1,12 @@
 import styled from 'styled-components';
-import { red } from '../colors';
+import { red, white } from '../colors';
 export const MessageFormWrap = styled.div`
   width: 100vw;
   min-height: 387px;
   background-image: url("/images/bg-container-short-form-wrap.jpg");
   background-position: center;
   background-size: cover;
-  color: #fff;
+  color: ${white};
 `;
 export const MessageForm = styled.div`
   width: calc(100% - 48px);
@@ -29,7 +29,7 @@ export const MessageForm = styled.div`
 `;
 export const MessageLinks = styled.div`
   a {
-    color: #fff;
+    color: ${white};
     text-decoration: underline;
   }
 `;

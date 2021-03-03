@@ -15,6 +15,8 @@ var _global = require("../styled-components/global");
 
 var _blogs = _interopRequireDefault(require("../data/blogs"));
 
+var _attorneyList = _interopRequireDefault(require("../data/attorneyList"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
@@ -73,13 +75,22 @@ var ContentBottomComponent = /*#__PURE__*/function (_Component) {
           blog = _this$props.blog;
       return /*#__PURE__*/_react["default"].createElement(_contentBottom.ContentBottom, {
         className: className
-      }, home && /*#__PURE__*/_react["default"].createElement(_contentBottom.MeetAttorneys, null, /*#__PURE__*/_react["default"].createElement("h3", null, "MEET OUR ATTORNEYS"), /*#__PURE__*/_react["default"].createElement("img", {
-        src: "/images/atto-home-new.jpg"
-      }), /*#__PURE__*/_react["default"].createElement("a", {
-        className: "learnMore",
-        href: "/about"
-      }, "LEARN MORE ", /*#__PURE__*/_react["default"].createElement("i", {
-        className: "fas fa-chevron-circle-right"
+      }, home && /*#__PURE__*/_react["default"].createElement(_contentBottom.MeetAttorneys, null, /*#__PURE__*/_react["default"].createElement("h3", null, "MEET OUR ATTORNEYS"), /*#__PURE__*/_react["default"].createElement("div", {
+        id: "attorneyList"
+      }, _attorneyList["default"].map(function (a, i) {
+        return /*#__PURE__*/_react["default"].createElement("a", {
+          className: "learnMore",
+          href: a.link,
+          key: i
+        }, /*#__PURE__*/_react["default"].createElement("img", {
+          src: a.headshot
+        }), /*#__PURE__*/_react["default"].createElement("div", {
+          style: {
+            marginBottom: "12px"
+          }
+        }, a.name, " ", /*#__PURE__*/_react["default"].createElement("i", {
+          className: "fas fa-chevron-circle-right"
+        })));
       })), /*#__PURE__*/_react["default"].createElement("h3", {
         className: "freeConsultation"
       }, "FREE CONSULTATION"), /*#__PURE__*/_react["default"].createElement("a", {

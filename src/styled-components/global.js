@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { gold, red, yellow } from './colors';
+import { gold, red, yellow, white } from './colors';
 
 export const PageWrapper = styled.div`
   width: 100%;
@@ -77,7 +77,7 @@ export const Content = styled.div`
   }
   .goldBack {
     background-color: ${gold};
-    color: #fff;
+    color: ${white};
     padding: 20px;
   }
   .boxedList {
@@ -106,7 +106,7 @@ export const GoldButton = styled.button`
   background: ${gold};
   padding: 12px 20px;
   margin: 12px auto;
-  color: #fff;
+  color: ${white};
   font-size: 17px;
   border: 1px solid #8d8d8d;
   border-radius: 3px;
@@ -132,14 +132,14 @@ export const BigGoldButton = styled.button`
   &:hover {
     cursor: pointer;
     background-color: ${red};
-    color: #fff;
+    color: ${white};
   }
 `;
 export const RedButton = styled.button`
   background-color: ${red};
   padding: 5px 15px;
   margin: 24px 0 8px 0;
-  color: #fff;
+  color: ${white};
   font-size: 15px;
   font-weight: 600px;
   border: none;
@@ -162,7 +162,7 @@ export const FBButton = styled.button`
   transition: background-color 300ms ease 0ms;
   display: block;
   i {
-    color: #fff;
+    color: ${white};
     font-size: 16px;
   }
   &:hover {
@@ -171,7 +171,7 @@ export const FBButton = styled.button`
   }
 `;
 export const Input = styled.input`
-  background: #fff;
+  background: ${white};
   padding: 12px;
   width: 100%;
   margin: 0 0 12px 0;
@@ -182,7 +182,7 @@ export const Input = styled.input`
 `;
 
 export const TextArea = styled.textarea`
-  background: #fff;
+  background: ${white};
   padding: 12px;
   width: 100%;
   height: 174px;

@@ -218,7 +218,8 @@ app.get('/images/:id', (req, res) => {
 
 app.post('/emailer', (req, res) => {
   res.send({message: "success"})
-  let { email, name, description, phone} = req.body;
+  let { name, email, phone, state, zip, description, contactemail, contactphone, disclaimer } = req.body;
+
   var transporter = nodemailer.createTransport({
     host: 'smtp.gmail.com',
     port: 587,
@@ -232,14 +233,22 @@ app.post('/emailer', (req, res) => {
 
   transporter.sendMail({
     from: email,
-    to: cryptr.decrypt(config.nodemailerEmail),
+    to: cryptr.decrypt(config.nrEmail),
     subject: 'Nelson Rozier: Online Inquiry',
     html: `
       <h3>Hi! The following person has submitted a message.<h3/>
       <h4>Name: ${name}</h4>
+
       <h4>Email: ${email}</h4>
       <h4>Phone: ${phone}</h4>
-      <h4>Message: ${description}</h4>
+      <h4>State: ${state}</h4>
+      <h4>Zip: ${zip}</h4>
+
+      <h3>Message: ${description}</h3>
+
+      <h4>Contact via phone: ${contactphone}</h4>
+      <h4>Contact via email: ${contactemail}</h4>
+      <h4>Disclaimer Checked: ${disclaimer}</h4>
     `
   }, (error, info) => {
     if (error) res.send({error: error});

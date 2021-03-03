@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { red, reddish } from '../colors'
+import { red, reddish, white } from '../colors'
 
 export const PersonalInjury = styled.div`
   width: 100%;
@@ -48,7 +48,7 @@ export const MobilePI = styled.div`
   .mobilePI {
     text-transform: capitalize;
     padding: 10px 37.5px;
-    background-color: #fff;
+    background-color: ${red};
     border: 1px solid rgba(0,0,0,.03);
     width: 100%;
     box-sizing: border-box;
@@ -64,23 +64,23 @@ export const PIButton = styled.div`
   font-size: 15px;
   width: 216px;
   word-wrap: break-word;
-  color: #fff;
+  color: ${white};
   padding: 3px 13px;
-  border-right: ${props => props.index != props.size - 1 ? "1px solid #fff" : "none"};
+  border-right: ${props => props.index != props.size - 1 ? `1px solid ${white}` : "none"};
   background: url("${props => props.himg}") 6px center no-repeat ${red};
   padding: 10px 7px 10px 53px;
   &.selectedPI.desktopPI {
-    color: #fff;
+    color: ${white};
     background: url("${props => props.himg}") 6px center no-repeat ${reddish};
   }
 
   &:hover {
     &.mobilePI {
-      background-color: ${red};
+      background-color: ${reddish};
       background-image: none;
     }
     &.desktopPI {
-      color: #fff;
+      color: ${white};
       background: url("${props => props.himg}") 6px center no-repeat ${reddish};
     }
 
@@ -106,7 +106,7 @@ export const PIBar = styled.div`
 `;
 export const PIPopup = styled.div`
   width: calc(100% - 24px);
-  background-color: #fff;
+  background-color: ${white};
   box-shadow: 0 2px 3px rgba(0,0,0,.1);
   display: none;
   margin: auto;
@@ -114,7 +114,7 @@ export const PIPopup = styled.div`
   text-align: center;
   font-weight: 700;
   font-size: 16px;
-  color: #fff;
+  color: ${white};
   position: absolute;
   top: 68px;
   left: 12px;

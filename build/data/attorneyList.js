@@ -7,6 +7,7 @@ module.exports = [{
   location: "Visalia, CA",
   phone: "(559) 372-0303",
   phonelink: "tel:+1-559-713-0303",
+  position: "Partner",
   fax: "(559) 713-0166",
   email: "",
   content: [{
@@ -51,6 +52,7 @@ module.exports = [{
   phone: "(559) 372-0303",
   phonelink: "tel:+1-559-713-0303",
   fax: "(559) 713-0166",
+  position: "Partner",
   email: "",
   content: [{
     type: "p",
@@ -112,6 +114,7 @@ module.exports = [{
   phone: "(559) 372-0303",
   phonelink: "tel:+1-559-713-0303",
   fax: "(559) 713-0166",
+  position: "Associate",
   email: "",
   content: [{
     type: "p",

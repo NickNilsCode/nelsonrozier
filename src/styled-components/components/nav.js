@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { red, reddish } from '../colors'
+import { red, reddish, whiteish, white } from '../colors'
 
 export const Nav = styled.div`
   width: 100%;
@@ -29,9 +29,9 @@ export const NavButton = styled.div`
   font-weight: 700;
   font-size: 18px;
   width: max-content;
-  color: #fff;
+  color: ${white};
   padding: 3px 13px;
-  border-right: ${props => props.index != props.size - 1 ? "1px solid #fff" : "none"};
+  border-right: ${props => props.index != props.size - 1 ? `1px solid ${white}` : "none"};
   transition: background-color 0.4s;
   background-color: ${props => props.selected ? red : "transparent"};
   &.mobileNav {
@@ -41,12 +41,12 @@ export const NavButton = styled.div`
     width: 100%;
     box-sizing: border-box;
     text-align: left;
-    background-color: ${props => props.selected ? "#321413" : red};
+    background-color: ${props => props.selected ? whiteish : red};
   }
   &:hover {
-    background-color: ${reddish};
+    background-color: ${whiteish};
     &.mobileNav {
-      background-color: #32141399;
+      background-color: ${whiteish};
     }
   }
 `;
@@ -57,21 +57,21 @@ export const MenuBar = styled.div`
   text-align: center;
   font-weight: 700;
   font-size: 16px;
-  color: #fff;
+  color: ${white};
   &:hover {
     cursor: pointer;
   }
 `;
 export const MenuPopup = styled.div`
   width: calc(100% - 24px);
-  background-color: rgb(118, 52, 50);
+  background-color: ${red};
   display: none;
   margin: auto;
   padding: 24px auto;
   text-align: center;
   font-weight: 700;
   font-size: 16px;
-  color: #fff;
+  color: ${white};
   position: absolute;
   top: 68px;
   left: 12px;

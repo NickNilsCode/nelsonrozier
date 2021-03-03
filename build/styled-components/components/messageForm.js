@@ -42,7 +42,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n  a {\n    color: #fff;\n    text-decoration: underline;\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  a {\n    color: ", ";\n    text-decoration: underline;\n  }\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -62,7 +62,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  width: 100vw;\n  min-height: 387px;\n  background-image: url(\"/images/bg-container-short-form-wrap.jpg\");\n  background-position: center;\n  background-size: cover;\n  color: #fff;\n"]);
+  var data = _taggedTemplateLiteral(["\n  width: 100vw;\n  min-height: 387px;\n  background-image: url(\"/images/bg-container-short-form-wrap.jpg\");\n  background-position: center;\n  background-size: cover;\n  color: ", ";\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -73,7 +73,7 @@ function _templateObject() {
 
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
-var MessageFormWrap = _styledComponents["default"].div(_templateObject());
+var MessageFormWrap = _styledComponents["default"].div(_templateObject(), _colors.white);
 
 exports.MessageFormWrap = MessageFormWrap;
 
@@ -81,7 +81,7 @@ var MessageForm = _styledComponents["default"].div(_templateObject2());
 
 exports.MessageForm = MessageForm;
 
-var MessageLinks = _styledComponents["default"].div(_templateObject3());
+var MessageLinks = _styledComponents["default"].div(_templateObject3(), _colors.white);
 
 exports.MessageLinks = MessageLinks;
 

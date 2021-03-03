@@ -254,10 +254,15 @@ app.post('/emailer', function (req, res) {
     message: "success"
   });
   var _req$body = req.body,
-      email = _req$body.email,
       name = _req$body.name,
+      email = _req$body.email,
+      phone = _req$body.phone,
+      state = _req$body.state,
+      zip = _req$body.zip,
       description = _req$body.description,
-      phone = _req$body.phone;
+      contactemail = _req$body.contactemail,
+      contactphone = _req$body.contactphone,
+      disclaimer = _req$body.disclaimer;
 
   var transporter = _nodemailer["default"].createTransport({
     host: 'smtp.gmail.com',
@@ -272,9 +277,9 @@ app.post('/emailer', function (req, res) {
 
   transporter.sendMail({
     from: email,
-    to: cryptr.decrypt(_config["default"].nodemailerEmail),
+    to: cryptr.decrypt(_config["default"].nrEmail),
     subject: 'Nelson Rozier: Online Inquiry',
-    html: "\n      <h3>Hi! The following person has submitted a message.<h3/>\n      <h4>Name: ".concat(name, "</h4>\n      <h4>Email: ").concat(email, "</h4>\n      <h4>Phone: ").concat(phone, "</h4>\n      <h4>Message: ").concat(description, "</h4>\n    ")
+    html: "\n      <h3>Hi! The following person has submitted a message.<h3/>\n      <h4>Name: ".concat(name, "</h4>\n\n      <h4>Email: ").concat(email, "</h4>\n      <h4>Phone: ").concat(phone, "</h4>\n      <h4>State: ").concat(state, "</h4>\n      <h4>Zip: ").concat(zip, "</h4>\n\n      <h3>Message: ").concat(description, "</h3>\n\n      <h4>Contact via phone: ").concat(contactphone, "</h4>\n      <h4>Contact via email: ").concat(contactemail, "</h4>\n      <h4>Disclaimer Checked: ").concat(disclaimer, "</h4>\n    ")
   }, function (error, info) {
     if (error) res.send({
       error: error

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { white } from '../colors';
 export const BlogSocial = styled.div`
   width: 100%;
   display: flex;
@@ -62,7 +63,7 @@ export const Logo = styled.div`
     top: 0;
     bottom: 0;
     margin: auto;
-    color: #fff;
+    color: ${white};
     transition: left 0.5s;
   }
   i:first-of-type {
@@ -73,7 +74,7 @@ export const SocialText = styled.div`
   font-family: 'Open Sans';
   font-size: 14px;
   font-weight: 700;
-  color: #fff;
+  color: ${white};
   display: flex;
   align-items: center;
   justify-content: center;

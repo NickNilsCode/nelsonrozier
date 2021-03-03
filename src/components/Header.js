@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Nav } from './';
-import { Header, HeaderWrap, HeaderDiv, Header1, Header2, Header3, Header4 } from '../styled-components/components/header';
+import { Header, HeaderImage, DesktopView, HeaderWrap, HeaderDiv, Header1, Header2, Header3, Header4, Header5 } from '../styled-components/components/header';
 import { GoldButton, FlexDiv } from '../styled-components/global';
 
 class HeaderComponent extends Component {
@@ -25,8 +25,12 @@ class HeaderComponent extends Component {
             </HeaderDiv>
           </FlexDiv>
           <Nav page={this.props.page}/>
-          <Header4>Personalized Legal Representation by Compassionate,</Header4>
-          <Header4>Dedicated and Experienced Attorneys</Header4>
+          <HeaderImage>
+            <Header4>Personalized Legal Representation by Compassionate,<br/>Dedicated and Experienced Attorneys</Header4>
+          </HeaderImage>
+          <DesktopView>
+            <Header4>Personalized Legal Representation by Compassionate,<br/>Dedicated and Experienced Attorneys</Header4>
+          </DesktopView>
           <a href="" onClick={this.scroll} className="consultationAnchor">
             <GoldButton className="consultationButton">Get a Free Consultation <i className="fas fa-chevron-circle-right"/></GoldButton>
           </a>

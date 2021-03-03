@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react';
 import { ContentBottom, BottomBox, BoxTitle, BoxContent, MeetAttorneys } from '../styled-components/components/contentBottom';
 import { RedButton, FBButton } from '../styled-components/global';
 import blogData from '../data/blogs';
+import attorneyData from '../data/attorneyList';
 
 class ContentBottomComponent extends Component {
   searchBlogs = () => {
@@ -15,8 +16,18 @@ class ContentBottomComponent extends Component {
           home &&
           <MeetAttorneys>
             <h3>MEET OUR ATTORNEYS</h3>
-            <img src="/images/atto-home-new.jpg"/>
-            <a className="learnMore" href="/about">LEARN MORE <i className="fas fa-chevron-circle-right"/></a>
+            <div id="attorneyList">
+            {
+              attorneyData.map((a,i) => {
+                return (
+                  <a className="learnMore" href={a.link} key={i}>
+                    <img src={a.headshot}/>
+                    <div style={{marginBottom: "12px"}}>{a.name} <i className="fas fa-chevron-circle-right"/></div>
+                  </a>
+                )
+              })
+            }
+          </div>
             <h3 className="freeConsultation">FREE CONSULTATION</h3>
             <a href="/contact" className="contactToday">
               <RedButton>Contact Us Today <i className="fas fa-chevron-circle-right"/></RedButton>

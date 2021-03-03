@@ -20,7 +20,7 @@ class Attorneytemplate extends Component {
                     attorney &&
                     <AttorneyDiv>
                       <h1>{attorney.name}</h1>
-                      <p>Associate</p>
+                      <p>{attorney.position}</p>
                       <img src={attorney.headshot}/>
                       <h2>Location</h2>
                       <p>{attorney.location}</p>

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { red } from '../colors';
+import { red, white } from '../colors';
 export const ContentBottom = styled.div`
   a {
     width: max-content;
@@ -9,14 +9,14 @@ export const ContentBottom = styled.div`
   }
   &.mobileBottom {
     width: 100%;
-    background-color: #fff;
+    background-color: ${white};
     color: #000;
     text-align: center;
   }
   &.desktopBottom {
     display: none;
     width: 100%;
-    background-color: #fff;
+    background-color: ${white};
     color: #000;
     text-align: center;
   }
@@ -58,6 +58,12 @@ export const MeetAttorneys = styled.div`
   .learnMore:hover i {
     color: #000;
   }
+  #attorneyList {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
   @media (min-width: 900px){
     .contactToday, .contactToday button {
       width: 100%;
@@ -77,8 +83,8 @@ export const BoxTitle = styled.div`
   background-color: ${red};
   padding: 3px 0;
   width: calc(100% - 8px);
-  color: #fff;
-  border: 4px solid #fff;
+  color: ${white};
+  border: 4px solid ${white};
 `;
 
 export const BoxContent = styled.div`

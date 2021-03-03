@@ -1,10 +1,10 @@
 import styled from 'styled-components';
-import { red } from '../colors';
+import { red, white } from '../colors';
 export const LocationCard = styled.div`
   width: 100%;
   height: 241px;
   max-width: 300px;
-  background-color: #fff;
+  background-color: ${white};
   border-left: 1px solid black;
   position: absolute;
   left: 0;
@@ -34,7 +34,7 @@ export const LocationCard = styled.div`
     bottom: -28px;
     left: 24px;
     .directionButton {
-      color: #fff;
+      color: ${white};
     }
     i {
       font-size: 13px;

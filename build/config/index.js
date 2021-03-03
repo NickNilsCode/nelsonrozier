@@ -4,6 +4,7 @@ module.exports = {
   key: "nelson-rozier",
   userDB: "",
   passDB: "",
-  nodemailerEmail: "",
-  nodemailerPW: ""
+  nrEmail: "765156829ac2deaa08167ce5cfacaa9408e3010335ffbd855846158465eaf317c7d7ff43d23fa0cbfe71e541c3bb83a00fcded3c60c768cdbecec5148d9c7935a290b7f571161c4da591d0b3255369fb2876cd08ac37482a255a8de45f35f1723a5ae1d085cc3ca85032cbf586a883200106777d1c",
+  nodemailerEmail: "157127fe66c4ea6ea2c46e3a2b8c864e57fa057a1bb08f7e6d6f43f69f8d45839a6b2ac5bee51fd786a79e44ddcabf909b0ffbb3687d061a9aee6158ccabbc59989c886b6dcb6cab7f6c6ffad2eafbc4239ed4ddd93b09dad3c9901cf2a984d8a9ee2708b5a9307673efabcc2a2be27c82",
+  nodemailerPW: "9ae8501158bd646818fbd68deb4ad1b7f97494c901ffb66d066b18bca9c63b5ddc39bd79c70dd5ff04dac08a24c6471e95f73e28051a3902f6cab61e4fbefd45660b6bb4a4dcb17d7830f911badba4efcb6ea11b8e18f8af36693d61f1fac41e6ba7990938a9e6cd99e55875ac6ca73c"
 };

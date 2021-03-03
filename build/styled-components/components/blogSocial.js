@@ -7,10 +7,12 @@ exports.SocialText = exports.Logo = exports.SocialButton = exports.BlogSocial = 
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
+var _colors = require("../colors");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _templateObject4() {
-  var data = _taggedTemplateLiteral(["\n  font-family: 'Open Sans';\n  font-size: 14px;\n  font-weight: 700;\n  color: #fff;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 7px 14px;\n"]);
+  var data = _taggedTemplateLiteral(["\n  font-family: 'Open Sans';\n  font-size: 14px;\n  font-weight: 700;\n  color: ", ";\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 7px 14px;\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -20,7 +22,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n  width: 40px;\n  height: 40px;\n  overflow: hidden;\n  position: relative;\n  transition: background-color 0.5s;\n  border-radius: 4px 0 0 4px\n  i {\n    width: 40px;\n    height: 20px;\n    position: absolute;\n    left: 0;\n    top: 0;\n    bottom: 0;\n    margin: auto;\n    color: #fff;\n    transition: left 0.5s;\n  }\n  i:first-of-type {\n    left: -40px;\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  width: 40px;\n  height: 40px;\n  overflow: hidden;\n  position: relative;\n  transition: background-color 0.5s;\n  border-radius: 4px 0 0 4px\n  i {\n    width: 40px;\n    height: 20px;\n    position: absolute;\n    left: 0;\n    top: 0;\n    bottom: 0;\n    margin: auto;\n    color: ", ";\n    transition: left 0.5s;\n  }\n  i:first-of-type {\n    left: -40px;\n  }\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -59,10 +61,10 @@ var SocialButton = _styledComponents["default"].a(_templateObject2());
 
 exports.SocialButton = SocialButton;
 
-var Logo = _styledComponents["default"].div(_templateObject3());
+var Logo = _styledComponents["default"].div(_templateObject3(), _colors.white);
 
 exports.Logo = Logo;
 
-var SocialText = _styledComponents["default"].div(_templateObject4());
+var SocialText = _styledComponents["default"].div(_templateObject4(), _colors.white);
 
 exports.SocialText = SocialText;
