@@ -7,7 +7,6 @@ import fs from 'fs';
 import compression from 'compression';
 import cors from 'cors';
 import path from 'path';
-import cron from 'node-cron';
 import bodyParser from 'body-parser';
 import nodemailer from 'nodemailer';
 
@@ -24,17 +23,6 @@ app.use(compression());
 app.use(cors());
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded())
-
-cron.schedule('0 1 * * *', (e) => {
-  console.log(e);
-  fetch('https://nelsonrozier.herokuapp.com/')
-  .then(res => {
-    console.log("requested at " + new Date())
-  })
-  .catch(() => {
-    console.log("request to https://nelsonrozier.herokuapp.com/ failed at " + new Date())
-  });
-});
 
 var dataObj = {},
 homeBundle = "",

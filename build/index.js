@@ -18,8 +18,6 @@ var _cors = _interopRequireDefault(require("cors"));
 
 var _path = _interopRequireDefault(require("path"));
 
-var _nodeCron = _interopRequireDefault(require("node-cron"));
-
 var _bodyParser = _interopRequireDefault(require("body-parser"));
 
 var _nodemailer = _interopRequireDefault(require("nodemailer"));
@@ -39,16 +37,6 @@ app.use((0, _compression["default"])());
 app.use((0, _cors["default"])());
 app.use(_bodyParser["default"].json());
 app.use(_bodyParser["default"].urlencoded());
-
-_nodeCron["default"].schedule('0 1 * * *', function (e) {
-  console.log(e);
-  (0, _nodeFetch["default"])('https://nelsonrozier.herokuapp.com/').then(function (res) {
-    console.log("requested at " + new Date());
-  })["catch"](function () {
-    console.log("request to https://nelsonrozier.herokuapp.com/ failed at " + new Date());
-  });
-});
-
 var dataObj = {},
     homeBundle = "",
     aboutBundle = "",
