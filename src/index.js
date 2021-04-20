@@ -17,7 +17,7 @@ const cryptr = new Cryptr(config.key);
 import { HomeRoot, AboutRoot, PersonalinjuryRoot, PersonalinjurytemplateRoot, CaseresultsRoot, FaqRoot, BlogRoot, BlogcattemplateRoot, BlogtemplateRoot, ContactRoot, DisclaimerRoot, SitemapRoot, PrivacypolicyRoot, AttorneytemplateRoot, SearchRoot } from './roots';
 
 var PORT = process.env.PORT || 3003;
-
+//this is a comment
 const app = express();
 app.use(compression());
 app.use(cors());
