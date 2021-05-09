@@ -91,7 +91,7 @@ class BlogBottomComponent extends Component {
               let year = date.getFullYear();
               let month = date.getMonth() + 1;
               month = month > 9 ? month : "0" + month;
-              let titledashed = a.title.toLowerCase().split(" ").join('-').replace(/[^\w\s]/gi, '')
+              let titledashed = a.title.toLowerCase().replace(/[^\w\s]/gi, '').split(" ").join('-')
               return (
                 <li key={i}><a href={`/blog/${year}/${month}/${titledashed}`}>{a.title}</a></li>
               )
