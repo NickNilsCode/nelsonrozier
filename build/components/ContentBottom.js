@@ -13,8 +13,6 @@ var _contentBottom = require("../styled-components/components/contentBottom");
 
 var _global = require("../styled-components/global");
 
-var _blogs = _interopRequireDefault(require("../data/blogs"));
-
 var _attorneyList = _interopRequireDefault(require("../data/attorneyList"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -39,40 +37,48 @@ function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) ===
 
 function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 var ContentBottomComponent = /*#__PURE__*/function (_Component) {
   _inherits(ContentBottomComponent, _Component);
 
   var _super = _createSuper(ContentBottomComponent);
 
-  function ContentBottomComponent() {
+  function ContentBottomComponent(props) {
     var _this;
 
     _classCallCheck(this, ContentBottomComponent);
 
-    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
-    }
-
-    _this = _super.call.apply(_super, [this].concat(args));
-
-    _defineProperty(_assertThisInitialized(_this), "searchBlogs", function () {});
-
+    _this = _super.call(this, props);
+    _this.state = {
+      blogs: []
+    };
     return _this;
   }
 
   _createClass(ContentBottomComponent, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      var _this2 = this;
+
+      fetch('/api/blogs/getThree').then(function (res) {
+        return res.json();
+      }).then(function (res) {
+        _this2.setState({
+          blogs: res
+        });
+      });
+    }
+  }, {
     key: "render",
     value: function render() {
       var _this$props = this.props,
           className = _this$props.className,
           home = _this$props.home,
           blog = _this$props.blog;
+      var blogs = this.state.blogs;
       return /*#__PURE__*/_react["default"].createElement(_contentBottom.ContentBottom, {
         className: className
       }, home && /*#__PURE__*/_react["default"].createElement(_contentBottom.MeetAttorneys, null, /*#__PURE__*/_react["default"].createElement("h3", null, "MEET OUR ATTORNEYS"), /*#__PURE__*/_react["default"].createElement("div", {
@@ -98,10 +104,15 @@ var ContentBottomComponent = /*#__PURE__*/function (_Component) {
         className: "contactToday"
       }, /*#__PURE__*/_react["default"].createElement(_global.RedButton, null, "Contact Us Today ", /*#__PURE__*/_react["default"].createElement("i", {
         className: "fas fa-chevron-circle-right"
-      })))), /*#__PURE__*/_react["default"].createElement(_contentBottom.BottomBox, null, /*#__PURE__*/_react["default"].createElement(_contentBottom.BoxTitle, null, "VISIT OUR BLOG"), /*#__PURE__*/_react["default"].createElement(_contentBottom.BoxContent, null, _blogs["default"].map(function (a, i) {
+      })))), /*#__PURE__*/_react["default"].createElement(_contentBottom.BottomBox, null, /*#__PURE__*/_react["default"].createElement(_contentBottom.BoxTitle, null, "VISIT OUR BLOG"), /*#__PURE__*/_react["default"].createElement(_contentBottom.BoxContent, null, blogs.map(function (a, i) {
+        var date = new Date(a.date);
+        var year = date.getFullYear();
+        var month = date.getMonth() + 1;
+        month = month > 9 ? month : "0" + month;
+        var titledashed = a.title.toLowerCase().replace(/[^\w\s]/gi, '').split(" ").join('-');
         return /*#__PURE__*/_react["default"].createElement("a", {
           key: i,
-          href: a.link
+          href: "/blog/".concat(year, "/").concat(month, "/").concat(titledashed)
         }, a.title);
       }), /*#__PURE__*/_react["default"].createElement("a", {
         href: "/blog",

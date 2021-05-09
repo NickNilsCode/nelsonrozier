@@ -9,6 +9,8 @@ import cors from 'cors';
 import path from 'path';
 import bodyParser from 'body-parser';
 import nodemailer from 'nodemailer';
+import mongoose from 'mongoose';
+import blogCtrl from './controllers/blogCtrl';
 
 import config from './config';
 const Cryptr = require('cryptr');
@@ -133,7 +135,12 @@ app.get('/faq', (req, res) => {
   res.send(returnHTML(data, faqBundle, FaqRoot, "faq"));
 });
 app.get('/blog', (req, res) => {
-  let data = "";
+  let data = {
+    query: "",
+    category: "",
+    year: "",
+    month: ""
+  };
   res.set('Cache-Control', 'public, max-age=31557600');
   res.send(returnHTML(data, blogBundle, BlogRoot, "blog"));
 });
@@ -143,9 +150,21 @@ app.get('/blogcattemplate', (req, res) => {
   res.send(returnHTML(data, blogcattemplateBundle, BlogcattemplateRoot, "blogcattemplate"));
 });
 app.get('/blog/search/:query', (req, res) => {
-  const { query } = req.params;
   let data = {
-    link: `/blog/search/${query}`
+    query: req.params.query,
+    category: "",
+    year: "",
+    month: ""
+  };
+  res.set('Cache-Control', 'public, max-age=31557600');
+  res.send(returnHTML(data, blogBundle, BlogRoot, "blog"));
+});
+app.get('/blog/category/:category', (req, res) => {
+  let data = {
+    category: req.params.category,
+    query: "",
+    year: "",
+    month: ""
   };
   res.set('Cache-Control', 'public, max-age=31557600');
   res.send(returnHTML(data, blogBundle, BlogRoot, "blog"));
@@ -153,7 +172,9 @@ app.get('/blog/search/:query', (req, res) => {
 app.get('/blog/:year/:month', (req, res) => {
   const { year, month } = req.params;
   let data = {
-    link: `/blog/${year}/${month}`
+    year, month,
+    query: "",
+    category: ""
   };
   res.set('Cache-Control', 'public, max-age=31557600');
   res.send(returnHTML(data, blogBundle, BlogRoot, "blog"));
@@ -161,7 +182,7 @@ app.get('/blog/:year/:month', (req, res) => {
 app.get('/blog/:year/:month/:title', (req, res) => {
   const { year, month, title } = req.params;
   let data = {
-    link: `/blog/${year}/${month}/${title}`
+    year, month, title
   };
   res.set('Cache-Control', 'public, max-age=31557600');
   res.send(returnHTML(data, blogtemplateBundle, BlogtemplateRoot, "blogtemplate"));
@@ -244,9 +265,21 @@ app.post('/emailer', (req, res) => {
   });
 })
 
-
+app.get('/api/blogs/getAll', blogCtrl.read);
+app.get('/api/blogs/getThree', blogCtrl.readThree);
+app.get('/api/blogs/getTen', blogCtrl.readTen);
+app.get('/api/blogs/getOne/:id', blogCtrl.readOne);
+app.get('/api/blogs/getCategories', blogCtrl.readCategories)
+app.get('/api/blogs/getMonths', blogCtrl.readMonths)
 
 app.get('/health', (req, res) => res.send('OK'));
+
+var mongoUri = process.env.MONGODB_URI ? process.env.MONGODB_URI : 'mongodb+srv://'+cryptr.decrypt(config.dbuser)+':'+cryptr.decrypt(config.dbpass)+'@nelsonrozier.1dnpj.mongodb.net/nelsonrozier?retryWrites=true&w=majority';
+mongoose.connect(mongoUri, { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connection.on('error', console.error.bind(console, 'connection error'));
+mongoose.connection.once('open', function(){
+ console.log("Connected to mongoDB");
+});
 
 
 app.listen( PORT, () => {

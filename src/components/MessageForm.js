@@ -15,7 +15,6 @@ class MessageFormComponent extends Component {
   }
   submitForm = (e) => {
     e.preventDefault();
-    console.log(this.state);
     fetch('/emailer', {
       method: "POST",
       headers: {'Content-Type': 'application/json'},

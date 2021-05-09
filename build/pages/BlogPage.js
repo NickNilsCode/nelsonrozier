@@ -15,8 +15,6 @@ var _blog = require("../styled-components/pages/blog");
 
 var _global = require("../styled-components/global");
 
-var _blogs = _interopRequireDefault(require("../data/blogs"));
-
 var _mapBlog = _interopRequireDefault(require("../helpers/mapBlog"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -41,7 +39,7 @@ function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) ===
 
 function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
@@ -50,20 +48,45 @@ var Blog = /*#__PURE__*/function (_Component) {
 
   var _super = _createSuper(Blog);
 
-  function Blog() {
+  function Blog(props) {
+    var _this;
+
     _classCallCheck(this, Blog);
 
-    return _super.apply(this, arguments);
+    _this = _super.call(this, props);
+    _this.state = {
+      blogs: []
+    };
+    return _this;
   }
 
   _createClass(Blog, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      var _this2 = this;
+
+      var _this$props$data = this.props.data,
+          query = _this$props$data.query,
+          category = _this$props$data.category,
+          month = _this$props$data.month,
+          year = _this$props$data.year;
+      fetch("/api/blogs/getTen?category=".concat(category, "&query=").concat(query, "&month=").concat(month, "&year=").concat(year)).then(function (res) {
+        return res.json();
+      }).then(function (res) {
+        _this2.setState({
+          blogs: res
+        });
+      });
+    }
+  }, {
     key: "render",
     value: function render() {
+      var blogs = this.state.blogs;
       return /*#__PURE__*/_react["default"].createElement(_global.PageWrapper, null, /*#__PURE__*/_react["default"].createElement(_components.Header, {
         page: "Blog"
       }), /*#__PURE__*/_react["default"].createElement(_global.ContentWrapper, {
         className: "blogPage"
-      }, /*#__PURE__*/_react["default"].createElement(_global.Content, null, /*#__PURE__*/_react["default"].createElement("h1", null, "Visalia Personal Injury Law Blog"), (0, _mapBlog["default"])(_blogs["default"])), /*#__PURE__*/_react["default"].createElement(_components.BlogBottom, null)), /*#__PURE__*/_react["default"].createElement(_components.Footer, null));
+      }, /*#__PURE__*/_react["default"].createElement(_global.Content, null, /*#__PURE__*/_react["default"].createElement("h1", null, "Visalia Personal Injury Law Blog"), (0, _mapBlog["default"])(blogs)), /*#__PURE__*/_react["default"].createElement(_components.BlogBottom, null)), /*#__PURE__*/_react["default"].createElement(_components.Footer, null));
     }
   }]);
 

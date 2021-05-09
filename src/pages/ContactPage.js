@@ -23,7 +23,6 @@ class Contact extends Component {
     }
     submitForm = (e) => {
       e.preventDefault();
-      console.log(this.state);
       fetch('/emailer', {
         method: "POST",
         headers: {'Content-Type': 'application/json'},
@@ -43,7 +42,6 @@ class Contact extends Component {
       this.setState(initialState)
     }
     updateState = (e, prop) => {
-      console.log("crash", prop, e.currentTarget.value );
       let obj = {};
       obj[prop] = e.currentTarget.value;
       this.setState(obj);
