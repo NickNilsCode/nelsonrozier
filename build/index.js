@@ -134,7 +134,12 @@ _fs["default"].readFile('./dist/js/search.bundle.min.js', "utf8", function (err,
   searchBundle = data || "";
 });
 
+function checkURL(req, res) {
+  console.log(req.get('host'));
+}
+
 app.get('/', function (req, res) {
+  checkURL(req, res);
   var data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
   res.send(returnHTML(data, homeBundle, _roots.HomeRoot, "home"));
