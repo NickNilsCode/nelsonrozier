@@ -137,40 +137,44 @@ _fs["default"].readFile('./dist/js/search.bundle.min.js', "utf8", function (err,
 function checkURL(req, res, extension) {
   if (req.get('host') == "www.nelsonrozier.com") {
     res.redirect("https://www.nrclaw.com".concat(extension));
-  }
-
-  console.log("crash", req.protocol);
-
-  if (req.protocol == "http") {
+    return false;
+  } else if (req.protocol == "http") {
     res.redirect("https://www.nrclaw.com".concat(extension));
+    return false;
   }
+
+  return true;
 }
 
 app.get('/', function (req, res) {
-  checkURL(req, res, "");
-  var data = "";
-  res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, homeBundle, _roots.HomeRoot, "home"));
+  if (checkURL(req, res, "")) {
+    var data = "";
+    res.set('Cache-Control', 'public, max-age=31557600');
+    res.send(returnHTML(data, homeBundle, _roots.HomeRoot, "home"));
+  }
 });
 app.get('/about', function (req, res) {
-  checkURL(req, res, "/about");
-  var data = "";
-  res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, aboutBundle, _roots.AboutRoot, "about"));
+  if (checkURL(req, res, "/about")) {
+    var data = "";
+    res.set('Cache-Control', 'public, max-age=31557600');
+    res.send(returnHTML(data, aboutBundle, _roots.AboutRoot, "about"));
+  }
 });
 app.get('/personal-injury', function (req, res) {
-  checkURL(req, res, "/personal-injury");
-  var data = "";
-  res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, personalinjuryBundle, _roots.PersonalinjuryRoot, "personalinjury"));
+  if (checkURL(req, res, "/personal-injury")) {
+    var data = "";
+    res.set('Cache-Control', 'public, max-age=31557600');
+    res.send(returnHTML(data, personalinjuryBundle, _roots.PersonalinjuryRoot, "personalinjury"));
+  }
 });
 app.get('/personal-injury/:id', function (req, res) {
-  checkURL(req, res, "/personal-injury/".concat(req.params.id));
-  var data = {
-    page: req.params.id
-  };
-  res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, personalinjurytemplateBundle, _roots.PersonalinjurytemplateRoot, "personalinjurytemplate"));
+  if (checkURL(req, res, "/personal-injury/".concat(req.params.id))) {
+    var data = {
+      page: req.params.id
+    };
+    res.set('Cache-Control', 'public, max-age=31557600');
+    res.send(returnHTML(data, personalinjurytemplateBundle, _roots.PersonalinjurytemplateRoot, "personalinjurytemplate"));
+  }
 });
 app.get('/case-results', function (req, res) {
   checkURL(req, res, "/case-results");

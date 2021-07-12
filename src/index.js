@@ -105,37 +105,42 @@ fs.readFile('./dist/js/search.bundle.min.js', "utf8", (err, data) => {
 function checkURL (req, res, extension){
   if(req.get('host') == "www.nelsonrozier.com"){
     res.redirect(`https://www.nrclaw.com${extension}`);
-  }
-  console.log("crash", req.protocol);
-  if(req.protocol == "http"){
+    return false;
+  } else if(req.protocol == "http"){
     res.redirect(`https://www.nrclaw.com${extension}`);
+    return false;
   }
+  return true;
 }
 app.get('/', (req, res) => {
-  checkURL(req, res, "")
-  let data = "";
-  res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, homeBundle, HomeRoot, "home"));
+  if(checkURL(req, res, "")){
+    let data = "";
+    res.set('Cache-Control', 'public, max-age=31557600');
+    res.send(returnHTML(data, homeBundle, HomeRoot, "home"));
+  }
 });
 app.get('/about', (req, res) => {
-  checkURL(req, res, "/about")
-  let data = "";
-  res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, aboutBundle, AboutRoot, "about"));
+  if(checkURL(req, res, "/about")){
+    let data = "";
+    res.set('Cache-Control', 'public, max-age=31557600');
+    res.send(returnHTML(data, aboutBundle, AboutRoot, "about"));
+  }
 });
 app.get('/personal-injury', (req, res) => {
-  checkURL(req, res, "/personal-injury")
-  let data = "";
-  res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, personalinjuryBundle, PersonalinjuryRoot, "personalinjury"));
+  if(checkURL(req, res, "/personal-injury")){
+    let data = "";
+    res.set('Cache-Control', 'public, max-age=31557600');
+    res.send(returnHTML(data, personalinjuryBundle, PersonalinjuryRoot, "personalinjury"));
+  }
 });
 app.get('/personal-injury/:id', (req, res) => {
-  checkURL(req, res, `/personal-injury/${req.params.id}`)
-  let data = {
-    page: req.params.id
+  if(checkURL(req, res, `/personal-injury/${req.params.id}`)){
+    let data = {
+      page: req.params.id
+    }
+    res.set('Cache-Control', 'public, max-age=31557600');
+    res.send(returnHTML(data, personalinjurytemplateBundle, PersonalinjurytemplateRoot, "personalinjurytemplate"));
   }
-  res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, personalinjurytemplateBundle, PersonalinjurytemplateRoot, "personalinjurytemplate"));
 });
 app.get('/case-results', (req, res) => {
   checkURL(req, res, "/case-results")
