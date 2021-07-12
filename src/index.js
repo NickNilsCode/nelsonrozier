@@ -102,29 +102,32 @@ fs.readFile('./dist/js/search.bundle.min.js', "utf8", (err, data) => {
   if (err) console.log("ERR" ,err);
   searchBundle = data || "";
 })
-function checkURL (req, res){
+function checkURL (req, res, extension){
   console.log(req.get('host'))
   if(req.get('host') == "www.nelsonrozier.com"){
-    res.redirect("http://www.nrclaw.com");
+    res.redirect("http://www.nrclaw.com" + extension);
   }
 }
 app.get('/', (req, res) => {
-  checkURL(req, res)
+  checkURL(req, res, "")
   let data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
   res.send(returnHTML(data, homeBundle, HomeRoot, "home"));
 });
 app.get('/about', (req, res) => {
+  checkURL(req, res, "/about")
   let data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
   res.send(returnHTML(data, aboutBundle, AboutRoot, "about"));
 });
 app.get('/personal-injury', (req, res) => {
+  checkURL(req, res, "/personal-injury")
   let data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
   res.send(returnHTML(data, personalinjuryBundle, PersonalinjuryRoot, "personalinjury"));
 });
 app.get('/personal-injury/:id', (req, res) => {
+  checkURL(req, res, `/personal-injury/${req.params.id}`)
   let data = {
     page: req.params.id
   }
@@ -132,16 +135,19 @@ app.get('/personal-injury/:id', (req, res) => {
   res.send(returnHTML(data, personalinjurytemplateBundle, PersonalinjurytemplateRoot, "personalinjurytemplate"));
 });
 app.get('/case-results', (req, res) => {
+  checkURL(req, res, "/case-results")
   let data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
   res.send(returnHTML(data, caseresultsBundle, CaseresultsRoot, "caseresults"));
 });
 app.get('/faq', (req, res) => {
+  checkURL(req, res, "/faq")
   let data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
   res.send(returnHTML(data, faqBundle, FaqRoot, "faq"));
 });
 app.get('/blog', (req, res) => {
+  checkURL(req, res, "/blog")
   let data = {
     query: "",
     category: "",
@@ -152,11 +158,13 @@ app.get('/blog', (req, res) => {
   res.send(returnHTML(data, blogBundle, BlogRoot, "blog"));
 });
 app.get('/blogcattemplate', (req, res) => {
+  checkURL(req, res, "/blogcattemplate")
   let data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
   res.send(returnHTML(data, blogcattemplateBundle, BlogcattemplateRoot, "blogcattemplate"));
 });
 app.get('/blog/search/:query', (req, res) => {
+  checkURL(req, res, `/blog/search/${req.params.query}`)
   let data = {
     query: req.params.query,
     category: "",
@@ -167,6 +175,7 @@ app.get('/blog/search/:query', (req, res) => {
   res.send(returnHTML(data, blogBundle, BlogRoot, "blog"));
 });
 app.get('/blog/category/:category', (req, res) => {
+  checkURL(req, res, `/blog/category/${req.params.category}`)
   let data = {
     category: req.params.category,
     query: "",
@@ -178,6 +187,7 @@ app.get('/blog/category/:category', (req, res) => {
 });
 app.get('/blog/:year/:month', (req, res) => {
   const { year, month } = req.params;
+  checkURL(req, res, `/blog/${year}/${month}`)
   let data = {
     year, month,
     query: "",
@@ -188,33 +198,37 @@ app.get('/blog/:year/:month', (req, res) => {
 });
 app.get('/blog/:year/:month/:title', (req, res) => {
   const { year, month, title } = req.params;
-  let data = {
-    year, month, title
-  };
+  checkURL(req, res, `/blog/${year}/${month}/${title}`)
+  let data = { year, month, title };
   res.set('Cache-Control', 'public, max-age=31557600');
   res.send(returnHTML(data, blogtemplateBundle, BlogtemplateRoot, "blogtemplate"));
 });
 app.get('/contact', (req, res) => {
+  checkURL(req, res, "/contact")
   let data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
   res.send(returnHTML(data, contactBundle, ContactRoot, "contact"));
 });
 app.get('/disclaimer', (req, res) => {
+  checkURL(req, res, "/disclaimer")
   let data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
   res.send(returnHTML(data, disclaimerBundle, DisclaimerRoot, "disclaimer"));
 });
 app.get('/sitemap', (req, res) => {
+  checkURL(req, res, "/sitemap")
   let data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
   res.send(returnHTML(data, sitemapBundle, SitemapRoot, "sitemap"));
 });
 app.get('/privacy', (req, res) => {
+  checkURL(req, res, "/privacy")
   let data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
   res.send(returnHTML(data, privacypolicyBundle, PrivacypolicyRoot, "privacypolicy"));
 });
 app.get('/attorney/:name', (req, res) => {
+  checkURL(req, res, `/attorney/${req.params.name}`)
   let data = {
     link: `/attorney/${req.params.name}`
   };
@@ -222,6 +236,7 @@ app.get('/attorney/:name', (req, res) => {
   res.send(returnHTML(data, attorneytemplateBundle, AttorneytemplateRoot, "attorneytemplate"));
 });
 app.get('/search', (req, res) => {
+  checkURL(req, res, "/search")
   let data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
   res.send(returnHTML(data, searchBundle, SearchRoot, "search"));
