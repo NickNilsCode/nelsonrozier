@@ -106,6 +106,7 @@ function checkURL (req, res, extension){
   if(req.get('host') == "www.nelsonrozier.com"){
     res.redirect(`https://www.nrclaw.com${extension}`);
   }
+  console.log("crash", req.protocol);
   if(req.protocol == "http"){
     res.redirect(`https://www.nrclaw.com${extension}`);
   }

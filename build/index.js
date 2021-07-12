@@ -139,6 +139,8 @@ function checkURL(req, res, extension) {
     res.redirect("https://www.nrclaw.com".concat(extension));
   }
 
+  console.log("crash", req.protocol);
+
   if (req.protocol == "http") {
     res.redirect("https://www.nrclaw.com".concat(extension));
   }
