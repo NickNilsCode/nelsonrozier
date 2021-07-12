@@ -105,7 +105,7 @@ fs.readFile('./dist/js/search.bundle.min.js', "utf8", (err, data) => {
 function checkURL (req, res){
   console.log(req.get('host'))
   if(req.get('host') == "www.nelsonrozier.com"){
-    res.redirect("www.nrclaw.com");
+    res.redirect("http://www.nrclaw.com");
   }
 }
 app.get('/', (req, res) => {
