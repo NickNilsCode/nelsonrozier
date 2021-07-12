@@ -132,14 +132,13 @@ _fs["default"].readFile('./dist/js/attorneytemplate.bundle.min.js', "utf8", func
 _fs["default"].readFile('./dist/js/search.bundle.min.js', "utf8", function (err, data) {
   if (err) console.log("ERR", err);
   searchBundle = data || "";
-});
+}); // function checkURL (req, res){
+//   console.log(req.get('host'))
+// }
 
-function checkURL(req, res) {
-  console.log(req.get('host'));
-}
 
 app.get('/', function (req, res) {
-  checkURL(req, res);
+  // checkURL(req, res)
   var data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
   res.send(returnHTML(data, homeBundle, _roots.HomeRoot, "home"));
