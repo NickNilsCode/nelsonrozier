@@ -136,7 +136,11 @@ _fs["default"].readFile('./dist/js/search.bundle.min.js', "utf8", function (err,
 
 function checkURL(req, res, extension) {
   if (req.get('host') == "www.nelsonrozier.com") {
-    res.redirect("".concat(req.protocol, "://www.nrclaw.com").concat(extension));
+    res.redirect("https://www.nrclaw.com".concat(extension));
+  }
+
+  if (req.protocol == "http") {
+    res.redirect("https://www.nrclaw.com".concat(extension));
   }
 }
 
