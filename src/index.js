@@ -103,9 +103,8 @@ fs.readFile('./dist/js/search.bundle.min.js', "utf8", (err, data) => {
   searchBundle = data || "";
 })
 function checkURL (req, res, extension){
-  console.log(req.get('host'))
   if(req.get('host') == "www.nelsonrozier.com"){
-    res.redirect("http://www.nrclaw.com" + extension);
+    res.redirect(`${req.protocol}://www.nrclaw.com${extension}`);
   }
 }
 app.get('/', (req, res) => {

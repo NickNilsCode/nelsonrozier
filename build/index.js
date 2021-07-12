@@ -134,27 +134,32 @@ _fs["default"].readFile('./dist/js/search.bundle.min.js', "utf8", function (err,
   searchBundle = data || "";
 });
 
-function checkURL(req, res) {
-  console.log(req.get('host'));
+function checkURL(req, res, extension) {
+  if (req.get('host') == "www.nelsonrozier.com") {
+    res.redirect("".concat(req.protocol, "://www.nrclaw.com").concat(extension));
+  }
 }
 
 app.get('/', function (req, res) {
-  checkURL(req, res);
+  checkURL(req, res, "");
   var data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
   res.send(returnHTML(data, homeBundle, _roots.HomeRoot, "home"));
 });
 app.get('/about', function (req, res) {
+  checkURL(req, res, "/about");
   var data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
   res.send(returnHTML(data, aboutBundle, _roots.AboutRoot, "about"));
 });
 app.get('/personal-injury', function (req, res) {
+  checkURL(req, res, "/personal-injury");
   var data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
   res.send(returnHTML(data, personalinjuryBundle, _roots.PersonalinjuryRoot, "personalinjury"));
 });
 app.get('/personal-injury/:id', function (req, res) {
+  checkURL(req, res, "/personal-injury/".concat(req.params.id));
   var data = {
     page: req.params.id
   };
@@ -162,16 +167,19 @@ app.get('/personal-injury/:id', function (req, res) {
   res.send(returnHTML(data, personalinjurytemplateBundle, _roots.PersonalinjurytemplateRoot, "personalinjurytemplate"));
 });
 app.get('/case-results', function (req, res) {
+  checkURL(req, res, "/case-results");
   var data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
   res.send(returnHTML(data, caseresultsBundle, _roots.CaseresultsRoot, "caseresults"));
 });
 app.get('/faq', function (req, res) {
+  checkURL(req, res, "/faq");
   var data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
   res.send(returnHTML(data, faqBundle, _roots.FaqRoot, "faq"));
 });
 app.get('/blog', function (req, res) {
+  checkURL(req, res, "/blog");
   var data = {
     query: "",
     category: "",
@@ -182,11 +190,13 @@ app.get('/blog', function (req, res) {
   res.send(returnHTML(data, blogBundle, _roots.BlogRoot, "blog"));
 });
 app.get('/blogcattemplate', function (req, res) {
+  checkURL(req, res, "/blogcattemplate");
   var data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
   res.send(returnHTML(data, blogcattemplateBundle, _roots.BlogcattemplateRoot, "blogcattemplate"));
 });
 app.get('/blog/search/:query', function (req, res) {
+  checkURL(req, res, "/blog/search/".concat(req.params.query));
   var data = {
     query: req.params.query,
     category: "",
@@ -197,6 +207,7 @@ app.get('/blog/search/:query', function (req, res) {
   res.send(returnHTML(data, blogBundle, _roots.BlogRoot, "blog"));
 });
 app.get('/blog/category/:category', function (req, res) {
+  checkURL(req, res, "/blog/category/".concat(req.params.category));
   var data = {
     category: req.params.category,
     query: "",
@@ -210,6 +221,7 @@ app.get('/blog/:year/:month', function (req, res) {
   var _req$params = req.params,
       year = _req$params.year,
       month = _req$params.month;
+  checkURL(req, res, "/blog/".concat(year, "/").concat(month));
   var data = {
     year: year,
     month: month,
@@ -224,6 +236,7 @@ app.get('/blog/:year/:month/:title', function (req, res) {
       year = _req$params2.year,
       month = _req$params2.month,
       title = _req$params2.title;
+  checkURL(req, res, "/blog/".concat(year, "/").concat(month, "/").concat(title));
   var data = {
     year: year,
     month: month,
@@ -233,26 +246,31 @@ app.get('/blog/:year/:month/:title', function (req, res) {
   res.send(returnHTML(data, blogtemplateBundle, _roots.BlogtemplateRoot, "blogtemplate"));
 });
 app.get('/contact', function (req, res) {
+  checkURL(req, res, "/contact");
   var data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
   res.send(returnHTML(data, contactBundle, _roots.ContactRoot, "contact"));
 });
 app.get('/disclaimer', function (req, res) {
+  checkURL(req, res, "/disclaimer");
   var data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
   res.send(returnHTML(data, disclaimerBundle, _roots.DisclaimerRoot, "disclaimer"));
 });
 app.get('/sitemap', function (req, res) {
+  checkURL(req, res, "/sitemap");
   var data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
   res.send(returnHTML(data, sitemapBundle, _roots.SitemapRoot, "sitemap"));
 });
 app.get('/privacy', function (req, res) {
+  checkURL(req, res, "/privacy");
   var data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
   res.send(returnHTML(data, privacypolicyBundle, _roots.PrivacypolicyRoot, "privacypolicy"));
 });
 app.get('/attorney/:name', function (req, res) {
+  checkURL(req, res, "/attorney/".concat(req.params.name));
   var data = {
     link: "/attorney/".concat(req.params.name)
   };
@@ -260,6 +278,7 @@ app.get('/attorney/:name', function (req, res) {
   res.send(returnHTML(data, attorneytemplateBundle, _roots.AttorneytemplateRoot, "attorneytemplate"));
 });
 app.get('/search', function (req, res) {
+  checkURL(req, res, "/search");
   var data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
   res.send(returnHTML(data, searchBundle, _roots.SearchRoot, "search"));
