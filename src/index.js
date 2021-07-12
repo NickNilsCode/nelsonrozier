@@ -102,11 +102,11 @@ fs.readFile('./dist/js/search.bundle.min.js', "utf8", (err, data) => {
   if (err) console.log("ERR" ,err);
   searchBundle = data || "";
 })
-function checkURL (req, res){
-  console.log(req.get('host'))
-}
+// function checkURL (req, res){
+//   console.log(req.get('host'))
+// }
 app.get('/', (req, res) => {
-  checkURL(req, res)
+  // checkURL(req, res)
   let data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
   res.send(returnHTML(data, homeBundle, HomeRoot, "home"));
