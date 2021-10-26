@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.FlexDiv = exports.HalfSize = exports.TextArea = exports.Input = exports.FBButton = exports.RedButton = exports.BigGoldButton = exports.GoldButton = exports.Content = exports.ContentWrapper = exports.PageWrapper = void 0;
+exports.FlexDiv = exports.HalfSize = exports.TextArea = exports.Input = exports.FBButton = exports.BlueButton = exports.BigGoldButton = exports.GoldButton = exports.Content = exports.ContentWrapper = exports.PageWrapper = void 0;
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
@@ -131,21 +131,21 @@ var ContentWrapper = _styledComponents["default"].div(_templateObject2());
 
 exports.ContentWrapper = ContentWrapper;
 
-var Content = _styledComponents["default"].div(_templateObject3(), _colors.red, _colors.gold, _colors.gold, _colors.white);
+var Content = _styledComponents["default"].div(_templateObject3(), _colors.blue, _colors.gold, _colors.gold, _colors.white);
 
 exports.Content = Content;
 
-var GoldButton = _styledComponents["default"].button(_templateObject4(), _colors.gold, _colors.white, _colors.red);
+var GoldButton = _styledComponents["default"].button(_templateObject4(), _colors.gold, _colors.white, _colors.blue);
 
 exports.GoldButton = GoldButton;
 
-var BigGoldButton = _styledComponents["default"].button(_templateObject5(), _colors.gold, _colors.red, _colors.red, _colors.white);
+var BigGoldButton = _styledComponents["default"].button(_templateObject5(), _colors.gold, _colors.blue, _colors.blue, _colors.white);
 
 exports.BigGoldButton = BigGoldButton;
 
-var RedButton = _styledComponents["default"].button(_templateObject6(), _colors.red, _colors.white);
+var BlueButton = _styledComponents["default"].button(_templateObject6(), _colors.blue, _colors.white);
 
-exports.RedButton = RedButton;
+exports.BlueButton = BlueButton;
 
 var FBButton = _styledComponents["default"].button(_templateObject7(), _colors.white);
 

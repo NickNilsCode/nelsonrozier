@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import { BlogBottom } from '../styled-components/components/blogBottom';
-import { RedButton, GoldButton, FBButton, Input } from '../styled-components/global';
+import { BlueButton, GoldButton, FBButton, Input } from '../styled-components/global';
 // import archives from '../data/archives';
 
 class BlogBottomComponent extends Component {
@@ -98,7 +98,7 @@ class BlogBottomComponent extends Component {
             })
           }
         </ul>
-        <RedButton target="_blank" href="https://reviewplatform.findlaw.com/nelsonrozier">REVIEW US</RedButton>
+        <BlueButton target="_blank" href="https://reviewplatform.findlaw.com/nelsonrozier">REVIEW US</BlueButton>
         <FBButton target="_blank" href="https://www.facebook.com/nelsonrozier/"><i className="fab fa-facebook-f"></i></FBButton>
       </BlogBottom>
     );

@@ -133,11 +133,11 @@ var HeaderDiv = _styledComponents["default"].div(_templateObject5());
 
 exports.HeaderDiv = HeaderDiv;
 
-var Header1 = _styledComponents["default"].h2(_templateObject6(), _colors.red);
+var Header1 = _styledComponents["default"].h2(_templateObject6(), _colors.blue);
 
 exports.Header1 = Header1;
 
-var Header2 = _styledComponents["default"].h2(_templateObject7(), _colors.red);
+var Header2 = _styledComponents["default"].h2(_templateObject7(), _colors.blue);
 
 exports.Header2 = Header2;
 

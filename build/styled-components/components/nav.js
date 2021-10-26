@@ -88,17 +88,17 @@ exports.MobileNav = MobileNav;
 var NavButton = _styledComponents["default"].div(_templateObject4(), _colors.white, function (props) {
   return props.index != props.size - 1 ? "1px solid ".concat(_colors.white) : "none";
 }, function (props) {
-  return props.selected ? _colors.red : "transparent";
+  return props.selected ? _colors.blue : "transparent";
 }, function (props) {
-  return props.selected ? _colors.whiteish : _colors.red;
+  return props.selected ? _colors.whiteish : _colors.blue;
 }, _colors.whiteish, _colors.whiteish);
 
 exports.NavButton = NavButton;
 
-var MenuBar = _styledComponents["default"].div(_templateObject5(), _colors.red, _colors.white);
+var MenuBar = _styledComponents["default"].div(_templateObject5(), _colors.blue, _colors.white);
 
 exports.MenuBar = MenuBar;
 
-var MenuPopup = _styledComponents["default"].div(_templateObject6(), _colors.red, _colors.white);
+var MenuPopup = _styledComponents["default"].div(_templateObject6(), _colors.blue, _colors.white);
 
 exports.MenuPopup = MenuPopup;

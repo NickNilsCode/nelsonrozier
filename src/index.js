@@ -348,6 +348,7 @@ function returnHTML(data, bundle, Page, title){
             <html lang="en">
               <head>
                 <meta name="viewport" content="width=device-width, initial-scale=1">
+                <meta name="msvalidate.01" content="55D6D8A6A04F450FBDDBD5C81164E3B2" />
                 <title>${title}</title>
                 <meta name="Description" content="${title}">
                 <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -364,6 +365,13 @@ function returnHTML(data, bundle, Page, title){
                 <script>window.__DATA__=${dataString}</script>
                 <div id="app" role="main">${body}</div>
                 <script>${bundle}</script>
+                <script async src="https://www.googletagmanager.com/gtag/js?id=G-BLVMB709EV"></script>
+              <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-BLVMB709EV');
+              </script>
               </body>
             </html>
           `;

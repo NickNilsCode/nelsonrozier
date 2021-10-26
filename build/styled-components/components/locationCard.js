@@ -33,7 +33,7 @@ function _templateObject() {
 
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
-var LocationCard = _styledComponents["default"].div(_templateObject(), _colors.white, _colors.white, _colors.red);
+var LocationCard = _styledComponents["default"].div(_templateObject(), _colors.white, _colors.white, _colors.blue);
 
 exports.LocationCard = LocationCard;
 

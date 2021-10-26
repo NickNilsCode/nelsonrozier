@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { red, reddish, whiteish, white } from '../colors'
+import { blue, whiteish, white } from '../colors'
 
 export const Nav = styled.div`
   width: 100%;
@@ -33,7 +33,7 @@ export const NavButton = styled.div`
   padding: 3px 13px;
   border-right: ${props => props.index != props.size - 1 ? `1px solid ${white}` : "none"};
   transition: background-color 0.4s;
-  background-color: ${props => props.selected ? red : "transparent"};
+  background-color: ${props => props.selected ? blue : "transparent"};
   &.mobileNav {
     text-transform: capitalize;
     padding: 10px 37.5px;
@@ -41,7 +41,7 @@ export const NavButton = styled.div`
     width: 100%;
     box-sizing: border-box;
     text-align: left;
-    background-color: ${props => props.selected ? whiteish : red};
+    background-color: ${props => props.selected ? whiteish : blue};
   }
   &:hover {
     background-color: ${whiteish};
@@ -51,7 +51,7 @@ export const NavButton = styled.div`
   }
 `;
 export const MenuBar = styled.div`
-  background-color: ${red};
+  background-color: ${blue};
   padding: 24px;
   margin: 12px 0;
   text-align: center;
@@ -64,7 +64,7 @@ export const MenuBar = styled.div`
 `;
 export const MenuPopup = styled.div`
   width: calc(100% - 24px);
-  background-color: ${red};
+  background-color: ${blue};
   display: none;
   margin: auto;
   padding: 24px auto;

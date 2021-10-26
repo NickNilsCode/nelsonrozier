@@ -85,7 +85,7 @@ var MessageLinks = _styledComponents["default"].div(_templateObject3(), _colors.
 
 exports.MessageLinks = MessageLinks;
 
-var ContactLinks = _styledComponents["default"].div(_templateObject4(), _colors.red);
+var ContactLinks = _styledComponents["default"].div(_templateObject4(), _colors.blue);
 
 exports.ContactLinks = ContactLinks;
 

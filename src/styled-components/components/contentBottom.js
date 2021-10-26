@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { red, white } from '../colors';
+import { blue, white } from '../colors';
 export const ContentBottom = styled.div`
   a {
     width: max-content;
@@ -51,7 +51,7 @@ export const MeetAttorneys = styled.div`
     margin: 0;
   }
   .learnMore, .learnMore i {
-    color: ${red};
+    color: ${blue};
     margin: auto;
     transition: color 300ms ease 0ms;
   }
@@ -80,7 +80,7 @@ export const BottomBox = styled.div`
 `;
 
 export const BoxTitle = styled.div`
-  background-color: ${red};
+  background-color: ${blue};
   padding: 3px 0;
   width: calc(100% - 8px);
   color: ${white};
@@ -106,7 +106,7 @@ export const BoxContent = styled.div`
     margin-top: 12px;
   }
   i {
-    color: {red};
+    color: ${blue};
   }
   a:hover i {
     color: #333;

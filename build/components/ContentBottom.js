@@ -102,7 +102,7 @@ var ContentBottomComponent = /*#__PURE__*/function (_Component) {
       }, "FREE CONSULTATION"), /*#__PURE__*/_react["default"].createElement("a", {
         href: "/contact",
         className: "contactToday"
-      }, /*#__PURE__*/_react["default"].createElement(_global.RedButton, null, "Contact Us Today ", /*#__PURE__*/_react["default"].createElement("i", {
+      }, /*#__PURE__*/_react["default"].createElement(_global.BlueButton, null, "Contact Us Today ", /*#__PURE__*/_react["default"].createElement("i", {
         className: "fas fa-chevron-circle-right"
       })))), /*#__PURE__*/_react["default"].createElement(_contentBottom.BottomBox, null, /*#__PURE__*/_react["default"].createElement(_contentBottom.BoxTitle, null, "VISIT OUR BLOG"), /*#__PURE__*/_react["default"].createElement(_contentBottom.BoxContent, null, blogs.map(function (a, i) {
         var date = new Date(a.date);
@@ -124,7 +124,7 @@ var ContentBottomComponent = /*#__PURE__*/function (_Component) {
         className: "readMore"
       }, /*#__PURE__*/_react["default"].createElement("div", null, "Read More ", /*#__PURE__*/_react["default"].createElement("i", {
         className: "fas fa-chevron-circle-right"
-      }))))), /*#__PURE__*/_react["default"].createElement(_global.RedButton, {
+      }))))), /*#__PURE__*/_react["default"].createElement(_global.BlueButton, {
         target: "_blank",
         href: "https://reviewplatform.findlaw.com/nelsonrozier"
       }, "REVIEW US"), /*#__PURE__*/_react["default"].createElement(_global.FBButton, {

@@ -12,7 +12,7 @@ var _colors = require("../colors");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _templateObject5() {
-  var data = _taggedTemplateLiteral(["\n  text-align: left;\n  border-top: 1px solid #dfdfdf;\n  padding: 8px;\n  a {\n    text-decoration: underline;\n    display: block;\n    color: #333;\n    font-size: 15px;\n    line-height: 27px;\n    font-weight: 700;\n    text-align: left;\n    margin-bottom: 13px;\n  }\n  .readMore {\n    text-decoration: none;\n    margin-top: 12px;\n  }\n  i {\n    color: {red};\n  }\n  a:hover i {\n    color: #333;\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  text-align: left;\n  border-top: 1px solid #dfdfdf;\n  padding: 8px;\n  a {\n    text-decoration: underline;\n    display: block;\n    color: #333;\n    font-size: 15px;\n    line-height: 27px;\n    font-weight: 700;\n    text-align: left;\n    margin-bottom: 13px;\n  }\n  .readMore {\n    text-decoration: none;\n    margin-top: 12px;\n  }\n  i {\n    color: ", ";\n  }\n  a:hover i {\n    color: #333;\n  }\n"]);
 
   _templateObject5 = function _templateObject5() {
     return data;
@@ -67,7 +67,7 @@ var ContentBottom = _styledComponents["default"].div(_templateObject(), _colors.
 
 exports.ContentBottom = ContentBottom;
 
-var MeetAttorneys = _styledComponents["default"].div(_templateObject2(), _colors.red);
+var MeetAttorneys = _styledComponents["default"].div(_templateObject2(), _colors.blue);
 
 exports.MeetAttorneys = MeetAttorneys;
 
@@ -75,10 +75,10 @@ var BottomBox = _styledComponents["default"].div(_templateObject3());
 
 exports.BottomBox = BottomBox;
 
-var BoxTitle = _styledComponents["default"].div(_templateObject4(), _colors.red, _colors.white, _colors.white);
+var BoxTitle = _styledComponents["default"].div(_templateObject4(), _colors.blue, _colors.white, _colors.white);
 
 exports.BoxTitle = BoxTitle;
 
-var BoxContent = _styledComponents["default"].div(_templateObject5());
+var BoxContent = _styledComponents["default"].div(_templateObject5(), _colors.blue);
 
 exports.BoxContent = BoxContent;

@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import { ContentBottom, BottomBox, BoxTitle, BoxContent, MeetAttorneys } from '../styled-components/components/contentBottom';
-import { RedButton, FBButton } from '../styled-components/global';
+import { BlueButton, FBButton } from '../styled-components/global';
 import attorneyData from '../data/attorneyList';
 
 class ContentBottomComponent extends Component {
@@ -42,7 +42,7 @@ class ContentBottomComponent extends Component {
           </div>
             <h3 className="freeConsultation">FREE CONSULTATION</h3>
             <a href="/contact" className="contactToday">
-              <RedButton>Contact Us Today <i className="fas fa-chevron-circle-right"/></RedButton>
+              <BlueButton>Contact Us Today <i className="fas fa-chevron-circle-right"/></BlueButton>
             </a>
           </MeetAttorneys>
         }
@@ -75,7 +75,7 @@ class ContentBottomComponent extends Component {
             </a>
           </BoxContent>
         </BottomBox>
-        <RedButton target="_blank" href="https://reviewplatform.findlaw.com/nelsonrozier">REVIEW US</RedButton>
+        <BlueButton target="_blank" href="https://reviewplatform.findlaw.com/nelsonrozier">REVIEW US</BlueButton>
         <FBButton target="_blank" href="https://www.facebook.com/nelsonrozier/"><i className="fab fa-facebook-f"></i></FBButton>
       </ContentBottom>
     );

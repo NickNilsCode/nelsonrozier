@@ -7,8 +7,6 @@ exports.BlogBottom = void 0;
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
-var _colors = require("../colors");
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _templateObject() {

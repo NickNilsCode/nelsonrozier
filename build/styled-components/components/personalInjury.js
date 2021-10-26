@@ -91,7 +91,7 @@ var DesktopPI = _styledComponents["default"].div(_templateObject2());
 
 exports.DesktopPI = DesktopPI;
 
-var MobilePI = _styledComponents["default"].div(_templateObject3(), _colors.red);
+var MobilePI = _styledComponents["default"].div(_templateObject3(), _colors.blue);
 
 exports.MobilePI = MobilePI;
 
@@ -99,15 +99,15 @@ var PIButton = _styledComponents["default"].div(_templateObject4(), _colors.whit
   return props.index != props.size - 1 ? "1px solid ".concat(_colors.white) : "none";
 }, function (props) {
   return props.himg;
-}, _colors.red, _colors.white, function (props) {
+}, _colors.blue, _colors.white, function (props) {
   return props.himg;
-}, _colors.reddish, _colors.reddish, _colors.white, function (props) {
+}, _colors.blueish, _colors.blueish, _colors.white, function (props) {
   return props.himg;
-}, _colors.reddish);
+}, _colors.blueish);
 
 exports.PIButton = PIButton;
 
-var PIBar = _styledComponents["default"].div(_templateObject5(), _colors.red);
+var PIBar = _styledComponents["default"].div(_templateObject5(), _colors.blue);
 
 exports.PIBar = PIBar;
 

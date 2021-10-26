@@ -150,7 +150,7 @@ var BlogBottomComponent = /*#__PURE__*/function (_Component) {
         }, /*#__PURE__*/_react["default"].createElement("a", {
           href: "/blog/".concat(year, "/").concat(month, "/").concat(titledashed)
         }, a.title));
-      })), /*#__PURE__*/_react["default"].createElement(_global.RedButton, {
+      })), /*#__PURE__*/_react["default"].createElement(_global.BlueButton, {
         target: "_blank",
         href: "https://reviewplatform.findlaw.com/nelsonrozier"
       }, "REVIEW US"), /*#__PURE__*/_react["default"].createElement(_global.FBButton, {
