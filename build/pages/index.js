@@ -75,6 +75,12 @@ Object.defineProperty(exports, "SitemapPage", {
     return _SitemapPage["default"];
   }
 });
+Object.defineProperty(exports, "NotFoundPage", {
+  enumerable: true,
+  get: function get() {
+    return _NotFoundPage["default"];
+  }
+});
 Object.defineProperty(exports, "PrivacypolicyPage", {
   enumerable: true,
   get: function get() {
@@ -117,6 +123,8 @@ var _ContactPage = _interopRequireDefault(require("./ContactPage"));
 var _DisclaimerPage = _interopRequireDefault(require("./DisclaimerPage"));
 
 var _SitemapPage = _interopRequireDefault(require("./SitemapPage"));
+
+var _NotFoundPage = _interopRequireDefault(require("./NotFoundPage"));
 
 var _PrivacypolicyPage = _interopRequireDefault(require("./PrivacypolicyPage"));
 

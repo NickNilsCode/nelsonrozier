@@ -16,7 +16,8 @@ const pages = [
   'sitemap',
   'privacypolicy',
   'attorneytemplate',
-  'search'
+  'search',
+  'notfound'
 ];
 
 module.exports = pages.map((page) => {
