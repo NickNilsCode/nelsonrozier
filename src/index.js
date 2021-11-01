@@ -353,6 +353,25 @@ function returnHTML(data, bundle, Page, title){
                 <meta name="Description" content="${title}">
                 <link rel="preconnect" href="https://fonts.gstatic.com">
                 <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&family=Open+Sans:wght@700&family=PT+Sans&display=swap" rel="stylesheet">
+                <script type="application/ld+json">
+                  {
+                    "@context": "https://schema.org",
+                    "@type": "Attorney",
+                    "name": "Nrclaw",
+                    "image": "",
+                    "@id": "",
+                    "url": "https://www.nrclaw.com/",
+                    "telephone": "559-713-0159",
+                    "address": {
+                      "@type": "PostalAddress",
+                      "streetAddress": "3924 W. Caldwell Ave. Suite A",
+                      "addressLocality": "Visalia",
+                      "addressRegion": "CA",
+                      "postalCode": "93277",
+                      "addressCountry": "US"
+                    }
+                  }
+                </script>
                 <style>
                   body { margin: 0; font-family: "PT Sans", Helvetica, Arial, Lucida, sans-serif; color: #383b40; }
                   a { text-decoration: none; color: #000; }
