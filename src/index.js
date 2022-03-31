@@ -116,16 +116,19 @@ function checkURL (req, res, extension){
   console.log("crash3");
   if(req.get('host') == "www.nelsonrozier.com"){
     res.redirect(`https://www.nrclaw.com${extension}`);
+    console.log("check1 false");
     return false
-  }
-  if(req.protocol == "http" && req.get('host') != "localhost:" + PORT){
+  } else if(req.protocol == "http" && req.get('host') != "localhost:" + PORT){
     res.redirect(`https://www.nrclaw.com${extension}`);
+    console.log("check2 false");
     return false
+  } else {
+    console.log("check3 true");
+    return true
   }
-  return true
+
 }
 app.get('/', (req, res) => {
-  console.log(checkURL(req, res, ""));
   if(checkURL(req, res, "")){
     let data = "";
     res.set('Cache-Control', 'public, max-age=31557600');
