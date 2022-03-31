@@ -114,26 +114,28 @@ function checkURL (req, res, extension){
   console.log("crash2");
   console.log(req.get('host'));
   console.log("crash3");
-  if(req.get('host') == "www.nelsonrozier.com"){
-    res.redirect(`https://www.nrclaw.com${extension}`);
-    console.log("check1 false");
-    return false
-  } else if(req.protocol == "http" && req.get('host') != "localhost:" + PORT){
-    res.redirect(`https://www.nrclaw.com${extension}`);
-    console.log("check2 false");
-    return false
-  } else {
-    console.log("check3 true");
-    return true
-  }
+  console.log(req);
+  // if(req.get('host') == "www.nelsonrozier.com"){
+  //   res.redirect(`https://www.nrclaw.com${extension}`);
+  //   console.log("check1 false");
+  //   return false
+  // } else if(req.protocol == "http" && req.get('host') != "localhost:" + PORT){
+  //   res.redirect(`https://www.nrclaw.com${extension}`);
+  //   console.log("check2 false");
+  //   return false
+  // } else {
+  //   console.log("check3 true");
+  //   return true
+  // }
 
 }
 app.get('/', (req, res) => {
-  if(checkURL(req, res, "")){
+  checkURL(req, res, "")
+  // if(checkURL(req, res, "")){
     let data = "";
     res.set('Cache-Control', 'public, max-age=31557600');
     res.send(returnHTML(data, homeBundle, HomeRoot, "Best Personal Injury Attorney California | Free Legal Consultation Visalia – NRC Law Firm", "Do not suffer from other people’s mistakes. Partner with NRC Law, the best personal injury attorneys in California. We represent plaintiffs and defendants.", "Personal injury attorney California, Free Legal Consultation Visalia, Best Injury Attorney, Best Visalia law firm, Visalia top Experienced law firm, Best Legal Attorney Services California, Best Legal attorney California, Experienced Legal attorney Visalia, Visalia Personal Injury Attorneys, experienced attorney California"));
-  }
+  // }
 });
 app.get('/about', (req, res) => {
   // checkURL(req, res, "/about")
