@@ -143,15 +143,10 @@ _fs["default"].readFile('./dist/js/notfound.bundle.min.js', "utf8", function (er
 });
 
 function checkURL(req, res, extension) {
-  if (req.get('host') == "www.nelsonrozier.com") {
+  if (req.get('host') == "www.nelsonrozier.com" || req.protocol == "http" && req.get('host') != "localhost:" + PORT) {
     res.redirect("https://www.nrclaw.com".concat(extension));
     return false;
-  } // console.log("crash", req.protocol);
-  // if(req.protocol == "http"){
-  //   res.redirect(`https://www.nrclaw.com${extension}`);
-  //   return false;
-  // }
-
+  }
 }
 
 app.get('/', function (req, res) {
