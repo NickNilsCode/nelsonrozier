@@ -109,7 +109,12 @@ fs.readFile('./dist/js/notfound.bundle.min.js', "utf8", (err, data) => {
   notfoundBundle = data || "";
 })
 function checkURL (req, res, extension){
-  if(req.get('host') == "www.nelsonrozier.com" || (req.protocol == "http" && req.get('host') != "localhost:" + PORT)){
+  console.log("crash1");
+  console.log(req.protocol);
+  console.log("crash2");
+  console.log(req.get('host'));
+  console.log("crash3");
+  if(req.get('host') == "www.nelsonrozier.com"){
     res.redirect(`https://www.nrclaw.com${extension}`);
     return false;
   }
