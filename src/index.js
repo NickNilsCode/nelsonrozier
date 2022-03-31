@@ -108,13 +108,13 @@ fs.readFile('./dist/js/notfound.bundle.min.js', "utf8", (err, data) => {
   if (err) console.log("ERR" ,err);
   notfoundBundle = data || "";
 })
-function checkURL (req, res, extension){
-  console.log("crash1");
-  console.log(req.protocol);
-  console.log("crash2");
-  console.log(req.get('host'));
-  console.log("crash3");
-  console.log(req);
+// function checkURL (req, res, extension){
+//   console.log("crash1");
+//   console.log(req.protocol);
+//   console.log("crash2");
+//   console.log(req.get('host'));
+//   console.log("crash3");
+//   console.log(req.rawHeaders);
   // if(req.get('host') == "www.nelsonrozier.com"){
   //   res.redirect(`https://www.nrclaw.com${extension}`);
   //   console.log("check1 false");
@@ -128,9 +128,9 @@ function checkURL (req, res, extension){
   //   return true
   // }
 
-}
+// }
 app.get('/', (req, res) => {
-  checkURL(req, res, "")
+  // checkURL(req, res, "")
   // if(checkURL(req, res, "")){
     let data = "";
     res.set('Cache-Control', 'public, max-age=31557600');
@@ -426,6 +426,17 @@ function returnHTML(data, bundle, Page, title, description, keywords){
                 function gtag(){dataLayer.push(arguments);}
                 gtag('js', new Date());
                 gtag('config', 'G-BLVMB709EV');
+              </script>
+              <script>
+                let protocol = window.location.protocol;
+                let host = window.location.host;
+                let href = window.location.href;
+                console.log(protocol);
+                console.log(host);
+                console.log(href);
+                if(protocol == "http:" && host != "localhost:3003"){
+                  href = href.split("http").join("https");
+                }
               </script>
               </body>
             </html>

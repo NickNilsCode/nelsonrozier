@@ -140,31 +140,31 @@ _fs["default"].readFile('./dist/js/search.bundle.min.js', "utf8", function (err,
 _fs["default"].readFile('./dist/js/notfound.bundle.min.js', "utf8", function (err, data) {
   if (err) console.log("ERR", err);
   notfoundBundle = data || "";
-});
+}); // function checkURL (req, res, extension){
+//   console.log("crash1");
+//   console.log(req.protocol);
+//   console.log("crash2");
+//   console.log(req.get('host'));
+//   console.log("crash3");
+//   console.log(req.rawHeaders);
+// if(req.get('host') == "www.nelsonrozier.com"){
+//   res.redirect(`https://www.nrclaw.com${extension}`);
+//   console.log("check1 false");
+//   return false
+// } else if(req.protocol == "http" && req.get('host') != "localhost:" + PORT){
+//   res.redirect(`https://www.nrclaw.com${extension}`);
+//   console.log("check2 false");
+//   return false
+// } else {
+//   console.log("check3 true");
+//   return true
+// }
+// }
 
-function checkURL(req, res, extension) {
-  console.log("crash1");
-  console.log(req.protocol);
-  console.log("crash2");
-  console.log(req.get('host'));
-  console.log("crash3");
-  console.log(req); // if(req.get('host') == "www.nelsonrozier.com"){
-  //   res.redirect(`https://www.nrclaw.com${extension}`);
-  //   console.log("check1 false");
-  //   return false
-  // } else if(req.protocol == "http" && req.get('host') != "localhost:" + PORT){
-  //   res.redirect(`https://www.nrclaw.com${extension}`);
-  //   console.log("check2 false");
-  //   return false
-  // } else {
-  //   console.log("check3 true");
-  //   return true
-  // }
-}
 
 app.get('/', function (req, res) {
-  checkURL(req, res, ""); // if(checkURL(req, res, "")){
-
+  // checkURL(req, res, "")
+  // if(checkURL(req, res, "")){
   var data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
   res.send(returnHTML(data, homeBundle, _roots.HomeRoot, "Best Personal Injury Attorney California | Free Legal Consultation Visalia – NRC Law Firm", "Do not suffer from other people’s mistakes. Partner with NRC Law, the best personal injury attorneys in California. We represent plaintiffs and defendants.", "Personal injury attorney California, Free Legal Consultation Visalia, Best Injury Attorney, Best Visalia law firm, Visalia top Experienced law firm, Best Legal Attorney Services California, Best Legal attorney California, Experienced Legal attorney Visalia, Visalia Personal Injury Attorneys, experienced attorney California")); // }
@@ -421,7 +421,7 @@ function returnHTML(data, bundle, Page, title, description, keywords) {
     data: data
   })));
   var styles = sheet.getStyleTags();
-  return "\n            <html lang=\"en\">\n              <head>\n                <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"/>\n                <meta name=\"msvalidate.01\" content=\"55D6D8A6A04F450FBDDBD5C81164E3B2\" />\n                <title>".concat(title, "</title>\n                <meta name=\"Description\" content=\"").concat(description, "\"/>\n                <meta name=\"google-site-verification\" content=\"4KRuv64nysKrmujcSKWbxB4YakbtXe5tQtmPJA1Ghaw\"/>\n                <meta name=\"Keywords\" content=\"").concat(keywords, "\"/>\n                <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\">\n                <link href=\"https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&family=Open+Sans:wght@700&family=PT+Sans&display=swap\" rel=\"stylesheet\">\n                <script type=\"application/ld+json\">\n                  {\n                    \"@context\": \"https://schema.org\",\n                    \"@type\": \"Attorney\",\n                    \"name\": \"Nrclaw\",\n                    \"image\": \"\",\n                    \"@id\": \"\",\n                    \"url\": \"https://www.nrclaw.com/\",\n                    \"telephone\": \"559-713-0159\",\n                    \"address\": {\n                      \"@type\": \"PostalAddress\",\n                      \"streetAddress\": \"3924 W. Caldwell Ave. Suite A\",\n                      \"addressLocality\": \"Visalia\",\n                      \"addressRegion\": \"CA\",\n                      \"postalCode\": \"93277\",\n                      \"addressCountry\": \"US\"\n                    }\n                  }\n                </script>\n                <style>\n                  body { margin: 0; font-family: \"PT Sans\", Helvetica, Arial, Lucida, sans-serif; color: #383b40; }\n                  a { text-decoration: none; color: #000; }\n                </style>\n                ").concat(styles, "\n                <script src=\"https://kit.fontawesome.com/7fa747235e.js\" crossorigin=\"anonymous\"></script>\n              </head>\n              <body>\n                <script>window.os = window.os || {};</script>\n                <script>window.__DATA__=").concat(dataString, "</script>\n                <div id=\"app\" role=\"main\">").concat(body, "</div>\n                <script>").concat(bundle, "</script>\n                <script async src=\"https://www.googletagmanager.com/gtag/js?id=G-BLVMB709EV\"></script>\n              <script>\n                window.dataLayer = window.dataLayer || [];\n                function gtag(){dataLayer.push(arguments);}\n                gtag('js', new Date());\n                gtag('config', 'G-BLVMB709EV');\n              </script>\n              </body>\n            </html>\n          ");
+  return "\n            <html lang=\"en\">\n              <head>\n                <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"/>\n                <meta name=\"msvalidate.01\" content=\"55D6D8A6A04F450FBDDBD5C81164E3B2\" />\n                <title>".concat(title, "</title>\n                <meta name=\"Description\" content=\"").concat(description, "\"/>\n                <meta name=\"google-site-verification\" content=\"4KRuv64nysKrmujcSKWbxB4YakbtXe5tQtmPJA1Ghaw\"/>\n                <meta name=\"Keywords\" content=\"").concat(keywords, "\"/>\n                <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\">\n                <link href=\"https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&family=Open+Sans:wght@700&family=PT+Sans&display=swap\" rel=\"stylesheet\">\n                <script type=\"application/ld+json\">\n                  {\n                    \"@context\": \"https://schema.org\",\n                    \"@type\": \"Attorney\",\n                    \"name\": \"Nrclaw\",\n                    \"image\": \"\",\n                    \"@id\": \"\",\n                    \"url\": \"https://www.nrclaw.com/\",\n                    \"telephone\": \"559-713-0159\",\n                    \"address\": {\n                      \"@type\": \"PostalAddress\",\n                      \"streetAddress\": \"3924 W. Caldwell Ave. Suite A\",\n                      \"addressLocality\": \"Visalia\",\n                      \"addressRegion\": \"CA\",\n                      \"postalCode\": \"93277\",\n                      \"addressCountry\": \"US\"\n                    }\n                  }\n                </script>\n                <style>\n                  body { margin: 0; font-family: \"PT Sans\", Helvetica, Arial, Lucida, sans-serif; color: #383b40; }\n                  a { text-decoration: none; color: #000; }\n                </style>\n                ").concat(styles, "\n                <script src=\"https://kit.fontawesome.com/7fa747235e.js\" crossorigin=\"anonymous\"></script>\n              </head>\n              <body>\n                <script>window.os = window.os || {};</script>\n                <script>window.__DATA__=").concat(dataString, "</script>\n                <div id=\"app\" role=\"main\">").concat(body, "</div>\n                <script>").concat(bundle, "</script>\n                <script async src=\"https://www.googletagmanager.com/gtag/js?id=G-BLVMB709EV\"></script>\n              <script>\n                window.dataLayer = window.dataLayer || [];\n                function gtag(){dataLayer.push(arguments);}\n                gtag('js', new Date());\n                gtag('config', 'G-BLVMB709EV');\n              </script>\n              <script>\n                let protocol = window.location.protocol;\n                let host = window.location.host;\n                let href = window.location.href;\n                console.log(protocol);\n                console.log(host);\n                console.log(href);\n                if(protocol == \"http:\" && host != \"localhost:3003\"){\n                  href = href.split(\"http\").join(\"https\");\n                }\n              </script>\n              </body>\n            </html>\n          ");
 }
 
 function errHandle(err) {
