@@ -435,7 +435,8 @@ function returnHTML(data, bundle, Page, title, description, keywords){
                 console.log(host);
                 console.log(href);
                 if(protocol == "http:" && host != "localhost:3003"){
-                  href = href.split("http").join("https");
+                  console.log("crash");
+                  window.href = href.split("http").join("https");
                 }
               </script>
               </body>
