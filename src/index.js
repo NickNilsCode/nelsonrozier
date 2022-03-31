@@ -118,6 +118,10 @@ function checkURL (req, res, extension){
     res.redirect(`https://www.nrclaw.com${extension}`);
     return false;
   }
+  if(req.protocol == "http" && req.get('host') != "localhost:" + PORT){
+    res.redirect(`https://www.nrclaw.com${extension}`);
+    return false;
+  }
 }
 app.get('/', (req, res) => {
   checkURL(req, res, "")
