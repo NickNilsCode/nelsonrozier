@@ -314,8 +314,8 @@ app.post('/emailer', function (req, res) {
 
   transporter.sendMail({
     from: email,
-    to: cryptr.decrypt(_config["default"].nrEmail),
-    subject: 'Nelson Rozier: Online Inquiry',
+    to: [cryptr.decrypt(_config["default"].nrEmail), cryptr.decrypt(_config["default"].nr2Email)],
+    subject: 'Nelson, Rozier & Christenson: Online Inquiry',
     html: "\n      <h3>Hi! The following person has submitted a message.<h3/>\n      <h4>Name: ".concat(name, "</h4>\n\n      <h4>Email: ").concat(email, "</h4>\n      <h4>Phone: ").concat(phone, "</h4>\n      <h4>State: ").concat(state, "</h4>\n      <h4>Zip: ").concat(zip, "</h4>\n\n      <h3>Message: ").concat(description, "</h3>\n\n      <h4>Contact via phone: ").concat(contactphone, "</h4>\n      <h4>Contact via email: ").concat(contactemail, "</h4>\n      <h4>Disclaimer Checked: ").concat(disclaimer, "</h4>\n    ")
   }, function (error, info) {
     if (error) res.send({

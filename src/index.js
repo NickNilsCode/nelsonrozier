@@ -19,6 +19,7 @@ const cryptr = new Cryptr(config.key);
 
 import { HomeRoot, AboutRoot, PersonalinjuryRoot, PersonalinjurytemplateRoot, CaseresultsRoot, FaqRoot, BlogRoot, BlogcattemplateRoot, BlogtemplateRoot, ContactRoot, DisclaimerRoot, SitemapRoot, PrivacypolicyRoot, AttorneytemplateRoot, SearchRoot, NotFoundRoot } from './roots';
 
+
 var PORT = process.env.PORT || 3003;
 //this is a comment
 const app = express();
@@ -263,8 +264,11 @@ app.post('/emailer', (req, res) => {
 
   transporter.sendMail({
     from: email,
-    to: cryptr.decrypt(config.nrEmail),
-    subject: 'Nelson Rozier: Online Inquiry',
+    to: [
+      cryptr.decrypt(config.nrEmail),
+      cryptr.decrypt(config.nr2Email)
+    ],
+    subject: 'Nelson, Rozier & Christenson: Online Inquiry',
     html: `
       <h3>Hi! The following person has submitted a message.<h3/>
       <h4>Name: ${name}</h4>
