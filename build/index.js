@@ -140,50 +140,25 @@ _fs["default"].readFile('./dist/js/search.bundle.min.js', "utf8", function (err,
 _fs["default"].readFile('./dist/js/notfound.bundle.min.js', "utf8", function (err, data) {
   if (err) console.log("ERR", err);
   notfoundBundle = data || "";
-}); // function checkURL (req, res, extension){
-//   console.log("crash1");
-//   console.log(req.protocol);
-//   console.log("crash2");
-//   console.log(req.get('host'));
-//   console.log("crash3");
-//   console.log(req.rawHeaders);
-// if(req.get('host') == "www.nelsonrozier.com"){
-//   res.redirect(`https://www.nrclaw.com${extension}`);
-//   console.log("check1 false");
-//   return false
-// } else if(req.protocol == "http" && req.get('host') != "localhost:" + PORT){
-//   res.redirect(`https://www.nrclaw.com${extension}`);
-//   console.log("check2 false");
-//   return false
-// } else {
-//   console.log("check3 true");
-//   return true
-// }
-// }
-
+});
 
 app.get('/', function (req, res) {
-  // checkURL(req, res, "")
-  // if(checkURL(req, res, "")){
   var data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
   res.send(returnHTML(data, homeBundle, _roots.HomeRoot, "Best Personal Injury Attorney California | Free Legal Consultation Visalia – NRC Law Firm", "Do not suffer from other people’s mistakes. Partner with NRC Law, the best personal injury attorneys in California. We represent plaintiffs and defendants.", "Personal injury attorney California, Free Legal Consultation Visalia, Best Injury Attorney, Best Visalia law firm, Visalia top Experienced law firm, Best Legal Attorney Services California, Best Legal attorney California, Experienced Legal attorney Visalia, Visalia Personal Injury Attorneys, experienced attorney California")); // }
 });
 app.get('/about', function (req, res) {
-  // checkURL(req, res, "/about")
   var data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
   res.send(returnHTML(data, aboutBundle, _roots.AboutRoot, "About Your Visalia Personal Injury Lawyers | NRC Law", "", ""));
 });
 app.get('/personal-injury', function (req, res) {
-  // checkURL(req, res, "/personal-injury")
   var data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
   res.send(returnHTML(data, personalinjuryBundle, _roots.PersonalinjuryRoot, "Best Injury Lawyers, California | Experienced Personal Injury Attorneys", "Get personalized legal representation by a compassionate, dedicated and experienced personal injury lawyer in California. We take cases on a contingency fee basis.", "Best injuries lawyer California, Professional personal injury lawyer, Attorney for personal injury california, Experienced personal injury attorney"));
 }); //all the rest
 
 app.get('/personal-injury/:id', function (req, res) {
-  // checkURL(req, res, `/personal-injury/${req.params.id}`)
   var data = {
     page: req.params.id
   };
@@ -200,19 +175,16 @@ app.get('/personal-injury/:id', function (req, res) {
   }
 });
 app.get('/case-results', function (req, res) {
-  // checkURL(req, res, "/case-results")
   var data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
   res.send(returnHTML(data, caseresultsBundle, _roots.CaseresultsRoot, "Best Visalia Law Firm Case Results | NRC Law", "", ""));
 });
 app.get('/faq', function (req, res) {
-  // checkURL(req, res, "/faq")
   var data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
   res.send(returnHTML(data, faqBundle, _roots.FaqRoot, "FAQ | NRC Law", "", ""));
 });
 app.get('/blog', function (req, res) {
-  // checkURL(req, res, "/blog")
   var data = {
     query: "",
     category: "",
@@ -223,13 +195,11 @@ app.get('/blog', function (req, res) {
   res.send(returnHTML(data, blogBundle, _roots.BlogRoot, "Blog | NRC Law", "", ""));
 });
 app.get('/blogcattemplate', function (req, res) {
-  // checkURL(req, res, "/blogcattemplate")
   var data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
   res.send(returnHTML(data, blogcattemplateBundle, _roots.BlogcattemplateRoot, "Blog | NRC Law", "", ""));
 });
 app.get('/blog/search/:query', function (req, res) {
-  // checkURL(req, res, `/blog/search/${req.params.query}`)
   var data = {
     query: req.params.query,
     category: "",
@@ -240,7 +210,6 @@ app.get('/blog/search/:query', function (req, res) {
   res.send(returnHTML(data, blogBundle, _roots.BlogRoot, "Blog | NRC Law", "", ""));
 });
 app.get('/blog/category/:category', function (req, res) {
-  // checkURL(req, res, `/blog/category/${req.params.category}`)
   var data = {
     category: req.params.category,
     query: "",
@@ -253,8 +222,7 @@ app.get('/blog/category/:category', function (req, res) {
 app.get('/blog/:year/:month', function (req, res) {
   var _req$params = req.params,
       year = _req$params.year,
-      month = _req$params.month; // checkURL(req, res, `/blog/${year}/${month}`)
-
+      month = _req$params.month;
   var data = {
     year: year,
     month: month,
@@ -268,8 +236,7 @@ app.get('/blog/:year/:month/:title', function (req, res) {
   var _req$params2 = req.params,
       year = _req$params2.year,
       month = _req$params2.month,
-      title = _req$params2.title; // checkURL(req, res, `/blog/${year}/${month}/${title}`)
-
+      title = _req$params2.title;
   var data = {
     year: year,
     month: month,
@@ -279,31 +246,26 @@ app.get('/blog/:year/:month/:title', function (req, res) {
   res.send(returnHTML(data, blogtemplateBundle, _roots.BlogtemplateRoot, "Blog | NRC Law", "", ""));
 });
 app.get('/contact', function (req, res) {
-  // checkURL(req, res, "/contact")
   var data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
   res.send(returnHTML(data, contactBundle, _roots.ContactRoot, "Contact for Best Legal Services California  | NRC Law", "", ""));
 });
 app.get('/disclaimer', function (req, res) {
-  // checkURL(req, res, "/disclaimer")
   var data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
   res.send(returnHTML(data, disclaimerBundle, _roots.DisclaimerRoot, "Disclaimer | NRC Law", "", ""));
 });
 app.get('/sitemap', function (req, res) {
-  // checkURL(req, res, "/sitemap")
   var data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
   res.send(returnHTML(data, sitemapBundle, _roots.SitemapRoot, "Sitemap | NRC Law", "", ""));
 });
 app.get('/privacy', function (req, res) {
-  // checkURL(req, res, "/privacy")
   var data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
   res.send(returnHTML(data, privacypolicyBundle, _roots.PrivacypolicyRoot, "Privacy Policy | NRC Law", "", ""));
 });
 app.get('/attorney/:name', function (req, res) {
-  // checkURL(req, res, `/attorney/${req.params.name}`)
   var data = {
     link: "/attorney/".concat(req.params.name)
   };
@@ -311,13 +273,11 @@ app.get('/attorney/:name', function (req, res) {
   res.send(returnHTML(data, attorneytemplateBundle, _roots.AttorneytemplateRoot, "Meet Your Visalia Personal Injury Lawyers | NRC Law", "", ""));
 });
 app.get('/search', function (req, res) {
-  // checkURL(req, res, "/search")
   var data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
   res.send(returnHTML(data, searchBundle, _roots.SearchRoot, "Search | NRC Law", "", ""));
 });
 app.get('/error', function (req, res) {
-  // checkURL(req, res, "/error")
   var data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
   res.send(returnHTML(data, notfoundBundle, _roots.NotFoundRoot, "404 Not Found | NRC Law", "", ""));
@@ -421,7 +381,7 @@ function returnHTML(data, bundle, Page, title, description, keywords) {
     data: data
   })));
   var styles = sheet.getStyleTags();
-  return "\n            <html lang=\"en\">\n              <head>\n                <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"/>\n                <meta name=\"msvalidate.01\" content=\"55D6D8A6A04F450FBDDBD5C81164E3B2\" />\n                <title>".concat(title, "</title>\n                <meta name=\"Description\" content=\"").concat(description, "\"/>\n                <meta name=\"google-site-verification\" content=\"4KRuv64nysKrmujcSKWbxB4YakbtXe5tQtmPJA1Ghaw\"/>\n                <meta name=\"Keywords\" content=\"").concat(keywords, "\"/>\n                <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\">\n                <link href=\"https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&family=Open+Sans:wght@700&family=PT+Sans&display=swap\" rel=\"stylesheet\">\n                <script type=\"application/ld+json\">\n                  {\n                    \"@context\": \"https://schema.org\",\n                    \"@type\": \"Attorney\",\n                    \"name\": \"Nrclaw\",\n                    \"image\": \"\",\n                    \"@id\": \"\",\n                    \"url\": \"https://www.nrclaw.com/\",\n                    \"telephone\": \"559-713-0159\",\n                    \"address\": {\n                      \"@type\": \"PostalAddress\",\n                      \"streetAddress\": \"3924 W. Caldwell Ave. Suite A\",\n                      \"addressLocality\": \"Visalia\",\n                      \"addressRegion\": \"CA\",\n                      \"postalCode\": \"93277\",\n                      \"addressCountry\": \"US\"\n                    }\n                  }\n                </script>\n                <style>\n                  body { margin: 0; font-family: \"PT Sans\", Helvetica, Arial, Lucida, sans-serif; color: #383b40; }\n                  a { text-decoration: none; color: #000; }\n                </style>\n                ").concat(styles, "\n                <script src=\"https://kit.fontawesome.com/7fa747235e.js\" crossorigin=\"anonymous\"></script>\n              </head>\n              <body>\n                <script>window.os = window.os || {};</script>\n                <script>window.__DATA__=").concat(dataString, "</script>\n                <div id=\"app\" role=\"main\">").concat(body, "</div>\n                <script>").concat(bundle, "</script>\n                <script async src=\"https://www.googletagmanager.com/gtag/js?id=G-BLVMB709EV\"></script>\n              <script>\n                window.dataLayer = window.dataLayer || [];\n                function gtag(){dataLayer.push(arguments);}\n                gtag('js', new Date());\n                gtag('config', 'G-BLVMB709EV');\n              </script>\n              <script>\n                let protocol = window.location.protocol;\n                let host = window.location.host;\n                let href = window.location.href;\n                console.log(protocol);\n                console.log(host);\n                console.log(href);\n                if(protocol == \"http:\" && host != \"localhost:3003\"){\n                  console.log(\"crash\");\n                  window.location.href = href.split(\"http\").join(\"https\");\n                }\n              </script>\n              </body>\n            </html>\n          ");
+  return "\n            <html lang=\"en\">\n              <head>\n                <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"/>\n                <meta name=\"msvalidate.01\" content=\"55D6D8A6A04F450FBDDBD5C81164E3B2\" />\n                <title>".concat(title, "</title>\n                <meta name=\"Description\" content=\"").concat(description, "\"/>\n                <meta name=\"google-site-verification\" content=\"4KRuv64nysKrmujcSKWbxB4YakbtXe5tQtmPJA1Ghaw\"/>\n                <meta name=\"Keywords\" content=\"").concat(keywords, "\"/>\n                <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\">\n                <link href=\"https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&family=Open+Sans:wght@700&family=PT+Sans&display=swap\" rel=\"stylesheet\">\n                <script type=\"application/ld+json\">\n                  {\n                    \"@context\": \"https://schema.org\",\n                    \"@type\": \"Attorney\",\n                    \"name\": \"Nrclaw\",\n                    \"image\": \"\",\n                    \"@id\": \"\",\n                    \"url\": \"https://www.nrclaw.com/\",\n                    \"telephone\": \"559-713-0159\",\n                    \"address\": {\n                      \"@type\": \"PostalAddress\",\n                      \"streetAddress\": \"3924 W. Caldwell Ave. Suite A\",\n                      \"addressLocality\": \"Visalia\",\n                      \"addressRegion\": \"CA\",\n                      \"postalCode\": \"93277\",\n                      \"addressCountry\": \"US\"\n                    }\n                  }\n                </script>\n                <style>\n                  body { margin: 0; font-family: \"PT Sans\", Helvetica, Arial, Lucida, sans-serif; color: #383b40; }\n                  a { text-decoration: none; color: #000; }\n                </style>\n                ").concat(styles, "\n                <script src=\"https://kit.fontawesome.com/7fa747235e.js\" crossorigin=\"anonymous\"></script>\n              </head>\n              <body>\n                <script>window.os = window.os || {};</script>\n                <script>window.__DATA__=").concat(dataString, "</script>\n                <div id=\"app\" role=\"main\">").concat(body, "</div>\n                <script>").concat(bundle, "</script>\n                <script async src=\"https://www.googletagmanager.com/gtag/js?id=G-BLVMB709EV\"></script>\n              <script>\n                window.dataLayer = window.dataLayer || [];\n                function gtag(){dataLayer.push(arguments);}\n                gtag('js', new Date());\n                gtag('config', 'G-BLVMB709EV');\n              </script>\n              <script>\n                let protocol = window.location.protocol;\n                let host = window.location.host;\n                let href = window.location.href;\n                if(protocol == \"http:\" && host != \"localhost:3003\"){\n                  console.log(\"crash\");\n                  window.location.href = href.split(\"http\").join(\"https\");\n                }\n              </script>\n              </body>\n            </html>\n          ");
 }
 
 function errHandle(err) {

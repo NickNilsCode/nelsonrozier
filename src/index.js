@@ -108,43 +108,19 @@ fs.readFile('./dist/js/notfound.bundle.min.js', "utf8", (err, data) => {
   if (err) console.log("ERR" ,err);
   notfoundBundle = data || "";
 })
-// function checkURL (req, res, extension){
-//   console.log("crash1");
-//   console.log(req.protocol);
-//   console.log("crash2");
-//   console.log(req.get('host'));
-//   console.log("crash3");
-//   console.log(req.rawHeaders);
-  // if(req.get('host') == "www.nelsonrozier.com"){
-  //   res.redirect(`https://www.nrclaw.com${extension}`);
-  //   console.log("check1 false");
-  //   return false
-  // } else if(req.protocol == "http" && req.get('host') != "localhost:" + PORT){
-  //   res.redirect(`https://www.nrclaw.com${extension}`);
-  //   console.log("check2 false");
-  //   return false
-  // } else {
-  //   console.log("check3 true");
-  //   return true
-  // }
 
-// }
 app.get('/', (req, res) => {
-  // checkURL(req, res, "")
-  // if(checkURL(req, res, "")){
     let data = "";
     res.set('Cache-Control', 'public, max-age=31557600');
     res.send(returnHTML(data, homeBundle, HomeRoot, "Best Personal Injury Attorney California | Free Legal Consultation Visalia – NRC Law Firm", "Do not suffer from other people’s mistakes. Partner with NRC Law, the best personal injury attorneys in California. We represent plaintiffs and defendants.", "Personal injury attorney California, Free Legal Consultation Visalia, Best Injury Attorney, Best Visalia law firm, Visalia top Experienced law firm, Best Legal Attorney Services California, Best Legal attorney California, Experienced Legal attorney Visalia, Visalia Personal Injury Attorneys, experienced attorney California"));
   // }
 });
 app.get('/about', (req, res) => {
-  // checkURL(req, res, "/about")
   let data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
   res.send(returnHTML(data, aboutBundle, AboutRoot, "About Your Visalia Personal Injury Lawyers | NRC Law", "", ""));
 });
 app.get('/personal-injury', (req, res) => {
-  // checkURL(req, res, "/personal-injury")
   let data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
   res.send(returnHTML(data, personalinjuryBundle, PersonalinjuryRoot, "Best Injury Lawyers, California | Experienced Personal Injury Attorneys", "Get personalized legal representation by a compassionate, dedicated and experienced personal injury lawyer in California. We take cases on a contingency fee basis.", "Best injuries lawyer California, Professional personal injury lawyer, Attorney for personal injury california, Experienced personal injury attorney"));
@@ -152,7 +128,6 @@ app.get('/personal-injury', (req, res) => {
 
 //all the rest
 app.get('/personal-injury/:id', (req, res) => {
-  // checkURL(req, res, `/personal-injury/${req.params.id}`)
   let data = {
     page: req.params.id
   }
@@ -167,19 +142,16 @@ app.get('/personal-injury/:id', (req, res) => {
 });
 
 app.get('/case-results', (req, res) => {
-  // checkURL(req, res, "/case-results")
   let data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
   res.send(returnHTML(data, caseresultsBundle, CaseresultsRoot, "Best Visalia Law Firm Case Results | NRC Law", "", ""));
 });
 app.get('/faq', (req, res) => {
-  // checkURL(req, res, "/faq")
   let data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
   res.send(returnHTML(data, faqBundle, FaqRoot, "FAQ | NRC Law", "", ""));
 });
 app.get('/blog', (req, res) => {
-  // checkURL(req, res, "/blog")
   let data = {
     query: "",
     category: "",
@@ -190,13 +162,11 @@ app.get('/blog', (req, res) => {
   res.send(returnHTML(data, blogBundle, BlogRoot, "Blog | NRC Law", "", ""));
 });
 app.get('/blogcattemplate', (req, res) => {
-  // checkURL(req, res, "/blogcattemplate")
   let data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
   res.send(returnHTML(data, blogcattemplateBundle, BlogcattemplateRoot, "Blog | NRC Law", "", ""));
 });
 app.get('/blog/search/:query', (req, res) => {
-  // checkURL(req, res, `/blog/search/${req.params.query}`)
   let data = {
     query: req.params.query,
     category: "",
@@ -207,7 +177,6 @@ app.get('/blog/search/:query', (req, res) => {
   res.send(returnHTML(data, blogBundle, BlogRoot, "Blog | NRC Law", "", ""));
 });
 app.get('/blog/category/:category', (req, res) => {
-  // checkURL(req, res, `/blog/category/${req.params.category}`)
   let data = {
     category: req.params.category,
     query: "",
@@ -219,7 +188,6 @@ app.get('/blog/category/:category', (req, res) => {
 });
 app.get('/blog/:year/:month', (req, res) => {
   const { year, month } = req.params;
-  // checkURL(req, res, `/blog/${year}/${month}`)
   let data = {
     year, month,
     query: "",
@@ -230,37 +198,31 @@ app.get('/blog/:year/:month', (req, res) => {
 });
 app.get('/blog/:year/:month/:title', (req, res) => {
   const { year, month, title } = req.params;
-  // checkURL(req, res, `/blog/${year}/${month}/${title}`)
   let data = { year, month, title };
   res.set('Cache-Control', 'public, max-age=31557600');
   res.send(returnHTML(data, blogtemplateBundle, BlogtemplateRoot, "Blog | NRC Law", "", ""));
 });
 app.get('/contact', (req, res) => {
-  // checkURL(req, res, "/contact")
   let data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
   res.send(returnHTML(data, contactBundle, ContactRoot, "Contact for Best Legal Services California  | NRC Law", "", ""));
 });
 app.get('/disclaimer', (req, res) => {
-  // checkURL(req, res, "/disclaimer")
   let data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
   res.send(returnHTML(data, disclaimerBundle, DisclaimerRoot, "Disclaimer | NRC Law", "", ""));
 });
 app.get('/sitemap', (req, res) => {
-  // checkURL(req, res, "/sitemap")
   let data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
   res.send(returnHTML(data, sitemapBundle, SitemapRoot, "Sitemap | NRC Law", "", ""));
 });
 app.get('/privacy', (req, res) => {
-  // checkURL(req, res, "/privacy")
   let data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
   res.send(returnHTML(data, privacypolicyBundle, PrivacypolicyRoot, "Privacy Policy | NRC Law", "", ""));
 });
 app.get('/attorney/:name', (req, res) => {
-  // checkURL(req, res, `/attorney/${req.params.name}`)
   let data = {
     link: `/attorney/${req.params.name}`
   };
@@ -268,14 +230,12 @@ app.get('/attorney/:name', (req, res) => {
   res.send(returnHTML(data, attorneytemplateBundle, AttorneytemplateRoot, "Meet Your Visalia Personal Injury Lawyers | NRC Law", "", ""));
 });
 app.get('/search', (req, res) => {
-  // checkURL(req, res, "/search")
   let data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
   res.send(returnHTML(data, searchBundle, SearchRoot, "Search | NRC Law", "", ""));
 });
 
 app.get('/error', (req, res) => {
-  // checkURL(req, res, "/error")
   let data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
   res.send(returnHTML(data, notfoundBundle, NotFoundRoot, "404 Not Found | NRC Law", "", ""));
@@ -431,9 +391,6 @@ function returnHTML(data, bundle, Page, title, description, keywords){
                 let protocol = window.location.protocol;
                 let host = window.location.host;
                 let href = window.location.href;
-                console.log(protocol);
-                console.log(host);
-                console.log(href);
                 if(protocol == "http:" && host != "localhost:3003"){
                   console.log("crash");
                   window.location.href = href.split("http").join("https");
