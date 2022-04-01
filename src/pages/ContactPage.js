@@ -30,11 +30,11 @@ class Contact extends Component {
       })
       .then(res => res.json())
       .then(res => {
-        alert("An email has been submitted to the associates at Nelson Rozier. Someone will be in contact with you shortly.")
+        alert("An email has been submitted to the associates at Nelson, Rozier, and Christenson. Someone will be in contact with you shortly.")
         this.resetState();
       })
       .catch(err => {
-        alert("Something went wrong. Please contact Nelson Rozier directly via email or telephone. We are sorry for the inconvenience.")
+        alert("Something went wrong. Please contact Nelson, Rozier, and Christenson directly via email or telephone. We are sorry for the inconvenience.")
         this.resetState();
       })
     }

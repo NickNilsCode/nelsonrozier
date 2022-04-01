@@ -82,11 +82,11 @@ var Contact = /*#__PURE__*/function (_Component) {
       }).then(function (res) {
         return res.json();
       }).then(function (res) {
-        alert("An email has been submitted to the associates at Nelson Rozier. Someone will be in contact with you shortly.");
+        alert("An email has been submitted to the associates at Nelson, Rozier, and Christenson. Someone will be in contact with you shortly.");
 
         _this.resetState();
       })["catch"](function (err) {
-        alert("Something went wrong. Please contact Nelson Rozier directly via email or telephone. We are sorry for the inconvenience.");
+        alert("Something went wrong. Please contact Nelson, Rozier, and Christenson directly via email or telephone. We are sorry for the inconvenience.");
 
         _this.resetState();
       });
