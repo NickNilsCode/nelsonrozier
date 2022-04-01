@@ -396,8 +396,10 @@ function returnHTML(data, bundle, Page, title, description, keywords){
                 let host = window.location.host;
                 let href = window.location.href;
                 if(protocol == "http:" && host != "localhost:3003"){
-                  console.log("crash");
                   window.location.href = href.split("http").join("https");
+                }
+                if(host == "www.nelsonrozier.com"){
+                  window.location.href = href.split("www.nelsonrozier.com").join("www.nrclaw.com");
                 }
               </script>
               </body>
