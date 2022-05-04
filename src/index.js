@@ -400,6 +400,8 @@ function returnHTML(data, bundle, Page, title, description, keywords){
                 }
                 if(host == "www.nelsonrozier.com"){
                   window.location.href = href.split("www.nelsonrozier.com").join("www.nrclaw.com");
+                } else if(host == "nelsonrozier.com"){
+                  window.location.href = href.split("nelsonrozier.com").join("www.nrclaw.com");
                 }
               </script>
               </body>
