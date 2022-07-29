@@ -3,3 +3,5 @@ Disallow: /
 
 User-agent: Googlebot
 Allow: /
+
+Disallow: https://www.nrclaw.com/personal-injury/slip-and-fall-accidents
