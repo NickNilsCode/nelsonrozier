@@ -357,7 +357,7 @@ function returnHTML(data, bundle, Page, title, description, keywords){
                   {
                     "@context": "https://schema.org",
                     "@type": "Attorney",
-                    "name": "Nrclaw",
+                    "name": "Nelson Rozier & Christenson",
                     "image": "",
                     "@id": "",
                     "url": "https://www.nrclaw.com/",
