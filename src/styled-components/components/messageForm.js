@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { red, white } from '../colors';
+import { blue, white } from '../colors';
 export const MessageFormWrap = styled.div`
   width: 100vw;
   min-height: 387px;
@@ -36,7 +36,7 @@ export const MessageLinks = styled.div`
 export const ContactLinks = styled.div`
   text-align: left;
   a {
-    color: ${red};
+    color: ${blue};
     text-decoration: underline;
   }
 `;

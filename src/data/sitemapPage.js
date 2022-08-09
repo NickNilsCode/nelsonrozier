@@ -10,6 +10,7 @@ module.exports = [
   {
     type: "ul",
     content: `<li><a href="/about">About</a></li>
+<li><a href="/blog">Blog</a></li>
 <li><a href="/case-results">Case Results</a></li>
 <li><a href="/contact">Contact</a></li>
 <li><a href="/disclaimer">Disclaimer</a></li>
@@ -36,6 +37,7 @@ module.exports = [
   <li><a href="/personal-injury/uninsured-underinsured-motorist-claim">Uninsured/Underinsured Motorist Claim</a></li>
   <li><a href="/personal-injury/wrongful-death">Wrongful Death</a></li>
 </ul>
+<li><a href="/privacy">Pricacy Policy</a></li>
 <li><a href="/search">Search</a></li>`
   },
   {

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { red, reddish, white } from '../colors'
+import { blue, blueish, white } from '../colors'
 
 export const PersonalInjury = styled.div`
   width: 100%;
@@ -48,7 +48,7 @@ export const MobilePI = styled.div`
   .mobilePI {
     text-transform: capitalize;
     padding: 10px 37.5px;
-    background-color: ${red};
+    background-color: ${blue};
     border: 1px solid rgba(0,0,0,.03);
     width: 100%;
     box-sizing: border-box;
@@ -67,21 +67,21 @@ export const PIButton = styled.div`
   color: ${white};
   padding: 3px 13px;
   border-right: ${props => props.index != props.size - 1 ? `1px solid ${white}` : "none"};
-  background: url("${props => props.himg}") 6px center no-repeat ${red};
+  background: url("${props => props.himg}") 6px center no-repeat ${blue};
   padding: 10px 7px 10px 53px;
   &.selectedPI.desktopPI {
     color: ${white};
-    background: url("${props => props.himg}") 6px center no-repeat ${reddish};
+    background: url("${props => props.himg}") 6px center no-repeat ${blueish};
   }
 
   &:hover {
     &.mobilePI {
-      background-color: ${reddish};
+      background-color: ${blueish};
       background-image: none;
     }
     &.desktopPI {
       color: ${white};
-      background: url("${props => props.himg}") 6px center no-repeat ${reddish};
+      background: url("${props => props.himg}") 6px center no-repeat ${blueish};
     }
 
   }
@@ -92,7 +92,7 @@ export const PIBar = styled.div`
   text-align: center;
   font-weight: 700;
   font-size: 16px;
-  color: ${red};
+  color: ${blue};
   i {
     color: #0099c4
   }

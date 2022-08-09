@@ -17,10 +17,10 @@ class HeaderComponent extends Component {
             padding: '12px',
             width: 'calc(100% - 24px)'
           }}>
-            <a href="/"><img src="/images/brand-logo.png"/></a>
+            <a href="/"><img src="/images/nelson.png"/></a>
             <HeaderDiv>
               <Header1>FREE Consultation.</Header1>
-              <Header2>No fee unless we win</Header2>
+              <Header2>No fee unless we winning</Header2>
               <a href="tel:+1-559-713-0159"><Header3>559-713-0159</Header3></a>
             </HeaderDiv>
           </FlexDiv>

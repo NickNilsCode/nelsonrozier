@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { red, gold, white } from '../colors';
+import { blue, gold, white } from '../colors';
 export const Header = styled.header`
   width: 100vw;
   min-height: 100px;
@@ -75,11 +75,11 @@ export const HeaderDiv = styled.div`
 export const Header1 = styled.h2`
   font-size: 23px;
   font-weight: 700;
-  color: ${red};
+  color: ${blue};
   margin: 0;
 `;
 export const Header2 = styled.h2`
-  color: ${red};
+  color: ${blue};
   font-weight: 400;
   font-size: 24px;
   margin: 0;

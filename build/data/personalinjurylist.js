@@ -38,6 +38,10 @@ var _require = require("./repeatables.js"),
 
 module.exports = [{
   name: "Car Accidents",
+  id: "car-accidents",
+  title: "Auto Accident Lawyer, California| Car & Auto Accident Attorneys",
+  description: "Nothing can compensate for the impairment, disability and death caused by a car accident, but we can help you recover. Hire our car and auto accident attorneys to fight for you.",
+  "keywords": "Car & Auto Accident Attorneys, Best Accident Attorneys California, Auto Accident lawyer",
   link: "/personal-injury/car-accidents",
   icon: "/images/icon-car.png",
   hicon: "/images/icon-car-o.png",
@@ -164,6 +168,10 @@ module.exports = [{
   }]
 }, {
   name: "Truck Accidents",
+  id: "truck-accidents",
+  title: "Experienced Truck Accident Attorney | Visalia Truck Accident Attorneys",
+  description: "Work with an experienced truck accident attorney to recover your financial losses and damage caused by the accident. We have 40 years’ experience.",
+  keywords: "Experienced truck accident attorney, Visalia Truck Accident Attorneys",
   link: "/personal-injury/truck-accidents",
   icon: "/images/icon-truck.png",
   hicon: "/images/icon-truck-o.png",
@@ -222,6 +230,10 @@ module.exports = [{
   }]
 }, {
   name: "Motorcycle Accidents",
+  id: "motorcycle-accidents",
+  title: "Motorcycle Accident Attorneys, Visalia | Motorcycle Accident Attorney Firm",
+  description: "Motorcycle riders are most at risk and often receive catastrophic injuries due to others' negligence. Work with our expert motorcycle accident attorneys in Visalia to represent you.",
+  keywords: "Motorcycle Accident Attorney firm, Motorcycle Accident Attorneys Visalia",
   link: "/personal-injury/motorcycle-accidents",
   icon: "/images/icon-motor.png",
   hicon: "/images/icon-motor-o.png",
@@ -276,6 +288,10 @@ module.exports = [{
   }]
 }, {
   name: "Drunk Driving Accidents",
+  id: "drunk-driving-accidents",
+  title: "Professional Accident Attorney Services | DUI Accident Attorneys in Visalia",
+  description: "DUI accidents are not mistakes. Do not suffer from other people’s negligence. File a DUI lawsuit against the other driver with our experienced DUI accident attorneys in Visalia.",
+  keywords: "DUI Accident Attorneys in Visalia, DUI Accident Attorney services, Professional Accident Attorney services",
   link: "/personal-injury/drunk-driving-accidents",
   icon: "/images/icon-drunk.png",
   hicon: "/images/icon-drunk-o.png",
@@ -389,6 +405,10 @@ module.exports = [{
   }]
 }, {
   name: "Distracted Driving Accidents",
+  id: "distracted-driving-accidents",
+  title: "Visalia Distracted Driving Accident Attorneys – NRC Law",
+  description: "If you have been suffering due to someone else’s distracted driving, you have the right to represent yourself. Fight for your rights with our distracted driving accident attorneys.",
+  keywords: "Professional Accident Attorneys, Visalia Distracted Driving Accident Attorneys",
   link: "/personal-injury/distracted-driving-accidents",
   icon: "/images/icon-distracted.png",
   hicon: "/images/icon-distracted-o.png",
@@ -439,6 +459,10 @@ module.exports = [{
   }]
 }, {
   name: "Uninsured/Underinsured Motorist Claim",
+  id: "uninsured-underinsured-motorist-claim",
+  title: "Best Accident Attorneys, California | Uninsured or Under-Insured Motorist Lawyer",
+  description: "Receiving compensation from uninsured or under-insured motorists is difficult but our motorist accident attorneys in California can help you. Schedule a consultation.",
+  keywords: "Best Accident Attorneys California, Motorist Accident Attorneys California,  Uninsured or Underinsured Motorist Lawyer",
   link: "/personal-injury/uninsured-underinsured-motorist-claim",
   icon: "/images/icon-uninsured.png",
   hicon: "/images/icon-uninsured-o.png",
@@ -485,6 +509,10 @@ module.exports = [{
   }]
 }, {
   name: "Rear-End Collisions",
+  id: "rear-end-collisions",
+  title: "Rear-End Collision Attorneys | Visalia | NRC Law",
+  description: "Nothing can be done about rear-end collisions. Work with our top rear-end collision attorneys to recover your losses. Contact us to schedule a free initial consultation.",
+  keywords: "Rear-End Collision Attorneys, Top Legal consultation firm Visalia",
   link: "/personal-injury/rear-end-collisions",
   icon: "/images/icon-rear.png",
   hicon: "/images/icon-rear-o.png",
@@ -543,6 +571,10 @@ module.exports = [{
   }]
 }, {
   name: "Dangerous Stop Signs/Accident Locations",
+  id: "dangerous-stop-signs-accident-locations",
+  title: "Road Accident Lawyers, Visalia | Best Accident Law Firm CA",
+  description: "Are you a victim of improper signage? We understand not all accidents are caused by dangerous drivers. We will represent you with our road accident lawyers in Visalia.",
+  keywords: "Road Accident Lawyers Visalia, Best accident law firm CA",
   link: "/personal-injury/dangerous-stop-signs-accident-locations",
   icon: "/images/icon-dangerous.png",
   hicon: "/images/icon-dangerous-o.png",
@@ -589,6 +621,10 @@ module.exports = [{
   }]
 }, {
   name: "Bicycle And Pedestrian Accidents",
+  id: "bicycle-and-pedestrian-accidents",
+  title: "Bicycle Accident Lawyer CA | Bicycle and Pedestrian Attorney",
+  description: "Have you received injuries in a bicycle or pedestrian accident? Do not fall back on the driver’s excuses. Defend yourself with our expert bicycle and pedestrian attorneys.",
+  keywords: "Bicycle And Pedestrian Attorney, Bicycle Accident Lawyer CA",
   link: "/personal-injury/bicycle-and-pedestrian-accidents",
   icon: "/images/icon-bicycle.png",
   hicon: "/images/icon-bicycle-o.png",
@@ -663,6 +699,10 @@ module.exports = [{
   }]
 }, {
   name: "Medical Malpractice",
+  id: "medical-malpractice",
+  title: "Medical Malpractice Law Firm | Best Medical Malpractice Lawyer",
+  description: "Suffering due to medical malpractice from physicians, nurses and other health care professionals is one of the worst experiences. Contact our medical malpractice law firm to represent you.",
+  keywords: "Medical Malpractice Law Firm, Medical Malpractice Attorneys, Best Medical Malpractice Lawyer",
   link: "/personal-injury/medical-malpractice",
   icon: "/images/icon-medical.png",
   hicon: "/images/icon-medical-o.png",
@@ -725,6 +765,10 @@ module.exports = [{
   }]
 }, {
   name: "Birth Injuries",
+  id: "birth-injuries",
+  title: "Experienced Birth Injury Lawyers | Best Birth Injury Attorney Visalia",
+  description: "If your child is suffering from a lack of care from healthcare professionals, you have the right to pursue compensation. Call our experienced birth injury lawyers for a consultation.",
+  keywords: "Experienced Birth Injury Lawyers, Best Birth Injury Attorney Visalia",
   link: "/personal-injury/birth-injuries",
   icon: "/images/icon-birth.png",
   hicon: "/images/icon-birth-o.png",
@@ -783,6 +827,10 @@ module.exports = [{
   }]
 }, {
   name: "Traumatic Brain Injuries",
+  id: "traumatic-brain-injuries",
+  title: "Brain Injury Attorney CA | Experienced Brain Injury Attorney",
+  description: "If any type of accident has led to a traumatic brain injury (TBI), you can pursue compensation. Our brain injury attorney in CA can help you recover your losses.",
+  keywords: "Brain Injury Attorney CA, Experienced Brain Injury Attorney",
   link: "/personal-injury/traumatic-brain-injuries",
   icon: "/images/icon-traumatic.png",
   hicon: "/images/icon-traumatic-o.png",
@@ -837,6 +885,10 @@ module.exports = [{
   }]
 }, {
   name: "Burn Injuries",
+  id: "burn-injuries",
+  title: "Best Fire and Burn Injury Lawyer | Burn Injury Attorneys CA",
+  description: "Burns are horrific injuries. Hire our burn injuries attorneys in CA to represent you and recover your losses. Schedule a free consultation.",
+  keywords: "Burn Injuries Attorneys CA, Experienced attorney visalia, Best fire and Burn Injury Lawyer",
   link: "/personal-injury/burn-injuries",
   icon: "/images/icon-car.png",
   hicon: "/images/icon-car-o.png",
@@ -887,6 +939,10 @@ module.exports = [{
   }]
 }, {
   name: "Spinal Injuries/Amputations",
+  id: "spinal-injuries-amputations",
+  title: "Spinal Cord Injury Lawyer | Best Spinal Injuries Attorneys",
+  description: "Are you suffering from a spinal cord injury and/or amputations due to someone else’s fault? Contact our spinal cord injury lawyer to secure the compensation you need. We have 40 years’ experience.",
+  keywords: "Spinal Cord Injury Lawyer, Best Spinal Injuries Attorneys",
   link: "/personal-injury/spinal-injuries-amputations",
   icon: "/images/icon-spinal.png",
   hicon: "/images/icon-spinal-o.png",
@@ -941,6 +997,10 @@ module.exports = [{
   }]
 }, {
   name: "Slip And Fall",
+  id: "slip-and-fall",
+  title: "Visalia Slip and Fall Attorneys – NRC Law",
+  description: "Suffering from a slip or fall injury due to wet floors with no warning signs? Let us represent you and recover compensation for you with our expert Visalia slip and fall attorneys.",
+  keywords: "Visalia Slip and Fall Attorneys",
   link: "/personal-injury/slip-and-fall",
   icon: "/images/icon-slip.png",
   hicon: "/images/icon-slip-o.png",
@@ -999,6 +1059,10 @@ module.exports = [{
   }]
 }, {
   name: "Animal-Related Injuries",
+  id: "animal-related-injuries",
+  title: "Dog Bite Attorneys CA | Visalia Dog Bite Attorneys",
+  description: "For animal-related injuries, owners of animals are often responsible. Work with our best animal injury attorneys to recover the compensation you deserve.",
+  keywords: "Best animal injury attorney near me, Visalia Dog Bite Attorneys, Dog Bite Attorneys CA",
   link: "/personal-injury/animal-related-injuries",
   icon: "/images/icon-animal.png",
   hicon: "/images/icon-animal-o.png",
@@ -1041,6 +1105,10 @@ module.exports = [{
   }]
 }, {
   name: "Wrongful Death",
+  id: "wrongful-death",
+  title: "Visalia Wrongful Death Attorneys | Top Wrongful Death Attorneys CA",
+  description: "Our expert top wrongful death attorneys in CA will tell your story to the judge, jury and insurance companies to get you the help you deserve.",
+  keywords: "Top Wrongful Death Attorneys CA, Visalia Wrongful Death Attorneys",
   link: "/personal-injury/wrongful-death",
   icon: "/images/icon-wrongful.png",
   hicon: "/images/icon-wrongful-o.png",
@@ -1091,6 +1159,10 @@ module.exports = [{
   }]
 }, {
   name: "Elder Abuse/Nursing Home Claims",
+  id: "elder-abuse-nursing-home-claims",
+  title: "Professional Elder Abuse Attorneys | Visalia Elder Abuse Attorneys",
+  description: "Elder abuse is among the worst crimes. Let us represent you with our professional elder abuse attorneys. Schedule a free initial consultation.",
+  keywords: "Professional Elder Abuse Attorneys, Visalia Elder Abuse Attorneys",
   link: "/personal-injury/elder-abuse-nursing-home-claims",
   icon: "/images/icon-elder.png",
   hicon: "/images/icon-elder-o.png",
