@@ -13,14 +13,6 @@ var _blogBottom = require("../styled-components/components/blogBottom");
 
 var _global = require("../styled-components/global");
 
-var _categories = _interopRequireDefault(require("../data/categories"));
-
-var _blogs = _interopRequireDefault(require("../data/blogs"));
-
-var _archives = _interopRequireDefault(require("../data/archives"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
@@ -41,12 +33,13 @@ function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) ===
 
 function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
+// import archives from '../data/archives';
 var BlogBottomComponent = /*#__PURE__*/function (_Component) {
   _inherits(BlogBottomComponent, _Component);
 
@@ -72,22 +65,56 @@ var BlogBottomComponent = /*#__PURE__*/function (_Component) {
 
     _defineProperty(_assertThisInitialized(_this), "changeBlogDate", function (e) {
       e.preventDefault();
-      window.location.href = e.target.value;
+      window.location.href = '/blog/' + e.target.value;
     });
 
     _this.state = {
-      searchInput: ""
+      searchInput: "",
+      blogs: [],
+      categories: [],
+      archives: []
     };
     return _this;
   }
 
   _createClass(BlogBottomComponent, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      var _this2 = this;
+
+      fetch('/api/blogs/getThree').then(function (res) {
+        return res.json();
+      }).then(function (res) {
+        _this2.setState({
+          blogs: res
+        });
+      });
+      fetch('/api/blogs/getCategories').then(function (res) {
+        return res.json();
+      }).then(function (res) {
+        _this2.setState({
+          categories: res
+        });
+      });
+      fetch('/api/blogs/getMonths').then(function (res) {
+        return res.json();
+      }).then(function (res) {
+        _this2.setState({
+          archives: res
+        });
+      });
+    }
+  }, {
     key: "render",
     value: function render() {
       var _this$props = this.props,
           className = _this$props.className,
           home = _this$props.home,
           blog = _this$props.blog;
+      var _this$state = this.state,
+          blogs = _this$state.blogs,
+          categories = _this$state.categories,
+          archives = _this$state.archives;
       return /*#__PURE__*/_react["default"].createElement(_blogBottom.BlogBottom, {
         className: className
       }, /*#__PURE__*/_react["default"].createElement("form", {
@@ -99,26 +126,31 @@ var BlogBottomComponent = /*#__PURE__*/function (_Component) {
         onChange: this.changeSearch
       }), /*#__PURE__*/_react["default"].createElement(_global.GoldButton, {
         type: "submit"
-      }, "Search")), /*#__PURE__*/_react["default"].createElement("h2", null, "Categories"), /*#__PURE__*/_react["default"].createElement("ul", null, _categories["default"].map(function (a, i) {
+      }, "Search")), /*#__PURE__*/_react["default"].createElement("h2", null, "Categories"), /*#__PURE__*/_react["default"].createElement("ul", null, categories.map(function (a, i) {
         return /*#__PURE__*/_react["default"].createElement("li", {
           key: i
         }, /*#__PURE__*/_react["default"].createElement("a", {
-          href: a.link
+          href: "/blog/category/".concat(a.name.toLowerCase().split(" ").join("-"))
         }, a.name), " (", a.qty, ")");
       })), /*#__PURE__*/_react["default"].createElement("h2", null, "Archives"), /*#__PURE__*/_react["default"].createElement("select", {
         onChange: this.changeBlogDate
-      }, _archives["default"].map(function (a, i) {
+      }, archives.map(function (a, i) {
         return /*#__PURE__*/_react["default"].createElement("option", {
           key: i,
-          value: a.link
-        }, a.date, "(", a.qty, ")");
-      })), /*#__PURE__*/_react["default"].createElement("h2", null, "Recent Posts"), /*#__PURE__*/_react["default"].createElement("ul", null, _blogs["default"].map(function (a, i) {
+          value: a.src
+        }, a.title, " (", a.qty, ")");
+      })), /*#__PURE__*/_react["default"].createElement("h2", null, "Recent Posts"), /*#__PURE__*/_react["default"].createElement("ul", null, blogs.map(function (a, i) {
+        var date = new Date(a.date);
+        var year = date.getFullYear();
+        var month = date.getMonth() + 1;
+        month = month > 9 ? month : "0" + month;
+        var titledashed = a.title.toLowerCase().replace(/[^\w\s]/gi, '').split(" ").join('-');
         return /*#__PURE__*/_react["default"].createElement("li", {
           key: i
         }, /*#__PURE__*/_react["default"].createElement("a", {
-          href: a.link
+          href: "/blog/".concat(year, "/").concat(month, "/").concat(titledashed)
         }, a.title));
-      })), /*#__PURE__*/_react["default"].createElement(_global.RedButton, {
+      })), /*#__PURE__*/_react["default"].createElement(_global.BlueButton, {
         target: "_blank",
         href: "https://reviewplatform.findlaw.com/nelsonrozier"
       }, "REVIEW US"), /*#__PURE__*/_react["default"].createElement(_global.FBButton, {

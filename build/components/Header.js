@@ -35,7 +35,7 @@ function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) ===
 
 function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
@@ -84,7 +84,7 @@ var HeaderComponent = /*#__PURE__*/function (_Component) {
       }, /*#__PURE__*/_react["default"].createElement("a", {
         href: "/"
       }, /*#__PURE__*/_react["default"].createElement("img", {
-        src: "/images/brand-logo.png"
+        src: "/images/nelson.png"
       })), /*#__PURE__*/_react["default"].createElement(_header.HeaderDiv, null, /*#__PURE__*/_react["default"].createElement(_header.Header1, null, "FREE Consultation."), /*#__PURE__*/_react["default"].createElement(_header.Header2, null, "No fee unless we win"), /*#__PURE__*/_react["default"].createElement("a", {
         href: "tel:+1-559-713-0159"
       }, /*#__PURE__*/_react["default"].createElement(_header.Header3, null, "559-713-0159")))), /*#__PURE__*/_react["default"].createElement(_.Nav, {

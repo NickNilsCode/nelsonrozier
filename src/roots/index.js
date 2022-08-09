@@ -10,6 +10,7 @@ export { default as BlogtemplateRoot } from "./BlogtemplateRoot";
 export { default as ContactRoot } from "./ContactRoot";
 export { default as DisclaimerRoot } from "./DisclaimerRoot";
 export { default as SitemapRoot } from "./SitemapRoot";
+export { default as NotFoundRoot } from "./NotFoundRoot";
 export { default as PrivacypolicyRoot } from "./PrivacypolicyRoot";
 export { default as AttorneytemplateRoot } from "./AttorneytemplateRoot";
 export { default as SearchRoot } from "./SearchRoot";

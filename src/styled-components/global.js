@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { gold, red, yellow, white } from './colors';
+import { gold, blue, yellow, white } from './colors';
 
 export const PageWrapper = styled.div`
   width: 100%;
@@ -63,7 +63,7 @@ export const Content = styled.div`
     line-height: 1.5;
   }
   a {
-    color: ${red};
+    color: ${blue};
     transition: color 300ms ease 0ms;
     text-decoration: underline;
   }
@@ -114,14 +114,14 @@ export const GoldButton = styled.button`
   transition: background-color 300ms ease 0ms;
   &:hover {
     cursor: pointer;
-    background-color: ${red};
+    background-color: ${blue};
   }
 `;
 export const BigGoldButton = styled.button`
   background: ${gold};
   padding: 12px 20px;
   margin: 12px auto;
-  color: ${red};
+  color: ${blue};
   font-size: 19px;
   border: 1px solid #8d8d8d;
   border-radius: 3px;
@@ -131,12 +131,12 @@ export const BigGoldButton = styled.button`
   transition: background-color 300ms ease 0ms;
   &:hover {
     cursor: pointer;
-    background-color: ${red};
+    background-color: ${blue};
     color: ${white};
   }
 `;
-export const RedButton = styled.button`
-  background-color: ${red};
+export const BlueButton = styled.button`
+  background-color: ${blue};
   padding: 5px 15px;
   margin: 24px 0 8px 0;
   color: ${white};

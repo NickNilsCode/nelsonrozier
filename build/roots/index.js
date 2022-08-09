@@ -75,6 +75,12 @@ Object.defineProperty(exports, "SitemapRoot", {
     return _SitemapRoot["default"];
   }
 });
+Object.defineProperty(exports, "NotFoundRoot", {
+  enumerable: true,
+  get: function get() {
+    return _NotFoundRoot["default"];
+  }
+});
 Object.defineProperty(exports, "PrivacypolicyRoot", {
   enumerable: true,
   get: function get() {
@@ -117,6 +123,8 @@ var _ContactRoot = _interopRequireDefault(require("./ContactRoot"));
 var _DisclaimerRoot = _interopRequireDefault(require("./DisclaimerRoot"));
 
 var _SitemapRoot = _interopRequireDefault(require("./SitemapRoot"));
+
+var _NotFoundRoot = _interopRequireDefault(require("./NotFoundRoot"));
 
 var _PrivacypolicyRoot = _interopRequireDefault(require("./PrivacypolicyRoot"));
 

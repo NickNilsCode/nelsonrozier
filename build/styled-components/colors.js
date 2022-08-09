@@ -3,13 +3,13 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.white = exports.whiteish = exports.reddish = exports.gold = exports.red = void 0;
-var red = '#042b6e';
-exports.red = red;
-var gold = '#e9af64';
+exports.white = exports.whiteish = exports.blueish = exports.gold = exports.blue = void 0;
+var blue = '#23336b';
+exports.blue = blue;
+var gold = '#edb533';
 exports.gold = gold;
-var reddish = '#042b6e99';
-exports.reddish = reddish;
+var blueish = '#042b6e99';
+exports.blueish = blueish;
 var whiteish = '#ffffff80';
 exports.whiteish = whiteish;
 var white = "#fff";

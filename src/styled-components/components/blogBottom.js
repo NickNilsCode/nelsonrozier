@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { red } from '../colors';
 export const BlogBottom = styled.div`
   width: 100%;
   a {

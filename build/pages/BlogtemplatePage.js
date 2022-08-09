@@ -15,8 +15,6 @@ var _blogtemplate = require("../styled-components/pages/blogtemplate");
 
 var _global = require("../styled-components/global");
 
-var _blogs = _interopRequireDefault(require("../data/blogs"));
-
 var _mapPage = _interopRequireDefault(require("../helpers/mapPage"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -41,39 +39,77 @@ function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) ===
 
 function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
 var Blogtemplate = /*#__PURE__*/function (_Component) {
   _inherits(Blogtemplate, _Component);
 
   var _super = _createSuper(Blogtemplate);
 
-  function Blogtemplate() {
+  function Blogtemplate(props) {
+    var _this;
+
     _classCallCheck(this, Blogtemplate);
 
-    return _super.apply(this, arguments);
+    _this = _super.call(this, props);
+    _this.state = {
+      blog: {},
+      year: "",
+      day: "",
+      month: ""
+    };
+    return _this;
   }
 
   _createClass(Blogtemplate, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      var _this2 = this;
+
+      var title = this.props.data.title;
+      fetch('/api/blogs/getAll').then(function (res) {
+        return res.json();
+      }).then(function (res) {
+        var blog = res.find(function (a) {
+          return title == a.title.toLowerCase().replace(/[^\w\s]/gi, '').split(" ").join('-');
+        });
+
+        if (blog) {
+          var date = new Date(blog.date);
+          var year = date.getFullYear();
+          var day = date.getDate();
+          var month = months[date.getMonth()];
+
+          _this2.setState({
+            blog: blog,
+            year: year,
+            day: day,
+            month: month
+          });
+        }
+      });
+    }
+  }, {
     key: "render",
     value: function render() {
-      var link = this.props.data.link;
-
-      var blog = _blogs["default"].find(function (a) {
-        return a.link == link;
-      });
-
+      var _this$state = this.state,
+          blog = _this$state.blog,
+          year = _this$state.year,
+          day = _this$state.day,
+          month = _this$state.month;
       return /*#__PURE__*/_react["default"].createElement(_global.PageWrapper, null, /*#__PURE__*/_react["default"].createElement(_components.Header, {
         page: "Blog"
       }), /*#__PURE__*/_react["default"].createElement(_global.ContentWrapper, {
         className: "blogPage"
       }, /*#__PURE__*/_react["default"].createElement(_global.Content, {
         className: "blogContent"
-      }, blog && /*#__PURE__*/_react["default"].createElement(_react.Fragment, null, /*#__PURE__*/_react["default"].createElement("h1", null, blog.title), /*#__PURE__*/_react["default"].createElement("p", null, /*#__PURE__*/_react["default"].createElement("a", {
+      }, blog && blog.date && /*#__PURE__*/_react["default"].createElement(_react.Fragment, null, /*#__PURE__*/_react["default"].createElement("h1", null, blog.title), /*#__PURE__*/_react["default"].createElement("p", null, /*#__PURE__*/_react["default"].createElement("a", {
         href: "/"
-      }, "On behalf of Nelson & Rozier"), " | ", blog.date, " | ", blog.categories.join(', ')), (0, _mapPage["default"])(blog.content), /*#__PURE__*/_react["default"].createElement(_components.BlogSocial, {
+      }, "On behalf of Nelson & Rozier"), " | ", month, " ", day, ", ", year, " | ", blog.categories.join(', ')), (0, _mapPage["default"])(blog.content), /*#__PURE__*/_react["default"].createElement(_components.BlogSocial, {
         share: blog.share
       }))), /*#__PURE__*/_react["default"].createElement(_components.BlogBottom, null)), /*#__PURE__*/_react["default"].createElement(_components.Footer, null));
     }
