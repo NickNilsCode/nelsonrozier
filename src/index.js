@@ -357,7 +357,7 @@ function returnHTML(data, bundle, Page, title, description, keywords){
                   {
                     "@context": "https://schema.org",
                     "@type": "Attorney",
-                    "name": "Nrclaw",
+                    "name": "Nelson Rozier & Christenson",
                     "image": "",
                     "@id": "",
                     "url": "https://www.nrclaw.com/",
@@ -378,13 +378,48 @@ function returnHTML(data, bundle, Page, title, description, keywords){
                 </style>
                 ${styles}
                 <script src="https://kit.fontawesome.com/7fa747235e.js" crossorigin="anonymous"></script>
+		
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-180738835-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-180738835-1');
+</script>
+	
+	<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JHY6MME7XL"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JHY6MME7XL');
+</script>
+	
+		<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KGNFJWW');</script>
+<!-- End Google Tag Manager -->
+
+<meta name="google-site-verification" content="QcxUyvtxY2put4kvP8hB4qGQ364ORLZJjLOujBHmgx4" />
+		
               </head>
               <body>
                 <script>window.os = window.os || {};</script>
                 <script>window.__DATA__=${dataString}</script>
                 <div id="app" role="main">${body}</div>
-                <script>${bundle}</script>
-                <script async src="https://www.googletagmanager.com/gtag/js?id=G-BLVMB709EV"></script>
+                <script>${bundle}</script>		
+		<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KGNFJWW"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-BLVMB709EV"></script>
               <script>
                 window.dataLayer = window.dataLayer || [];
                 function gtag(){dataLayer.push(arguments);}
@@ -400,6 +435,8 @@ function returnHTML(data, bundle, Page, title, description, keywords){
                 }
                 if(host == "www.nelsonrozier.com"){
                   window.location.href = href.split("www.nelsonrozier.com").join("www.nrclaw.com");
+                } else if(host == "nelsonrozier.com"){
+                  window.location.href = href.split("nelsonrozier.com").join("www.nrclaw.com");
                 }
               </script>
               </body>
