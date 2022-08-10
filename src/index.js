@@ -216,7 +216,7 @@ app.get('/disclaimer', (req, res) => {
 app.get('/sitemap', (req, res) => {
   let data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, sitemapBundle, SitemapRoot, "Sitemap | NRC Law", "", ""));
+  res.send(returnHTML(data, sitemapBundle, SitemapRoot, "Sitemap | Nelson Rozier & Christenson", "", ""));
 });
 app.get('/privacy', (req, res) => {
   let data = "";
@@ -228,7 +228,7 @@ app.get('/attorney/:name', (req, res) => {
     link: `/attorney/${req.params.name}`
   };
   res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, attorneytemplateBundle, AttorneytemplateRoot, "Meet Your Visalia Personal Injury Lawyers | NRC Law", "", ""));
+  res.send(returnHTML(data, attorneytemplateBundle, AttorneytemplateRoot, "Meet Your Visalia Personal Injury Lawyers | Nelson Rozier & Christenson", "", ""));
 });
 app.get('/search', (req, res) => {
   let data = "";
@@ -358,8 +358,7 @@ function returnHTML(data, bundle, Page, title, description, keywords){
                     "@context": "https://schema.org",
                     "@type": "Attorney",
                     "name": "Nelson Rozier & Christenson",
-                    "image": "",
-                    "@id": "",
+                    "image": "https://www.nrclaw.com/images/nelson.png",
                     "url": "https://www.nrclaw.com/",
                     "telephone": "559-713-0159",
                     "address": {
