@@ -160,7 +160,7 @@ app.get('/blog', (req, res) => {
     month: ""
   };
   res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, blogBundle, BlogRoot, "Read Our Latest Blog & News About Personal Injury Visalia", "", ""));
+  res.send(returnHTML(data, blogBundle, BlogRoot, "Blog | Nelson Rozier & Christenson", "", ""));
 });
 app.get('/blogcattemplate', (req, res) => {
   let data = "";
