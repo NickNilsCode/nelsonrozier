@@ -150,7 +150,7 @@ app.get('/case-results', (req, res) => {
 app.get('/faq', (req, res) => {
   let data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, faqBundle, FaqRoot, "Injury Attorney FAQ | Nelson Rozier & Christenson", "", ""));
+  res.send(returnHTML(data, faqBundle, FaqRoot, "FAQ Personal Injury Visalia | Nelson Rozier & Christenson", "", ""));
 });
 app.get('/blog', (req, res) => {
   let data = {
@@ -160,7 +160,7 @@ app.get('/blog', (req, res) => {
     month: ""
   };
   res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, blogBundle, BlogRoot, "Blog | Nelson Rozier & Christenson", "", ""));
+  res.send(returnHTML(data, blogBundle, BlogRoot, "Read Our Latest Blog & News About Personal Injury Visalia | Nelson Rozier & Christenson", "", ""));
 });
 app.get('/blogcattemplate', (req, res) => {
   let data = "";
