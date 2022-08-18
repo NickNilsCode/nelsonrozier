@@ -182,7 +182,7 @@ app.get('/case-results', function (req, res) {
 app.get('/faq', function (req, res) {
   var data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, faqBundle, _roots.FaqRoot, "FAQ | NRC Law", "", ""));
+  res.send(returnHTML(data, faqBundle, _roots.FaqRoot, "FAQ Personal Injury Visalia | NRC Law", "", ""));
 });
 app.get('/blog', function (req, res) {
   var data = {
@@ -192,7 +192,7 @@ app.get('/blog', function (req, res) {
     month: ""
   };
   res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, blogBundle, _roots.BlogRoot, "Blog | NRC Law", "", ""));
+  res.send(returnHTML(data, blogBundle, _roots.BlogRoot, "Read Our Latest Blog & News About Personal Injury Visalia | NRC Law", "", ""));
 });
 app.get('/blogcattemplate', function (req, res) {
   var data = "";
