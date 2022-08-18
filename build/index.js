@@ -182,7 +182,7 @@ app.get('/case-results', function (req, res) {
 app.get('/faq', function (req, res) {
   var data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, faqBundle, _roots.FaqRoot, "FAQ Personal Injury Visalia | Nelson Rozier & Christenson", "Learn more about personal injury claims with this FAQ for personal injury in California. Contact Nelson Rozier & Christenson for help today!", ""));
+  res.send(returnHTML(data, faqBundle, _roots.FaqRoot, "FAQ Personal Injury Visalia | Nelson Rozier & Christenson", "Learn more about personal injury claims with this FAQ for personal injury in California. Contact Nelson Rozier & Christenson for help today!", "Best Injuries Lawyer, Professional Personal Injury, Motorcycle Accident Lawyer, Personal Injury Lawyers Near Me"));
 });
 app.get('/blog', function (req, res) {
   var data = {
