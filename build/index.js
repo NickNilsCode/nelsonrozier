@@ -171,7 +171,7 @@ app.get('/personal-injury/:id', function (req, res) {
     res.set('Cache-Control', 'public, max-age=31557600');
     res.send(returnHTML(data, personalinjurytemplateBundle, _roots.PersonalinjurytemplateRoot, pi.title, pi.description, pi.keywords));
   } else {
-    res.send(returnHTML(data, notfoundBundle, _roots.NotFoundRoot, "404 Not Found | Nelson Rozier & Christenson", "", ""));
+    res.send(returnHTML(data, notfoundBundle, _roots.NotFoundRoot, "404 Not Found | NRC Law", "", ""));
   }
 });
 app.get('/case-results', function (req, res) {
@@ -182,7 +182,7 @@ app.get('/case-results', function (req, res) {
 app.get('/faq', function (req, res) {
   var data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, faqBundle, _roots.FaqRoot, "FAQ Personal Injury Visalia | Nelson Rozier & Christenson", "", ""));
+  res.send(returnHTML(data, faqBundle, _roots.FaqRoot, "FAQ Personal Injury Visalia | Nelson Rozier & Christenson", "Learn more about personal injury claims with this FAQ for personal injury in California. Contact Nelson Rozier & Christenson for help today!", ""));
 });
 app.get('/blog', function (req, res) {
   var data = {
