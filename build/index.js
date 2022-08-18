@@ -182,7 +182,7 @@ app.get('/case-results', function (req, res) {
 app.get('/faq', function (req, res) {
   var data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, faqBundle, _roots.FaqRoot, "FAQ Personal Injury Visalia | NRC Law", "", ""));
+  res.send(returnHTML(data, faqBundle, _roots.FaqRoot, "FAQ Personal Injury Visalia | Nelson Rozier & Christenson", "", ""));
 });
 app.get('/blog', function (req, res) {
   var data = {
@@ -192,7 +192,7 @@ app.get('/blog', function (req, res) {
     month: ""
   };
   res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, blogBundle, _roots.BlogRoot, "Read Our Latest Blog & News About Personal Injury Visalia | NRC Law", "", ""));
+  res.send(returnHTML(data, blogBundle, _roots.BlogRoot, "Blog | NRC Law", "", ""));
 });
 app.get('/blogcattemplate', function (req, res) {
   var data = "";
@@ -263,7 +263,7 @@ app.get('/sitemap', function (req, res) {
 app.get('/privacy', function (req, res) {
   var data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, privacypolicyBundle, _roots.PrivacypolicyRoot, "Privacy Policy | Nelson Rozier & Christenson", "", ""));
+  res.send(returnHTML(data, privacypolicyBundle, _roots.PrivacypolicyRoot, "Our Privacy Policy | Nelson Rozier & Christenson", "", ""));
 });
 app.get('/attorney/:name', function (req, res) {
   var data = {
@@ -275,7 +275,7 @@ app.get('/attorney/:name', function (req, res) {
 app.get('/search', function (req, res) {
   var data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, searchBundle, _roots.SearchRoot, "Search | NRC Law", "", ""));
+  res.send(returnHTML(data, searchBundle, _roots.SearchRoot, "Search | Nelson Rozier & Christenson", "", ""));
 });
 app.get('/error', function (req, res) {
   var data = "";
