@@ -160,7 +160,7 @@ app.get('/blog', (req, res) => {
     month: ""
   };
   res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, blogBundle, BlogRoot, "Blog | NRC Laws", "Read Our Latest Blog & News posts on Personal Injury, Injuries, car accidents, and many more. Visit our website now!", ""));
+  res.send(returnHTML(data, blogBundle, BlogRoot, "Blog | NRC Laws", "", ""));
 });
 app.get('/blogcattemplate', (req, res) => {
   let data = "";
