@@ -192,7 +192,7 @@ app.get('/blog', function (req, res) {
     month: ""
   };
   res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, blogBundle, _roots.BlogRoot, "Blog | NRC Law", "Read Our Latest Blog & News posts on Personal Injury, Injuries, car accidents, and many more. Visit our website now!", "Personal Injury"));
+  res.send(returnHTML(data, blogBundle, _roots.BlogRoot, "Blog | NRC Law", "", ""));
 });
 app.get('/blogcattemplate', function (req, res) {
   var data = "";
@@ -230,7 +230,7 @@ app.get('/blog/:year/:month', function (req, res) {
     category: ""
   };
   res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, blogBundle, _roots.BlogRoot, "Read Latest Blog & News | NRC Law", "", ""));
+  res.send(returnHTML(data, blogBundle, _roots.BlogRoot, "Blog | NRC Law", "", ""));
 });
 app.get('/blog/:year/:month/:title', function (req, res) {
   var _req$params2 = req.params,
