@@ -119,7 +119,7 @@ app.get('/', (req, res) => {
 app.get('/about', (req, res) => {
   let data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, aboutBundle, AboutRoot, "About Your Visalia Personal Injury Lawyers | Nelson Rozier & Christenson", "", ""));
+  res.send(returnHTML(data, aboutBundle, AboutRoot, "About Your Visalia Personal Injury Lawyers | Nelson Rozier & Christenson", "Our firm has been located in Visalia since 1982. Our attorneys all live in our area and were raised here. We know the people of our community and the surrounding areas.", ""));
 });
 app.get('/personal-injury', (req, res) => {
   let data = "";
@@ -145,12 +145,12 @@ app.get('/personal-injury/:id', (req, res) => {
 app.get('/case-results', (req, res) => {
   let data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, caseresultsBundle, CaseresultsRoot, "Best Visalia Law Firm Case Results | Nelson Rozier & Christenson", "", ""));
+  res.send(returnHTML(data, caseresultsBundle, CaseresultsRoot, "Best Visalia Law Firm Case Results | Nelson Rozier & Christenson", "See our successful case results if you have a similar case and need an attorney, call us today at 559-713-0159 or contact our office to schedule a free consultation.", ""));
 });
 app.get('/faq', (req, res) => {
   let data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, faqBundle, FaqRoot, "FAQ Personal Injury Visalia | Nelson Rozier & Christenson", "", ""));
+  res.send(returnHTML(data, faqBundle, FaqRoot, "FAQ Personal Injury Visalia | Nelson Rozier & Christenson", "Learn more about personal injury claims with this FAQ for personal injury in California. Contact Nelson Rozier & Christenson for help today!", ""));
 });
 app.get('/blog', (req, res) => {
   let data = {
@@ -206,7 +206,7 @@ app.get('/blog/:year/:month/:title', (req, res) => {
 app.get('/contact', (req, res) => {
   let data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, contactBundle, ContactRoot, "Contact for Best Legal Services California | Nelson Rozier & Christenson", "", ""));
+  res.send(returnHTML(data, contactBundle, ContactRoot, "Contact for Best Legal Services California | Nelson Rozier & Christenson", "If you need an Personal Injury Attorneys in California, let us help.  Call 559-713-0159 or fill out the form to schedule your free consultation.", ""));
 });
 app.get('/disclaimer', (req, res) => {
   let data = "";
