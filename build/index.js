@@ -192,7 +192,7 @@ app.get('/blog', function (req, res) {
     month: ""
   };
   res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, blogBundle, _roots.BlogRoot, "Read Our Latest Blog & News About Personal Injury Visalia", "", ""));
+  res.send(returnHTML(data, blogBundle, _roots.BlogRoot, "Blog | NRC Law", "", ""));
 });
 app.get('/blogcattemplate', function (req, res) {
   var data = "";
