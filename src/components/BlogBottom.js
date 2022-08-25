@@ -100,7 +100,8 @@ class BlogBottomComponent extends Component {
         </ul>
         <BlueButton target="_blank" href="https://reviewplatform.findlaw.com/nelsonrozier">REVIEW US</BlueButton>
         <FBButton target="_blank" href="https://www.facebook.com/nelsonrozier/"><i className="fab fa-facebook-f"></i></FBButton>
-      </BlogBottom>
+
+</BlogBottom>
     );
   }
 }
