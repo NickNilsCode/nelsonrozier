@@ -150,12 +150,12 @@ app.get('/', function (req, res) {
 app.get('/about', function (req, res) {
   var data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, aboutBundle, _roots.AboutRoot, "About Your Visalia Personal Injury Lawyers | Nelson Rozier & Christenson", "Our firm has been located in Visalia since 1982. Our attorneys all live in our area and were raised here. We know the people of our community and the surrounding areas.", ""));
+  res.send(returnHTML(data, aboutBundle, _roots.AboutRoot, "About Your Visalia Personal Injury Lawyers | Nelson Rozier & Christenson", "", ""));
 });
 app.get('/personal-injury', function (req, res) {
   var data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, personalinjuryBundle, _roots.PersonalinjuryRoot, "Best Injury Lawyers, California | Experienced Personal Injury Attorneys", "Get personalized legal representation by a compassionate, dedicated and experienced personal injury lawyer in California. We take cases on a contingency fee basis.", "Best injuries lawyer California, Professional personal injury lawyer, Attorney for personal injury california, Experienced personal injury attorney"));
+  res.send(returnHTML(data, personalinjuryBundle, _roots.PersonalinjuryRoot, "Best Injury Lawyers, California | Experienced Personal Injury Attorneys Visalia", "Get personalized legal representation by a compassionate, dedicated and experienced personal injury lawyer in California. We take cases on a contingency fee basis.", "Best injuries lawyer California, Professional personal injury lawyer, Attorney for personal injury california, Experienced personal injury attorney"));
 }); //all the rest
 
 app.get('/personal-injury/:id', function (req, res) {
@@ -171,7 +171,7 @@ app.get('/personal-injury/:id', function (req, res) {
     res.set('Cache-Control', 'public, max-age=31557600');
     res.send(returnHTML(data, personalinjurytemplateBundle, _roots.PersonalinjurytemplateRoot, pi.title, pi.description, pi.keywords));
   } else {
-    res.send(returnHTML(data, notfoundBundle, _roots.NotFoundRoot, "404 Not Found | NRC Law", "", ""));
+    res.send(returnHTML(data, notfoundBundle, _roots.NotFoundRoot, "404 Not Found | Nelson Rozier & Christenson", "", ""));
   }
 });
 app.get('/case-results', function (req, res) {
@@ -182,7 +182,7 @@ app.get('/case-results', function (req, res) {
 app.get('/faq', function (req, res) {
   var data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, faqBundle, _roots.FaqRoot, "FAQ Personal Injury Visalia | Nelson Rozier & Christenson", "Learn more about personal injury claims with this FAQ for personal injury in California. Contact Nelson Rozier & Christenson for help today!", "Best Injuries Lawyer, Professional Personal Injury, Motorcycle Accident Lawyer, Personal Injury Lawyers Near Me"));
+  res.send(returnHTML(data, faqBundle, _roots.FaqRoot, "FAQ | NRC Law", "", ""));
 });
 app.get('/blog', function (req, res) {
   var data = {
@@ -192,7 +192,7 @@ app.get('/blog', function (req, res) {
     month: ""
   };
   res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, blogBundle, _roots.BlogRoot, "Read Our Latest Blog & News About Personal Injury Visalia | Nelson Rozier & Christenson", "", "Driverless Vehicles"));
+  res.send(returnHTML(data, blogBundle, _roots.BlogRoot, "Blog | NRC Law", "", ""));
 });
 app.get('/blogcattemplate', function (req, res) {
   var data = "";
@@ -248,7 +248,7 @@ app.get('/blog/:year/:month/:title', function (req, res) {
 app.get('/contact', function (req, res) {
   var data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, contactBundle, _roots.ContactRoot, "Contact for Best Legal Services California | Nelson Rozier & Christenson", "If you need an Personal Injury Attorneys in California, let us help.  Call 559-713-0159 or fill out the form to schedule your free consultation.", ""));
+  res.send(returnHTML(data, contactBundle, _roots.ContactRoot, "Contact for Best Legal Services California | Nelson Rozier & Christenson", "", ""));
 });
 app.get('/disclaimer', function (req, res) {
   var data = "";
@@ -263,7 +263,7 @@ app.get('/sitemap', function (req, res) {
 app.get('/privacy', function (req, res) {
   var data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, privacypolicyBundle, _roots.PrivacypolicyRoot, "Our Privacy Policy | Nelson Rozier & Christenson", "If you have any additional questions or concerns about this privacy policy, please contact us via the phone number, contact form or mailing address listed on this website.", ""));
+  res.send(returnHTML(data, privacypolicyBundle, _roots.PrivacypolicyRoot, "Privacy Policy | Nelson Rozier & Christenson", "", ""));
 });
 app.get('/attorney/:name', function (req, res) {
   var data = {
@@ -275,7 +275,7 @@ app.get('/attorney/:name', function (req, res) {
 app.get('/search', function (req, res) {
   var data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, searchBundle, _roots.SearchRoot, "Search | Nelson Rozier & Christenson", "", ""));
+  res.send(returnHTML(data, searchBundle, _roots.SearchRoot, "Search | NRC Law", "", ""));
 });
 app.get('/error', function (req, res) {
   var data = "";
