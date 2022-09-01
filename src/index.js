@@ -165,7 +165,7 @@ app.get('/blog', (req, res) => {
 app.get('/blogcattemplate', (req, res) => {
   let data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, blogcattemplateBundle, BlogcattemplateRoot, "Blog | Nelson Rozier & Christenson", "", ""));
+  res.send(returnHTML(data, blogcattemplateBundle, BlogcattemplateRoot, "Driverless Vehicles | Nelson Rozier & Christenson", "", ""));
 });
 app.get('/blog/search/:query', (req, res) => {
   let data = {
