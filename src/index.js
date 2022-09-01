@@ -160,12 +160,12 @@ app.get('/blog', (req, res) => {
     month: ""
   };
   res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, blogBundle, BlogRoot, "Read Our Latest Blog & News About Personal Injury Visalia", "Read Our Latest Blog & News posts on Personal Injury, Injuries, car accidents, and many more. Visit our website now!", ""));
+  res.send(returnHTML(data, blogBundle, BlogRoot, "Blog | NRC Laws", "", ""));
 });
 app.get('/blogcattemplate', (req, res) => {
   let data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, blogcattemplateBundle, BlogcattemplateRoot, "Blog | Nelson Rozier & Christenson", "", ""));
+  res.send(returnHTML(data, blogcattemplateBundle, BlogcattemplateRoot, "Blog | NRC Law", "", ""));
 });
 app.get('/blog/search/:query', (req, res) => {
   let data = {
@@ -175,7 +175,7 @@ app.get('/blog/search/:query', (req, res) => {
     month: ""
   };
   res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, blogBundle, BlogRoot, "Blog | Nelson Rozier & Christenson", "", ""));
+  res.send(returnHTML(data, blogBundle, BlogRoot, "Blog | NRC Law", "", ""));
 });
 app.get('/blog/category/:category', (req, res) => {
   let data = {
@@ -185,7 +185,7 @@ app.get('/blog/category/:category', (req, res) => {
     month: ""
   };
   res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, blogBundle, BlogRoot, "Blog | Nelson Rozier & Christenson", "", ""));
+  res.send(returnHTML(data, blogBundle, BlogRoot, "Blog | NRC Law", "", ""));
 });
 app.get('/blog/:year/:month', (req, res) => {
   const { year, month } = req.params;
@@ -195,13 +195,13 @@ app.get('/blog/:year/:month', (req, res) => {
     category: ""
   };
   res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, blogBundle, BlogRoot, "Blog | Nelson Rozier & Christenson", "", ""));
+  res.send(returnHTML(data, blogBundle, BlogRoot, "Blog | NRC Law", "", ""));
 });
 app.get('/blog/:year/:month/:title', (req, res) => {
   const { year, month, title } = req.params;
   let data = { year, month, title };
   res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, blogtemplateBundle, BlogtemplateRoot, "Blog | Nelson Rozier & Christenson", "", ""));
+  res.send(returnHTML(data, blogtemplateBundle, BlogtemplateRoot, "Blog | NRC Law", "", ""));
 });
 app.get('/contact', (req, res) => {
   let data = "";
@@ -221,7 +221,7 @@ app.get('/sitemap', (req, res) => {
 app.get('/privacy', (req, res) => {
   let data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, privacypolicyBundle, PrivacypolicyRoot, "Our Privacy Policy | Nelson Rozier & Christenson", "If you have any additional questions or concerns about this privacy policy, please contact us via the phone number, contact form or mailing address listed on this website.", ""));
+  res.send(returnHTML(data, privacypolicyBundle, PrivacypolicyRoot, "Our Privacy Policy | Nelson Rozier & Christenson", "", ""));
 });
 app.get('/attorney/:name', (req, res) => {
   let data = {
@@ -233,13 +233,13 @@ app.get('/attorney/:name', (req, res) => {
 app.get('/search', (req, res) => {
   let data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, searchBundle, SearchRoot, "Search | Nelson Rozier & Christenson", "", ""));
+  res.send(returnHTML(data, searchBundle, SearchRoot, "Search | NRC Law", "", ""));
 });
 
 app.get('/error', (req, res) => {
   let data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, notfoundBundle, NotFoundRoot, "404 Not Found | Nelson Rozier & Christenson", "", ""));
+  res.send(returnHTML(data, notfoundBundle, NotFoundRoot, "404 Not Found | NRC Law", "", ""));
 });
 
 app.get('/images/:id', (req, res) => {
