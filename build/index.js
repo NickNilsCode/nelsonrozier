@@ -197,7 +197,7 @@ app.get('/blog', function (req, res) {
 app.get('/blogcattemplate', function (req, res) {
   var data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, blogcattemplateBundle, _roots.BlogcattemplateRoot, "Blog | Nelson Rozier & Christenson", "", ""));
+  res.send(returnHTML(data, blogcattemplateBundle, _roots.BlogcattemplateRoot, "Blog & News | Nelson Rozier & Christenson", "", ""));
 });
 app.get('/blog/search/:query', function (req, res) {
   var data = {
