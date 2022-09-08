@@ -207,7 +207,7 @@ app.get('/blog/search/:query', function (req, res) {
     month: ""
   };
   res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, blogBundle, _roots.BlogRoot, "Blog | Nelson Rozier & Christenson", "", ""));
+  res.send(returnHTML(data, blogBundle, _roots.BlogRoot, "Blog & News | Nelson Rozier & Christenson", "", ""));
 });
 app.get('/blog/category/:category', function (req, res) {
   var data = {
@@ -217,7 +217,7 @@ app.get('/blog/category/:category', function (req, res) {
     month: ""
   };
   res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, blogBundle, _roots.BlogRoot, "Blog | Nelson Rozier & Christenson", "", ""));
+  res.send(returnHTML(data, blogBundle, _roots.BlogRoot, "Blog & News | Nelson Rozier & Christenson", "", ""));
 });
 app.get('/blog/:year/:month', function (req, res) {
   var _req$params = req.params,
@@ -230,7 +230,7 @@ app.get('/blog/:year/:month', function (req, res) {
     category: ""
   };
   res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, blogBundle, _roots.BlogRoot, "Blog | Nelson Rozier & Christenson", "", ""));
+  res.send(returnHTML(data, blogBundle, _roots.BlogRoot, "Blog & News | Nelson Rozier & Christenson", "", ""));
 });
 app.get('/blog/:year/:month/:title', function (req, res) {
   var _req$params2 = req.params,
@@ -243,7 +243,7 @@ app.get('/blog/:year/:month/:title', function (req, res) {
     title: title
   };
   res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, blogtemplateBundle, _roots.BlogtemplateRoot, "Blog | Nelson Rozier & Christenson", "", ""));
+  res.send(returnHTML(data, blogtemplateBundle, _roots.BlogtemplateRoot, "Blog & News | Nelson Rozier & Christenson", "", ""));
 });
 app.get('/contact', function (req, res) {
   var data = "";
@@ -280,7 +280,7 @@ app.get('/search', function (req, res) {
 app.get('/error', function (req, res) {
   var data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, notfoundBundle, _roots.NotFoundRoot, "404 Not Found | NRC Law", "", ""));
+  res.send(returnHTML(data, notfoundBundle, _roots.NotFoundRoot, "404 Not Found | Nelson Rozier & Christenson", "", ""));
 });
 app.get('/images/:id', function (req, res) {
   res.set('Cache-Control', 'public, max-age=31557600');
