@@ -6,7 +6,7 @@ module.exports = [
   },
   {
     type: "p",
-    content: `At Nelson & Rozier, our personal injury attorneys have served over four decades in Visalia and surrounding cities in California’s central valley.`
+    content: `At Nelson Rozier & Christenson, our personal injury attorneys have served over four decades in Visalia and surrounding cities in California’s central valley.`
   },
   {
     type: "p",
@@ -14,7 +14,7 @@ module.exports = [
   },
   {
     type: "p",
-    content: `<strong>You can trust us to seek the maximum settlement.</strong> From car accidents to medical malpractice, Nelson & Rozier attorneys have recovered millions of dollars in losses to our personal injury clients throughout California. We will fight for what is owed to you and your family.`
+    content: `<strong>You can trust us to seek the maximum settlement.</strong> From car accidents to medical malpractice, Nelson Rozier & Christenson attorneys have recovered millions of dollars in losses to our personal injury clients throughout California. We will fight for what is owed to you and your family.`
   },
   {
     type: "p",
@@ -46,7 +46,7 @@ module.exports = [
   },
   {
     type: "p",
-    content: `<strong>What kind of cases do personal injury lawyers handle?</strong><br/>Personal injury lawyers defend victims who have suffered physical harm or a loved one’s death due to the negligence of a person and/or company. This includes auto accidents, brain injuries, burn injuries, and more. It may also extend to negligence at the hands of child daycares, elderly care, and hospitals.<br/>At Nelson & Rozier, our litigators have decades of experience in all areas of personal injury law throughout Visalia. Review our areas of practice and achievements:`
+    content: `<strong>What kind of cases do personal injury lawyers handle?</strong><br/>Personal injury lawyers defend victims who have suffered physical harm or a loved one’s death due to the negligence of a person and/or company. This includes auto accidents, brain injuries, burn injuries, and more. It may also extend to negligence at the hands of child daycares, elderly care, and hospitals.<br/>At Nelson Rozier & Christenson, our litigators have decades of experience in all areas of personal injury law throughout Visalia. Review our areas of practice and achievements:`
   },
   {
     type: "ul",
