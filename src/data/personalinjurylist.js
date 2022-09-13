@@ -7,8 +7,8 @@ module.exports = [
     title: "Auto Accident Lawyer, California| Car & Auto Accident Attorneys",
     description: "Nothing can compensate for the impairment, disability and death caused by a car accident, but we can help you recover. Hire our car and auto accident attorneys to fight for you.",
     "keywords": "Car & Auto Accident Attorneys, Best Accident Attorneys California, Auto Accident lawyer",
-    link: "/personal-injury/car-accidents",
     canonicalUrl: "https://www.nrclaw.com/personal-injury/car-accidents",
+    link: "/personal-injury/car-accidents",
     icon: "/images/icon-car.png",
     hicon: "/images/icon-car-o.png",
     content: [
