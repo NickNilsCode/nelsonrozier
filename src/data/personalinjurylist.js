@@ -9,6 +9,7 @@ module.exports = [
     "keywords": "Car & Auto Accident Attorneys, Best Accident Attorneys California, Auto Accident lawyer",
     link: "rel: "canonical", href: "/personal-injury/car-accidents",
     link: "/personal-injury/car-accidents",
+    canonicalUrl: "https://www.nrclaw.com/personal-injury/car-accidents",
     icon: "/images/icon-car.png",
     hicon: "/images/icon-car-o.png",
     content: [
