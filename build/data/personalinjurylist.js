@@ -783,7 +783,7 @@ module.exports = [{
   }, {
     type: "p",
     className: "",
-    content: "Obstetricians and the nurses and other health care professionals who may participate in a birth all have responsibilities to provide care that conforms with certain standards. If the level of care provided fell below those standards and the child was injured as a result, that is <a href=\"/medical-malpractice\">medical malpractice</a>."
+    content: "Obstetricians and the nurses and other health care professionals who may participate in a birth all have responsibilities to provide care that conforms with certain standards. If the level of care provided fell below those standards and the child was injured as a result, that is <a href="/personal-injury/medical-malpractice">medical malpractice</a>."
   }, {
     type: "p",
     className: "",
