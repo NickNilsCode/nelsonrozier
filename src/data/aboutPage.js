@@ -3,7 +3,7 @@ let { phone, contact, phoneorcontact, successfulresults, freeconsultation, motor
 module.exports = [
   {
     type: "h1",
-    content: "Meet The Attorneys Of Nelson & Rozier"
+    content: "Meet The Attorneys Of Nelson Rozier & Christenson"
   },
   {
     type: "p",
