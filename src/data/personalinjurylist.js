@@ -8,6 +8,7 @@ module.exports = [
     description: "Nothing can compensate for the impairment, disability and death caused by a car accident, but we can help you recover. Hire our car and auto accident attorneys to fight for you.",
     "keywords": "Car & Auto Accident Attorneys, Best Accident Attorneys California, Auto Accident lawyer",
     link: "/personal-injury/car-accidents",
+    link: rel="canonical" href="{{ seo_tag.canonical_url }}",
     icon: "/images/icon-car.png",
     hicon: "/images/icon-car-o.png",
     content: [
