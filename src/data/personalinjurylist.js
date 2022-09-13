@@ -10,7 +10,7 @@ module.exports = [
     link: "/personal-injury/car-accidents",
     icon: "/images/icon-car.png",
     hicon: "/images/icon-car-o.png",
-    link: rel="canonical" href="/personal-injury/car-accidents/"
+    link: [{ rel: "canonical", href: ${window.location} }]
     content: [
       {
         type: "h1",
