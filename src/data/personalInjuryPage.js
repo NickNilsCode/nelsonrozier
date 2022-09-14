@@ -65,7 +65,7 @@ module.exports = [
     <li>${traumaticbraininjuries}</li>
     <li>${burninjuries}</li>
     <li>${spinalcordinjuriesamputations}</li>
-    <li>${slipandfallaccidents}</li>
+    <li>${slipandfall}</li>
     <li>${animalrelatedinjuries}</li>
     <li>${elderabusenursinghomeclaims}</li>
     <li>${wrongfuldeath}</li>`
