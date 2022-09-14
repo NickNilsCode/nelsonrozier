@@ -350,7 +350,6 @@ function returnHTML(data, bundle, Page, title, description, keywords){
                 <title>${title}</title>
                 <meta name="Description" content="${description}"/>
 		<link rel="canonical", href=${window.location}/>
-		<link rel="canonical" URL="{{Page URL}}"  />
                 <meta name="google-site-verification" content="4KRuv64nysKrmujcSKWbxB4YakbtXe5tQtmPJA1Ghaw"/>
                 <meta name="Keywords" content="${keywords}"/>
                 <link rel="preconnect" href="https://fonts.gstatic.com">
