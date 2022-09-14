@@ -349,6 +349,14 @@ function returnHTML(data, bundle, Page, title, description, keywords){
                 <meta name="msvalidate.01" content="55D6D8A6A04F450FBDDBD5C81164E3B2" />
                 <title>${title}</title>
                 <meta name="Description" content="${description}"/>
+		
+		<script type='text/javascript'>
+  var link = !!document.querySelector("link[rel='canonical']") ? document.querySelector("link[rel='canonical']") : document.createElement('link');
+  link.setAttribute('rel', 'canonical');
+  link.setAttribute('href', location.protocol + '//' + location.host + location.pathname);
+  document.head.appendChild(link);
+</script>
+		
 		<link rel="canonical" URL="{{Page URL}}"  />
                 <meta name="google-site-verification" content="4KRuv64nysKrmujcSKWbxB4YakbtXe5tQtmPJA1Ghaw"/>
                 <meta name="Keywords" content="${keywords}"/>
