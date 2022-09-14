@@ -351,7 +351,7 @@ function returnHTML(data, bundle, Page, title, description, keywords){
                 <meta name="Description" content="${description}"/>
                 <meta name="google-site-verification" content="4KRuv64nysKrmujcSKWbxB4YakbtXe5tQtmPJA1Ghaw"/>
                 <meta name="Keywords" content="${keywords}"/>
-               <link rel="preconnect" href="https://fonts.gstatic.com">
+                <link rel="preconnect" href="https://fonts.gstatic.com">
                 <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&family=Open+Sans:wght@700&family=PT+Sans&display=swap" rel="stylesheet">
                 <script type="application/ld+json">
                   {
