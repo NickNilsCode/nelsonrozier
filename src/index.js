@@ -221,7 +221,7 @@ app.get('/sitemap', (req, res) => {
 app.get('/privacy', (req, res) => {
   let data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, privacypolicyBundle, PrivacypolicyRoot, "Our Privacy Policy | Nelson Rozier & Christenson", "", ""));
+  res.send(returnHTML(data, privacypolicyBundle, PrivacypolicyRoot, "Our Privacy Policy | Nelson Rozier & Christenson", "If you have any additional questions or concerns about this privacy policy, please contact us via the phone number, contact form or mailing address listed on this website.", ""));
 });
 app.get('/attorney/:name', (req, res) => {
   let data = {
