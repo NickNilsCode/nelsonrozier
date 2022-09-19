@@ -1,4 +1,4 @@
-let { phone, contact, phoneorcontact, phoneorcontactoffice, successfulresults, recordofsucceeding, freeconsultation, caraccidents, truckaccidents, birthinjuries, motorcycleaccidents, bicycleandpedestrianaccidents, traumaticbraininjuries, accidentsinvolvingcowsorotherlivestock, braininjuries, spineinjuriesandamputations, dangerousintersectionsandobscuredstopsigns, underinsuredanduninsuredmotoristclaims, drunkdrivers, distracteddrivers, rearendcollisions, wrongfuldeath, braininjuriesspineinjuriesandamputations, commercialtrucksandtractortrailers, spinalinjuries, amputations, nelsonrozier, personalinjury, personalinjuries, weonlycollect, morethan40, commonlyaskedquestions, dangerouslocalintersectionsandstopsigns, slipandfallaccidents } = require("./repeatables.js");
+let { phone, contact, phoneorcontact, phoneorcontactoffice, successfulresults, recordofsucceeding, freeconsultation, caraccidents, truckaccidents, birthinjuries, motorcycleaccidents, bicycleandpedestrianaccidents, traumaticbraininjuries, accidentsinvolvingcowsorotherlivestock, braininjuries, spineinjuriesandamputations, dangerousintersectionsandobscuredstopsigns, underinsuredanduninsuredmotoristclaims, drunkdrivers, distracteddrivers, rearendcollisions, wrongfuldeath, braininjuriesspineinjuriesandamputations, commercialtrucksandtractortrailers, spinalinjuries, amputations, nelsonrozier, personalinjury, personalinjuries, weonlycollect, morethan40, commonlyaskedquestions, dangerouslocalintersectionsandstopsigns, slipandfall } = require("./repeatables.js");
 
 module.exports = [
   {
@@ -1086,7 +1086,7 @@ module.exports = [
         <li>${truckaccidents}</li>
         <li>${motorcycleaccidents}</li>
         <li>Falls from heights (ladders, roofs, scaffolding, etc.)</li>
-        <li>${slipandfallaccidents}</li>`
+        <li>${slipandfall}</li>`
       },
       {
         type: "h2",
