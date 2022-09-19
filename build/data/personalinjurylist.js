@@ -853,7 +853,7 @@ module.exports = [{
   }, {
     type: "ul",
     className: "",
-    content: "<li>".concat(caraccidents, "</li>\n        <li>").concat(truckaccidents, "</li>\n        <li>").concat(motorcycleaccidents, "</li>\n        <li>Falls from heights (ladders, roofs, scaffolding, etc.)</li>\n        <li>").concat(slipandfallaccidents, "</li>")
+    content: "<li>".concat(caraccidents, "</li>\n        <li>").concat(truckaccidents, "</li>\n        <li>").concat(motorcycleaccidents, "</li>\n        <li>Falls from heights (ladders, roofs, scaffolding, etc.)</li>\n        <li>").concat(slipandfall, "</li>")
   }, {
     type: "h2",
     className: "",
