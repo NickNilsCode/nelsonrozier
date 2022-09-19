@@ -9,7 +9,7 @@ module.exports = [
     "keywords": "Car & Auto Accident Attorneys, Best Accident Attorneys California, Auto Accident lawyer",
     canonicalUrl: "https://www.nrclaw.com/personal-injury/car-accidents",
     link: "/personal-injury/car-accidents",
-    canonical: "https://nelson-rozier.herokuapp.com/personal-injury/car-accidents",
+    canonical: link: "https://www.nrclaw.com/personal-injury/car-accidents",
     icon: "/images/icon-car.png",
     hicon: "/images/icon-car-o.png",
     content: [
