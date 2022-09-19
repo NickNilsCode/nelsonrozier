@@ -185,7 +185,7 @@ app.get('/blog/category/:category', (req, res) => {
     month: ""
   };
   res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, blogBundle, BlogRoot, "Blog | Nelson Rozier & Christenson", "", ""));
+  res.send(returnHTML(data, blogBundle, BlogRoot, "Nelson Rozier & Christenson", "", ""));
 });
 app.get('/blog/:year/:month', (req, res) => {
   const { year, month } = req.params;
@@ -211,7 +211,7 @@ app.get('/contact', (req, res) => {
 app.get('/disclaimer', (req, res) => {
   let data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, disclaimerBundle, DisclaimerRoot, "Disclaimer | Nelson Rozier & Christenson", "", ""));
+  res.send(returnHTML(data, disclaimerBundle, DisclaimerRoot, "Disclaimer | Nelson Rozier & Christenson", "The information you obtain at this site is not, nor is it intended to be, legal advice. You should consult an attorney for advice regarding your individual situation.", ""));
 });
 app.get('/sitemap', (req, res) => {
   let data = "";
