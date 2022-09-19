@@ -1086,7 +1086,7 @@ module.exports = [
         <li>${truckaccidents}</li>
         <li>${motorcycleaccidents}</li>
         <li>Falls from heights (ladders, roofs, scaffolding, etc.)</li>
-        <li>${slipandfallaccidents}</li>`
+        <li>${slipandfalla}</li>`
       },
       {
         type: "h2",
