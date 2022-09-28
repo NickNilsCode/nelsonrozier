@@ -345,15 +345,6 @@ function returnHTML(data, bundle, Page, title, description, keywords){
     return `
             <html lang="en">
               <head>
-	      
-	      <script>
- var c = document.createElement('link'); 
- c.; 
- c.href = {{Page URL Canonical}}; 
- document.head.appendChild(c);
-</script>
-	      
-	      
                 <meta name="viewport" content="width=device-width, initial-scale=1"/>
                 <meta name="msvalidate.01" content="55D6D8A6A04F450FBDDBD5C81164E3B2" />
                 <title>${title}</title>
