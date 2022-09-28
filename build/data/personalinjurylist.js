@@ -234,7 +234,6 @@ module.exports = [{
   title: "Motorcycle Accident Attorneys, Visalia | Motorcycle Accident Attorney Firm",
   description: "Motorcycle riders are most at risk and often receive catastrophic injuries due to others' negligence. Work with our expert motorcycle accident attorneys in Visalia to represent you.",
   keywords: "Motorcycle Accident Attorney firm, Motorcycle Accident Attorneys Visalia",
-  link: "https://www.nrclaw.com/personal-injury/motorcycle-accidents",
   link: "/personal-injury/motorcycle-accidents",
   icon: "/images/icon-motor.png",
   hicon: "/images/icon-motor-o.png",
