@@ -350,7 +350,7 @@ function returnHTML(data, bundle, Page, title, description, keywords){
                 <meta name="Description" content="${description}"/>
                 <meta name="google-site-verification" content="4KRuv64nysKrmujcSKWbxB4YakbtXe5tQtmPJA1Ghaw"/>
                 <meta name="Keywords" content="${keywords}"/>
-		  <link rel="canonical" href="#">
+		  <link rel="canonical" href="/#">
                 <link rel="preconnect" href="https://fonts.gstatic.com">
                 <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&family=Open+Sans:wght@700&family=PT+Sans&display=swap" rel="stylesheet">
                 <script type="application/ld+json">
@@ -408,13 +408,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <meta name="google-site-verification" content="QcxUyvtxY2put4kvP8hB4qGQ364ORLZJjLOujBHmgx4" />
 
-<script type='text/javascript'>
-  var link = !!document.querySelector("link[rel='canonical']") ? document.querySelector("link[rel='canonical']") : document.createElement('link');
-  link.setAttribute('rel', 'canonical');
-  link.setAttribute('href', location.protocol + '//' + location.host + location.pathname);
-  document.head.appendChild(link);
-</script>
-		
               </head>
               <body>
                 <script>window.os = window.os || {};</script>
