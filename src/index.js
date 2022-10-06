@@ -344,13 +344,18 @@ function returnHTML(data, bundle, Page, title, description, keywords){
     return `
             <html lang="en">
               <head>
+	      <script type='text/javascript'>
+  var link = !!document.querySelector("link[rel='canonical']") ? document.querySelector("link[rel='canonical']") : document.createElement('link');
+  link.setAttribute('rel', 'canonical');
+  link.setAttribute('href', location.protocol + '//' + location.host + location.pathname);
+  document.head.appendChild(link);
+</script>
                 <meta name="viewport" content="width=device-width, initial-scale=1"/>
                 <meta name="msvalidate.01" content="55D6D8A6A04F450FBDDBD5C81164E3B2" />
                 <title>${title}</title>
                 <meta name="Description" content="${description}"/>
                 <meta name="google-site-verification" content="4KRuv64nysKrmujcSKWbxB4YakbtXe5tQtmPJA1Ghaw"/>
                 <meta name="Keywords" content="${keywords}"/>
-		<link rel="canonical" href="${window.location}"/>
                 <link rel="preconnect" href="https://fonts.gstatic.com">
                 <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&family=Open+Sans:wght@700&family=PT+Sans&display=swap" rel="stylesheet">
                 <script type="application/ld+json">
