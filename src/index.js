@@ -210,7 +210,9 @@ app.get('/contact', (req, res) => {
 app.get('/disclaimer', (req, res) => {
   let data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, disclaimerBundle, DisclaimerRoot, "Disclaimer | Nelson Rozier & Christenson", "The information you obtain at this site is not, nor is it intended to be, legal advice. You should consult an attorney for advice regarding your individual situation.", ""));
+  res.send(returnHTML(data, disclaimerBundle, DisclaimerRoot, "Disclaimer | Nelson Rozier & Christenson", "The information you obtain at this site is not, nor is it intended to be, legal advice. You should consult an attorney for advice regarding your individual situation.", "", metaInfo: {
+link: [{ rel: "canonical", href: ${window.location} }]
+} ));
 });
 app.get('/sitemap', (req, res) => {
   let data = "";
