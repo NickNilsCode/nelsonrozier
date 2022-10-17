@@ -408,6 +408,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <meta name="google-site-verification" content="QcxUyvtxY2put4kvP8hB4qGQ364ORLZJjLOujBHmgx4" />
 
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-180738835-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-180738835-2');
+</script>
+
               </head>
               <body>
                 <script>window.os = window.os || {};</script>
