@@ -164,7 +164,7 @@ app.get('/blog', (req, res) => {
 app.get('/blogcattemplate', (req, res) => {
   let data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, blogcattemplateBundle, BlogcattemplateRoot, "Blog & News at Nelson Rozier & Christenson", "", ""));
+  res.send(returnHTML(data, blogcattemplateBundle, BlogcattemplateRoot, "Blog1", "", ""));
 });
 app.get('/blog/search/:query', (req, res) => {
   let data = {
@@ -174,7 +174,7 @@ app.get('/blog/search/:query', (req, res) => {
     month: ""
   };
   res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, blogBundle, BlogRoot, "Blog | Nelson Rozier & Christenson", "", ""));
+  res.send(returnHTML(data, blogBundle, BlogRoot, "Blog2", "", ""));
 });
 app.get('/blog/category/:category', (req, res) => {
   let data = {
@@ -184,7 +184,7 @@ app.get('/blog/category/:category', (req, res) => {
     month: ""
   };
   res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, blogBundle, BlogRoot, "Nelson Rozier & Christenson", "", ""));
+  res.send(returnHTML(data, blogBundle, BlogRoot, "Blog3", "", ""));
 });
 app.get('/blog/:year/:month', (req, res) => {
   const { year, month } = req.params;
@@ -194,13 +194,13 @@ app.get('/blog/:year/:month', (req, res) => {
     category: ""
   };
   res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, blogBundle, BlogRoot, "Blog | Nelson Rozier & Christenson", "", ""));
+  res.send(returnHTML(data, blogBundle, BlogRoot, "Blog4", "", ""));
 });
 app.get('/blog/:year/:month/:title', (req, res) => {
   const { year, month, title } = req.params;
   let data = { year, month, title };
   res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, blogtemplateBundle, BlogtemplateRoot, "Blog | Nelson Rozier & Christenson", "", ""));
+  res.send(returnHTML(data, blogtemplateBundle, BlogtemplateRoot, "Blog5", "", ""));
 });
 app.get('/contact', (req, res) => {
   let data = "";
