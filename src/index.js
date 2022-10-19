@@ -159,12 +159,12 @@ app.get('/blog', (req, res) => {
     month: ""
   };
   res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, blogBundle, BlogRoot, "Read Our Latest Blog & News About Personal Injury Visalia | Nelson Rozier & Christenson", "Read Our Latest Blog & News posts on Personal Injury, Injuries, car accidents, and many more. Visit our website now!", ""));
+  res.send(returnHTML(data, blogBundle, BlogRoot, "Read Our Latest Blog & News About Personal Injury Visalia | Nelson Rozier & Christenson", "Read Our Latest Blog & News posts on Personal Injury, Injuries, car accidents, and many more. Visit our website now!", "Personal Injury Visalia"));
 });
 app.get('/blogcattemplate', (req, res) => {
   let data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, blogcattemplateBundle, BlogcattemplateRoot, "Blog1", "", ""));
+  res.send(returnHTML(data, blogcattemplateBundle, BlogcattemplateRoot, "Blog & News About Personal Injury Attorneys | Nelson Rozier & Christenson", "", ""));
 });
 app.get('/blog/search/:query', (req, res) => {
   let data = {
@@ -174,7 +174,7 @@ app.get('/blog/search/:query', (req, res) => {
     month: ""
   };
   res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, blogBundle, BlogRoot, "Blog2", "", ""));
+  res.send(returnHTML(data, blogBundle, BlogRoot, "Blog & News About Personal Injury Attorneys | Nelson Rozier & Christenson", "", ""));
 });
 app.get('/blog/category/:category', (req, res) => {
   let data = {
@@ -184,7 +184,7 @@ app.get('/blog/category/:category', (req, res) => {
     month: ""
   };
   res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, blogBundle, BlogRoot, "Blog3", "", ""));
+  res.send(returnHTML(data, blogBundle, BlogRoot, "Blog & News About Personal Injury Attorneys | Nelson Rozier & Christenson", "", ""));
 });
 app.get('/blog/:year/:month', (req, res) => {
   const { year, month } = req.params;
@@ -194,13 +194,13 @@ app.get('/blog/:year/:month', (req, res) => {
     category: ""
   };
   res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, blogBundle, BlogRoot, "Blog4", "", ""));
+  res.send(returnHTML(data, blogBundle, BlogRoot, "Blog & News About Personal Injury Attorneys | Nelson Rozier & Christenson", "", ""));
 });
 app.get('/blog/:year/:month/:title', (req, res) => {
   const { year, month, title } = req.params;
   let data = { year, month, title };
   res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, blogtemplateBundle, BlogtemplateRoot, "Americans Still Not Convinced Driverless Vehicles Will Function", "", ""));
+  res.send(returnHTML(data, blogtemplateBundle, BlogtemplateRoot, "Blog5", "", ""));
 });
 app.get('/contact', (req, res) => {
   let data = "";
