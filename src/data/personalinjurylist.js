@@ -498,7 +498,7 @@ module.exports = [
   {
     name: "Distracted Driving Accidents",
     id: "distracted-driving-accidents",
-    title: "Visalia Distracted Driving Accident Attorneys – NRC Law",
+    title: "Visalia Distracted Driving Accident Attorneys | Nelson Rozier & Christenson",
     description: "If you have been suffering due to someone else’s distracted driving, you have the right to represent yourself. Fight for your rights with our distracted driving accident attorneys.",
     keywords: "Professional Accident Attorneys, Visalia Distracted Driving Accident Attorneys",
     link: "/personal-injury/distracted-driving-accidents",
@@ -629,7 +629,7 @@ module.exports = [
   {
     name: "Rear-End Collisions",
     id: "rear-end-collisions",
-    title: "Rear-End Collision Attorneys | Visalia | NRC Law",
+    title: "Rear-End Collision Attorneys | Visalia | Nelson Rozier & Christenson",
     description: "Nothing can be done about rear-end collisions. Work with our top rear-end collision attorneys to recover your losses. Contact us to schedule a free initial consultation.",
     keywords: "Rear-End Collision Attorneys, Top Legal consultation firm Visalia",
     link: "/personal-injury/rear-end-collisions",
