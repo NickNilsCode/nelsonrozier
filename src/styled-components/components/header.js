@@ -5,7 +5,7 @@ export const Header = styled.header`
   min-height: 100px;
   color: ${white};
   @media(min-width: 900px){
-    background-image: url("/images/Proof-8961.jpg");
+    background-image: url("/images/Proof-8961.jpg") alt="Personal Injury Attorneys";
     background-position: center;
     background-size: cover;
   }
