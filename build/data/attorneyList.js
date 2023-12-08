@@ -106,24 +106,4 @@ module.exports = [{
     type: "p",
     content: "Tulare County Bar Association, Member, 2015 to Present"
   }]
-}, {
-  name: "John C. Green",
-  link: "/attorney/green-john",
-  headshot: "/images/green_john.jpg",
-  location: "Visalia, CA",
-  phone: "(559) 372-0303",
-  phonelink: "tel:+1-559-713-0303",
-  fax: "(559) 713-0166",
-  position: "Associate",
-  email: "",
-  content: [{
-    type: "p",
-    content: "John C. Green was born and raised in Fresno, California into a family of seven children. He attended and graduated from Buchanan High School. Mr. Green grew up the son of a personal injury lawyer and had exposure to the field from a young age. After high school, Mr. Green served a two year service mission for his church in Maine, Vermont, and New Hampshire. "
-  }, {
-    type: "p",
-    content: "Mr. Green received his bachelor\u2019s degree in Economics from University of Utah in 2016. He received his Juris Doctorate from University of the Pacific McGeorge School of Law in 2019. While at McGeorge, Mr. Green was awarded honors in trial advocacy. He also received his certificate of concentration in trial and appellate advocacy. Mr. Green also had the opportunity to work with federal judges in the Eastern District of California on civil rights cases."
-  }, {
-    type: "p",
-    content: "When not working, Mr. Green enjoys spending time with his wife and two kids. He enjoys exploring the outdoors, camping, fishing, and anything else in nature. Mr. Green is also an avid sports fan and enjoys watching nearly any sport that is televised."
-  }]
 }];

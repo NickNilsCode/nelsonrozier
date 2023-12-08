@@ -1,7 +1,6 @@
 "use strict";
 
 var BlogModel = require('./../models/blogModel');
-
 var monthList = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 module.exports = {
   read: function read(req, res) {
@@ -73,16 +72,15 @@ module.exports = {
   },
   readTen: function readTen(req, res) {
     var _req$query = req.query,
-        category = _req$query.category,
-        query = _req$query.query,
-        month = _req$query.month,
-        year = _req$query.year;
+      category = _req$query.category,
+      query = _req$query.query,
+      month = _req$query.month,
+      year = _req$query.year;
     BlogModel.find().exec(function (err, result) {
       if (err) {
         res.send(err);
       } else {
         var finalResult = [];
-
         if (month && year) {
           finalResult = result.filter(function (a) {
             var date = new Date(a.date);
@@ -106,7 +104,6 @@ module.exports = {
         } else {
           finalResult = result;
         }
-
         res.send(finalResult);
       }
     });

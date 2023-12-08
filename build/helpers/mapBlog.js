@@ -4,25 +4,18 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports["default"] = _default;
-
 var _react = _interopRequireDefault(require("react"));
-
 var _blog = require("../styled-components/pages/blog");
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-
 var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-
 function intersperse(arr, sep) {
   if (arr.length === 0) {
     return [];
   }
-
   return arr.slice(1).reduce(function (xs, x, i) {
     return xs.concat([sep, x]);
   }, [arr[0]]);
 }
-
 function _default(blogData) {
   return blogData.map(function (a, ai) {
     var author = a.author == "On behalf of Nelson & Rozier" ? a.author : "by " + a.author;
