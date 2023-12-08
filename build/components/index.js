@@ -3,12 +3,6 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-Object.defineProperty(exports, "BottomSection", {
-  enumerable: true,
-  get: function get() {
-    return _BottomSection["default"];
-  }
-});
 Object.defineProperty(exports, "BlogBottom", {
   enumerable: true,
   get: function get() {
@@ -19,6 +13,12 @@ Object.defineProperty(exports, "BlogSocial", {
   enumerable: true,
   get: function get() {
     return _BlogSocial["default"];
+  }
+});
+Object.defineProperty(exports, "BottomSection", {
+  enumerable: true,
+  get: function get() {
+    return _BottomSection["default"];
   }
 });
 Object.defineProperty(exports, "ContentBottom", {
@@ -69,27 +69,15 @@ Object.defineProperty(exports, "PersonalInjury", {
     return _PersonalInjury["default"];
   }
 });
-
 var _BottomSection = _interopRequireDefault(require("./BottomSection"));
-
 var _BlogBottom = _interopRequireDefault(require("./BlogBottom"));
-
 var _BlogSocial = _interopRequireDefault(require("./BlogSocial"));
-
 var _ContentBottom = _interopRequireDefault(require("./ContentBottom"));
-
 var _Footer = _interopRequireDefault(require("./Footer"));
-
 var _Header = _interopRequireDefault(require("./Header"));
-
 var _LocationCard = _interopRequireDefault(require("./LocationCard"));
-
 var _Map = _interopRequireDefault(require("./Map"));
-
 var _MessageForm = _interopRequireDefault(require("./MessageForm"));
-
 var _Nav = _interopRequireDefault(require("./Nav"));
-
 var _PersonalInjury = _interopRequireDefault(require("./PersonalInjury"));
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
