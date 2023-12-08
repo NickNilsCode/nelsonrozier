@@ -1,11 +1,11 @@
-import styled from 'styled-components';
-import { blue, gold, white } from '../colors';
+import styled from "styled-components";
+import { blue, gold, white } from "../colors";
 export const Header = styled.header`
   width: 100vw;
   min-height: 100px;
   color: ${white};
-  @media(min-width: 900px){
-    background-image: url("/images/Proof-8961.jpg") alt="Personal Injury Attorneys";
+  @media (min-width: 900px) {
+    background-image: url("/images/Proof-8961.jpg");
     background-position: center;
     background-size: cover;
   }
@@ -20,14 +20,14 @@ export const HeaderImage = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   color: ${white};
-  @media(min-width: 900px){
+  @media (min-width: 900px) {
     display: none;
   }
 `;
 
 export const DesktopView = styled.div`
   display: none;
-  @media(min-width: 900px){
+  @media (min-width: 900px) {
     display: block;
   }
 `;
@@ -39,7 +39,8 @@ export const HeaderWrap = styled.div`
   position: relative;
   padding: 24px 0;
   margin: auto;
-  h2, p {
+  h2,
+  p {
     text-align: center;
   }
   .consultationAnchor {
@@ -58,7 +59,7 @@ export const HeaderWrap = styled.div`
     width: calc(100% - 24px);
     max-width: 480px;
   }
-  @media(min-width: 900px){
+  @media (min-width: 900px) {
     .consultationAnchor {
       bottom: -32px;
     }
@@ -67,7 +68,7 @@ export const HeaderWrap = styled.div`
 
 export const HeaderDiv = styled.div`
   margin-top: 24px;
-  @media(min-width: 900px){
+  @media (min-width: 900px) {
     margin-top: 0;
   }
 `;
@@ -94,7 +95,7 @@ export const Header3 = styled.h2`
   margin: auto;
 `;
 export const Header4 = styled.h2`
-  font-family: 'Libre Baskerville',Georgia,"Times New Roman",serif;
+  font-family: "Libre Baskerville", Georgia, "Times New Roman", serif;
   color: ${white};
   font-size: 17px;
   font-weight: 100;
@@ -103,7 +104,7 @@ export const Header4 = styled.h2`
   padding: 212px 0 24px 0;
   line-height: 2;
   max-width: 600px;
-  @media(min-width: 900px){
+  @media (min-width: 900px) {
     padding: 0;
     font-size: 32px;
     margin: 284px 0 24px 0;
@@ -111,13 +112,13 @@ export const Header4 = styled.h2`
   }
 `;
 export const Header5 = styled.h2`
-  font-family: 'Libre Baskerville',Georgia,"Times New Roman",serif;
+  font-family: "Libre Baskerville", Georgia, "Times New Roman", serif;
   color: ${white};
   font-size: 17px;
   font-weight: 100;
   text-shadow: 1px 1px #000000;
 
-  @media(min-width: 900px){
+  @media (min-width: 900px) {
     font-size: 32px;
   }
 `;
