@@ -6,7 +6,7 @@ export const Header = styled.header`
   color: ${white};
   @media (min-width: 900px) {
     background-image: url("/images/Proof-8961.jpg");
-    background-position: stretch;
+    background-position: center;
     background-size: cover;
   }
 `;
