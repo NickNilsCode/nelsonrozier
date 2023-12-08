@@ -42,7 +42,7 @@ module.exports = [{
   content: "To learn more about our attorneys’ backgrounds, follow the links below."
 }, {
   type: "ul",
-  content: "<li><a href=\"/attorney/ryan-t-nelson\">Ryan T. Nelson</a></li>\n      <li><a href=\"/attorney/clayton-j-christenson\">Clayton J. Christenson</a></li>\n      <li><a href=\"/attorney/green-john\">John Green</a></li>"
+  content: "<li><a href=\"/attorney/ryan-t-nelson\">Ryan T. Nelson</a></li>\n      <li><a href=\"/attorney/clayton-j-christenson\">Clayton J. Christenson</a></li>"
 }, {
   type: "h2",
   content: "Attorneys Helping The Injured In Visalia And Throughout California’s Central Valley"
