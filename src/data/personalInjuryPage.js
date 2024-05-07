@@ -10,7 +10,6 @@ let {
   rearendcollisions,
   dangerousstopsignsaccidentlocations,
   bicycleandpedestrianaccidents,
-  birthinjuries,
   traumaticbraininjuries,
   burninjuries,
   spinalcordinjuriesamputations,
@@ -76,7 +75,6 @@ module.exports = [
     <li>${rearendcollisions}</li>
     <li>${dangerousstopsignsaccidentlocations}</li>
     <li>${bicycleandpedestrianaccidents}</li>
-    <li>${birthinjuries}</li>
     <li>${traumaticbraininjuries}</li>
     <li>${burninjuries}</li>
     <li>${spinalcordinjuriesamputations}</li>
