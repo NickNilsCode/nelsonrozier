@@ -46,11 +46,11 @@ var Blogtemplate = /*#__PURE__*/function (_Component) {
     value: function componentDidMount() {
       var _this2 = this;
       var title = this.props.data.title;
-      fetch('/api/blogs/getAll').then(function (res) {
+      fetch("/api/blogs/getAll").then(function (res) {
         return res.json();
       }).then(function (res) {
         var blog = res.find(function (a) {
-          return title == a.title.toLowerCase().replace(/[^\w\s]/gi, '').split(" ").join('-');
+          return title == a.title.toLowerCase().replace(/[^\w\s]/gi, "").split(" ").join("-");
         });
         if (blog) {
           var date = new Date(blog.date);
@@ -82,7 +82,7 @@ var Blogtemplate = /*#__PURE__*/function (_Component) {
         className: "blogContent"
       }, blog && blog.date && /*#__PURE__*/_react["default"].createElement(_react.Fragment, null, /*#__PURE__*/_react["default"].createElement("h1", null, blog.title), /*#__PURE__*/_react["default"].createElement("p", null, /*#__PURE__*/_react["default"].createElement("a", {
         href: "/"
-      }, "On behalf of Nelson & Rozier"), " | ", month, " ", day, ", ", year, " | ", blog.categories.join(', ')), (0, _mapPage["default"])(blog.content), /*#__PURE__*/_react["default"].createElement(_components.BlogSocial, {
+      }, "On behalf of Nelson, Rozier, & Christenson"), " |", " ", month, " ", day, ", ", year, " | ", blog.categories.join(", ")), (0, _mapPage["default"])(blog.content), /*#__PURE__*/_react["default"].createElement(_components.BlogSocial, {
         share: blog.share
       }))), /*#__PURE__*/_react["default"].createElement(_components.BlogBottom, null)), /*#__PURE__*/_react["default"].createElement(_components.Footer, null));
     }

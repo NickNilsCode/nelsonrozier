@@ -31,16 +31,16 @@ var BottomSectionComponent = /*#__PURE__*/function (_Component) {
   _createClass(BottomSectionComponent, [{
     key: "render",
     value: function render() {
-      return /*#__PURE__*/_react["default"].createElement(_bottomSection.BottomSection, null, /*#__PURE__*/_react["default"].createElement("p", null, "\xA9 2022 ", /*#__PURE__*/_react["default"].createElement("a", {
+      return /*#__PURE__*/_react["default"].createElement(_bottomSection.BottomSection, null, /*#__PURE__*/_react["default"].createElement("p", null, "\xA9 2022", " ", /*#__PURE__*/_react["default"].createElement("a", {
         href: "https://goo.gl/maps/YwUSxzEzj3yXUjeV8",
         target: "_blank"
-      }, " Nelson Rozier & Christenson"), ". All Rights Reserved."), /*#__PURE__*/_react["default"].createElement("p", null, /*#__PURE__*/_react["default"].createElement("a", {
+      }, " ", "Nelson, Rozier, & Christenson"), ". All Rights Reserved."), /*#__PURE__*/_react["default"].createElement("p", null, /*#__PURE__*/_react["default"].createElement("a", {
         href: "/disclaimer",
         target: "_blank"
-      }, "Disclaimer"), " | ", /*#__PURE__*/_react["default"].createElement("a", {
+      }, "Disclaimer"), " ", "|", " ", /*#__PURE__*/_react["default"].createElement("a", {
         href: "/sitemap",
         target: "_blank"
-      }, "Site Map"), " | ", /*#__PURE__*/_react["default"].createElement("a", {
+      }, "Site Map"), " ", "|", " ", /*#__PURE__*/_react["default"].createElement("a", {
         href: "/privacy",
         target: "_blank"
       }, "Privacy Policy")));

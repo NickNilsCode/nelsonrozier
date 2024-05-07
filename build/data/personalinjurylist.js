@@ -10,7 +10,6 @@ var _require = require("./repeatables.js"),
   freeconsultation = _require.freeconsultation,
   caraccidents = _require.caraccidents,
   truckaccidents = _require.truckaccidents,
-  birthinjuries = _require.birthinjuries,
   motorcycleaccidents = _require.motorcycleaccidents,
   bicycleandpedestrianaccidents = _require.bicycleandpedestrianaccidents,
   traumaticbraininjuries = _require.traumaticbraininjuries,
@@ -40,7 +39,7 @@ module.exports = [{
   id: "car-accidents",
   title: "Auto Accident Lawyer, California| Car & Auto Accident Attorneys",
   description: "Nothing can compensate for the impairment, disability and death caused by a car accident, but we can help you recover. Hire our car and auto accident attorneys to fight for you.",
-  "keywords": "Car & Auto Accident Attorneys, Best Accident Attorneys California, Auto Accident lawyer",
+  keywords: "Car & Auto Accident Attorneys, Best Accident Attorneys California, Auto Accident lawyer",
   canonicalUrl: "https://www.nrclaw.com/personal-injury/car-accidents",
   link: "/personal-injury/car-accidents",
   icon: "/images/icon-car.png",
@@ -60,7 +59,7 @@ module.exports = [{
   }, {
     type: "h2",
     className: "",
-    content: "Why Hire Nelson & Rozier as You Auto Accident Attorney"
+    content: "Why Hire Nelson, Rozier, & Christenson as Your Auto Accident Attorney"
   }, {
     type: "p",
     className: "",
@@ -76,7 +75,7 @@ module.exports = [{
   }, {
     type: "p",
     className: "",
-    content: "Car accident attorneys at Nelson & Rozier have an intense level of familiarity with local law. We\u2019ve served in Visalia and California\u2019s central valley for a combined forty years, and our experience working for insurance companies helps us set realistic expectations for your car accident lawsuit. This ensures we never overpromise, and always get you what you\u2019re owed."
+    content: "Car accident attorneys at Nelson, Rozier, & Christenson have an intense level of familiarity with local law. We\u2019ve served in Visalia and California\u2019s central valley for a combined forty years, and our experience working for insurance companies helps us set realistic expectations for your car accident lawsuit. This ensures we never overpromise, and always get you what you\u2019re owed."
   }, {
     type: "p",
     className: "",
@@ -84,7 +83,7 @@ module.exports = [{
   }, {
     type: "p",
     className: "",
-    content: "We know insurance companies are trying to confuse you. We have complete empathy and will work to ease those fears and frustrations. We fight for what\u2019s fair and have a strong track record of effectiveness. To schedule a free initial consultation with a car accident attorney, call Nelson & Rozier today at ".concat(phoneorcontact, ". We are ready to help. One of our auto accident defense attorneys can visit your home in Visalia or surrounding cities to begin consultation on your case.")
+    content: "We know insurance companies are trying to confuse you. We have complete empathy and will work to ease those fears and frustrations. We fight for what\u2019s fair and have a strong track record of effectiveness. To schedule a free initial consultation with a car accident attorney, call Nelson, Rozier, & Christenson today at ".concat(phoneorcontact, ". We are ready to help. One of our auto accident defense attorneys can visit your home in Visalia or surrounding cities to begin consultation on your case.")
   }, {
     type: "h2",
     className: "",
@@ -164,7 +163,7 @@ module.exports = [{
   }, {
     type: "p",
     className: "",
-    content: "The success rate and total cost of payout versus legal fees should all influence your decision to pursue a case. You don\u2019t want it to drag out. You can schedule a free consultation to evaluate all your options and the best course of action. Contact Nelson & Rozier to get free guidance from the top auto accident attorney in Visalia, CA. You can call us at ".concat(phoneorcontact, ".")
+    content: "The success rate and total cost of payout versus legal fees should all influence your decision to pursue a case. You don\u2019t want it to drag out. You can schedule a free consultation to evaluate all your options and the best course of action. Contact Nelson, Rozier, & Christenson to get free guidance from the top auto accident attorney in Visalia, CA. You can call us at ".concat(phoneorcontact, ".")
   }]
 }, {
   name: "Truck Accidents",
@@ -190,7 +189,7 @@ module.exports = [{
   }, {
     type: "p",
     className: "",
-    content: "We are Nelson & Rozier \u2014 a personal injury law firm with more than 40 years of combined experience providing compassionate, experienced and effective representation from our office in Visalia. For a ".concat(freeconsultation, ", call ").concat(phoneorcontact, ".")
+    content: "We are Nelson, Rozier, & Christenson \u2014 a personal injury law firm with more than 40 years of combined experience providing compassionate, experienced and effective representation from our office in Visalia. For a ".concat(freeconsultation, ", call ").concat(phoneorcontact, ".")
   }, {
     type: "p",
     className: "",
@@ -280,7 +279,7 @@ module.exports = [{
   }, {
     type: "p",
     className: "",
-    content: "When you have been seriously injured in a motorcycle accident, Nelson & Rozier, can offer you the skilled and experienced help you need. To schedule a free initial consultation, call ".concat(phoneorcontact, ".")
+    content: "When you have been seriously injured in a motorcycle accident, Nelson, Rozier, & Christenson, can offer you the skilled and experienced help you need. To schedule a free initial consultation, call ".concat(phoneorcontact, ".")
   }, {
     type: "p",
     className: "",
@@ -314,7 +313,7 @@ module.exports = [{
   }, {
     type: "p",
     className: "",
-    content: "<strong>Why hire Nelson & Rozier for your DUI accident case?</strong>"
+    content: "<strong>Why hire Nelson, Rozier, & Christenson for your DUI accident case?</strong>"
   }, {
     type: "p",
     className: "",
@@ -329,7 +328,7 @@ module.exports = [{
     content: "<i>We help you avoid vulnerability.</i>"
   }, {
     type: "p",
-    className: "As the victim of a drunk driving accident, your auto accident insurance should help you recover damages. However, these companies may deny your claim or attempt to reduce your payout. Our lawyers began their careers by negotiating for insurance companies, and we now use that expertise to negotiate with them. Hiring Nelson & Rozier protects your legal rights as the victim of DUI or DWI accident."
+    className: "As the victim of a drunk driving accident, your auto accident insurance should help you recover damages. However, these companies may deny your claim or attempt to reduce your payout. Our lawyers began their careers by negotiating for insurance companies, and we now use that expertise to negotiate with them. Hiring Nelson, Rozier, & Christenson protects your legal rights as the victim of DUI or DWI accident."
   }, {
     type: "p",
     className: "",
@@ -341,7 +340,7 @@ module.exports = [{
   }, {
     type: "p",
     className: "",
-    content: "Call ".concat(phoneorcontact, " to consult with Nelson & Rozier drunk driving accident attorneys.")
+    content: "Call ".concat(phoneorcontact, " to consult with Nelson, Rozier, & Christenson drunk driving accident attorneys.")
   }, {
     type: "h2",
     className: "",
@@ -361,7 +360,7 @@ module.exports = [{
   }, {
     type: "p",
     className: "",
-    content: "Drunk driving victims can pursue full compensation for incurred damages, and that\u2019s why it\u2019s important to hire attorneys that you can trust. A DUI accident attorney will build your case using medical records, police reports, insurance policies, witness and expert testimony, and more. Nelson & Rozier have previously secured compensation for impaired driving cases, including:"
+    content: "Drunk driving victims can pursue full compensation for incurred damages, and that\u2019s why it\u2019s important to hire attorneys that you can trust. A DUI accident attorney will build your case using medical records, police reports, insurance policies, witness and expert testimony, and more. Nelson, Rozier, & Christenson have previously secured compensation for impaired driving cases, including:"
   }, {
     type: "ul",
     className: "",
@@ -377,7 +376,7 @@ module.exports = [{
   }, {
     type: "p",
     className: "",
-    content: "Our drunk driving accident lawyers can come to your home or hospital room to expedite your case. Let us help you hold drunk drivers responsible for the harm they cause. Nelson & Rozier can offer you the skilled and experienced help you need to recover the maximum amount owed to you."
+    content: "Our drunk driving accident lawyers can come to your home or hospital room to expedite your case. Let us help you hold drunk drivers responsible for the harm they cause. Nelson, Rozier, & Christenson can offer you the skilled and experienced help you need to recover the maximum amount owed to you."
   }, {
     type: "p",
     className: "",
@@ -406,7 +405,7 @@ module.exports = [{
 }, {
   name: "Distracted Driving Accidents",
   id: "distracted-driving-accidents",
-  title: "Visalia Distracted Driving Accident Attorneys | Nelson Rozier & Christenson",
+  title: "Visalia Distracted Driving Accident Attorneys | Nelson, Rozier, & Christenson",
   description: "If you have been suffering due to someone else’s distracted driving, you have the right to represent yourself. Fight for your rights with our distracted driving accident attorneys.",
   keywords: "Professional Accident Attorneys, Visalia Distracted Driving Accident Attorneys",
   link: "/personal-injury/distracted-driving-accidents",
@@ -451,7 +450,7 @@ module.exports = [{
   }, {
     type: "p",
     className: "",
-    content: "For the skilled and experienced help you need after being injured by a distracted driver, turn to Nelson & Rozier. To schedule a free initial consultation, call ".concat(phoneorcontact, ".")
+    content: "For the skilled and experienced help you need after being injured by a distracted driver, turn to Nelson, Rozier, & Christenson. To schedule a free initial consultation, call ".concat(phoneorcontact, ".")
   }, {
     type: "p",
     className: "",
@@ -501,7 +500,7 @@ module.exports = [{
   }, {
     type: "p",
     className: "",
-    content: "Our experience as personal injury litigators allows us to offer real hope and real help to people like you. Turn to Nelson & Rozier. To schedule a free initial consultation, call ".concat(phoneorcontact, ".")
+    content: "Our experience as personal injury litigators allows us to offer real hope and real help to people like you. Turn to Nelson, Rozier, & Christenson. To schedule a free initial consultation, call ".concat(phoneorcontact, ".")
   }, {
     type: "p",
     className: "",
@@ -510,7 +509,7 @@ module.exports = [{
 }, {
   name: "Rear-End Collisions",
   id: "rear-end-collisions",
-  title: "Rear-End Collision Attorneys | Visalia | Nelson Rozier & Christenson",
+  title: "Rear-End Collision Attorneys | Visalia | Nelson, Rozier, & Christenson",
   description: "Nothing can be done about rear-end collisions. Work with our top rear-end collision attorneys to recover your losses. Contact us to schedule a free initial consultation.",
   keywords: "Rear-End Collision Attorneys, Top Legal consultation firm Visalia",
   link: "/personal-injury/rear-end-collisions",
@@ -563,7 +562,7 @@ module.exports = [{
   }, {
     type: "p",
     className: "",
-    content: "Nelson & Rozier, is dedicated to helping people secure the full compensation they deserve after being injured in an accident. To schedule a free initial consultation, call ".concat(phoneorcontact, ".")
+    content: "Nelson, Rozier, & Christenson, is dedicated to helping people secure the full compensation they deserve after being injured in an accident. To schedule a free initial consultation, call ".concat(phoneorcontact, ".")
   }, {
     type: "p",
     className: "",
@@ -589,7 +588,7 @@ module.exports = [{
   }, {
     type: "p",
     className: "",
-    content: "We are Nelson & Rozier \u2014 a personal injury law firm in Visalia, California, with more than 40 years of combined experience practicing in this region. We have handled numerous accident cases where the true blame lay squarely on the shoulders of the city in charge of maintaining safe roadways and stop signs."
+    content: "We are Nelson, Rozier, & Christenson \u2014 a personal injury law firm in Visalia, California, with more than 40 years of combined experience practicing in this region. We have handled numerous accident cases where the true blame lay squarely on the shoulders of the city in charge of maintaining safe roadways and stop signs."
   }, {
     type: "p",
     className: "",
@@ -691,135 +690,7 @@ module.exports = [{
   }, {
     type: "p",
     className: "",
-    content: "Nelson & Rozier, is dedicated to helping people secure the full compensation they deserve after being injured in an accident. To schedule a free initial consultation, call ".concat(phoneorcontact, ".")
-  }, {
-    type: "p",
-    className: "",
-    content: weonlycollect
-  }]
-}, {
-  name: "Medical Malpractice",
-  id: "medical-malpractice",
-  title: "Medical Malpractice Law Firm | Best Medical Malpractice Lawyer",
-  description: "Suffering due to medical malpractice from physicians, nurses and other health care professionals is one of the worst experiences. Contact our medical malpractice law firm to represent you.",
-  keywords: "Medical Malpractice Law Firm, Medical Malpractice Attorneys, Best Medical Malpractice Lawyer",
-  link: "/personal-injury/medical-malpractice",
-  icon: "/images/icon-medical.png",
-  hicon: "/images/icon-medical-o.png",
-  content: [{
-    type: "h1",
-    className: "",
-    content: "Visalia Medical Malpractice Attorneys"
-  }, {
-    type: "p",
-    className: "",
-    content: "We place our trust in physicians, nurses and other health care professionals to provide care that will help us, not harm us. When substandard care is provided and injuries are caused, the doctor or another health care professional who caused that harm should compensate that person."
-  }, {
-    type: "p",
-    className: "",
-    content: "We place our trust in physicians, nurses and other health care professionals to provide care that will help us, not harm us. When substandard care is provided and injuries are caused, the doctor or another health care professional who caused that harm should compensate that person."
-  }, {
-    type: "h2",
-    className: "",
-    content: "Many people have longstanding relationships with their doctors and may be reluctant to sue based on that relationship. However, patients who have been injured by their doctors should remember that all doctors and hospitals carry extensive insurance. It is the insurance company that would provide compensation, not the physician."
-  }, {
-    type: "h2",
-    className: "",
-    content: "Our firm offers experienced representation to those who have been injured by any type of medical malpractice, including:"
-  }, {
-    type: "ul",
-    className: "",
-    content: "<li>".concat(birthinjuries, " (cerebral palsy, Erb\u2019s palsy, shoulder dystocia)</li>\n        <li>Dental malpractice</li>\n        <li>Surgical errors (wrong-site surgery, foreign object, nicked or perforated blood vessels or nerves, anesthesia errors)</li>\n        <li>Failure to diagnose/misdiagnosis</li>\n        <li>Medication errors</li>\n        <li>Emergency room errors</li>")
-  }, {
-    type: "h2",
-    className: "",
-    content: "Take Action As Soon As Possible"
-  }, {
-    type: "p",
-    className: "",
-    content: "There are strict time limits in place regarding when a claim against a doctor or hospital can be filed. That time frame is even tighter if the hospital is a government entity. As in all personal injury cases, the sooner we can begin building a case, the more effective the case is likely to be."
-  }, {
-    type: "h2",
-    className: "",
-    content: morethan40
-  }, {
-    type: "p",
-    className: "",
-    content: "At ".concat(nelsonrozier, ", we are skilled litigators with decades of combined courtroom experience. We are confident in the strength of the cases that we present for our clients, and we have a record of success that illustrates how effective we are as advocates.")
-  }, {
-    type: "p",
-    className: "",
-    content: "Medical malpractice cases can be very complex from an evidence standpoint. We rely on the assistance of various experts when necessary to help us build our cases, including physicians, life care planners, financial experts and others. Our experience and the assistance of outside experts allow us to craft cases that are able to show the extent of your injuries, who was responsible, and what care you will need going forward to aid in your recovery."
-  }, {
-    type: "h2",
-    className: "",
-    content: "Medical Malpractice Attorneys Serving Visalia And Throughout California\u2019s Central Valley"
-  }, {
-    type: "p",
-    className: "",
-    content: "Nelson & Rozier, can help you secure the full compensation you should have after being injured by medical malpractice. To schedule a free initial consultation, call ".concat(phoneorcontact, ".")
-  }, {
-    type: "p",
-    className: "",
-    content: weonlycollect
-  }]
-}, {
-  name: "Birth Injuries",
-  id: "birth-injuries",
-  title: "Experienced Birth Injury Lawyers | Best Birth Injury Attorney Visalia",
-  description: "If your child is suffering from a lack of care from healthcare professionals, you have the right to pursue compensation. Call our experienced birth injury lawyers for a consultation.",
-  keywords: "Experienced Birth Injury Lawyers, Best Birth Injury Attorney Visalia",
-  link: "/personal-injury/birth-injuries",
-  icon: "/images/icon-birth.png",
-  hicon: "/images/icon-birth-o.png",
-  content: [{
-    type: "h1",
-    className: "",
-    content: "Visalia Birth Injury Attorneys"
-  }, {
-    type: "p",
-    className: "",
-    content: "Children are especially vulnerable during birth. While many births occur without the need for anything more than minimal levels of medical care, any birth can become complicated. A baby\u2019s health needs to be monitored during the birthing process to ensure that it is not under stress. When complications occur, the need for medical care may be immediate."
-  }, {
-    type: "p",
-    className: "",
-    content: "Obstetricians and the nurses and other health care professionals who may participate in a birth all have responsibilities to provide care that conforms with certain standards. If the level of care provided fell below those standards and the child was injured as a result, that is <a href=\"/personal-injury/birth-injuries\">medical malpractice</a>."
-  }, {
-    type: "p",
-    className: "",
-    content: "Some of the common issues that can arise because of substandard care during childbirth include:"
-  }, {
-    type: "ul",
-    className: "",
-    content: "<li>Cerebral palsy</li>\n        <li>Erb\u2019s palsy</li>\n        <li>Shoulder dystocia</li>\n        <li>Hypoxia</li>"
-  }, {
-    type: "p",
-    className: "",
-    content: "These injuries can be caused by failure to monitor a child\u2019s oxygen levels, applying too much force during extraction and other errors."
-  }, {
-    type: "h2",
-    className: "",
-    content: "Ensuring Your Child\u2019s Needs Are Met In The Future"
-  }, {
-    type: "p",
-    className: "",
-    content: "One of the key issues in pursuing compensation for a child who was injured during birth is being able to accurately project his or her needs in the future. Many of the injuries a child may suffer during birth will have a lasting impact on his or her life. We work with experts, such as physicians, life care planners and financial planners, to help us create an accurate assessment of your child\u2019s needs in the future."
-  }, {
-    type: "h2",
-    className: "",
-    content: morethan40
-  }, {
-    type: "p",
-    className: "",
-    content: "At ".concat(nelsonrozier, ", our firm is committed to helping children who have been injured during the birthing process by medical care that did not meet the accepted standards. With more than 40 years of combined ").concat(personalinjury, " experience, our attorneys know what is necessary to build a successful medical malpractice case for a birth injury. Our firm has built a track ").concat(recordofsucceeding, " for our clients that clearly illustrates the quality of representation we offer. We can help you make sure your child has what he or she needs to be able to make the most of his or her future.")
-  }, {
-    type: "h2",
-    className: "",
-    content: "Birth Injury Attorneys Serving Visalia And Throughout California\u2019s Central Valley"
-  }, {
-    type: "p",
-    className: "",
-    content: "Nelson & Rozier, provides highly effective medical malpractice representation to those whose child was injured during the birthing process. To schedule a free initial consultation, call ".concat(phoneorcontact, ".")
+    content: "Nelson, Rozier, & Christenson, is dedicated to helping people secure the full compensation they deserve after being injured in an accident. To schedule a free initial consultation, call ".concat(phoneorcontact, ".")
   }, {
     type: "p",
     className: "",
@@ -877,7 +748,7 @@ module.exports = [{
   }, {
     type: "p",
     className: "",
-    content: "Nelson & Rozier, offers highly effective personal injury representation to those who have suffered a TBI. To schedule a free initial consultation, call ".concat(phoneorcontact, ".")
+    content: "Nelson, Rozier, & Christenson, offers highly effective personal injury representation to those who have suffered a TBI. To schedule a free initial consultation, call ".concat(phoneorcontact, ".")
   }, {
     type: "p",
     className: "",
@@ -931,7 +802,7 @@ module.exports = [{
   }, {
     type: "p",
     className: "",
-    content: "Nelson & Rozier, offers highly effective legal representation to those who have suffered serious burns. To schedule a free initial consultation, call ".concat(phoneorcontact, ".")
+    content: "Nelson, Rozier, & Christenson, offers highly effective legal representation to those who have suffered serious burns. To schedule a free initial consultation, call ".concat(phoneorcontact, ".")
   }, {
     type: "p",
     className: "",
@@ -989,7 +860,7 @@ module.exports = [{
   }, {
     type: "p",
     className: "",
-    content: "Nelson & Rozier, is committed to helping those who have suffered spinal cord injuries and amputations. To schedule a free initial consultation, call ".concat(phoneorcontact, ".")
+    content: "Nelson, Rozier, & Christenson, is committed to helping those who have suffered spinal cord injuries and amputations. To schedule a free initial consultation, call ".concat(phoneorcontact, ".")
   }, {
     type: "p",
     className: "",
@@ -1019,7 +890,7 @@ module.exports = [{
   }, {
     type: "p",
     className: "",
-    content: "We are Nelson & Rozier. We are a personal injury law firm with more than 40 years of combined experience practicing law. We provide personal, attentive, compassionate and effective representation to clients facing extreme hardship. For a free consultation, call ".concat(phoneorcontact, ".")
+    content: "We are Nelson, Rozier, & Christenson. We are a personal injury law firm with more than 40 years of combined experience practicing law. We provide personal, attentive, compassionate and effective representation to clients facing extreme hardship. For a free consultation, call ".concat(phoneorcontact, ".")
   }, {
     type: "h2",
     className: "",
@@ -1077,7 +948,7 @@ module.exports = [{
   }, {
     type: "p",
     className: "",
-    content: "Nelson & Rozier, is a personal injury law firm in Visalia, California, with more than 40 years of combined legal experience. We have a history of achieving ".concat(successfulresults, " for our clients, and we focus on providing personalized, compassionate and attentive service. If you would like to schedule a <strong>free initial consultation</strong>, call today at ").concat(phoneorcontactoffice, ".")
+    content: "Nelson, Rozier, & Christenson, is a personal injury law firm in Visalia, California, with more than 40 years of combined legal experience. We have a history of achieving ".concat(successfulresults, " for our clients, and we focus on providing personalized, compassionate and attentive service. If you would like to schedule a <strong>free initial consultation</strong>, call today at ").concat(phoneorcontactoffice, ".")
   }, {
     type: "h2",
     className: "",
@@ -1123,7 +994,7 @@ module.exports = [{
   }, {
     type: "p",
     className: "",
-    content: "Nelson & Rozier, is a personal injury law firm in Visalia, California, with more than 40 years of combined legal experience. We have the experience necessary to help you find justice, prepare for the future and recover the compensation you need."
+    content: "Nelson, Rozier, & Christenson, is a personal injury law firm in Visalia, California, with more than 40 years of combined legal experience. We have the experience necessary to help you find justice, prepare for the future and recover the compensation you need."
   }, {
     type: "p",
     className: "",
@@ -1135,7 +1006,7 @@ module.exports = [{
   }, {
     type: "p",
     className: "",
-    content: "At the law firm of Nelson & Rozier, we have served Visalia, Fresno and surrounding areas since 1982. We treat our clients like neighbors, and we will work directly with you, one on one, to help you tell your story to judges, jurors and insurance companies."
+    content: "At the law firm of Nelson, Rozier, & Christenson, we have served Visalia, Fresno and surrounding areas since 1982. We treat our clients like neighbors, and we will work directly with you, one on one, to help you tell your story to judges, jurors and insurance companies."
   }, {
     type: "p",
     className: "",
@@ -1156,39 +1027,5 @@ module.exports = [{
     type: "p",
     className: "",
     content: "If you would like to schedule a ".concat(freeconsultation, " to discuss your legal options for moving forward after the wrongful death of a loved one, call our office today at ").concat(phoneorcontact, ". We are ready to listen.")
-  }]
-}, {
-  name: "Elder Abuse/Nursing Home Claims",
-  id: "elder-abuse-nursing-home-claims",
-  title: "Professional Elder Abuse Attorneys | Visalia Elder Abuse Attorneys",
-  description: "Elder abuse is among the worst crimes. Let us represent you with our professional elder abuse attorneys. Schedule a free initial consultation.",
-  keywords: "Professional Elder Abuse Attorneys, Visalia Elder Abuse Attorneys",
-  link: "/personal-injury/elder-abuse-nursing-home-claims",
-  icon: "/images/icon-elder.png",
-  hicon: "/images/icon-elder-o.png",
-  content: [{
-    type: "h1",
-    className: "",
-    content: "Visalia Elder Abuse Attorneys"
-  }, {
-    type: "p",
-    className: "",
-    content: "Elder abuse claims under California and federal law include the right to recover for pre-death pain and suffering, punitive damages, medical expenses, wrongful death damages and several types of financial penalties. The rules and procedures protect victims through a variety of enhanced remedies. Most claims against nursing homes in California begin with a complaint to the Department of Health Care Services which regulates care centers. They often assess stiff penalties for mistreatment and their investigation files are priceless. However, their investigation may linger for months or even years. Obtaining the services of an attorney at an early stage can assist the state to come to a correct result and prod them to a more timely result."
-  }, {
-    type: "p",
-    className: "",
-    content: "Nursing home failures include inadequate wound care, elopements or escapes from a facility, brutal or assaultive conduct, poor nutrition, and any other aspect of care which falls below a safe standard and which causes harm."
-  }, {
-    type: "p",
-    className: "",
-    content: "Cases handled by our office include:"
-  }, {
-    type: "ul",
-    className: "",
-    content: "<li>The escape of a 91-year-old gentleman from an Alzheimer care unit whereupon he fell down a ravine and fractured his neck. We were able to demonstrate that his security bracelet failed to activate due to an expired battery. A large settlement resulted.</li>\n        <li>A wheelchair-bound woman was sent to the doctor\u2019s office unescorted. She fell and broke a hip. After surgery, she was returned to the nursing home and contrary to her physician\u2019s orders, her wound was not checked for infection through proper blood work. She expired after a lengthy hospitalization.</li>\n        <li>A wheelchair-bound woman was improperly restrained and abandoned. She slid down her chair and strangled. Her care provider was sentenced to prison.</li>\n        <li>A two-month-old infant in child care was delivered home in a lifeless state. The state of California has filed a complaint seeking to remove the license of the care provider. Day care or child care cases often involve baby shaking injuries, neglect or drownings.</li>"
-  }, {
-    type: "p",
-    className: "",
-    content: "Please call ".concat(phoneorcontact, ". We will handle your case personally. We need to get busy to find out what really occurred.")
   }]
 }];

@@ -17,7 +17,7 @@ var _personalinjurylist = _interopRequireDefault(require("./data/personalinjuryl
 var _config = _interopRequireDefault(require("./config"));
 var _roots = require("./roots");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-var Cryptr = require('cryptr');
+var Cryptr = require("cryptr");
 var cryptr = new Cryptr(_config["default"].key);
 var PORT = process.env.PORT || 3003;
 //this is a comment
@@ -43,147 +43,151 @@ var dataObj = {},
   attorneytemplateBundle = "",
   searchBundle = "",
   notfoundBundle = "";
-_fs["default"].readFile('./dist/js/home.bundle.min.js', "utf8", function (err, data) {
+_fs["default"].readFile("./dist/js/home.bundle.min.js", "utf8", function (err, data) {
   if (err) console.log("ERR", err);
   homeBundle = data || "";
 });
-_fs["default"].readFile('./dist/js/about.bundle.min.js', "utf8", function (err, data) {
+_fs["default"].readFile("./dist/js/about.bundle.min.js", "utf8", function (err, data) {
   if (err) console.log("ERR", err);
   aboutBundle = data || "";
 });
-_fs["default"].readFile('./dist/js/personalinjury.bundle.min.js', "utf8", function (err, data) {
+_fs["default"].readFile("./dist/js/personalinjury.bundle.min.js", "utf8", function (err, data) {
   if (err) console.log("ERR", err);
   personalinjuryBundle = data || "";
 });
-_fs["default"].readFile('./dist/js/personalinjurytemplate.bundle.min.js', "utf8", function (err, data) {
+_fs["default"].readFile("./dist/js/personalinjurytemplate.bundle.min.js", "utf8", function (err, data) {
   if (err) console.log("ERR", err);
   personalinjurytemplateBundle = data || "";
 });
-_fs["default"].readFile('./dist/js/caseresults.bundle.min.js', "utf8", function (err, data) {
+_fs["default"].readFile("./dist/js/caseresults.bundle.min.js", "utf8", function (err, data) {
   if (err) console.log("ERR", err);
   caseresultsBundle = data || "";
 });
-_fs["default"].readFile('./dist/js/faq.bundle.min.js', "utf8", function (err, data) {
+_fs["default"].readFile("./dist/js/faq.bundle.min.js", "utf8", function (err, data) {
   if (err) console.log("ERR", err);
   faqBundle = data || "";
 });
-_fs["default"].readFile('./dist/js/blog.bundle.min.js', "utf8", function (err, data) {
+_fs["default"].readFile("./dist/js/blog.bundle.min.js", "utf8", function (err, data) {
   if (err) console.log("ERR", err);
   blogBundle = data || "";
 });
-_fs["default"].readFile('./dist/js/blogcattemplate.bundle.min.js', "utf8", function (err, data) {
+_fs["default"].readFile("./dist/js/blogcattemplate.bundle.min.js", "utf8", function (err, data) {
   if (err) console.log("ERR", err);
   blogcattemplateBundle = data || "";
 });
-_fs["default"].readFile('./dist/js/blogtemplate.bundle.min.js', "utf8", function (err, data) {
+_fs["default"].readFile("./dist/js/blogtemplate.bundle.min.js", "utf8", function (err, data) {
   if (err) console.log("ERR", err);
   blogtemplateBundle = data || "";
 });
-_fs["default"].readFile('./dist/js/contact.bundle.min.js', "utf8", function (err, data) {
+_fs["default"].readFile("./dist/js/contact.bundle.min.js", "utf8", function (err, data) {
   if (err) console.log("ERR", err);
   contactBundle = data || "";
 });
-_fs["default"].readFile('./dist/js/disclaimer.bundle.min.js', "utf8", function (err, data) {
+_fs["default"].readFile("./dist/js/disclaimer.bundle.min.js", "utf8", function (err, data) {
   if (err) console.log("ERR", err);
   disclaimerBundle = data || "";
 });
-_fs["default"].readFile('./dist/js/sitemap.bundle.min.js', "utf8", function (err, data) {
+_fs["default"].readFile("./dist/js/sitemap.bundle.min.js", "utf8", function (err, data) {
   if (err) console.log("ERR", err);
   sitemapBundle = data || "";
 });
-_fs["default"].readFile('./dist/js/privacypolicy.bundle.min.js', "utf8", function (err, data) {
+_fs["default"].readFile("./dist/js/privacypolicy.bundle.min.js", "utf8", function (err, data) {
   if (err) console.log("ERR", err);
   privacypolicyBundle = data || "";
 });
-_fs["default"].readFile('./dist/js/attorneytemplate.bundle.min.js', "utf8", function (err, data) {
+_fs["default"].readFile("./dist/js/attorneytemplate.bundle.min.js", "utf8", function (err, data) {
   if (err) console.log("ERR", err);
   attorneytemplateBundle = data || "";
 });
-_fs["default"].readFile('./dist/js/search.bundle.min.js', "utf8", function (err, data) {
+_fs["default"].readFile("./dist/js/search.bundle.min.js", "utf8", function (err, data) {
   if (err) console.log("ERR", err);
   searchBundle = data || "";
 });
-_fs["default"].readFile('./dist/js/notfound.bundle.min.js', "utf8", function (err, data) {
+_fs["default"].readFile("./dist/js/notfound.bundle.min.js", "utf8", function (err, data) {
   if (err) console.log("ERR", err);
   notfoundBundle = data || "";
 });
-app.get('/', function (req, res) {
+app.get("/", function (req, res) {
   var data = "";
-  res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, homeBundle, _roots.HomeRoot, "Best Personal Injury Attorney California | Free Legal Consultation Visalia – NRC Law Firms | Nelson Rozier & Christenson", "Do not suffer from other people’s mistakes. Partner with NRC Law, the best personal injury attorneys in California. We represent plaintiffs and defendants.", "Personal injury attorney California, Free Legal Consultation Visalia, Best Injury Attorney, Best Visalia law firm, Visalia top Experienced law firm, Best Legal Attorney Services California, Best Legal attorney California, Experienced Legal attorney Visalia, Visalia Personal Injury Attorneys, experienced attorney California"));
+  res.set("Cache-Control", "public, max-age=31557600");
+  res.send(returnHTML(data, homeBundle, _roots.HomeRoot, "Best Personal Injury Attorney California | Free Legal Consultation Visalia – NRC Law Firms | Nelson, Rozier, & Christenson", "Do not suffer from other people’s mistakes. Partner with NRC Law, the best personal injury attorneys in California. We represent plaintiffs and defendants.", "Personal injury attorney California, Free Legal Consultation Visalia, Best Injury Attorney, Best Visalia law firm, Visalia top Experienced law firm, Best Legal Attorney Services California, Best Legal attorney California, Experienced Legal attorney Visalia, Visalia Personal Injury Attorneys, experienced attorney California"));
 });
-app.get('/about', function (req, res) {
+app.get("/about", function (req, res) {
   var data = "";
-  res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, aboutBundle, _roots.AboutRoot, "About Your Visalia Personal Injury Lawyers | Nelson Rozier & Christenson", "Our firm has been located in Visalia since 1982. Our attorneys all live in our area and were raised here. We know the people of our community and the surrounding areas.", ""));
+  res.set("Cache-Control", "public, max-age=31557600");
+  res.send(returnHTML(data, aboutBundle, _roots.AboutRoot, "About Your Visalia Personal Injury Lawyers | Nelson, Rozier, & Christenson", "Our firm has been located in Visalia since 1982. Our attorneys all live in our area and were raised here. We know the people of our community and the surrounding areas.", ""));
 });
-app.get('/personal-injury', function (req, res) {
+app.get("/personal-injury", function (req, res) {
   var data = "";
-  res.set('Cache-Control', 'public, max-age=31557600');
+  res.set("Cache-Control", "public, max-age=31557600");
   res.send(returnHTML(data, personalinjuryBundle, _roots.PersonalinjuryRoot, "Best Injury Lawyers Visalia, California | Experienced Personal Injury Attorneys", "Get personalized legal representation by a compassionate, dedicated and experienced personal injury lawyer in California. We take cases on a contingency fee basis.", "Best injuries lawyer California, Professional personal injury lawyer, Attorney for personal injury california, Experienced personal injury attorney"));
 });
 
 //all the rest
-app.get('/personal-injury/:id', function (req, res) {
+app.get("/personal-injury/:id", function (req, res) {
   var data = {
     page: req.params.id
   };
+  var permanentRedirectPages = ["medical-malpractice", "elder-abuse-nursing-home-claims", "birth-injuries"];
+  if (permanentRedirectPages.includes(req.params.id)) {
+    return res.redirect(301, "/personal-injury");
+  }
   var pi = _personalinjurylist["default"].find(function (a) {
     return a.id == req.params.id;
   });
   if (pi) {
-    res.set('Cache-Control', 'public, max-age=31557600');
+    res.set("Cache-Control", "public, max-age=31557600");
     res.send(returnHTML(data, personalinjurytemplateBundle, _roots.PersonalinjurytemplateRoot, pi.title, pi.description, pi.keywords));
   } else {
     res.send(returnHTML(data, notfoundBundle, _roots.NotFoundRoot, "404 Not Found | NRC Law", "", ""));
   }
 });
-app.get('/case-results', function (req, res) {
+app.get("/case-results", function (req, res) {
   var data = "";
-  res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, caseresultsBundle, _roots.CaseresultsRoot, "Best Visalia Law Firm Case Results | Nelson Rozier & Christenson", "See our successful case results if you have a similar case and need an attorney, call us today at 559-713-0159 or contact our office to schedule a free consultation.", ""));
+  res.set("Cache-Control", "public, max-age=31557600");
+  res.send(returnHTML(data, caseresultsBundle, _roots.CaseresultsRoot, "Best Visalia Law Firm Case Results | Nelson, Rozier, & Christenson", "See our successful case results if you have a similar case and need an attorney, call us today at 559-713-0159 or contact our office to schedule a free consultation.", ""));
 });
-app.get('/faq', function (req, res) {
+app.get("/faq", function (req, res) {
   var data = "";
-  res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, faqBundle, _roots.FaqRoot, "FAQ Personal Injury Visalia | Nelson Rozier & Christenson", "Learn more about personal injury claims with this FAQ for personal injury in California. Contact Nelson Rozier & Christenson for help today!", ""));
+  res.set("Cache-Control", "public, max-age=31557600");
+  res.send(returnHTML(data, faqBundle, _roots.FaqRoot, "FAQ Personal Injury Visalia | Nelson, Rozier, & Christenson", "Learn more about personal injury claims with this FAQ for personal injury in California. Contact Nelson, Rozier, & Christenson for help today!", ""));
 });
-app.get('/blog', function (req, res) {
+app.get("/blog", function (req, res) {
   var data = {
     query: "",
     category: "",
     year: "",
     month: ""
   };
-  res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, blogBundle, _roots.BlogRoot, "Read Our Latest Blog & News About Personal Injury Visalia | Nelson Rozier & Christenson", "Read Our Latest Blog & News posts on Personal Injury, Injuries, car accidents, and many more. Visit our website now!", "Personal Injury Visalia"));
+  res.set("Cache-Control", "public, max-age=31557600");
+  res.send(returnHTML(data, blogBundle, _roots.BlogRoot, "Read Our Latest Blog & News About Personal Injury Visalia | Nelson, Rozier, & Christenson", "Read Our Latest Blog & News posts on Personal Injury, Injuries, car accidents, and many more. Visit our website now!", "Personal Injury Visalia"));
 });
-app.get('/blogcattemplate', function (req, res) {
+app.get("/blogcattemplate", function (req, res) {
   var data = "";
-  res.set('Cache-Control', 'public, max-age=31557600');
+  res.set("Cache-Control", "public, max-age=31557600");
   res.send(returnHTML(data, blogcattemplateBundle, _roots.BlogcattemplateRoot, "Blog & News About Personal Injury Attorneys", "Attorneys", ""));
 });
-app.get('/blog/search/:query', function (req, res) {
+app.get("/blog/search/:query", function (req, res) {
   var data = {
     query: req.params.query,
     category: "",
     year: "",
     month: ""
   };
-  res.set('Cache-Control', 'public, max-age=31557600');
+  res.set("Cache-Control", "public, max-age=31557600");
   res.send(returnHTML(data, blogBundle, _roots.BlogRoot, "Blog & News About Personal Injury Attorneys", "Lawyers", ""));
 });
-app.get('/blog/category/:category', function (req, res) {
+app.get("/blog/category/:category", function (req, res) {
   var data = {
     category: req.params.category,
     query: "",
     year: "",
     month: ""
   };
-  res.set('Cache-Control', 'public, max-age=31557600');
+  res.set("Cache-Control", "public, max-age=31557600");
   res.send(returnHTML(data, blogBundle, _roots.BlogRoot, "Blog & News About Personal Injury Attorneys", "Personal Injury", ""));
 });
-app.get('/blog/:year/:month', function (req, res) {
+app.get("/blog/:year/:month", function (req, res) {
   var _req$params = req.params,
     year = _req$params.year,
     month = _req$params.month;
@@ -193,10 +197,10 @@ app.get('/blog/:year/:month', function (req, res) {
     query: "",
     category: ""
   };
-  res.set('Cache-Control', 'public, max-age=31557600');
+  res.set("Cache-Control", "public, max-age=31557600");
   res.send(returnHTML(data, blogBundle, _roots.BlogRoot, "Blog & News About Personal Injury Attorneys", "Personal Injury Attorneys", ""));
 });
-app.get('/blog/:year/:month/:title', function (req, res) {
+app.get("/blog/:year/:month/:title", function (req, res) {
   var _req$params2 = req.params,
     year = _req$params2.year,
     month = _req$params2.month,
@@ -206,51 +210,51 @@ app.get('/blog/:year/:month/:title', function (req, res) {
     month: month,
     title: title
   };
-  res.set('Cache-Control', 'public, max-age=31557600');
+  res.set("Cache-Control", "public, max-age=31557600");
   res.send(returnHTML(data, blogtemplateBundle, _roots.BlogtemplateRoot, "Blog & News About Personal Injury Attorneys", "", ""));
 });
-app.get('/contact', function (req, res) {
+app.get("/contact", function (req, res) {
   var data = "";
-  res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, contactBundle, _roots.ContactRoot, "Contact for Best Legal Services California | Nelson Rozier & Christenson", "If you need an Personal Injury Attorneys in California, let us help.  Call 559-713-0159 or fill out the form to schedule your free consultation.", ""));
+  res.set("Cache-Control", "public, max-age=31557600");
+  res.send(returnHTML(data, contactBundle, _roots.ContactRoot, "Contact for Best Legal Services California | Nelson, Rozier, & Christenson", "If you need an Personal Injury Attorneys in California, let us help.  Call 559-713-0159 or fill out the form to schedule your free consultation.", ""));
 });
-app.get('/disclaimer', function (req, res) {
+app.get("/disclaimer", function (req, res) {
   var data = "";
-  res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, disclaimerBundle, _roots.DisclaimerRoot, "Disclaimer | Nelson Rozier & Christenson", "The information you obtain at this site is not, nor is it intended to be, legal advice. You should consult an attorney for advice regarding your individual situation.", ""));
+  res.set("Cache-Control", "public, max-age=31557600");
+  res.send(returnHTML(data, disclaimerBundle, _roots.DisclaimerRoot, "Disclaimer | Nelson, Rozier, & Christenson", "The information you obtain at this site is not, nor is it intended to be, legal advice. You should consult an attorney for advice regarding your individual situation.", ""));
 });
-app.get('/sitemap', function (req, res) {
+app.get("/sitemap", function (req, res) {
   var data = "";
-  res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, sitemapBundle, _roots.SitemapRoot, "Sitemap | Nelson Rozier & Christenson", "", ""));
+  res.set("Cache-Control", "public, max-age=31557600");
+  res.send(returnHTML(data, sitemapBundle, _roots.SitemapRoot, "Sitemap | Nelson, Rozier, & Christenson", "", ""));
 });
-app.get('/privacy', function (req, res) {
+app.get("/privacy", function (req, res) {
   var data = "";
-  res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, privacypolicyBundle, _roots.PrivacypolicyRoot, "Our Privacy Policy | Nelson Rozier & Christenson", "If you have any additional questions or concerns about this privacy policy, please contact us via the phone number, contact form or mailing address listed on this website.", ""));
+  res.set("Cache-Control", "public, max-age=31557600");
+  res.send(returnHTML(data, privacypolicyBundle, _roots.PrivacypolicyRoot, "Our Privacy Policy | Nelson, Rozier, & Christenson", "If you have any additional questions or concerns about this privacy policy, please contact us via the phone number, contact form or mailing address listed on this website.", ""));
 });
-app.get('/attorney/:name', function (req, res) {
+app.get("/attorney/:name", function (req, res) {
   var data = {
     link: "/attorney/".concat(req.params.name)
   };
-  res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, attorneytemplateBundle, _roots.AttorneytemplateRoot, "Meet Your Visalia Personal Injury Lawyers | Nelson Rozier & Christenson", "", ""));
+  res.set("Cache-Control", "public, max-age=31557600");
+  res.send(returnHTML(data, attorneytemplateBundle, _roots.AttorneytemplateRoot, "Meet Your Visalia Personal Injury Lawyers | Nelson, Rozier, & Christenson", "", ""));
 });
-app.get('/search', function (req, res) {
+app.get("/search", function (req, res) {
   var data = "";
-  res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, searchBundle, _roots.SearchRoot, "Search | Nelson Rozier & Christenson", "", ""));
+  res.set("Cache-Control", "public, max-age=31557600");
+  res.send(returnHTML(data, searchBundle, _roots.SearchRoot, "Search | Nelson, Rozier, & Christenson", "", ""));
 });
-app.get('/error', function (req, res) {
+app.get("/error", function (req, res) {
   var data = "";
-  res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, notfoundBundle, _roots.NotFoundRoot, "404 Not Found | Nelson Rozier & Christenson", "", ""));
+  res.set("Cache-Control", "public, max-age=31557600");
+  res.send(returnHTML(data, notfoundBundle, _roots.NotFoundRoot, "404 Not Found | Nelson, Rozier, & Christenson", "", ""));
 });
-app.get('/images/:id', function (req, res) {
-  res.set('Cache-Control', 'public, max-age=31557600');
-  res.sendFile(_path["default"].join(__dirname, '../images/' + req.params.id));
+app.get("/images/:id", function (req, res) {
+  res.set("Cache-Control", "public, max-age=31557600");
+  res.sendFile(_path["default"].join(__dirname, "../images/" + req.params.id));
 });
-app.post('/emailer', function (req, res) {
+app.post("/emailer", function (req, res) {
   res.send({
     message: "success"
   });
@@ -265,7 +269,7 @@ app.post('/emailer', function (req, res) {
     contactphone = _req$body.contactphone,
     disclaimer = _req$body.disclaimer;
   var transporter = _nodemailer["default"].createTransport({
-    host: 'smtp.gmail.com',
+    host: "smtp.gmail.com",
     port: 587,
     secure: false,
     requireTLS: true,
@@ -277,7 +281,7 @@ app.post('/emailer', function (req, res) {
   transporter.sendMail({
     from: email,
     to: [cryptr.decrypt(_config["default"].nrEmail), cryptr.decrypt(_config["default"].nr2Email)],
-    subject: 'Nelson, Rozier & Christenson: Online Inquiry',
+    subject: "Nelson, Rozier & Christenson: Online Inquiry",
     html: "\n      <h3>Hi! The following person has submitted a message.<h3/>\n      <h4>Name: ".concat(name, "</h4>\n\n      <h4>Email: ").concat(email, "</h4>\n      <h4>Phone: ").concat(phone, "</h4>\n      <h4>State: ").concat(state, "</h4>\n      <h4>Zip: ").concat(zip, "</h4>\n\n      <h3>Message: ").concat(description, "</h3>\n\n      <h4>Contact via phone: ").concat(contactphone, "</h4>\n      <h4>Contact via email: ").concat(contactemail, "</h4>\n      <h4>Disclaimer Checked: ").concat(disclaimer, "</h4>\n    ")
   }, function (error, info) {
     if (error) res.send({
@@ -287,36 +291,36 @@ app.post('/emailer', function (req, res) {
     });
   });
 });
-app.get('/api/blogs/getAll', _blogCtrl["default"].read);
-app.get('/api/blogs/getThree', _blogCtrl["default"].readThree);
-app.get('/api/blogs/getTen', _blogCtrl["default"].readTen);
-app.get('/api/blogs/getOne/:id', _blogCtrl["default"].readOne);
-app.get('/api/blogs/getCategories', _blogCtrl["default"].readCategories);
-app.get('/api/blogs/getMonths', _blogCtrl["default"].readMonths);
-app.get('/health', function (req, res) {
-  return res.send('OK');
+app.get("/api/blogs/getAll", _blogCtrl["default"].read);
+app.get("/api/blogs/getThree", _blogCtrl["default"].readThree);
+app.get("/api/blogs/getTen", _blogCtrl["default"].readTen);
+app.get("/api/blogs/getOne/:id", _blogCtrl["default"].readOne);
+app.get("/api/blogs/getCategories", _blogCtrl["default"].readCategories);
+app.get("/api/blogs/getMonths", _blogCtrl["default"].readMonths);
+app.get("/health", function (req, res) {
+  return res.send("OK");
 });
-var mongoUri = process.env.MONGODB_URI ? process.env.MONGODB_URI : 'mongodb+srv://' + cryptr.decrypt(_config["default"].dbuser) + ':' + cryptr.decrypt(_config["default"].dbpass) + '@nelsonrozier.1dnpj.mongodb.net/nelsonrozier?retryWrites=true&w=majority';
+var mongoUri = process.env.MONGODB_URI ? process.env.MONGODB_URI : "mongodb+srv://" + cryptr.decrypt(_config["default"].dbuser) + ":" + cryptr.decrypt(_config["default"].dbpass) + "@nelsonrozier.1dnpj.mongodb.net/nelsonrozier?retryWrites=true&w=majority";
 _mongoose["default"].connect(mongoUri, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
-_mongoose["default"].connection.on('error', console.error.bind(console, 'connection error'));
-_mongoose["default"].connection.once('open', function () {
+_mongoose["default"].connection.on("error", console.error.bind(console, "connection error"));
+_mongoose["default"].connection.once("open", function () {
   console.log("Connected to mongoDB");
 });
 app.listen(PORT, function () {
-  console.log('Running on http://localhost:' + PORT);
+  console.log("Running on http://localhost:" + PORT);
 });
 
 // functions!!!!!!!!!!!!!
 
 function getQueries(req, res) {
   var qOb = {};
-  var queries = req && req._parsedUrl && req._parsedUrl.query && req._parsedUrl.query.split('&') ? req._parsedUrl.query.split('&') : [];
+  var queries = req && req._parsedUrl && req._parsedUrl.query && req._parsedUrl.query.split("&") ? req._parsedUrl.query.split("&") : [];
   if (queries.length) {
     queries.forEach(function (x) {
-      var y = x.split('=');
+      var y = x.split("=");
       qOb[y[0]] = y[1];
     });
   }
@@ -337,7 +341,7 @@ function returnHTML(data, bundle, Page, title, description, keywords) {
     data: data
   })));
   var styles = sheet.getStyleTags();
-  return "\n            <html lang=\"en\">\n              <head>\n                <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"/>\n                <meta name=\"msvalidate.01\" content=\"55D6D8A6A04F450FBDDBD5C81164E3B2\" />\n                <title>".concat(title, "</title>\n                <meta name=\"Description\" content=\"").concat(description, "\"/>\n                <meta name=\"google-site-verification\" content=\"4KRuv64nysKrmujcSKWbxB4YakbtXe5tQtmPJA1Ghaw\"/>\n                <meta name=\"Keywords\" content=\"").concat(keywords, "\"/>\n\t\t  <link rel=\"canonical\" href=\"#\">\n                <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\">\n                <link href=\"https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&family=Open+Sans:wght@700&family=PT+Sans&display=swap\" rel=\"stylesheet\">\n                <script type=\"application/ld+json\">\n                  {\n                    \"@context\": \"https://schema.org\",\n                    \"@type\": \"Attorney\",\n                    \"name\": \"Nelson Rozier & Christenson\",\n                    \"image\": \"https://www.nrclaw.com/images/nelson.png\",\n                    \"url\": \"https://www.nrclaw.com/\",\n                    \"telephone\": \"559-713-0159\",\n                    \"address\": {\n                      \"@type\": \"PostalAddress\",\n                      \"streetAddress\": \"3924 W. Caldwell Ave. Suite A\",\n                      \"addressLocality\": \"Visalia\",\n                      \"addressRegion\": \"CA\",\n                      \"postalCode\": \"93277\",\n                      \"addressCountry\": \"US\"\n                    }\n                  }\n                </script>\n                <style>\n                  body { margin: 0; font-family: \"PT Sans\", Helvetica, Arial, Lucida, sans-serif; color: #383b40; }\n                  a { text-decoration: none; color: #000; }\n                </style>\n                ").concat(styles, "\n                <script src=\"https://kit.fontawesome.com/7fa747235e.js\" crossorigin=\"anonymous\"></script>\n\t\t\n\t\t<!-- Global site tag (gtag.js) - Google Analytics -->\n<script async src=\"https://www.googletagmanager.com/gtag/js?id=UA-180738835-1\"></script>\n<script>\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){dataLayer.push(arguments);}\n  gtag('js', new Date());\n\n  gtag('config', 'UA-180738835-1');\n</script>\n\t\n\t<!-- Google tag (gtag.js) -->\n<script async src=\"https://www.googletagmanager.com/gtag/js?id=G-JHY6MME7XL\"></script>\n<script>\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){dataLayer.push(arguments);}\n  gtag('js', new Date());\n\n  gtag('config', 'G-JHY6MME7XL');\n</script>\n\t\n\t\t<!-- Google Tag Manager -->\n<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\nnew Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\nj=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n})(window,document,'script','dataLayer','GTM-KGNFJWW');</script>\n<!-- End Google Tag Manager -->\n\n<meta name=\"google-site-verification\" content=\"QcxUyvtxY2put4kvP8hB4qGQ364ORLZJjLOujBHmgx4\" />\n\n\n<!-- Google tag (gtag.js) -->\n<script async src=\"https://www.googletagmanager.com/gtag/js?id=UA-180738835-2\"></script>\n<script>\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){dataLayer.push(arguments);}\n  gtag('js', new Date());\n\n  gtag('config', 'UA-180738835-2');\n</script>\n\n              </head>\n              <body>\n                <script>window.os = window.os || {};</script>\n                <script>window.__DATA__=").concat(dataString, "</script>\n                <div id=\"app\" role=\"main\">").concat(body, "</div>\n                <script>").concat(bundle, "</script>\t\t\n\t\t<!-- Google Tag Manager (noscript) -->\n<noscript><iframe src=\"https://www.googletagmanager.com/ns.html?id=GTM-KGNFJWW\"\nheight=\"0\" width=\"0\" style=\"display:none;visibility:hidden\"></iframe></noscript>\n<!-- End Google Tag Manager (noscript) -->\n\t\t<script async src=\"https://www.googletagmanager.com/gtag/js?id=G-BLVMB709EV\"></script>\n              <script>\n                window.dataLayer = window.dataLayer || [];\n                function gtag(){dataLayer.push(arguments);}\n                gtag('js', new Date());\n                gtag('config', 'G-BLVMB709EV');\n              </script>\n              <script>\n                let protocol = window.location.protocol;\n                let host = window.location.host;\n                let href = window.location.href;\n                if(protocol == \"http:\" && host != \"localhost:3003\"){\n                  window.location.href = href.split(\"http\").join(\"https\");\n                }\n                if(host == \"www.nelsonrozier.com\"){\n                  window.location.href = href.split(\"www.nelsonrozier.com\").join(\"www.nrclaw.com\");\n                } else if(host == \"nelsonrozier.com\"){\n                  window.location.href = href.split(\"nelsonrozier.com\").join(\"www.nrclaw.com\");\n                }\n              </script>\n              </body>\n            </html>\n          ");
+  return "\n            <html lang=\"en\">\n              <head>\n                <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"/>\n                <meta name=\"msvalidate.01\" content=\"55D6D8A6A04F450FBDDBD5C81164E3B2\" />\n                <title>".concat(title, "</title>\n                <meta name=\"Description\" content=\"").concat(description, "\"/>\n                <meta name=\"google-site-verification\" content=\"4KRuv64nysKrmujcSKWbxB4YakbtXe5tQtmPJA1Ghaw\"/>\n                <meta name=\"Keywords\" content=\"").concat(keywords, "\"/>\n\t\t  <link rel=\"canonical\" href=\"#\">\n                <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\">\n                <link href=\"https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&family=Open+Sans:wght@700&family=PT+Sans&display=swap\" rel=\"stylesheet\">\n                <script type=\"application/ld+json\">\n                  {\n                    \"@context\": \"https://schema.org\",\n                    \"@type\": \"Attorney\",\n                    \"name\": \"Nelson, Rozier, & Christenson\",\n                    \"image\": \"https://www.nrclaw.com/images/nelson.png\",\n                    \"url\": \"https://www.nrclaw.com/\",\n                    \"telephone\": \"559-713-0159\",\n                    \"address\": {\n                      \"@type\": \"PostalAddress\",\n                      \"streetAddress\": \"3924 W. Caldwell Ave. Suite A\",\n                      \"addressLocality\": \"Visalia\",\n                      \"addressRegion\": \"CA\",\n                      \"postalCode\": \"93277\",\n                      \"addressCountry\": \"US\"\n                    }\n                  }\n                </script>\n                <style>\n                  body { margin: 0; font-family: \"PT Sans\", Helvetica, Arial, Lucida, sans-serif; color: #383b40; }\n                  a { text-decoration: none; color: #000; }\n                </style>\n                ").concat(styles, "\n                <script src=\"https://kit.fontawesome.com/7fa747235e.js\" crossorigin=\"anonymous\"></script>\n\t\t\n\t\t<!-- Global site tag (gtag.js) - Google Analytics -->\n<script async src=\"https://www.googletagmanager.com/gtag/js?id=UA-180738835-1\"></script>\n<script>\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){dataLayer.push(arguments);}\n  gtag('js', new Date());\n\n  gtag('config', 'UA-180738835-1');\n</script>\n\t\n\t<!-- Google tag (gtag.js) -->\n<script async src=\"https://www.googletagmanager.com/gtag/js?id=G-JHY6MME7XL\"></script>\n<script>\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){dataLayer.push(arguments);}\n  gtag('js', new Date());\n\n  gtag('config', 'G-JHY6MME7XL');\n</script>\n\t\n\t\t<!-- Google Tag Manager -->\n<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\nnew Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\nj=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n})(window,document,'script','dataLayer','GTM-KGNFJWW');</script>\n<!-- End Google Tag Manager -->\n\n<meta name=\"google-site-verification\" content=\"QcxUyvtxY2put4kvP8hB4qGQ364ORLZJjLOujBHmgx4\" />\n\n\n<!-- Google tag (gtag.js) -->\n<script async src=\"https://www.googletagmanager.com/gtag/js?id=UA-180738835-2\"></script>\n<script>\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){dataLayer.push(arguments);}\n  gtag('js', new Date());\n\n  gtag('config', 'UA-180738835-2');\n</script>\n\n              </head>\n              <body>\n                <script>window.os = window.os || {};</script>\n                <script>window.__DATA__=").concat(dataString, "</script>\n                <div id=\"app\" role=\"main\">").concat(body, "</div>\n                <script>").concat(bundle, "</script>\t\t\n\t\t<!-- Google Tag Manager (noscript) -->\n<noscript><iframe src=\"https://www.googletagmanager.com/ns.html?id=GTM-KGNFJWW\"\nheight=\"0\" width=\"0\" style=\"display:none;visibility:hidden\"></iframe></noscript>\n<!-- End Google Tag Manager (noscript) -->\n\t\t<script async src=\"https://www.googletagmanager.com/gtag/js?id=G-BLVMB709EV\"></script>\n              <script>\n                window.dataLayer = window.dataLayer || [];\n                function gtag(){dataLayer.push(arguments);}\n                gtag('js', new Date());\n                gtag('config', 'G-BLVMB709EV');\n              </script>\n              <script>\n                let protocol = window.location.protocol;\n                let host = window.location.host;\n                let href = window.location.href;\n                if(protocol == \"http:\" && host != \"localhost:3003\"){\n                  window.location.href = href.split(\"http\").join(\"https\");\n                }\n                if(host == \"www.nelsonrozier.com\"){\n                  window.location.href = href.split(\"www.nelsonrozier.com\").join(\"www.nrclaw.com\");\n                } else if(host == \"nelsonrozier.com\"){\n                  window.location.href = href.split(\"nelsonrozier.com\").join(\"www.nrclaw.com\");\n                }\n              </script>\n              </body>\n            </html>\n          ");
 }
 function errHandle(err) {
   console.log(err);

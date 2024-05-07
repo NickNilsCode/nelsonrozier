@@ -12,14 +12,11 @@ var _require = require("./repeatables.js"),
   rearendcollisions = _require.rearendcollisions,
   dangerousstopsignsaccidentlocations = _require.dangerousstopsignsaccidentlocations,
   bicycleandpedestrianaccidents = _require.bicycleandpedestrianaccidents,
-  medicalmalpractice = _require.medicalmalpractice,
-  birthinjuries = _require.birthinjuries,
   traumaticbraininjuries = _require.traumaticbraininjuries,
   burninjuries = _require.burninjuries,
   spinalcordinjuriesamputations = _require.spinalcordinjuriesamputations,
   slipandfallaccidents = _require.slipandfallaccidents,
   animalrelatedinjuries = _require.animalrelatedinjuries,
-  elderabusenursinghomeclaims = _require.elderabusenursinghomeclaims,
   wrongfuldeath = _require.wrongfuldeath,
   weonlycollect = _require.weonlycollect;
 module.exports = [{
@@ -27,13 +24,10 @@ module.exports = [{
   content: "Visalia Personal Injury Attorneys"
 }, {
   type: "p",
-  content: "At Nelson Rozier & Christenson, our personal injury attorneys have served over four decades in Visalia and surrounding cities in California\u2019s central valley."
+  content: "At Nelson, Rozier, & Christenson, our personal injury attorneys have served over four decades in Visalia and surrounding cities in California\u2019s central valley."
 }, {
   type: "p",
   content: "<strong>We specialize in personal injury law.</strong> Years of experience defending insurance companies in California have made us negotiating experts to better serve victims. Having practiced on both sides of personal injury litigation, our lawyers fully understand the circumstances unique to your case. We will guide you with compassion and expertise."
-}, {
-  type: "p",
-  content: "<strong>You can trust us to seek the maximum settlement.</strong> From car accidents to medical malpractice, Nelson Rozier & Christenson attorneys have recovered millions of dollars in losses to our personal injury clients throughout California. We will fight for what is owed to you and your family."
 }, {
   type: "p",
   content: "Give your personal injury case the personalized attention it deserves from some of the most respected personal injury lawyers in California. Consult a Visalia accident attorney today."
@@ -57,9 +51,9 @@ module.exports = [{
   content: "<strong>What do personal injury lawyers do?</strong><br/>A personal injury lawyer secures compensation to cover medical expenses and lost income when someone else is legally responsible for your suffering. Your lawyer will handle the full investigation, gathering data such as logs, videotapes, and policy manuals to prove the cause and extent of damages. They will identify and contact all witnesses and guilty parties. A personal injury lawyer also helps you to avoid jeopardizing your claim, from your social media posts to your adherence to medical treatment plans."
 }, {
   type: "p",
-  content: "<strong>What kind of cases do personal injury lawyers handle?</strong><br/>Personal injury lawyers defend victims who have suffered physical harm or a loved one\u2019s death due to the negligence of a person and/or company. This includes auto accidents, brain injuries, burn injuries, and more. It may also extend to negligence at the hands of child daycares, elderly care, and hospitals.<br/>At Nelson Rozier & Christenson, our litigators have decades of experience in all areas of personal injury law throughout Visalia. Review our areas of practice and achievements:"
+  content: "<strong>What kind of cases do personal injury lawyers handle?</strong><br/>Personal injury lawyers defend victims who have suffered physical harm or a loved one\u2019s death due to the negligence of a person and/or company. This includes auto accidents, brain injuries, burn injuries, and more. It may also extend to negligence at the hands of child daycares, elderly care, and hospitals.<br/>At Nelson, Rozier, & Christenson, our litigators have decades of experience in all areas of personal injury law throughout Visalia. Review our areas of practice and achievements:"
 }, {
   type: "ul",
   className: "boxedList",
-  content: "<li>".concat(caraccidents, "</li>\n    <li>").concat(truckaccidents, "</li>\n    <li>").concat(motorcycleaccidents, "</li>\n    <li>").concat(drunkdrivingaccidents, "</li>\n    <li>").concat(distracteddrivingaccidents, "</li>\n    <li>").concat(underinsuredanduninsuredmotoristclaims, "</li>\n    <li>").concat(rearendcollisions, "</li>\n    <li>").concat(dangerousstopsignsaccidentlocations, "</li>\n    <li>").concat(bicycleandpedestrianaccidents, "</li>\n    <li>").concat(medicalmalpractice, "</li>\n    <li>").concat(birthinjuries, "</li>\n    <li>").concat(traumaticbraininjuries, "</li>\n    <li>").concat(burninjuries, "</li>\n    <li>").concat(spinalcordinjuriesamputations, "</li>\n    <li>").concat(slipandfallaccidents, "</li>\n    <li>").concat(animalrelatedinjuries, "</li>\n    <li>").concat(elderabusenursinghomeclaims, "</li>\n    <li>").concat(wrongfuldeath, "</li>")
+  content: "<li>".concat(caraccidents, "</li>\n    <li>").concat(truckaccidents, "</li>\n    <li>").concat(motorcycleaccidents, "</li>\n    <li>").concat(drunkdrivingaccidents, "</li>\n    <li>").concat(distracteddrivingaccidents, "</li>\n    <li>").concat(underinsuredanduninsuredmotoristclaims, "</li>\n    <li>").concat(rearendcollisions, "</li>\n    <li>").concat(dangerousstopsignsaccidentlocations, "</li>\n    <li>").concat(bicycleandpedestrianaccidents, "</li>\n    <li>").concat(traumaticbraininjuries, "</li>\n    <li>").concat(burninjuries, "</li>\n    <li>").concat(spinalcordinjuriesamputations, "</li>\n    <li>").concat(slipandfallaccidents, "</li>\n    <li>").concat(animalrelatedinjuries, "</li>\n    <li>").concat(wrongfuldeath, "</li>")
 }];
