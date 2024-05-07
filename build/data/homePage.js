@@ -29,7 +29,7 @@ module.exports = [{
   content: "Decades of Combined Experience"
 }, {
   type: "p",
-  content: "At Nelson & Rozier, we provide the skill and decades of combined experience necessary to secure all the compensation you are entitled to. Our strength as litigators ensures our clients’ best interests are understood by the jury and judge."
+  content: "At Nelson, Rozier, & Christenson, we provide the skill and decades of combined experience necessary to secure all the compensation you are entitled to. Our strength as litigators ensures our clients’ best interests are understood by the jury and judge."
 }, {
   type: "h2",
   content: "We Know How To Deal With Insurance Companies"
@@ -41,7 +41,7 @@ module.exports = [{
   content: "Personal Injury Attorneys Serving Visalia And Throughout California’s Central Valley"
 }, {
   type: "p",
-  content: "If you or someone you love has suffered a serious injury in an accident, the attorneys here at Nelson & Rozier, can offer you the skilled and experienced help you need. To schedule a free initial consultation, call <a href=\"tel:+1-559-713-0159\">559-713-0159</a> or <a href=\"/contact\">contact us online</a>."
+  content: "If you or someone you love has suffered a serious injury in an accident, the attorneys here at Nelson, Rozier, & Christenson, can offer you the skilled and experienced help you need. To schedule a free initial consultation, call <a href=\"tel:+1-559-713-0159\">559-713-0159</a> or <a href=\"/contact\">contact us online</a>."
 }, {
   type: "p",
   content: "We only collect attorney’s fees and costs if we secure compensation for you."

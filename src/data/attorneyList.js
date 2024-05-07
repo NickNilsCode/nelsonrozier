@@ -12,7 +12,7 @@ module.exports = [
     content: [
       {
         type: "p",
-        content: `Mr. Nelson was born and raised in the Central Valley, with Visalia being his home for over 30 years. After graduating from Golden West High School, he attended law school while working at the Washington State Attorney General’s Office. He then worked for one year as a law clerk in the Fourth District Court, Department II, in Elko, Nevada. He returned to Visalia in 2009, to join Nelson & Rozier and continue practicing law.`,
+        content: `Mr. Nelson was born and raised in the Central Valley, with Visalia being his home for over 30 years. After graduating from Golden West High School, he attended law school while working at the Washington State Attorney General’s Office. He then worked for one year as a law clerk in the Fourth District Court, Department II, in Elko, Nevada. He returned to Visalia in 2009, to join Nelson, Rozier, & Christenson and continue practicing law.`,
       },
       {
         type: "p",
@@ -21,15 +21,6 @@ module.exports = [
       {
         type: "p",
         content: `He remains active in the community through coaching local athletic teams and by serving in his church and other local organizations. Mr. Nelson is married and has 4 children.`,
-      },
-      {
-        type: "h2",
-        content: `Areas Of Practice`,
-      },
-      {
-        type: "p",
-        content: `Personal Injury 90%<br/>
-        Education Law 10%`,
       },
       {
         type: "h2",
@@ -107,21 +98,11 @@ module.exports = [
       },
       {
         type: "p",
-        content: `Mr. Christenson practices in the areas of personal injury, medical malpractice, and employment law. He is admitted to practice before California and Federal Courts.`,
+        content: `Mr. Christenson practices in the areas of personal injury, and employment law. He is admitted to practice before California and Federal Courts.`,
       },
       {
         type: "p",
         content: `His hobbies include playing sports, reading, and spending time with his family. He and his wife live in Visalia and have two children.`,
-      },
-      {
-        type: "h2",
-        content: `Areas Of Practice`,
-      },
-      {
-        type: "p",
-        content: `Personal Injury 80%<br/>
-        Employment Law 10%<br/>
-        Education Law 10%`,
       },
       {
         type: "h2",

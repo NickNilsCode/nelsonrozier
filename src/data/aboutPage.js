@@ -28,7 +28,7 @@ let {
 module.exports = [
   {
     type: "h1",
-    content: "Meet The Attorneys Of Nelson Rozier & Christenson",
+    content: "Meet The Attorneys Of Nelson, Rozier, & Christenson",
   },
   {
     type: "p",
@@ -36,7 +36,7 @@ module.exports = [
   },
   {
     type: "p",
-    content: `We are committed to helping people who have suffered serious injuries put their lives back together by securing the compensation they need and deserve. As part of that commitment, you will never receive a bill from us unless we recover compensation for you. While almost all personal injury attorneys will not charge you attorneys’ fees for their time if they are unable to secure compensation for you, many will still bill you for any costs they incur in your case, such as filing fees or expert witness fees. Here at Nelson & Rozier, we are confident in our ability to secure compensation for you, so we will not bill our clients for either our time or our costs unless we secure compensation for you.`,
+    content: `We are committed to helping people who have suffered serious injuries put their lives back together by securing the compensation they need and deserve. As part of that commitment, you will never receive a bill from us unless we recover compensation for you. While almost all personal injury attorneys will not charge you attorneys’ fees for their time if they are unable to secure compensation for you, many will still bill you for any costs they incur in your case, such as filing fees or expert witness fees. Here at Nelson, Rozier, & Christenson, we are confident in our ability to secure compensation for you, so we will not bill our clients for either our time or our costs unless we secure compensation for you.`,
   },
   {
     type: "p",
@@ -59,7 +59,7 @@ module.exports = [
   },
   {
     type: "p",
-    content: `For skilled representation you can trust to always put you first, turn to Nelson & Rozier. To schedule a free initial consultation, call ${phoneorcontact}.`,
+    content: `For skilled representation you can trust to always put you first, turn to Nelson, Rozier, & Christenson. To schedule a free initial consultation, call ${phoneorcontact}.`,
   },
   {
     type: "p",
